@@ -1,0 +1,12 @@
+{
+  "name": "wms-server",
+  "version": "1.0.0",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "bootstrap-datepicker": "^1.6.4"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,7 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    
+erp_api:
+    resource: "@WilliamsErpBundle/Resources/config/routes.yml"
+    prefix: /api

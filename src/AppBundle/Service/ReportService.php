@@ -142,7 +142,7 @@ class ReportService {
             $avgDaysToShip[$i]['williams'] = $williamsAvgDaysToShip[$day];
         }
 
-        file_put_contents(__DIR__ . '/../../../web/data/' . $startDate->format('Ymd') . '-' . $endDate->format('Ymd') . '-avgDaysToShip.json', json_encode($avgDaysToShip));
+        file_put_contents(__DIR__ . '/../../../web/data/avgDaysToShip.json', json_encode($avgDaysToShip));
 
         $williamsAvgNumberOfOrders = $this->calculateAverageNumberOfOrders($williamsOrders);
         $muffsAvgNumberOfOrders = $this->calculateAverageNumberOfOrders($muffsOrders);
@@ -163,7 +163,7 @@ class ReportService {
             $avgOrdersPerDay[$i]['williams'] = $williamsAvgNumberOfOrders[$day];
         }
 
-        file_put_contents(__DIR__ . '/../../../web/data/' . $startDate->format('Ymd') . '-' . $endDate->format('Ymd') . '-avgOrdersPerDay.json', json_encode($avgOrdersPerDay));
+        file_put_contents(__DIR__ . '/../../../web/data/avgOrdersPerDay.json', json_encode($avgOrdersPerDay));
 
         $williamsOrdersPerHour = $this->calculateOrdersPerHour($williamsOrders);
         $muffsOrdersPerHour = $this->calculateOrdersPerHour($muffsOrders);

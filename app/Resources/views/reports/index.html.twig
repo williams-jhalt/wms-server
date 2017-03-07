@@ -13,6 +13,16 @@
             var createBarGraph = function (report) {
 
                 return function (data) {
+                    
+                    var title;
+                    
+                    if (report['type'] == 'avgDaysToShip') {
+                        title = 'Average Days To Ship';
+                    } 
+                    
+                    if (report['type'] == 'avgOrdersPerDay') {
+                        title = 'Average Orders Per Day';
+                    }
 
                     var el = $('<div>').height('250px');
 
@@ -43,7 +53,7 @@
 
                     var panel = $('<div>').addClass('col-sm-12')
                             .append($('<div>').addClass('panel panel-default')
-                                    .append($('<div>').addClass('panel-heading').html(report['type']))
+                                    .append($('<div>').addClass('panel-heading').html('Orders Per Hour'))
                                     .append($('<div>').addClass('panel-body')
                                             .append(el)));
 

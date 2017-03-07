@@ -84,19 +84,17 @@ class ReportService {
 
         foreach ($orders as $order) {
             $week = $order->getOrderDate()->format('W');
-            if (array_search($week, $weeks) !== false) {
+            if (array_search($week, $weeks) === false) {
                 $weeks[] = $week;
             }
             $numberOfOrders[$order->getOrderDate()->format('l')] ++;
         }
 
-        $weekCount = (count($weeks) > 0) ? count($weeks) : 1;
-
         $avgNumberOfOrders = [];
 
         // divide by number of weeks
         foreach ($numberOfOrders as $key => $value) {
-            $avgNumberOfOrders[$key] = $value / $weekCount;
+            $avgNumberOfOrders[$key] = $value / count($weeks);
         }
 
         return $avgNumberOfOrders;
@@ -110,7 +108,7 @@ class ReportService {
 
         foreach ($orders as $order) {
             $day = $order->getOrderDate()->format('z');
-            if (array_search($day, $days) !== false) {
+            if (array_search($day, $days) === false) {
                 $days[] = $day;
             }
             if (!isset($ordersPerHour[$order->getOrderDate()->format('G')])) {
@@ -118,11 +116,9 @@ class ReportService {
             }
             $ordersPerHour[$order->getOrderDate()->format('G')] ++;
         }
-
-        $dayCount = (count($days) > 0) ? count($days) : 1;
         
         foreach ($ordersPerHour as $key => $value) {
-            $ordersPerHour[$key] = $value / $dayCount;
+            $ordersPerHour[$key] = $value / count($days);
         }
 
         return $ordersPerHour;

@@ -17,7 +17,7 @@ class ReportService {
     public function generateReports() {
 
         // get two weeks
-        $startDate = new DateTime("3 weeks ago");
+        $startDate = new DateTime("4 weeks ago");
         $endDate = new DateTime("1 week ago");
 
         $this->generateWebsiteReports($startDate, $endDate);
@@ -106,12 +106,12 @@ class ReportService {
 
         $ordersPerHour = [];
 
-        $weeks = [];
+        $days = [];
 
         foreach ($orders as $order) {
-            $week = $order->getOrderDate()->format('W');
-            if (array_search($week, $weeks) !== false) {
-                $weeks[] = $week;
+            $day = $order->getOrderDate()->format('z');
+            if (array_search($day, $days) !== false) {
+                $days[] = $day;
             }
             if (!isset($ordersPerHour[$order->getOrderDate()->format('G')])) {
                 $ordersPerHour[$order->getOrderDate()->format('G')] = 0;
@@ -119,10 +119,10 @@ class ReportService {
             $ordersPerHour[$order->getOrderDate()->format('G')] ++;
         }
 
-        $weekCount = (count($weeks) > 0) ? count($weeks) : 1;
+        $dayCount = (count($days) > 0) ? count($days) : 1;
         
         foreach ($ordersPerHour as $key => $value) {
-            $ordersPerHour[$key] = $value / $weekCount;
+            $ordersPerHour[$key] = $value / $dayCount;
         }
 
         return $ordersPerHour;
@@ -132,7 +132,7 @@ class ReportService {
 
         $williamsOrders = $this->orderService->getWebsiteOrdersByDate($startDate, $endDate, OrderService::WMS_WILLIAMS);
         $muffsOrders = $this->orderService->getWebsiteOrdersByDate($startDate, $endDate, OrderService::WMS_MUFFS);
-
+        
         $williamsAvgDaysToShip = $this->calculateWebsiteAverageDaysToShip($williamsOrders);
         $muffsAvgDaysToShip = $this->calculateWebsiteAverageDaysToShip($muffsOrders);
 
@@ -150,8 +150,8 @@ class ReportService {
 
         foreach ($days as $i => $day) {
             $avgDaysToShip[$i]['label'] = $day;
-            $avgDaysToShip[$i]['muffs'] = number_format($muffsAvgDaysToShip[$day], 2, '.', '');
-            $avgDaysToShip[$i]['williams'] = number_format($williamsAvgDaysToShip[$day], 2, '.', '');
+            $avgDaysToShip[$i]['muffs'] = round($muffsAvgDaysToShip[$day], 2);
+            $avgDaysToShip[$i]['williams'] = round($williamsAvgDaysToShip[$day], 2);
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/avgDaysToShip.json', json_encode($avgDaysToShip));

@@ -10,29 +10,18 @@
 
             var reports = $.parseJSON('{{ reports|json_encode|raw }}');
 
-            var createBarGraph = function (report) {
+            var createBarGraphAvgOrdersPerDay = function () {
 
                 return function (data) {
-                    
-                    var title;
-                    
-                    if (report['type'] == 'avgDaysToShip') {
-                        title = 'Average Days To Ship';
-                    } 
-                    
-                    if (report['type'] == 'avgOrdersPerDay') {
-                        title = 'Average Orders Per Day';
-                    }
 
                     var el = $('<div>').height('250px');
 
-                    var panel = $('<div>').addClass('col-sm-12')
-                            .append($('<div>').addClass('panel panel-default')
-                                    .append($('<div>').addClass('panel-heading').html(title))
+                    var panel = $('<div>').addClass('panel panel-default')
+                                    .append($('<div>').addClass('panel-heading').html('Average Orders Per Day'))
                                     .append($('<div>').addClass('panel-body')
-                                            .append(el)));
+                                            .append(el));
 
-                    $('#graphs').append(panel);
+                    $('#ordersPerDay').append(panel);
 
                     Morris.Bar({
                         element: el,
@@ -45,21 +34,20 @@
                 }
             }
 
-            var createLineGraph = function (report) {
+            var createBarGraphAvgDaysToShip = function () {
 
                 return function (data) {
 
                     var el = $('<div>').height('250px');
 
-                    var panel = $('<div>').addClass('col-sm-12')
-                            .append($('<div>').addClass('panel panel-default')
-                                    .append($('<div>').addClass('panel-heading').html('Orders Per Hour'))
+                    var panel = $('<div>').addClass('panel panel-default')
+                                    .append($('<div>').addClass('panel-heading').html('Average Days To Ship'))
                                     .append($('<div>').addClass('panel-body')
-                                            .append(el)));
+                                            .append(el));
 
-                    $('#graphs').append(panel);
+                    $('#daysToShip').append(panel);
 
-                    Morris.Line({
+                    Morris.Bar({
                         element: el,
                         data: data,
                         xkey: 'label',
@@ -70,16 +58,43 @@
                 }
             }
 
-            console.log(reports);
+            var createLineGraphOrdersPerHour = function () {
+
+                return function (data) {
+
+                    var el = $('<div>').height('250px');
+
+                    var panel = $('<div>').addClass('panel panel-default')
+                                    .append($('<div>').addClass('panel-heading').html('Orders Per Hour'))
+                                    .append($('<div>').addClass('panel-body')
+                                            .append(el));
+
+                    $('#ordersPerHour').append(panel);
+
+                    Morris.Line({
+                        element: el,
+                        data: data,
+                        parseTime: false,
+                        xkey: 'label',
+                        ykeys: ['muffs', 'williams'],
+                        labels: ['Muffs', 'Williams']
+                    });
+
+                }
+            }
 
             for (var i = 0; i < reports.length; i++) {
 
-                if (reports[i]['type'] == 'avgDaysToShip' || reports[i]['type'] == 'avgOrdersPerDay') {
-                    $.getJSON(reports[i]['filename'], createBarGraph(reports[i]));
+                if (reports[i]['type'] == 'avgOrdersPerDay') {
+                    $.getJSON(reports[i]['filename'], createBarGraphAvgOrdersPerDay());
                 }
-                
+
+                if (reports[i]['type'] == 'avgDaysToShip') {
+                    $.getJSON(reports[i]['filename'], createBarGraphAvgDaysToShip());
+                }
+
                 if (reports[i]['type'] == 'ordersPerHour') {
-                    $.getJSON(reports[i]['filename'], createLineGraph(reports[i]));
+                    $.getJSON(reports[i]['filename'], createLineGraphOrdersPerHour());
                 }
 
             }
@@ -97,7 +112,11 @@
 
 {% block body %}
 
-    <div id="graphs" class="row">
+    <div class="row">
+        
+        <div id="daysToShip" class="col-sm-12"></div>
+        <div id="ordersPerDay" class="col-sm-12"></div>
+        <div id="ordersPerHour" class="col-sm-12"></div>
 
     </div>
 

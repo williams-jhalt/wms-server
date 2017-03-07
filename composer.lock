@@ -3445,12 +3445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/wms-bundle.git",
-                "reference": "df942f16b8fab6d5971ec514b7db4726c84cbc31"
+                "reference": "2381c94f69e0668e04d1f32627888f9db7ceb840"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/wms-bundle/zipball/df942f16b8fab6d5971ec514b7db4726c84cbc31",
-                "reference": "df942f16b8fab6d5971ec514b7db4726c84cbc31",
+                "url": "https://api.github.com/repos/williams-jhalt/wms-bundle/zipball/2381c94f69e0668e04d1f32627888f9db7ceb840",
+                "reference": "2381c94f69e0668e04d1f32627888f9db7ceb840",
                 "shasum": ""
             },
             "require": {
@@ -3483,7 +3483,7 @@
                 "source": "https://github.com/williams-jhalt/wms-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/wms-bundle/issues"
             },
-            "time": "2017-03-07 16:05:28"
+            "time": "2017-03-07 20:50:09"
         }
     ],
     "packages-dev": [

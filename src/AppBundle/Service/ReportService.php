@@ -106,11 +106,23 @@ class ReportService {
 
         $ordersPerHour = [];
 
+        $weeks = [];
+
         foreach ($orders as $order) {
-            if (!isset($ordersPerHour[$order->getOrderDate()->format('Y-m-d H:00')])) {
-                $ordersPerHour[$order->getOrderDate()->format('Y-m-d H:00')] = 0;
+            $week = $order->getOrderDate()->format('W');
+            if (array_search($week, $weeks) !== false) {
+                $weeks[] = $week;
             }
-            $ordersPerHour[$order->getOrderDate()->format('Y-m-d H:00')] ++;
+            if (!isset($ordersPerHour[$order->getOrderDate()->format('G')])) {
+                $ordersPerHour[$order->getOrderDate()->format('G')] = 0;
+            }
+            $ordersPerHour[$order->getOrderDate()->format('G')] ++;
+        }
+
+        $weekCount = (count($weeks) > 0) ? count($weeks) : 1;
+        
+        foreach ($ordersPerHour as $key => $value) {
+            $ordersPerHour[$key] = $value / $weekCount;
         }
 
         return $ordersPerHour;
@@ -138,8 +150,8 @@ class ReportService {
 
         foreach ($days as $i => $day) {
             $avgDaysToShip[$i]['label'] = $day;
-            $avgDaysToShip[$i]['muffs'] = $muffsAvgDaysToShip[$day];
-            $avgDaysToShip[$i]['williams'] = $williamsAvgDaysToShip[$day];
+            $avgDaysToShip[$i]['muffs'] = number_format($muffsAvgDaysToShip[$day], 2, '.', '');
+            $avgDaysToShip[$i]['williams'] = number_format($williamsAvgDaysToShip[$day], 2, '.', '');
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/avgDaysToShip.json', json_encode($avgDaysToShip));
@@ -170,9 +182,7 @@ class ReportService {
 
         $ordersPerHour = [];
 
-        $hours = array_unique(array_merge(array_keys($williamsOrdersPerHour), array_keys($muffsOrdersPerHour)));
-
-        foreach ($hours as $hour) {
+        for ($hour = 0; $hour < 24; $hour++) {
             $ordersPerHour[] = [
                 'label' => $hour,
                 'muffs' => isset($muffsOrdersPerHour[$hour]) ? $muffsOrdersPerHour[$hour] : 0,

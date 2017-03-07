@@ -57,7 +57,7 @@ class ReportService {
             'Thursday' => 0,
             'Friday' => 0,
             'Saturday' => 0
-    ];
+        ];
 
         foreach ($daysToShip as $key => $value) {
             if (count($value) > 0 && is_array($value)) {
@@ -170,17 +170,14 @@ class ReportService {
 
         $ordersPerHour = [];
 
-        foreach ($days as $day) {
+        $hours = array_unique(array_merge(array_keys($williamsOrdersPerHour), array_keys($muffsOrdersPerHour)));
 
-            $hours = array_unique(array_merge(array_keys($williamsOrdersPerHour[$day]), array_keys($muffsOrdersPerHour[$day])));
-
-            foreach ($hours as $hour) {
-                $ordersPerHour[] = [
-                    'label' => $hour,
-                    'muffs' => isset($muffsOrdersPerHour[$hour]) ? $muffsOrdersPerHour[$hour] : 0,
-                    'williams' => isset($williamsOrdersPerHour[$hour]) ? $williamsOrdersPerHour[$hour] : 0
-                ];
-            }
+        foreach ($hours as $hour) {
+            $ordersPerHour[] = [
+                'label' => $hour,
+                'muffs' => isset($muffsOrdersPerHour[$hour]) ? $muffsOrdersPerHour[$hour] : 0,
+                'williams' => isset($williamsOrdersPerHour[$hour]) ? $williamsOrdersPerHour[$hour] : 0
+            ];
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/ordersPerHour.json', json_encode($ordersPerHour));

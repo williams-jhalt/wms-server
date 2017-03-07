@@ -33,7 +33,7 @@ class ReportsController extends Controller {
         foreach ($finder as $file) {
             $reports[] = [
                 'type' => $file->getBasename(".json"),
-                'filename' => $file->getBasename()
+                'filename' => $request->getBasePath() . "/data/" . $file->getBasename()
             ];
         }
 

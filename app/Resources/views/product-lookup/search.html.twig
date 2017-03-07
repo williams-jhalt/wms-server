@@ -24,20 +24,10 @@
                 <b>{{ item.itemNumber }}</b> - {{ item.name }}
             </div>
             <div class="panel-body">
-                <div class="media">
-                    {% if item.detail.images is not empty %}
-                        <div class="media-left">
-                            <img class="media-object" src="{{ item.detail.images[0] }}">
-                        </div>
-                    {% endif %}
-                    <div class="media-body">
-                        {{ item.detail.description }}
-                    </div>
-                </div>
                 <b>Bin:</b> {{ item.binLocation }}<br>
-                <b>In Stock:</b> {{ item.stockQuantity }}<br>
-                <b>Committed:</b> {{ item.committedQuantity }}<br>
-                <b>Available:</b> {{ item.stockQuantity - item.committedQuantity }}
+                <b>In Stock:</b> {{ item.quantityOnHand }}<br>
+                <b>Committed:</b> {{ item.quantityCommitted }}<br>
+                <b>Available:</b> {{ item.quantityOnHand - item.quantityCommitted }}
             </div>
         </div>
 

@@ -30,6 +30,7 @@ class Builder implements ContainerAwareInterface
         $menu->addChild('Product Lookup', array('route' => 'product_lookup_index'));
         $menu->addChild('Order Lookup', array('route' => 'sales_orders_index'));
         $menu->addChild('Reports', array('route' => 'reports_index'));
+//        $menu->addChild('Order Watcher', array('route' => 'order_watcher_index'));
         
         return $menu;
     }

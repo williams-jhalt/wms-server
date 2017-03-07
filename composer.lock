@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "bfdd6965353a46dcfcf89c75d07b2d65",
+    "content-hash": "ba4edba6bf65006138f3e6cdad5051c3",
     "packages": [
         {
             "name": "braincrafted/bootstrap-bundle",
@@ -935,21 +935,21 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.2",
+            "version": "6.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60"
+                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
-                "reference": "ebf29dee597f02f09f4d5bbecc68230ea9b08f60",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/promises": "^1.0",
-                "guzzlehttp/psr7": "^1.3.1",
+                "guzzlehttp/psr7": "^1.4",
                 "php": ">=5.5"
             },
             "require-dev": {
@@ -993,7 +993,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-10-08T15:01:37+00:00"
+            "time": "2017-02-28T22:50:30+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1931,16 +1931,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.7",
+            "version": "v2.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f"
+                "reference": "eeb4c23c7b84c1dc87db3c92856bd57ff1844ca4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
-                "reference": "b5ea1ef3d8ff10c307ba8c5945c2f134e503278f",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/eeb4c23c7b84c1dc87db3c92856bd57ff1844ca4",
+                "reference": "eeb4c23c7b84c1dc87db3c92856bd57ff1844ca4",
                 "shasum": ""
             },
             "require": {
@@ -1975,7 +1975,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-02-27T17:11:23+00:00"
+            "time": "2017-03-03T14:11:40+00:00"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -2272,16 +2272,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.22",
+            "version": "v3.0.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "1c66c2e3b8f17f06178142386aff5a9f8057a104"
+                "reference": "d3601fd5709168ace7a1ca6eefa2619a1632b7f7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/1c66c2e3b8f17f06178142386aff5a9f8057a104",
-                "reference": "1c66c2e3b8f17f06178142386aff5a9f8057a104",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/d3601fd5709168ace7a1ca6eefa2619a1632b7f7",
+                "reference": "d3601fd5709168ace7a1ca6eefa2619a1632b7f7",
                 "shasum": ""
             },
             "require": {
@@ -2338,7 +2338,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-02-15T06:52:30+00:00"
+            "time": "2017-03-02T20:17:28+00:00"
         },
         {
             "name": "sensiolabs/security-checker",
@@ -2907,16 +2907,16 @@
         },
         {
             "name": "symfony/swiftmailer-bundle",
-            "version": "v2.4.2",
+            "version": "v2.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/swiftmailer-bundle.git",
-                "reference": "ad751095576ce0c12a284e30e3fff80c91f27225"
+                "reference": "b59a70d03b948e29d070b6c4416b4a03af4748ec"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/ad751095576ce0c12a284e30e3fff80c91f27225",
-                "reference": "ad751095576ce0c12a284e30e3fff80c91f27225",
+                "url": "https://api.github.com/repos/symfony/swiftmailer-bundle/zipball/b59a70d03b948e29d070b6c4416b4a03af4748ec",
+                "reference": "b59a70d03b948e29d070b6c4416b4a03af4748ec",
                 "shasum": ""
             },
             "require": {
@@ -2938,7 +2938,7 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.4-dev"
+                    "dev-master": "2.5-dev"
                 }
             },
             "autoload": {
@@ -2962,7 +2962,7 @@
             ],
             "description": "Symfony SwiftmailerBundle",
             "homepage": "http://symfony.com",
-            "time": "2016-12-20T04:44:33+00:00"
+            "time": "2017-03-02T16:47:57+00:00"
         },
         {
             "name": "symfony/symfony",
@@ -3304,17 +3304,62 @@
             "time": "2016-10-14T09:17:47+00:00"
         },
         {
+            "name": "williams/connectship-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/williams-jhalt/connectship-bundle.git",
+                "reference": "8f982028d68214f9aeedc6a4f3f7ebfec0e219f4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/williams-jhalt/connectship-bundle/zipball/8f982028d68214f9aeedc6a4f3f7ebfec0e219f4",
+                "reference": "8f982028d68214f9aeedc6a4f3f7ebfec0e219f4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "symfony/symfony": "3.2.*"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "5.7.14",
+                "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
+            },
+            "type": "symfony-bundle",
+            "autoload": {
+                "psr-4": {
+                    "Williams\\ConnectshipBundle\\": ""
+                },
+                "exclude-from-classmap": [
+                    "Tests/"
+                ]
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "support": {
+                "source": "https://github.com/williams-jhalt/connectship-bundle/tree/master",
+                "issues": "https://github.com/williams-jhalt/connectship-bundle/issues"
+            },
+            "time": "2017-03-01 21:06:00"
+        },
+        {
             "name": "williams/erp-bundle",
             "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/erp-bundle.git",
-                "reference": "3d38084d5e17595be9d97c6c36c714f4b4411717"
+                "reference": "e02c54b8dbe04e8727c40e5436557c7fca7e8e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/3d38084d5e17595be9d97c6c36c714f4b4411717",
-                "reference": "3d38084d5e17595be9d97c6c36c714f4b4411717",
+                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/e02c54b8dbe04e8727c40e5436557c7fca7e8e79",
+                "reference": "e02c54b8dbe04e8727c40e5436557c7fca7e8e79",
                 "shasum": ""
             },
             "require": {
@@ -3346,7 +3391,7 @@
                 "source": "https://github.com/williams-jhalt/erp-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/erp-bundle/issues"
             },
-            "time": "2016-12-28 18:33:27"
+            "time": "2017-03-03 15:37:13"
         },
         {
             "name": "williams/wholesale-bundle",
@@ -3400,12 +3445,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/wms-bundle.git",
-                "reference": "23cd0f05866129852df0c6a7177ac58b79b6f994"
+                "reference": "83d6adc32835e96eb4ad45ed336e16098932753e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/wms-bundle/zipball/23cd0f05866129852df0c6a7177ac58b79b6f994",
-                "reference": "23cd0f05866129852df0c6a7177ac58b79b6f994",
+                "url": "https://api.github.com/repos/williams-jhalt/wms-bundle/zipball/83d6adc32835e96eb4ad45ed336e16098932753e",
+                "reference": "83d6adc32835e96eb4ad45ed336e16098932753e",
                 "shasum": ""
             },
             "require": {
@@ -3438,22 +3483,22 @@
                 "source": "https://github.com/williams-jhalt/wms-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/wms-bundle/issues"
             },
-            "time": "2017-02-27 16:58:47"
+            "time": "2017-03-03 20:04:12"
         }
     ],
     "packages-dev": [
         {
             "name": "sensio/generator-bundle",
-            "version": "v3.1.2",
+            "version": "v3.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioGeneratorBundle.git",
-                "reference": "ec278c0bd530edf155c4a00900577b5cb80f559e"
+                "reference": "c76c7833ed5ffe0f5aeef15e13939ddb59a684eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/ec278c0bd530edf155c4a00900577b5cb80f559e",
-                "reference": "ec278c0bd530edf155c4a00900577b5cb80f559e",
+                "url": "https://api.github.com/repos/sensiolabs/SensioGeneratorBundle/zipball/c76c7833ed5ffe0f5aeef15e13939ddb59a684eb",
+                "reference": "c76c7833ed5ffe0f5aeef15e13939ddb59a684eb",
                 "shasum": ""
             },
             "require": {
@@ -3492,7 +3537,7 @@
                 }
             ],
             "description": "This bundle generates code for you",
-            "time": "2016-12-05T16:01:19+00:00"
+            "time": "2017-03-03T15:22:50+00:00"
         },
         {
             "name": "symfony/phpunit-bridge",
@@ -3559,7 +3604,8 @@
     "stability-flags": {
         "williams/erp-bundle": 20,
         "williams/wholesale-bundle": 20,
-        "williams/wms-bundle": 20
+        "williams/wms-bundle": 20,
+        "williams/connectship-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

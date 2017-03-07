@@ -2,14 +2,14 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Product;
-use AppBundle\Entity\ProductDetail;
+use Williams\ErpBundle\Service\ErpService;
+use Williams\WholesaleBundle\Service\WholesaleService;
 
 class ProductService {
 
     /**
      *
-     * @var ErpOneConnectorService
+     * @var ErpService
      */
     private $erp;
 
@@ -18,166 +18,90 @@ class ProductService {
      */
     private $wholesale;
 
-    public function __construct(ErpOneConnectorService $erp, WholesaleService $wholesale) {
+    public function __construct(ErpService $erp, WholesaleService $wholesale) {
         $this->erp = $erp;
         $this->wholesale = $wholesale;
     }
-
-    public function getByItemNumber($itemNumber) {
-
-        $query = "FOR EACH item NO-LOCK "
-                . "WHERE item.company_it = '" . $this->erp->getCompany() . "' "
-                . "AND item.item = '" . $itemNumber . "', "
-                . "EACH wa_item NO-LOCK WHERE "
-                . "wa_item.company_it = item.company_it AND "
-                . "wa_item.item = item.item";
-
-        $response = $this->erp->read($query, "item.item,item.descr,wa_item.ship_location,wa_item.list_price,wa_item.qty_cmtd,wa_item.qty_oh");
-
-        if (empty($response)) {
-            return null;
+    
+    public function findBySearchTerms($searchTerms, $limit = 25, $offset = 0) {
+        
+        $repo = $this->erp->getProductRepository();
+        
+        $products = $repo->findByTextSearch($searchTerms, $limit, $offset)->getProducts();
+        
+        $result = array();
+        
+        foreach ($products as $product) {
+            
+            $t = new \AppBundle\Model\Product();
+            $result[] = $this->loadProductFromErp($t, $product);
+            
         }
+        
+        return $result;
+            
+        
+    }        
 
-        $item = $response[0];
+    /**
+     * @param int $limit
+     * @param int $offset
+     * 
+     * @return \AppBundle\Model\Product[]
+     */
+    public function getCommittedProducts($limit = 25, $offset = 0) {
 
-        $product = new Product();
-        $product->setItemNumber($item->item_item);
-        $product->setName(join(" ", $item->item_descr));
-        $product->setBinLocation($item->wa_item_ship_location);
-        $product->setPrice($item->wa_item_list_price);
-        $product->setStockQuantity($item->wa_item_qty_oh);
-        $product->setCommittedQuantity($item->wa_item_qty_cmtd);
+        $repo = $this->erp->getProductRepository();
 
-        $productDetail = new ProductDetail();
-
-        $wholesaleData = $this->wholesale->getProductData($item->item_item);
-        $wholesaleImageData = $this->wholesale->getProductImageData($item->item_item);
-
-        if (!empty($wholesaleData)) {
-            $productDetail->setDescription($wholesaleData->description);
+        $products = $repo->findCommittedItems($limit, $offset)->getProducts();
+        
+        $result = array();
+        
+        foreach ($products as $product) {
+            $t = new \AppBundle\Model\Product();
+            $result[] = $this->loadProductFromErp($t, $product);
         }
-
-        if (!empty($wholesaleImageData)) {
-
-            $images = array();
-
-            foreach ($wholesaleImageData as $wholesaleImage) {
-                $images[] = $wholesaleImage->image_thumb_url;
-            }
-
-            $productDetail->setImages($images);
-        }
-
-        $product->setDetail($productDetail);
-
+        
+        return $result;
+        
+    }
+    
+    private function loadProductFromErp(\AppBundle\Model\Product $product, \Williams\ErpBundle\Model\Product $erpProduct) {
+        
+        $product->setBarcode($erpProduct->getBarcode())
+                ->setBinLocation($erpProduct->getBinLocation())
+                ->setCreatedOn($erpProduct->getCreatedOn())
+                ->setDeleted($erpProduct->getDeleted())
+                ->setItemNumber($erpProduct->getItemNumber())
+                ->setManufacturerCode($erpProduct->getManufacturerCode())
+                ->setName($erpProduct->getName())
+                ->setProductTypeCode($erpProduct->getProductTypeCode())
+                ->setQuantityCommitted($erpProduct->getQuantityCommitted())
+                ->setQuantityOnHand($erpProduct->getQuantityOnHand())
+                ->setReleaseDate($erpProduct->getReleaseDate())
+                ->setUnitOfMeasure($erpProduct->getUnitOfMeasure())
+                ->setWarehouse($erpProduct->getWarehouse())
+                ->setWholesalePrice($erpProduct->getWholesalePrice())
+                ->setWebItem($erpProduct->getWebItem());
+        
         return $product;
+        
     }
-
-    public function findBySearchTerms($searchTerms) {
-
-        $query = "FOR EACH item NO-LOCK "
-                . "WHERE item.company_it = '" . $this->erp->getCompany() . "' "
-                . "AND item.sy_lookup MATCHES '*" . $searchTerms . "*', "
-                . "EACH wa_item NO-LOCK WHERE "
-                . "wa_item.company_it = item.company_it AND "
-                . "wa_item.item = item.item";
-
-        $response = $this->erp->read($query, "item.item,item.descr,wa_item.ship_location,wa_item.list_price,wa_item.qty_cmtd,wa_item.qty_oh");
-
-        $result = array();
-
-        foreach ($response as $item) {
-
-            $product = new Product();
-            $product->setItemNumber($item->item_item);
-            $product->setName(join(" ", $item->item_descr));
-            $product->setBinLocation($item->wa_item_ship_location);
-            $product->setPrice($item->wa_item_list_price);
-            $product->setStockQuantity($item->wa_item_qty_oh);
-            $product->setCommittedQuantity($item->wa_item_qty_cmtd);
-
-            $productDetail = new ProductDetail();
-
-            $wholesaleData = $this->wholesale->getProductData($item->item_item);
-            $wholesaleImageData = $this->wholesale->getProductImageData($item->item_item);
-
-            if (!empty($wholesaleData)) {
-                $productDetail->setDescription($wholesaleData->description);
-            }
-
-            if (!empty($wholesaleImageData)) {
-
-                $images = array();
-
-                foreach ($wholesaleImageData as $wholesaleImage) {
-                    $images[] = $wholesaleImage->image_thumb_url;
-                }
-
-                $productDetail->setImages($images);
-            }
-
-            $product->setDetail($productDetail);
-
-            $result[] = $product;
-        }
-
-        return $result;
-    }
-
-    public function committedProducts($searchTerms = null, $offset = 0, $limit = 100) {
-
-        $query = "FOR EACH item NO-LOCK "
-                . "WHERE item.company_it = '" . $this->erp->getCompany() . "' ";
-
-        if ($searchTerms !== null) {
-            $query .= "AND item.sy_lookup MATCHES '*" . $searchTerms . "*'";
-        }
-
-        $query .= ", EACH wa_item NO-LOCK WHERE "
-                . "wa_item.company_it = item.company_it AND "
-                . "wa_item.item = item.item AND "
-                . "wa_item.qty_cmtd > 0";
-
-        $response = $this->erp->read($query, "item.item,item.descr,wa_item.ship_location,wa_item.list_price,wa_item.qty_cmtd,wa_item.qty_oh", $offset, $limit);
-
-        $result = array();
-
-        foreach ($response as $item) {
-
-            $product = new Product();
-            $product->setItemNumber($item->item_item);
-            $product->setName(join(" ", $item->item_descr));
-            $product->setBinLocation($item->wa_item_ship_location);
-            $product->setPrice($item->wa_item_list_price);
-            $product->setStockQuantity($item->wa_item_qty_oh);
-            $product->setCommittedQuantity($item->wa_item_qty_cmtd);
-
-            $productDetail = new ProductDetail();
-
-            $wholesaleData = $this->wholesale->getProductData($item->item_item);
-            $wholesaleImageData = $this->wholesale->getProductImageData($item->item_item);
-
-            if (!empty($wholesaleData)) {
-                $productDetail->setDescription($wholesaleData->description);
-            }
-
-            if (!empty($wholesaleImageData)) {
-
-                $images = array();
-
-                foreach ($wholesaleImageData as $wholesaleImage) {
-                    $images[] = $wholesaleImage->image_thumb_url;
-                }
-
-                $productDetail->setImages($images);
-            }
-
-            $product->setDetail($productDetail);
-
-            $result[] = $product;
-        }
-
-        return $result;
+    
+    private function loadProductFromWholesale(\AppBundle\Model\Product $product, \Williams\WholesaleBundle\Model\Product $wholesaleProduct) {
+        
+        $product->setDescription($wholesaleProduct->getDescription())
+                ->setColor($wholesaleProduct->getColor())
+                ->setMaterial($wholesaleProduct->getMaterial())
+                ->setHeight($wholesaleProduct->getHeight())
+                ->setLength($wholesaleProduct->getLength())
+                ->setWidth($wholesaleProduct->getWidth())
+                ->setDiameter($wholesaleProduct->getDiameter())
+                ->setWeight($wholesaleProduct->getWeight())
+                ->setKeywords($wholesaleProduct->getKeywords());
+        
+        return $product;
+        
     }
 
 }

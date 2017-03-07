@@ -28,3 +28,11 @@ parameters:
 
     erp_connector_username: ~
     erp_connector_password: ~
+
+    williams_wsdl_url: ~
+    williams_username: ~
+    williams_password: ~
+
+    muffs_wsdl_url: ~
+    muffs_username: ~
+    muffs_password: ~

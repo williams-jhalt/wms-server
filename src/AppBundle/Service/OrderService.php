@@ -2,123 +2,209 @@
 
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Carton;
-use AppBundle\Entity\CartonItem;
-use AppBundle\Entity\SalesOrder;
+use AppBundle\Model\SalesOrder;
 use DateTime;
+use Williams\ConnectshipBundle\Service\ConnectshipService;
+use Williams\ErpBundle\Service\ErpService;
+use Williams\WmsBundle\Model\Weborder;
+use Williams\WmsBundle\Service\WmsService;
 
 class OrderService {
-    
-    private $redis;
-    
+
+    const WMS_MUFFS = 'muffs';
+    const WMS_WILLIAMS = 'williams';
+
     /**
-     * @var ErpOneConnectorService
+     * @var ErpService
      */
     private $erp;
-    
+
     /**
-     * @var ProductService
+     * @var ConnectshipService
      */
-    private $productService;
-    
+    private $connectship;
+
     /**
-     * @var ConnectShipService
+     * @var WmsService
      */
-    private $connectShipService;
-    
-    public function __construct(ErpOneConnectorService $erp, $redis, ProductService $productService, ConnectShipService $connectShipService) {        
-        $this->redis = $redis;
+    private $muffsWms;
+
+    /**
+     * @var WmsService
+     */
+    private $williamsWms;
+
+    public function __construct(ErpService $erp, ConnectshipService $connectship, WmsService $muffsWms, WmsService $williamsWms) {
         $this->erp = $erp;
-        $this->productService = $productService;
-        $this->connectShipService = $connectShipService;
-    }    
-    
-    public function getOrder($manifestId) {
+        $this->connectship = $connectship;
+        $this->muffsWms = $muffsWms;
+        $this->williamsWms = $williamsWms;
+    }
 
-        $query = "FOR EACH oe_head NO-LOCK "
-                . "WHERE oe_head.company_oe = '" . $this->erp->getCompany() . "' "
-                . "AND oe_head.Manifest_id = '" . $manifestId . "'";
+    /**
+     * 
+     * @return Weborder[]
+     */
+    public function getNewOrders($company = self::WMS_WILLIAMS) {
 
-        $response = $this->erp->read($query, "oe_head.order,oe_head.rec_seq,oe_head.ord_date,oe_head.customer,oe_head.Manifest_id");
-        
-        $result = array();
-
-        foreach ($response as $item) {
-            
-            $salesOrder = new SalesOrder();
-            $salesOrder->setCustomerNumber($item->oe_head_customer);
-            $salesOrder->setManifestId($item->oe_head_Manifest_id);
-            $salesOrder->setOrderDate(new DateTime($item->oe_head_ord_date));
-            $salesOrder->setOrderNumber($item->oe_head_order);
-            $salesOrder->setRecordSequence($item->oe_head_rec_seq);
-            
-            $result[] = $salesOrder;
-            
+        if ($company == self::WMS_MUFFS) {
+            $repo = $this->muffsWms->getWeborderRepository();
+        } else {
+            $repo = $this->williamsWms->getWeborderRepository();
         }
-        
-        return $result[0];
 
+        return $repo->getNewOrders();
     }
     
-    public function getCartons($order, $seq = '0001') {
+    /**
+     * Get orders from website by date, company can be one of:
+     * 
+     * OrderService::WMS_WILLIAMS
+     * OrderService::WMS_MUFFS
+     * 
+     * @param DateTime $startDate
+     * @param DateTime $endDate
+     * @param string $company
+     * 
+     * @return Weborder[]
+     */
+    public function getWebsiteOrdersByDate(DateTime $startDate, DateTime $endDate, $company) {
+        
+        if ($company == self::WMS_WILLIAMS) {
+            return $this->williamsWms->getWeborderRepository()->findByOrderDate($startDate, $endDate);
+        } else {
+            return $this->muffsWms->getWeborderRepository()->findByOrderDate($startDate, $endDate);
+        }
+        
+    }
 
-        $query = "FOR EACH ed_ucc128ln NO-LOCK "
-                . "WHERE ed_ucc128ln.company_oe = '" . $this->erp->getCompany() . "' "
-                . "AND ed_ucc128ln.order = '" . $order . "' "
-                . "AND ed_ucc128ln.rec_seq = '" . $seq . "'";
+    public function getOrdersByDate(DateTime $startDate, DateTime $endDate, $company = self::WMS_WILLIAMS) {
 
-        $response = $this->erp->read($query, "ed_ucc128ln.order,ed_ucc128ln.rec_seq,ed_ucc128ln.ucc,ed_ucc128ln.carton");
+        if ($company == self::WMS_MUFFS) {
+            return $this->getMuffsOrdersByDate($startDate, $endDate);
+        } else {
+            return $this->getWilliamsOrdersByDate($startDate, $endDate);
+        }
+    }
+
+    private function getWilliamsOrdersByDate(DateTime $startDate, DateTime $endDate) {
         
         $result = array();
-        $uccs = array();
         
-        foreach ($response as $erpItem) {
-            if (array_search($erpItem->ed_ucc128ln_ucc, $uccs) !== false) {
-                continue;
+        $limit = 1000;
+        $offset = 0;
+        
+        do {
+        
+            $erpOrders = $this->erp->getSalesOrderRepository()->findByOrderDate($startDate, $endDate, $limit, $offset)->getSalesOrders();
+            
+            foreach ($erpOrders as $erpOrder) {
+                
+                if (strtoupper(substr($erpOrder->getCustomerNumber(), -1)) == 'I') {
+                    continue;
+                }                
+                
+                $salesOrder = new SalesOrder();
+                
+                $salesOrder->setCompany(SalesOrder::COMPANY_WILLIAMS);
+                
+                $this->loadOrderFromErp($salesOrder, $erpOrder);                
+                
+                if (!empty($erpOrder->getWebReferenceNumber())) {
+                    $salesOrder->setSource(SalesOrder::SOURCE_WEBSITE);
+                    $weborder = $this->williamsWms->getWeborderRepository()->getOrder($salesOrder->getWebsiteId());
+                    $this->loadOrderFromWms($salesOrder, $weborder);
+                } else {
+                    $salesOrder->setSource(SalesOrder::SOURCE_CSR);
+                }
+                
+                $result[] = $salesOrder;
+                
             }
-            $carton = new Carton();
-            $carton->setCartonNumber($erpItem->ed_ucc128ln_carton);
-            $carton->setOrderNumber($erpItem->ed_ucc128ln_order);
-            $carton->setRecordSequence($erpItem->ed_ucc128ln_rec_seq);
-            $carton->setUcc($erpItem->ed_ucc128ln_ucc);
-            $carton->setTrackingNumber($this->connectShipService->getTrackingNumber($erpItem->ed_ucc128ln_ucc));
-            $result[] = $carton;
-            $uccs[] = $erpItem->ed_ucc128ln_ucc;
-        }
-        
+            
+            $offset += $limit;
+            
+        } while(count($erpOrders) > 0);
+
         return $result;
         
     }
-    
-    public function getItems($ucc) {
 
-        $query = "FOR EACH ed_ucc128pk NO-LOCK "
-                . "WHERE ed_ucc128pk.company_oe = '" . $this->erp->getCompany() . "' "
-                . "AND ed_ucc128pk.ucc = '" . $ucc . "'";
-
-        $response = $this->erp->read($query, "ed_ucc128pk.item,ed_ucc128pk.qty_shp");
+    private function getMuffsOrdersByDate(DateTime $startDate, DateTime $endDate) {
         
         $result = array();
         
-        foreach ($response as $erpItem) {
-            $product = $this->productService->getByItemNumber($erpItem->ed_ucc128pk_item);
-            
-            $cartonItem = new CartonItem();
-            $cartonItem->setBinLocation($product->getBinLocation());
-            $cartonItem->setCommittedQuantity($product->getCommittedQuantity());
-            $cartonItem->setDetail($product->getDetail());
-            $cartonItem->setItemNumber($product->getItemNumber());
-            $cartonItem->setName($product->getName());
-            $cartonItem->setPrice($product->getPrice());
-            $cartonItem->setQuantityShipped($erpItem->ed_ucc128pk_qty_shp);
-            $cartonItem->setStockQuantity($product->getStockQuantity());
-            
-            $result[] = $cartonItem;
-        }
+        $limit = 1000;
+        $offset = 0;
         
+        do {
+        
+            $erpOrders = $this->erp->getSalesOrderRepository()->findByOrderDate($startDate, $endDate, $limit, $offset)->getSalesOrders();
+            
+            foreach ($erpOrders as $erpOrder) {
+                
+                if (strtoupper(substr($erpOrder->getCustomerNumber(), -1)) != 'I') {
+                    continue;
+                }                
+                
+                $salesOrder = new SalesOrder();
+                
+                $salesOrder->setCompany(SalesOrder::COMPANY_MUFFS);
+                
+                $this->loadOrderFromErp($salesOrder, $erpOrder);                
+                
+                if (!empty($erpOrder->getWebReferenceNumber())) {
+                    $salesOrder->setSource(SalesOrder::SOURCE_WEBSITE);
+                    $weborder = $this->williamsWms->getWeborderRepository()->getOrder($salesOrder->getWebsiteId());
+                    $this->loadOrderFromWms($salesOrder, $weborder);
+                } else {
+                    $salesOrder->setSource(SalesOrder::SOURCE_CSR);
+                }
+                 
+                $result[] = $salesOrder;
+                
+            }
+            
+            $offset += $limit;
+            
+        } while(count($erpOrders) > 0);
+
         return $result;
         
     }
-    
-}
 
+    private function loadOrderFromWms(SalesOrder $order, Weborder $weborder) {
+
+        $order->setWebsiteOrderDate($weborder->getOrderDate())
+                ->setWebsiteNotes($weborder->getNotes())
+                ->setShippingDate($weborder->getShipments()[0]->getShippingDate());
+
+        return $order;
+    }
+
+    private function loadOrderFromErp(SalesOrder $order, \Williams\ErpBundle\Model\SalesOrder $erpOrder) {
+
+        $order->setCustomerNumber($erpOrder->getCustomerNumber())
+                ->setCustomerPurchaseOrder($erpOrder->getCustomerPurchaseOrder())
+                ->setOpen($erpOrder->getOpen())
+                ->setOrderDate($erpOrder->getOrderDate())
+                ->setOrderNumber($erpOrder->getOrderNumber())
+                ->setRecordSequence($erpOrder->getRecordSequence())
+                ->setShipToAddress1($erpOrder->getShipToAddress1())
+                ->setShipToAddress2($erpOrder->getShipToAddress2())
+                ->setShipToAddress3($erpOrder->getShipToAddress3())
+                ->setShipToCity($erpOrder->getShipToCity())
+                ->setShipToCountry($erpOrder->getShipToCountry())
+                ->setShipToEmail($erpOrder->getShipToEmail())
+                ->setShipToName($erpOrder->getShipToName())
+                ->setShipToPhone($erpOrder->getShipToPhone())
+                ->setShipToState($erpOrder->getShipToState())
+                ->setShipToZip($erpOrder->getShipToZip())
+                ->setShipViaCode($erpOrder->getShipViaCode())
+                ->setStatus($erpOrder->getStatus())
+                ->setWebReferenceNumber($erpOrder->getWebReferenceNumber());
+
+        return $order;
+    }
+
+}

@@ -6,7 +6,9 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "bootstrap-datepicker": "^1.6.4"
+    "bootstrap-datepicker": "^1.6.4",
+    "datatables": "^1.10.13",
+    "morris.js": "^0.5.1"
   },
   "devDependencies": {}
 }

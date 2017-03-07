@@ -7,3 +7,27 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+                
+    app.product_service:
+        class: AppBundle\Service\ProductService
+        arguments: [ "@williams_erp.service", "@williams_wholesale.service" ]
+        
+    app.connectship_service:
+        class: Williams\ConnectshipBundle\Service\ConnectshipService
+        arguments: [ "%connectship_api_wsdl%" ]
+        
+    app.williams_wms:
+        class: Williams\WmsBundle\Service\WmsService
+        arguments: [ "%williams_wsdl_url%", "%williams_username%", "%williams_password%" ] 
+        
+    app.muffs_wms:
+        class: Williams\WmsBundle\Service\WmsService
+        arguments: [ "%muffs_wsdl_url%", "%muffs_username%", "%muffs_password%" ] 
+        
+    app.order_service:
+        class: AppBundle\Service\OrderService
+        arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms" ]
+        
+    app.reports:
+        class: AppBundle\Service\ReportService
+        arguments: [ "@app.order_service", "@app.product_service" ]

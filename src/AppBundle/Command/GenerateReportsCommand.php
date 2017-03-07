@@ -24,6 +24,7 @@ class GenerateReportsCommand extends ContainerAwareCommand {
             $service->generateReports();
         } catch (Exception $e) {
             $output->writeln("There was an error generating the reports: " . $e->getMessage());
+            $output->write($e->getTraceAsString());
         }
         $output->write("Finished!\n\n");
     }

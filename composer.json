@@ -30,6 +30,10 @@
             "url": "https://github.com/williams-jhalt/wms-bundle"
         },
         {
+            "type": "vcs",
+            "url": "https://github.com/williams-jhalt/connectship-bundle"
+        },
+        {
             "type": "package",
             "package": {
                 "name": "jquery/jquery",
@@ -63,7 +67,8 @@
         "jms/serializer-bundle": "^1.1",
         "williams/erp-bundle": "master-dev",
         "williams/wholesale-bundle": "master-dev",
-        "williams/wms-bundle": "master-dev"
+        "williams/wms-bundle": "master-dev",
+        "williams/connectship-bundle": "master-dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

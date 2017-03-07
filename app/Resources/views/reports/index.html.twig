@@ -1,9 +1,94 @@
 {% extends 'base.html.twig' %}
 
+{% block javascripts %}
+    {{ parent() }} 
+    {% javascripts '@morris_js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var reports = $.parseJSON('{{ reports|json_encode|raw }}');
+
+            var createBarGraph = function (report) {
+
+                return function (data) {
+
+                    var el = $('<div>').height('250px');
+
+                    var panel = $('<div>').addClass('col-sm-12')
+                            .append($('<div>').addClass('panel panel-default')
+                                    .append($('<div>').addClass('panel-heading').html(report['type']))
+                                    .append($('<div>').addClass('panel-body')
+                                            .append(el)));
+
+                    $('#graphs').append(panel);
+
+                    Morris.Bar({
+                        element: el,
+                        data: data,
+                        xkey: 'label',
+                        ykeys: ['muffs', 'williams'],
+                        labels: ['Muffs', 'Williams']
+                    });
+
+                }
+            }
+
+            var createLineGraph = function (report) {
+
+                return function (data) {
+
+                    var el = $('<div>').height('250px');
+
+                    var panel = $('<div>').addClass('col-sm-12')
+                            .append($('<div>').addClass('panel panel-default')
+                                    .append($('<div>').addClass('panel-heading').html(report['type']))
+                                    .append($('<div>').addClass('panel-body')
+                                            .append(el)));
+
+                    $('#graphs').append(panel);
+
+                    Morris.Line({
+                        element: el,
+                        data: data,
+                        xkey: 'label',
+                        ykeys: ['muffs', 'williams'],
+                        labels: ['Muffs', 'Williams']
+                    });
+
+                }
+            }
+
+            console.log(reports);
+
+            for (var i = 0; i < reports.length; i++) {
+
+                if (reports[i]['type'] == 'avgDaysToShip' || reports[i]['type'] == 'avgOrdersPerDay') {
+                    $.getJSON(reports[i]['filename'], createBarGraph(reports[i]));
+                }
+                
+                if (reports[i]['type'] == 'ordersPerHour') {
+                    $.getJSON(reports[i]['filename'], createLineGraph(reports[i]));
+                }
+
+            }
+
+        });
+    </script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets '@morris_css' %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
+    {% endstylesheets %}
+{% endblock %}
+
 {% block body %}
-    
-    <h1>Warehouse Manager</h1>
-    
-    <h2>Reports</h2>
-    
+
+    <div id="graphs" class="row">
+
+    </div>
+
 {% endblock %}

@@ -213,25 +213,25 @@ class ReportService {
                                 
         $williamsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($williamsOrders);
         $muffsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($muffsOrders);
+                        
+        $shippingMethodData = [
+            'williams' => [],
+            'muffs' => []
+        ];
         
-        $shippingMethods = array_unique(array_merge(array_keys($williamsShippingMethods), array_keys($muffsShippingMethods)));
+        foreach ($williamsShippingMethods as $key => $value) {
+            
+            $shippingMethodData['williams'][] = [
+                'label' => $key,
+                'value' => $value
+            ];
+            
+        }
         
-        $shippingMethodData = [];
-        
-        foreach ($shippingMethods as $shippingMethod) {
+        foreach ($muffsShippingMethods as $key => $value) {
             
-            $value = 0;
-            
-            if (isset($williamsShippingMethods[$shippingMethod])) {
-                $value += $williamsShippingMethods[$shippingMethod];
-            }          
-            
-            if (isset($muffsShippingMethods[$shippingMethod])) {
-                $value += $muffsShippingMethods[$shippingMethod];
-            }            
-            
-            $shippingMethodData = [
-                'label' => $shippingMethod,
+            $shippingMethodData['muffs'][] = [
+                'label' => $key,
                 'value' => $value
             ];
             

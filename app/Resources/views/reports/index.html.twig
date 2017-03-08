@@ -58,22 +58,36 @@
                 };
             };
 
-            var createDonutShippignMethods = function () {
+            var createDonutShippingMethods = function () {
                 
                 return function (data) {
 
                     var el = $('<div>').height('250px');
 
                     var panel = $('<div>').addClass('panel panel-default')
-                            .append($('<div>').addClass('panel-heading').html('Shipping Methods Used'))
+                            .append($('<div>').addClass('panel-heading').html('Shipping Methods Used (Williams)'))
                             .append($('<div>').addClass('panel-body')
                                     .append(el));
 
-                    $('#shippingMethods').append(panel);
+                    $('#' + company + 'ShippingMethods').append(panel);
 
-                    Morris.Bar({
+                    Morris.Donut({
                         element: el,
-                        data: data
+                        data: data['williams']
+                    });
+
+                    var el = $('<div>').height('250px');
+
+                    var panel = $('<div>').addClass('panel panel-default')
+                            .append($('<div>').addClass('panel-heading').html('Shipping Methods Used (Muffs)'))
+                            .append($('<div>').addClass('panel-body')
+                                    .append(el));
+
+                    $('#' + company + 'ShippingMethods').append(panel);
+
+                    Morris.Donut({
+                        element: el,
+                        data: data['muffs']
                     });
                     
                 };
@@ -120,7 +134,7 @@
                 }
                 
                 if (reports[i]['type'] == 'shippingMethods') {
-                    $.getJSON(reports[i]['filename'], createDonutShippignMethods());
+                    $.getJSON(reports[i]['filename'], createDonutShippingMethods());
                 }
 
             };
@@ -143,7 +157,8 @@
         <div id="daysToShip" class="col-sm-12"></div>
         <div id="ordersPerDay" class="col-sm-12"></div>
         <div id="ordersPerHour" class="col-sm-12"></div>
-        <div id="shippingMethods" class="col-sm-12"></div>
+        <div id="williamsShippingMethods" class="col-sm-6"></div>
+        <div id="muffsShippingMethods" class="col-sm-6"></div>
 
     </div>
 

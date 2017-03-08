@@ -17,9 +17,9 @@
                     var el = $('<div>').height('250px');
 
                     var panel = $('<div>').addClass('panel panel-default')
-                                    .append($('<div>').addClass('panel-heading').html('Average Orders Per Day'))
-                                    .append($('<div>').addClass('panel-body')
-                                            .append(el));
+                            .append($('<div>').addClass('panel-heading').html('Average Orders Per Day'))
+                            .append($('<div>').addClass('panel-body')
+                                    .append(el));
 
                     $('#ordersPerDay').append(panel);
 
@@ -31,8 +31,8 @@
                         labels: ['Muffs', 'Williams']
                     });
 
-                }
-            }
+                };
+            };
 
             var createBarGraphAvgDaysToShip = function () {
 
@@ -41,9 +41,9 @@
                     var el = $('<div>').height('250px');
 
                     var panel = $('<div>').addClass('panel panel-default')
-                                    .append($('<div>').addClass('panel-heading').html('Average Days To Ship'))
-                                    .append($('<div>').addClass('panel-body')
-                                            .append(el));
+                            .append($('<div>').addClass('panel-heading').html('Average Days To Ship'))
+                            .append($('<div>').addClass('panel-body')
+                                    .append(el));
 
                     $('#daysToShip').append(panel);
 
@@ -55,8 +55,30 @@
                         labels: ['Muffs', 'Williams']
                     });
 
-                }
-            }
+                };
+            };
+
+            var createDonutShippignMethods = function () {
+                
+                return function (data) {
+
+                    var el = $('<div>').height('250px');
+
+                    var panel = $('<div>').addClass('panel panel-default')
+                            .append($('<div>').addClass('panel-heading').html('Shipping Methods Used'))
+                            .append($('<div>').addClass('panel-body')
+                                    .append(el));
+
+                    $('#shippingMethods').append(panel);
+
+                    Morris.Bar({
+                        element: el,
+                        data: data
+                    });
+                    
+                };
+
+            };
 
             var createLineGraphOrdersPerHour = function () {
 
@@ -65,9 +87,9 @@
                     var el = $('<div>').height('250px');
 
                     var panel = $('<div>').addClass('panel panel-default')
-                                    .append($('<div>').addClass('panel-heading').html('Orders Per Hour'))
-                                    .append($('<div>').addClass('panel-body')
-                                            .append(el));
+                            .append($('<div>').addClass('panel-heading').html('Orders Per Hour'))
+                            .append($('<div>').addClass('panel-body')
+                                    .append(el));
 
                     $('#ordersPerHour').append(panel);
 
@@ -80,8 +102,8 @@
                         labels: ['Muffs', 'Williams']
                     });
 
-                }
-            }
+                };
+            };
 
             for (var i = 0; i < reports.length; i++) {
 
@@ -96,8 +118,12 @@
                 if (reports[i]['type'] == 'ordersPerHour') {
                     $.getJSON(reports[i]['filename'], createLineGraphOrdersPerHour());
                 }
+                
+                if (reports[i]['type'] == 'shippingMethods') {
+                    $.getJSON(reports[i]['filename'], createDonutShippignMethods());
+                }
 
-            }
+            };
 
         });
     </script>
@@ -113,10 +139,11 @@
 {% block body %}
 
     <div class="row">
-        
+
         <div id="daysToShip" class="col-sm-12"></div>
         <div id="ordersPerDay" class="col-sm-12"></div>
         <div id="ordersPerHour" class="col-sm-12"></div>
+        <div id="shippingMethods" class="col-sm-12"></div>
 
     </div>
 

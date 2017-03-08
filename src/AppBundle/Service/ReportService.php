@@ -3,6 +3,8 @@
 namespace AppBundle\Service;
 
 use DateTime;
+use Williams\WmsBundle\Model\Weborder;
+use function GuzzleHttp\json_encode;
 
 class ReportService {
 
@@ -116,7 +118,7 @@ class ReportService {
             }
             $ordersPerHour[$order->getOrderDate()->format('G')] ++;
         }
-        
+
         foreach ($ordersPerHour as $key => $value) {
             $ordersPerHour[$key] = $value / count($days);
         }
@@ -124,11 +126,32 @@ class ReportService {
         return $ordersPerHour;
     }
 
+    /**
+     * 
+     * @param Weborder[] $orders
+     */
+    public function calculateOrdersByRequestedShippingMethod(array $orders) {
+
+        $shippingMethods = [];
+
+        foreach ($orders as $order) {
+
+            if (!isset($shippingMethods[$order->getShipViaCode()])) {
+                $shippingMethods[$order->getShipViaCode()] = 0;
+            }
+
+            $shippingMethods[$order->getShipViaCode()] ++;
+        }
+        
+        return $shippingMethods;
+        
+    }
+
     public function generateWebsiteReports(DateTime $startDate, DateTime $endDate) {
 
         $williamsOrders = $this->orderService->getWebsiteOrdersByDate($startDate, $endDate, OrderService::WMS_WILLIAMS);
         $muffsOrders = $this->orderService->getWebsiteOrdersByDate($startDate, $endDate, OrderService::WMS_MUFFS);
-        
+
         $williamsAvgDaysToShip = $this->calculateWebsiteAverageDaysToShip($williamsOrders);
         $muffsAvgDaysToShip = $this->calculateWebsiteAverageDaysToShip($muffsOrders);
 
@@ -187,6 +210,35 @@ class ReportService {
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/ordersPerHour.json', json_encode($ordersPerHour));
+                                
+        $williamsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($williamsOrders);
+        $muffsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($muffsOrders);
+        
+        $shippingMethods = array_unique(array_merge(array_keys($williamsShippingMethods), array_keys($muffsShippingMethods)));
+        
+        $shippingMethodData = [];
+        
+        foreach ($shippingMethods as $shippingMethod) {
+            
+            $value = 0;
+            
+            if (isset($williamsShippingMethods[$shippingMethod])) {
+                $value += $williamsShippingMethods[$shippingMethod];
+            }          
+            
+            if (isset($muffsShippingMethods[$shippingMethod])) {
+                $value += $muffsShippingMethods[$shippingMethod];
+            }            
+            
+            $shippingMethodData = [
+                'label' => $shippingMethod,
+                'value' => $value
+            ];
+            
+        }
+
+        file_put_contents(__DIR__ . '/../../../web/data/shippingMethods.json', json_encode($shippingMethodData));
+        
     }
 
 }

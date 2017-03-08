@@ -181,8 +181,8 @@ class ReportService {
         for ($hour = 0; $hour < 24; $hour++) {
             $ordersPerHour[] = [
                 'label' => $hour,
-                'muffs' => isset($muffsOrdersPerHour[$hour]) ? $muffsOrdersPerHour[$hour] : 0,
-                'williams' => isset($williamsOrdersPerHour[$hour]) ? $williamsOrdersPerHour[$hour] : 0
+                'muffs' => isset($muffsOrdersPerHour[$hour]) ? round($muffsOrdersPerHour[$hour], 2) : 0,
+                'williams' => isset($williamsOrdersPerHour[$hour]) ? round($williamsOrdersPerHour[$hour], 2) : 0
             ];
         }
 

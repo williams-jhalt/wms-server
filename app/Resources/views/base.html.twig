@@ -6,57 +6,102 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
-            {% stylesheets '@bootstrap_css' '@bootstrap_datepicker_css' %}
-                <link rel="stylesheet" type="text/css" media="screen" href="{{ asset_url }}"/>
-            {% endstylesheets %}
+            <!-- Bootstrap Core CSS -->
+            <link href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
+
+            <!-- Bootstrap Datepicker CSS -->
+            <link href="{{ asset('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+
+            <!-- MetisMenu CSS -->
+            <link href="{{ asset('bower_components/metisMenu/dist/metisMenu.min.css') }}" rel="stylesheet">
+
+            <!-- Custom CSS -->
+            <link href="{{ asset('bower_components/blackrockdigital-startbootstrap-sb-admin-2/dist/css/sb-admin-2.css') }}" rel="stylesheet">
+
+            <!-- Morris Charts CSS -->
+            <link href="{{ asset('bower_components/morrisjs/morris.css') }}" rel="stylesheet">
+
+            <!-- Custom Fonts -->
+            <link href="{{ asset('bower_components/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+            <!-- DataTables -->
+            <link href="{{ asset('bower_components/datatables/media/css/dataTables.bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+            <link href="{{ asset('bower_components/datatables-responsive/css/dataTables.responsive.css') }}" rel="stylesheet" type="text/css">
+
+            <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+            <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+                <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <![endif]-->
+
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
 
-        <div class="navbar navbar-default navbar-fixed-top">
-            <div class="container-fluid">
-                {# Brand and toggle get grouped for better mobile display #}
+        <div id="wrapper">
+
+            <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#admin-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Warehouse Manager</a>
+                    <a class="navbar-brand" href="{{ path('homepage') }}">Warehouse Manager</a>
                 </div>
 
-                {# Collect the nav links, forms, and other content for toggling #}
-                <div class="collapse navbar-collapse" id="admin-navbar-collapse-1">
-                    {{ knp_menu_render('AppBundle:Builder:mainMenu', {'currentClass': 'active', 'template': 'AppBundle:Menu:knp_menu.html.twig'}) }}                    
+                <div class="navbar-default sidebar" role="navigation">
+                    <div class="sidebar-nav navbar-collapse">
+                        <ul class="nav" id="side-menu">
+                            <li><a href="{{ path('reports_index') }}">Dashboard</a></li>
+                            <li><a href="{{ path('document_tracker_index') }}">Document Tracker</a></li>
+                            <li><a href="{{ path('picker_log_index') }}">Picker Log</a></li>
+                            <li><a href="{{ path('product_lookup_index') }}">Product Lookup</a></li>
+                            <li><a href="{{ path('sales_orders_index') }}">Order Lookup</a></li>
+                        </ul>
+                    </div>
                 </div>
+
+            </nav>
+
+            <div id="page-wrapper" style="min-height: 879px;">
+                {% block pageHeader %}
+                {% endblock %}
+                {% block body %}
+                {% endblock %}
             </div>
+
         </div>
-                
-        <div class="content" style="margin-top: 60px;">
+
+        {% block javascripts %}    
+
+            <!-- jQuery -->
+            <script src="{{ asset('bower_components/jquery/dist/jquery.min.js') }}"></script>
+
+            <!-- Bootstrap Core JavaScript -->
+            <script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+
+            <!-- Bootstrap Datepicker JavaScript -->
+            <script src="{{ asset('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+
+            <!-- Metis Menu Plugin JavaScript -->
+            <script src="{{ asset('bower_components/metisMenu/dist/metisMenu.min.js') }}"></script>
+
+            <!-- Morris Charts JavaScript -->
+            <script src="{{ asset('bower_components/raphael/raphael.min.js') }}"></script>
+            <script src="{{ asset('bower_components/morrisjs/morris.min.js') }}"></script>
+
+            <!-- Custom Theme JavaScript -->
+            <script src="{{ asset('bower_components/blackrockdigital-startbootstrap-sb-admin-2/dist/js/sb-admin-2.js') }}"></script>
             
-            <div class="container-fluid row">
+            <!-- DataTables JavaScript -->
+            <script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
+            <script src="{{ asset('bower_components/datatables/media/js/dataTables.bootstrap.min.js') }}"></script>
+            <script src="{{ asset('bower_components/datatables-responsive/js/dataTables.responsive.js') }}"></script>
 
-                <div class="col-sm-3">
-                    {% block sidebar %}
-                        {{ knp_menu_render('AppBundle:Builder:sidebarMenu', {'currentClass': 'active', 'template': 'AppBundle:Menu:knp_menu.html.twig'}) }}    
-                    {% endblock %}
-                </div>
-
-                <div class="col-sm-9">
-                    {% block pageHeader %}{% endblock %}
-                    {% block body %}{% endblock %}
-                </div>
-
-            </div>
-        
-        </div>
-        
-        {% block javascripts %}     
-            {% javascripts '@jquery' '@bootstrap_js' '@bootstrap_datepicker_js' %}
-                <script type="text/javascript" src="{{ asset_url }}"></script>
-            {% endjavascripts %}
         {% endblock %}
     </body>
 </html>

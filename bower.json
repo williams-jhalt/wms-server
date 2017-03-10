@@ -6,9 +6,8 @@
     "**/*.txt"
   ],
   "dependencies": {
-    "bootstrap-datepicker": "^1.6.4",
-    "datatables": "^1.10.13",
-    "morris.js": "^0.5.1"
+    "blackrockdigital-startbootstrap-sb-admin-2": "3.3.7",
+    "bootstrap-datepicker": "^1.6.4"
   },
   "devDependencies": {}
 }

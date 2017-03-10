@@ -68,46 +68,6 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-
-assetic:
-    filters:
-        lessphp:
-             file: %kernel.root_dir%/../vendor/oyejorge/less.php/lessc.inc.php
-             apply_to: ".less$"
-        cssrewrite: ~
-    assets:
-        bootstrap_datepicker_js:
-            inputs:
-                - %kernel.root_dir%/../web/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js
-                
-        bootstrap_datepicker_css:
-            inputs:
-                - %kernel.root_dir%/../web/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css
-            filters: [cssrewrite]
-            
-        datatables_js:
-            inputs:
-                - %kernel.root_dir%/../web/bower_components/datatables/media/js/jquery.dataTables.js
-                - %kernel.root_dir%/../web/bower_components/datatables/media/js/dataTables.bootstrap.js
-                
-        datatables_css:
-            inputs:
-                - %kernel.root_dir%/../web/bower_components/datatables/media/css/jquery.dataTables.css
-                - %kernel.root_dir%/../web/bower_components/datatables/media/css/dataTables.bootstrap.css
-            filters: [cssrewrite]
-            
-        morris_js:
-            inputs:
-                - %kernel.root_dir%/../web/bower_components/raphael/raphael.js
-                - %kernel.root_dir%/../web/bower_components/morris.js/morris.js
-                
-        morris_css:
-            inputs:
-                - %kernel.root_dir%/../web/bower_components/morris.js/morris.css
-            filters: [cssrewrite]
-        
-braincrafted_bootstrap:
-    css_preprocessor: lessphp
         
 williams_erp:
     role: server

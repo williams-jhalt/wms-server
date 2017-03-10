@@ -19,8 +19,8 @@ class ReportService {
     public function generateReports() {
 
         // get two weeks
-        $startDate = new DateTime("4 weeks ago");
-        $endDate = new DateTime("1 week ago");
+        $startDate = new DateTime("3 weeks ago");
+        $endDate = new DateTime("1 day ago");
 
         $this->generateWebsiteReports($startDate, $endDate);
     }

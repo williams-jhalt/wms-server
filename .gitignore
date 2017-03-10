@@ -14,8 +14,4 @@
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
-/web/assetic/
-/web/css/
-/web/fonts/
-/web/js/
 /web/data/*

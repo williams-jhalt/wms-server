@@ -32,17 +32,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/williams-jhalt/connectship-bundle"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "jquery/jquery",
-                "version": "1.11.1",
-                "dist": {
-                    "url": "https://code.jquery.com/jquery-1.11.1.js",
-                    "type": "file"
-                }
-            }
         }
     ],
     "require": {
@@ -59,11 +48,6 @@
         "incenteev/composer-parameter-handler": "^2.0",
         "knplabs/knp-paginator-bundle": "^2.5",
         "knplabs/knp-menu-bundle": "^2.1",
-        "braincrafted/bootstrap-bundle": "^2.2",
-        "oyejorge/less.php": "v1.7.0.10",
-        "twbs/bootstrap": "3.1.*",
-        "jquery/jquery":  "1.11.*",
-        "symfony/assetic-bundle": "^2.8",
         "jms/serializer-bundle": "^1.1",
         "williams/erp-bundle": "master-dev",
         "williams/wholesale-bundle": "master-dev",
@@ -81,8 +65,7 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installAssets",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
-            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget",
-            "Braincrafted\\Bundle\\BootstrapBundle\\Composer\\ScriptHandler::install"
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ],
         "post-install-cmd": [
             "@symfony-scripts"

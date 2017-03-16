@@ -24,14 +24,25 @@ class CartonController extends Controller {
      */
     public function viewAction(Request $request) {
         
-        $ucc = $request->get('ucc');
+        $manifestId = $request->get('manifestId');
+        
+        list($orderNumber, $recordSequence) = explode('-', $manifestId);
         
         $repo = $this->getDoctrine()->getRepository('AppBundle:Carton');
         
-        $carton = $repo->find($ucc);
+        $service = $this->get('app.order_service');
+        
+        $cartons = array();
+        
+        $packages = $service->getCartons($orderNumber);
+        
+        foreach ($packages as $package) {
+            $cartons[] = $repo->find($package->getUcc());
+        }
         
         return $this->render('carton/view.html.twig', [
-            'carton' => $carton
+            'manifestId' => $manifestId,
+            'cartons' => $cartons
         ]);
         
     }

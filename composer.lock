@@ -3032,12 +3032,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/erp-bundle.git",
-                "reference": "f08733f46e75dae9064317fafb87770491ce21f7"
+                "reference": "5b9bbe88b5cafcd154db2139d91a81264b95d562"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/f08733f46e75dae9064317fafb87770491ce21f7",
-                "reference": "f08733f46e75dae9064317fafb87770491ce21f7",
+                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/5b9bbe88b5cafcd154db2139d91a81264b95d562",
+                "reference": "5b9bbe88b5cafcd154db2139d91a81264b95d562",
                 "shasum": ""
             },
             "require": {
@@ -3069,7 +3069,7 @@
                 "source": "https://github.com/williams-jhalt/erp-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/erp-bundle/issues"
             },
-            "time": "2017-03-16 20:45:56"
+            "time": "2017-03-16 20:48:45"
         },
         {
             "name": "williams/wholesale-bundle",

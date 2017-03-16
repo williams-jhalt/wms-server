@@ -1,8 +1,8 @@
 <?php
 
-namespace AppBundle\Model;
+use Williams\WholesaleBundle\Model\ProductImage;
 
-use DateTime;
+namespace AppBundle\Model;
 
 class Product extends \Williams\ErpBundle\Model\Product {
 
@@ -21,6 +21,7 @@ class Product extends \Williams\ErpBundle\Model\Product {
     protected $discountable;
     protected $maxDiscountRate;
     protected $saleable;
+    protected $images;
 
     public function getDescription() {
         return $this->description;
@@ -154,6 +155,23 @@ class Product extends \Williams\ErpBundle\Model\Product {
 
     public function setSaleable($saleable) {
         $this->saleable = $saleable;
+        return $this;
+    }
+
+    /**
+     * @return ProductImage[]
+     */
+    public function getImages() {
+        return $this->images;
+    }
+
+    /**
+     * 
+     * @param array $images
+     * @return Product
+     */
+    public function setImages(array $images) {
+        $this->images = $images;
         return $this;
     }
 

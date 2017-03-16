@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block pageHeader %}
-    {{ knp_menu_render('AppBundle:Builder:productMenu', {'currentClass': 'active', 'template': 'AppBundle:Menu:knp_menu.html.twig'}) }}    
-{% endblock %}
-
 {% block body %}
 
-    <h1>Search Results</h1>
-    
+    <div class="col-lg-12">
+        <h1 class="page-header">Product Lookup</h1>
+    </div>
+
+    <br> 
+
     <form class="form-inline" action="{{ path('product_lookup_search') }}" method="get">
         <div class="form-group">
             <input class="form-control" type="text" name="searchTerms">
@@ -24,10 +24,18 @@
                 <b>{{ item.itemNumber }}</b> - {{ item.name }}
             </div>
             <div class="panel-body">
-                <b>Bin:</b> {{ item.binLocation }}<br>
-                <b>In Stock:</b> {{ item.quantityOnHand }}<br>
-                <b>Committed:</b> {{ item.quantityCommitted }}<br>
-                <b>Available:</b> {{ item.quantityOnHand - item.quantityCommitted }}
+                <div class="col-sm-3">
+                    {% if item.images|length > 0 %}
+                        <img class="img-responsive" src="{{ item.images[0].imageMediumUrl }}" style="max-height: 150px;">
+                    {% endif %}
+                </div>
+                <div class="col-sm-6">{{ item.description }}</div>
+                <div class="col-sm-3">
+                    <b>Bin:</b> {{ item.binLocation }}<br>
+                    <b>In Stock:</b> {{ item.quantityOnHand }}<br>
+                    <b>Committed:</b> {{ item.quantityCommitted }}<br>
+                    <b>Available:</b> {{ item.quantityOnHand - item.quantityCommitted }}
+                </div>
             </div>
         </div>
 

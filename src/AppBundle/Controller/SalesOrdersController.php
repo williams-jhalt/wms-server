@@ -22,11 +22,14 @@ class SalesOrdersController extends Controller {
      * @Route("/list", name="sales_orders_list")
      */
     public function listAction(Request $request) {
+        
         $manifestId = $request->get('manifestId');
+        
+        list($orderNumber, $recordSequence) = explode('-', $manifestId);
         
         $service = $this->get('app.order_service');
         
-        $salesOrder = $service->getOrder($manifestId);
+        $salesOrder = $service->getOrder($orderNumber);
         
         return $this->render('sales-orders/list.html.twig', [
             'order' => $salesOrder
@@ -39,14 +42,12 @@ class SalesOrdersController extends Controller {
      */
     public function viewAction(Request $request) {
         
-        $manifestId = $request->get('manifestId');
         $orderNumber = $request->get('orderNumber');
-        $recordSequence = $request->get('recordSequence');
         
         $service = $this->get('app.order_service');
         
-        $salesOrder = $service->getOrder($manifestId);        
-        $cartons = $service->getCartons($orderNumber, $recordSequence);
+        $salesOrder = $service->getOrder($orderNumber);        
+        $cartons = $service->getCartons($orderNumber);
         
         return $this->render('sales-orders/view.html.twig', [
             'order' => $salesOrder,

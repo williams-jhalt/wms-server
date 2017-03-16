@@ -79,5 +79,5 @@ williams_erp:
         company: "%erp_company%"
     
 williams_wholesale:
-    url: http://wholesale.williams-trading.com    
+    url: https://wholesale.williams-trading.com    
         

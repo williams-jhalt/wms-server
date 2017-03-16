@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block pageHeader %}
-    {{ knp_menu_render('AppBundle:Builder:productMenu', {'currentClass': 'active', 'template': 'AppBundle:Menu:knp_menu.html.twig'}) }}    
-{% endblock %}
-
 {% block body %}
+
+    <div class="col-lg-12">
+        <h1 class="page-header">Product Lookup</h1>
+    </div>
     
-    <h1>Product Lookup</h1>
+    <br>
     
     <form class="form-inline" action="{{ path('product_lookup_search') }}" method="get">
         <div class="form-group">

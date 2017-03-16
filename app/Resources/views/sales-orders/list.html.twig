@@ -1,6 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+
+    <div class="col-lg-12">
+        <h1 class="page-header">Sales Orders</h1>
+    </div>
+    
+    <br>
     
     <br>
 
@@ -23,7 +29,7 @@
         </thead>
         <tbody>
             <tr>
-                <td><a href="{{ path('sales_orders_view', {manifestId: order.manifestId, orderNumber: order.orderNumber, recordSequence: order.recordSequence}) }}">{{ order.manifestId }}</a></td>
+                <td><a href="{{ path('sales_orders_view', {orderNumber: order.orderNumber}) }}">{{ order.orderNumber }}</a></td>
                 <td>{{ order.orderDate|date('D, d M Y h:i:s a') }}</td>
                 <td>{{ order.customerNumber }}</td>
             </tr>

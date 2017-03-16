@@ -5,6 +5,8 @@ namespace AppBundle\Service;
 use AppBundle\Model\SalesOrder;
 use DateTime;
 use Williams\ConnectshipBundle\Service\ConnectshipService;
+use Williams\ErpBundle\Model\SalesOrder as SalesOrder2;
+use Williams\ErpBundle\Model\ShipmentPackage;
 use Williams\ErpBundle\Service\ErpService;
 use Williams\WmsBundle\Model\Weborder;
 use Williams\WmsBundle\Service\WmsService;
@@ -54,6 +56,40 @@ class OrderService {
         }
 
         return $repo->getNewOrders();
+    }
+    
+    /**
+     * @return SalesOrder
+     */
+    public function getOrder($orderNumber) {
+        
+        $erpOrder = $this->erp->getSalesOrderRepository()->get($orderNumber);
+        
+        $order = new SalesOrder();
+        
+        $this->loadOrderFromErp($order, $erpOrder);
+                
+        if (strtoupper(substr($order->getCustomerNumber(), -1)) == 'I') {
+            $weborder = $this->muffsWms->getWeborderRepository()->getOrder($order->getWebsiteId());            
+        } else {
+            $weborder = $this->williamsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
+        }
+        
+        if ($weborder !== null) {
+            $this->loadOrderFromWms($order, $weborder);
+        }
+        
+        return $order;
+        
+    }
+    
+    /**
+     * @return ShipmentPackage[]
+     */
+    public function getCartons($orderNumber) {
+        
+        return $this->erp->getShipmentRepository()->getPackages($orderNumber)->getShipmentPackages();
+        
     }
     
     /**
@@ -182,7 +218,7 @@ class OrderService {
         return $order;
     }
 
-    private function loadOrderFromErp(SalesOrder $order, \Williams\ErpBundle\Model\SalesOrder $erpOrder) {
+    private function loadOrderFromErp(SalesOrder $order, SalesOrder2 $erpOrder) {
 
         $order->setCustomerNumber($erpOrder->getCustomerNumber())
                 ->setCustomerPurchaseOrder($erpOrder->getCustomerPurchaseOrder())

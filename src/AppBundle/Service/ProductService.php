@@ -3,6 +3,7 @@
 namespace AppBundle\Service;
 
 use Williams\ErpBundle\Service\ErpService;
+use AppBundle\Model\ProductImage;
 use Williams\WholesaleBundle\Service\WholesaleService;
 
 class ProductService {
@@ -22,26 +23,25 @@ class ProductService {
         $this->erp = $erp;
         $this->wholesale = $wholesale;
     }
-    
+
     public function findBySearchTerms($searchTerms, $limit = 25, $offset = 0) {
-        
+
         $repo = $this->erp->getProductRepository();
-        
+
         $products = $repo->findByTextSearch($searchTerms, $limit, $offset)->getProducts();
-        
+
         $result = array();
-        
+
         foreach ($products as $product) {
-            
             $t = new \AppBundle\Model\Product();
-            $result[] = $this->loadProductFromErp($t, $product);
-            
+            $this->loadProductFromErp($t, $product);
+            $wholesaleProduct = $this->wholesale->getProductRepository()->find($product->getItemNumber());
+            $this->loadProductFromWholesale($t, $wholesaleProduct);
+            $result[] = $t;
         }
-        
+
         return $result;
-            
-        
-    }        
+    }
 
     /**
      * @param int $limit
@@ -54,20 +54,19 @@ class ProductService {
         $repo = $this->erp->getProductRepository();
 
         $products = $repo->findCommittedItems($limit, $offset)->getProducts();
-        
+
         $result = array();
-        
+
         foreach ($products as $product) {
             $t = new \AppBundle\Model\Product();
             $result[] = $this->loadProductFromErp($t, $product);
         }
-        
+
         return $result;
-        
     }
-    
+
     private function loadProductFromErp(\AppBundle\Model\Product $product, \Williams\ErpBundle\Model\Product $erpProduct) {
-        
+
         $product->setBarcode($erpProduct->getBarcode())
                 ->setBinLocation($erpProduct->getBinLocation())
                 ->setCreatedOn($erpProduct->getCreatedOn())
@@ -83,13 +82,12 @@ class ProductService {
                 ->setWarehouse($erpProduct->getWarehouse())
                 ->setWholesalePrice($erpProduct->getWholesalePrice())
                 ->setWebItem($erpProduct->getWebItem());
-        
+
         return $product;
-        
     }
-    
+
     private function loadProductFromWholesale(\AppBundle\Model\Product $product, \Williams\WholesaleBundle\Model\Product $wholesaleProduct) {
-        
+
         $product->setDescription($wholesaleProduct->getDescription())
                 ->setColor($wholesaleProduct->getColor())
                 ->setMaterial($wholesaleProduct->getMaterial())
@@ -99,9 +97,18 @@ class ProductService {
                 ->setDiameter($wholesaleProduct->getDiameter())
                 ->setWeight($wholesaleProduct->getWeight())
                 ->setKeywords($wholesaleProduct->getKeywords());
-        
+
+        $wholesaleImages = $this->wholesale->getProductImageRepository()->findBySku($product->getItemNumber());
+
+        $images = array();
+
+        foreach ($wholesaleImages->getItems() as $wholesaleImage) {
+            $images[] = $wholesaleImage;
+        }
+
+        $product->setImages($images);
+
         return $product;
-        
     }
 
 }

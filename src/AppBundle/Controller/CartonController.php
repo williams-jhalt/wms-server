@@ -12,39 +12,45 @@ use Symfony\Component\HttpFoundation\Request;
 class CartonController extends Controller {
 
     /**
-     * @Route("/", name="carton_index")
+     * @Route("/{company}", name="carton_index", defaults={"company" = "WTC"})
      */
-    public function indexAction(Request $request) {
+    public function indexAction($company, Request $request) {
         // replace this example code with whatever you need
-        return $this->render('carton/index.html.twig');
+        return $this->render('carton/index.html.twig', [
+                    'company' => $company
+        ]);
     }
 
     /**
-     * @Route("/view", name="carton_view")
+     * @Route("/{company}/view", name="carton_view", defaults={"company" = "WTC"})
      */
-    public function viewAction(Request $request) {
-        
+    public function viewAction($company, Request $request) {
+
         $manifestId = $request->get('manifestId');
-        
+
         list($orderNumber, $recordSequence) = explode('-', $manifestId);
-        
+
         $repo = $this->getDoctrine()->getRepository('AppBundle:Carton');
-        
-        $service = $this->get('app.order_service');
-        
+
+        if ($company == 'MFG') {
+            $service = $this->get('app.mfg_order_service');
+        } else {
+            $service = $this->get('app.order_service');
+        }
+
         $cartons = array();
-        
+
         $packages = $service->getCartons($orderNumber);
-        
+
         foreach ($packages as $package) {
             $cartons[] = $repo->find($package->getUcc());
         }
-        
+
         return $this->render('carton/view.html.twig', [
-            'manifestId' => $manifestId,
-            'cartons' => $cartons
+                    'manifestId' => $manifestId,
+                    'company' => $company,
+                    'cartons' => $cartons
         ]);
-        
     }
 
 }

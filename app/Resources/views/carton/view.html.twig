@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="col-lg-12">
+        <h1 class="page-header">Carton Lookup</h1>
+    </div>
+
+    <br> 
+
+    <form class="form-inline" action="{{ path('carton_view') }}" method="get">
+        <div class="form-group">
+            <input class="form-control" type="text" name="ucc" value="{{ carton.ucc }}">
+        </div>
+        <button class="btn btn-default" type="submit">Load</button>
+    </form>
+
+    <br>
+    
+    <table class="table table-bordered table-condensed">
+        
+        <tbody>
+            <tr>
+                <th>Height</th>
+                <td>{{ carton.height }}</td>
+            </tr>
+            <tr>
+                <th>Length</th>
+                <td>{{ carton.length }}</td>
+            </tr>
+            <tr>
+                <th>Width</th>
+                <td>{{ carton.width }}</td>
+            </tr>
+            <tr>
+                <th>Weight</th>
+                <td>{{ carton.weight }}</td>
+            </tr>
+        </tbody>
+        
+    </table>
+
+{% endblock %}

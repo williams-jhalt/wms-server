@@ -10,7 +10,7 @@ services:
         
     app.mfg_erp.service:
         class: Williams\ErpBundle\Service\ErpServerService
-        arguments: [ "%erp_server%", "%erp_username%", "%erp_password%", "MFG", "%erp_appname%" ] 
+        arguments: [ "%erp_server%", "%erp_username%", "%erp_password%", "MFG", "wms-server-mfg" ] 
                 
     app.product_service:
         class: AppBundle\Service\ProductService

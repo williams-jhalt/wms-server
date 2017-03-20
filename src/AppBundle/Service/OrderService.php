@@ -4,6 +4,7 @@ namespace AppBundle\Service;
 
 use AppBundle\Model\SalesOrder;
 use DateTime;
+use Doctrine\ORM\EntityManager;
 use Williams\ConnectshipBundle\Service\ConnectshipService;
 use Williams\ErpBundle\Model\SalesOrder as SalesOrder2;
 use Williams\ErpBundle\Model\ShipmentPackage;
@@ -35,12 +36,18 @@ class OrderService {
      * @var WmsService
      */
     private $williamsWms;
+    
+    /**
+     * @var EntityManager
+     */
+    private $em;
 
-    public function __construct(ErpService $erp, ConnectshipService $connectship, WmsService $muffsWms, WmsService $williamsWms) {
+    public function __construct(ErpService $erp, ConnectshipService $connectship, WmsService $muffsWms, WmsService $williamsWms, EntityManager $em) {
         $this->erp = $erp;
         $this->connectship = $connectship;
         $this->muffsWms = $muffsWms;
         $this->williamsWms = $williamsWms;
+        $this->em = $em;
     }
 
     /**
@@ -88,7 +95,23 @@ class OrderService {
      */
     public function getCartons($orderNumber) {
         
-        return $this->erp->getShipmentRepository()->getPackages($orderNumber)->getShipmentPackages();
+        $repo = $this->em->getRepository('AppBundle:Carton');
+        $cartons = $this->erp->getShipmentRepository()->getPackages($orderNumber)->getShipmentPackages();
+        
+        foreach ($cartons as $carton) {
+            
+            $c = $repo->find($carton->getUcc());
+            
+            if ($c !== null) {
+                $carton->setPackageHeight($c->getHeight());
+                $carton->setPackageLength($c->getLength());
+                $carton->setPackageWidth($c->getWidth());
+                $carton->setShippingWeight($c->getWeight());
+            }
+            
+        }
+        
+        return $cartons;
         
     }
     

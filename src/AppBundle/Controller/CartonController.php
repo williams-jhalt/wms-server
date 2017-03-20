@@ -38,13 +38,7 @@ class CartonController extends Controller {
             $service = $this->get('app.order_service');
         }
 
-        $cartons = array();
-
-        $packages = $service->getCartons($orderNumber);
-
-        foreach ($packages as $package) {
-            $cartons[] = $repo->find($package->getUcc());
-        }
+        $cartons = $service->getCartons($orderNumber);
 
         return $this->render('carton/view.html.twig', [
                     'manifestId' => $manifestId,

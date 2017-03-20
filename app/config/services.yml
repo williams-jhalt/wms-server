@@ -30,11 +30,11 @@ services:
         
     app.order_service:
         class: AppBundle\Service\OrderService
-        arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms" ]
+        arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
         
     app.mfg_order_service:
         class: AppBundle\Service\OrderService
-        arguments: [ "@app.mfg_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms" ]
+        arguments: [ "@app.mfg_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
         
     app.reports:
         class: AppBundle\Service\ReportService

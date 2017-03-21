@@ -36,7 +36,7 @@ class OrderService {
      * @var WmsService
      */
     private $williamsWms;
-    
+
     /**
      * @var EntityManager
      */
@@ -64,57 +64,54 @@ class OrderService {
 
         return $repo->getNewOrders();
     }
-    
+
     /**
      * @return SalesOrder
      */
     public function getOrder($orderNumber) {
-        
+
         $erpOrder = $this->erp->getSalesOrderRepository()->get($orderNumber);
-        
+
         $order = new SalesOrder();
-        
+
         $this->loadOrderFromErp($order, $erpOrder);
-                
+
         if (strtoupper(substr($order->getCustomerNumber(), -1)) == 'I') {
-            $weborder = $this->muffsWms->getWeborderRepository()->getOrder($order->getWebsiteId());            
+            $weborder = $this->muffsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
         } else {
             $weborder = $this->williamsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
         }
-        
+
         if ($weborder !== null) {
             $this->loadOrderFromWms($order, $weborder);
         }
-        
+
         return $order;
-        
     }
-    
+
     /**
      * @return ShipmentPackage[]
      */
     public function getCartons($orderNumber) {
-        
+
         $repo = $this->em->getRepository('AppBundle:Carton');
         $cartons = $this->erp->getShipmentRepository()->getPackages($orderNumber)->getShipmentPackages();
-        
+
         foreach ($cartons as $carton) {
-            
+
             $c = $repo->find($carton->getUcc());
-            
+
             if ($c !== null) {
                 $carton->setPackageHeight($c->getHeight());
                 $carton->setPackageLength($c->getLength());
                 $carton->setPackageWidth($c->getWidth());
                 $carton->setShippingWeight($c->getWeight());
             }
-            
         }
-        
+
         return $cartons;
-        
     }
-    
+
     /**
      * Get orders from website by date, company can be one of:
      * 
@@ -128,13 +125,12 @@ class OrderService {
      * @return Weborder[]
      */
     public function getWebsiteOrdersByDate(DateTime $startDate, DateTime $endDate, $company) {
-        
+
         if ($company == self::WMS_WILLIAMS) {
             return $this->williamsWms->getWeborderRepository()->findByOrderDate($startDate, $endDate);
         } else {
             return $this->muffsWms->getWeborderRepository()->findByOrderDate($startDate, $endDate);
         }
-        
     }
 
     public function getOrdersByDate(DateTime $startDate, DateTime $endDate, $company = self::WMS_WILLIAMS) {
@@ -147,28 +143,28 @@ class OrderService {
     }
 
     private function getWilliamsOrdersByDate(DateTime $startDate, DateTime $endDate) {
-        
+
         $result = array();
-        
+
         $limit = 1000;
         $offset = 0;
-        
+
         do {
-        
+
             $erpOrders = $this->erp->getSalesOrderRepository()->findByOrderDate($startDate, $endDate, $limit, $offset)->getSalesOrders();
-            
+
             foreach ($erpOrders as $erpOrder) {
-                
+
                 if (strtoupper(substr($erpOrder->getCustomerNumber(), -1)) == 'I') {
                     continue;
-                }                
-                
+                }
+
                 $salesOrder = new SalesOrder();
-                
+
                 $salesOrder->setCompany(SalesOrder::COMPANY_WILLIAMS);
-                
-                $this->loadOrderFromErp($salesOrder, $erpOrder);                
-                
+
+                $this->loadOrderFromErp($salesOrder, $erpOrder);
+
                 if (!empty($erpOrder->getWebReferenceNumber())) {
                     $salesOrder->setSource(SalesOrder::SOURCE_WEBSITE);
                     $weborder = $this->williamsWms->getWeborderRepository()->getOrder($salesOrder->getWebsiteId());
@@ -176,42 +172,39 @@ class OrderService {
                 } else {
                     $salesOrder->setSource(SalesOrder::SOURCE_CSR);
                 }
-                
+
                 $result[] = $salesOrder;
-                
             }
-            
+
             $offset += $limit;
-            
-        } while(count($erpOrders) > 0);
+        } while (count($erpOrders) > 0);
 
         return $result;
-        
     }
 
     private function getMuffsOrdersByDate(DateTime $startDate, DateTime $endDate) {
-        
+
         $result = array();
-        
+
         $limit = 1000;
         $offset = 0;
-        
+
         do {
-        
+
             $erpOrders = $this->erp->getSalesOrderRepository()->findByOrderDate($startDate, $endDate, $limit, $offset)->getSalesOrders();
-            
+
             foreach ($erpOrders as $erpOrder) {
-                
+
                 if (strtoupper(substr($erpOrder->getCustomerNumber(), -1)) != 'I') {
                     continue;
-                }                
-                
+                }
+
                 $salesOrder = new SalesOrder();
-                
+
                 $salesOrder->setCompany(SalesOrder::COMPANY_MUFFS);
-                
-                $this->loadOrderFromErp($salesOrder, $erpOrder);                
-                
+
+                $this->loadOrderFromErp($salesOrder, $erpOrder);
+
                 if (!empty($erpOrder->getWebReferenceNumber())) {
                     $salesOrder->setSource(SalesOrder::SOURCE_WEBSITE);
                     $weborder = $this->williamsWms->getWeborderRepository()->getOrder($salesOrder->getWebsiteId());
@@ -219,24 +212,24 @@ class OrderService {
                 } else {
                     $salesOrder->setSource(SalesOrder::SOURCE_CSR);
                 }
-                 
+
                 $result[] = $salesOrder;
-                
             }
-            
+
             $offset += $limit;
-            
-        } while(count($erpOrders) > 0);
+        } while (count($erpOrders) > 0);
 
         return $result;
-        
     }
 
     private function loadOrderFromWms(SalesOrder $order, Weborder $weborder) {
 
         $order->setWebsiteOrderDate($weborder->getOrderDate())
-                ->setWebsiteNotes($weborder->getNotes())
-                ->setShippingDate($weborder->getShipments()[0]->getShippingDate());
+                ->setWebsiteNotes($weborder->getNotes());
+
+        if (count($weborder->getShipments()) > 0) {
+            $order->setShippingDate($weborder->getShipments()[0]->getShippingDate());
+        }
 
         return $order;
     }
@@ -262,7 +255,7 @@ class OrderService {
                 ->setShipViaCode($erpOrder->getShipViaCode())
                 ->setStatus($erpOrder->getStatus())
                 ->setWebReferenceNumber($erpOrder->getWebReferenceNumber());
-        
+
         $order->setCartons($this->getCartons($order->getOrderNumber()));
 
         return $order;

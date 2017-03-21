@@ -3,6 +3,7 @@
 namespace AppBundle\Model;
 
 use DateTime;
+use Williams\ErpBundle\Model\ShipmentPackage;
 
 class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
 
@@ -16,6 +17,12 @@ class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
     protected $shippingDate;
     protected $company;
     protected $source;
+    
+    /**
+     *
+     * @var ShipmentPackage[]
+     */
+    protected $cartons;
 
     /**
      * 
@@ -113,6 +120,60 @@ class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
     public function setSource($source) {
         $this->source = $source;
         return $this;
+    }
+
+    /**
+     * 
+     * @return ShipmentPackage[]
+     */
+    public function getCartons() {
+        return $this->cartons;
+    }
+
+    /**
+     * 
+     * @param ShipmentPackage[] $cartons
+     * @return SalesOrder
+     */
+    public function setCartons(array $cartons) {
+        $this->cartons = $cartons;
+        return $this;
+    }
+        
+    /**
+     * Calculate total volume of all cartons (in cubic inches)
+     * 
+     * @return double
+     */
+    public function getTotalVolume() {
+        
+        $volume = 0.0;
+        
+        foreach ($this->cartons as $carton) {
+            $volume += ($carton->getPackageHeight() * $carton->getPackageLength() * $carton->getPackageWidth());
+        }
+        
+        return $volume;
+        
+    }
+    
+    /**
+     * Calculate total weight of all cartons (in pounds)
+     * 
+     * @return double
+     */
+    public function getTotalWeight() {
+        
+        $weight = 0.0;
+        
+        foreach ($this->cartons as $carton) {
+            
+            $weight += $carton->getShippingWeight();
+            
+        }
+        
+        return $weight;
+        
     }
 
 }

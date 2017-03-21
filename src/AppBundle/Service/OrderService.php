@@ -262,6 +262,8 @@ class OrderService {
                 ->setShipViaCode($erpOrder->getShipViaCode())
                 ->setStatus($erpOrder->getStatus())
                 ->setWebReferenceNumber($erpOrder->getWebReferenceNumber());
+        
+        $order->setCartons($this->getCartons($order->getOrderNumber()));
 
         return $order;
     }

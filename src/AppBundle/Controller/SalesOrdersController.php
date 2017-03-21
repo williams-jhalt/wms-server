@@ -31,7 +31,7 @@ class SalesOrdersController extends Controller {
         
         $salesOrder = $service->getOrder($orderNumber);
         
-        return $this->render('sales-orders/list.html.twig', [
+        return $this->render('sales-orders/view.html.twig', [
             'order' => $salesOrder
         ]);
         
@@ -46,12 +46,10 @@ class SalesOrdersController extends Controller {
         
         $service = $this->get('app.order_service');
         
-        $salesOrder = $service->getOrder($orderNumber);        
-        $cartons = $service->getCartons($orderNumber);
+        $salesOrder = $service->getOrder($orderNumber);   
         
         return $this->render('sales-orders/view.html.twig', [
-            'order' => $salesOrder,
-            'cartons' => $cartons
+            'order' => $salesOrder
         ]);
         
     }

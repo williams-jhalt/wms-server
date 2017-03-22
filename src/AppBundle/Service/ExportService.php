@@ -81,20 +81,15 @@ class ExportService {
                 }
                 
                 $packages = $shipmentRepo->getPackages($invoice->getOrderNumber())->getShipmentPackages();
+                $shipment = $shipmentRepo->get($invoice->getOrderNumber(), $invoice->getRecordSequence());
                 
                 $trackingNumber = "";
-                $shipViaCode = "";
                 
                 for ($i = 0; $i < count($packages); $i++) {
                     if ($i > 0) {
                         $trackingNumber .= ",";
                     }
                     $trackingNumber .= $packages[$i]->getTrackingNumber();
-                    $shipViaCode = $packages[$i]->getShipViaCode();
-                }
-                
-                foreach ($packages as $package) {
-                    $trackingNumber .= $package->getTrackingNumber();
                 }
                 
                 $headerFh->fputcsv([
@@ -109,7 +104,7 @@ class ExportService {
                     $invoice->getFreightCharge(),
                     $invoice->getNetInvoiceAmount(),
                     $trackingNumber,
-                    $shipViaCode
+                    $shipment->getShipViaCode()
                 ]);
                 
                 $items = $repo->getItems($invoice->getOrderNumber(), $invoice->getRecordSequence())->getItems();

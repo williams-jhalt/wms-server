@@ -3,9 +3,6 @@
 namespace AppBundle\Command;
 
 use DateTime;
-use Exception;
-use SplFileInfo;
-use SplFileObject;
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

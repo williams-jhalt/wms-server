@@ -61,12 +61,13 @@ class ExportService {
     public function exportInvoiceData($customerNumber, DateTime $startDate, DateTime $endDate, $consolidated = false, SplFileInfo $headerFile, SplFileInfo $detailFile) {
 
         $repo = $this->erp->getInvoiceRepository();
+        $shipmentRepo = $this->erp->getShipmentRepository();
         
         $headerFh = $headerFile->openFile("wb");
         $detailFh = $detailFile->openFile("wb");
         
-        $headerFh->fputcsv(['orderNumber', 'recordSequence', 'webReferenceNumber', 'customerReferenceNumber', 'invoiceDate', 'customerNumber', 'grossInvoiceAmount', 'shippingAndHandling', 'freightCharge', 'netInvoiceAmount']);
-        $detailFh->fputcsv(['orderNumber', 'recordSequence', 'itemNumber', 'qtyOrdered', 'qtyBilled', 'price', 'unitOfMeasure']);
+        $headerFh->fputcsv(['orderNumber', 'recordSequence', 'webReferenceNumber', 'customerReferenceNumber', 'invoiceDate', 'customerNumber', 'grossInvoiceAmount', 'shippingAndHandling', 'freightCharge', 'netInvoiceAmount', 'trackingNumber', 'shippingMethod']);
+        $detailFh->fputcsv(['orderNumber', 'recordSequence', 'itemNumber', 'qtyOrdered', 'qtyBilled', 'unitOfMeasure', 'price']);
         
         $offset = 0;
         $limit = 1000;
@@ -74,6 +75,28 @@ class ExportService {
         do {
             $invoices = $repo->findByCustomerAndDate($customerNumber, $startDate, $endDate, $consolidated, $limit, $offset)->getInvoices();
             foreach ($invoices as $invoice) {
+                
+                if (!$invoice->getOpen()) {
+                    continue;
+                }
+                
+                $packages = $shipmentRepo->getPackages($invoice->getOrderNumber())->getShipmentPackages();
+                
+                $trackingNumber = "";
+                $shipViaCode = "";
+                
+                for ($i = 0; $i < count($packages); $i++) {
+                    if ($i > 0) {
+                        $trackingNumber .= ",";
+                    }
+                    $trackingNumber .= $packages[$i]->getTrackingNumber();
+                    $shipViaCode = $packages[$i]->getShipViaCode();
+                }
+                
+                foreach ($packages as $package) {
+                    $trackingNumber .= $package->getTrackingNumber();
+                }
+                
                 $headerFh->fputcsv([
                     $invoice->getOrderNumber(),
                     $invoice->getRecordSequence(),
@@ -84,7 +107,9 @@ class ExportService {
                     $invoice->getGrossInvoiceAmount(),
                     $invoice->getShippingAndHandling(),
                     $invoice->getFreightCharge(),
-                    $invoice->getNetInvoiceAmount()
+                    $invoice->getNetInvoiceAmount(),
+                    $trackingNumber,
+                    $shipViaCode
                 ]);
                 
                 $items = $repo->getItems($invoice->getOrderNumber(), $invoice->getRecordSequence())->getItems();
@@ -96,8 +121,8 @@ class ExportService {
                         $item->getItemNumber(),
                         $item->getQuantityOrdered(),
                         $item->getQuantityBilled(),
-                        $item->getPrice(),
-                        $item->getUnitOfMeasure()
+                        $item->getUnitOfMeasure(),
+                        $item->getPrice()
                     ]);
                 }
                 

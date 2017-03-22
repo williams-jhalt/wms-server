@@ -66,7 +66,7 @@ class ExportService {
         $detailFh = $detailFile->openFile("wb");
         
         $headerFh->fputcsv(['orderNumber', 'recordSequence', 'webReferenceNumber', 'customerReferenceNumber', 'invoiceDate', 'customerNumber', 'grossInvoiceAmount', 'shippingAndHandling', 'freightCharge', 'netInvoiceAmount']);
-        $detailFh->fputcsv(['itemNumber', 'qtyOrdered', 'qtyBilled', 'unitOfMeasure']);
+        $detailFh->fputcsv(['orderNumber', 'recordSequence', 'itemNumber', 'qtyOrdered', 'qtyBilled', 'price', 'unitOfMeasure']);
         
         $offset = 0;
         $limit = 1000;
@@ -91,9 +91,12 @@ class ExportService {
                 
                 foreach ($items as $item) {
                     $detailFh->fputcsv([
+                        $invoice->getOrderNumber(),
+                        $invoice->getRecordSequence(),
                         $item->getItemNumber(),
                         $item->getQuantityOrdered(),
                         $item->getQuantityBilled(),
+                        $item->getPrice(),
                         $item->getUnitOfMeasure()
                     ]);
                 }

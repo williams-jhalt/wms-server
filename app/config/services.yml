@@ -28,6 +28,10 @@ services:
         class: Williams\WmsBundle\Service\WmsService
         arguments: [ "%muffs_wsdl_url%", "%muffs_username%", "%muffs_password%" ] 
         
+    app.export_service:
+        class: AppBundle\Service\ExportService
+        arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
+        
     app.order_service:
         class: AppBundle\Service\OrderService
         arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]

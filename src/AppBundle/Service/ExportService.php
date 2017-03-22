@@ -76,7 +76,7 @@ class ExportService {
             $invoices = $repo->findByCustomerAndDate($customerNumber, $startDate, $endDate, $consolidated, $limit, $offset)->getInvoices();
             foreach ($invoices as $invoice) {
                 
-                if (!$invoice->getOpen()) {
+                if ($invoice->getOpen()) {
                     continue;
                 }
                 

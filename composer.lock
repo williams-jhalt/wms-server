@@ -2988,12 +2988,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/connectship-bundle.git",
-                "reference": "8f982028d68214f9aeedc6a4f3f7ebfec0e219f4"
+                "reference": "3c79f06afda432d445958b85cb752d28d2c5fd10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/connectship-bundle/zipball/8f982028d68214f9aeedc6a4f3f7ebfec0e219f4",
-                "reference": "8f982028d68214f9aeedc6a4f3f7ebfec0e219f4",
+                "url": "https://api.github.com/repos/williams-jhalt/connectship-bundle/zipball/3c79f06afda432d445958b85cb752d28d2c5fd10",
+                "reference": "3c79f06afda432d445958b85cb752d28d2c5fd10",
                 "shasum": ""
             },
             "require": {
@@ -3025,7 +3025,7 @@
                 "source": "https://github.com/williams-jhalt/connectship-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/connectship-bundle/issues"
             },
-            "time": "2017-03-01 21:06:00"
+            "time": "2017-03-22 20:52:22"
         },
         {
             "name": "williams/erp-bundle",
@@ -3033,12 +3033,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/erp-bundle.git",
-                "reference": "3c9753c58ec0f7c409ad0b8e4e8a151c3c3f6774"
+                "reference": "9c51a61ed58a3977d96348affe93486f4660dd79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/3c9753c58ec0f7c409ad0b8e4e8a151c3c3f6774",
-                "reference": "3c9753c58ec0f7c409ad0b8e4e8a151c3c3f6774",
+                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/9c51a61ed58a3977d96348affe93486f4660dd79",
+                "reference": "9c51a61ed58a3977d96348affe93486f4660dd79",
                 "shasum": ""
             },
             "require": {
@@ -3070,7 +3070,7 @@
                 "source": "https://github.com/williams-jhalt/erp-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/erp-bundle/issues"
             },
-            "time": "2017-03-22 20:30:12"
+            "time": "2017-03-23 13:55:58"
         },
         {
             "name": "williams/wholesale-bundle",

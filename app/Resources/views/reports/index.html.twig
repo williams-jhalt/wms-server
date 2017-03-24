@@ -142,11 +142,11 @@
                     var response = [];
 
                     for (var company in result) {
-                        response[company] = result[company]['shipped'] / result[company]['ordered'];
+                        response[company] = new Number(result[company]['shipped'] / result[company]['ordered']).toFixed(4);
                     }
                     
-                    $('#muffsFulfilmentRate').html((response['muffs'].toPrecision(4) * 100) + "%");
-                    $('#williamsFulfilmentRate').html((response['williams'].toPrecision(4) * 100) + "%");
+                    $('#muffsFulfilmentRate').html((response['muffs'] * 100) + "%");
+                    $('#williamsFulfilmentRate').html((response['williams'] * 100) + "%");
 
                     var muffsData = new Array();
 

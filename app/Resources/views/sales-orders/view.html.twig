@@ -48,7 +48,7 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Tracking Number</th>
+                <th>Tracking Number / UCC</th>
                 <th>Items</th>
                 <th>Dimensions</th>
             </tr>
@@ -56,7 +56,14 @@
         <tbody>
             {% for carton in order.cartons %}
                 <tr>
-                    <td>{{ carton.trackingNumber }}</td>
+                    <td>
+                        <dl class="dl-horizontal">
+                            <dt>Tracking Number</dt>
+                            <dd>{{ carton.trackingNumber }}</dd>
+                            <dt>Ucc</dt>
+                            <dd>{{ carton.ucc }}</dd>
+                        </dl>
+                    </td>
                     <td>
                         <table class="table table-bordered table-condensed table-striped">
                             <thead>

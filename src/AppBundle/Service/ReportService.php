@@ -45,6 +45,10 @@ class ReportService {
 
         foreach ($orders as $order) {
 
+            if ($order->getOrderCanceled()) {
+                continue;
+            }
+
             if (count($order->getShipments()) > 0 && $order->getShipments()[0]->getShippingDate() !== null) {
                 $interval = $order->getShipments()[0]->getShippingDate()->diff($order->getOrderDate());
                 $daysToShip[$order->getOrderDate()->format('l')][] = $interval->d;
@@ -85,6 +89,11 @@ class ReportService {
         $weeks = [];
 
         foreach ($orders as $order) {
+
+            if ($order->getOrderCanceled()) {
+                continue;
+            }
+
             $week = $order->getOrderDate()->format('W');
             if (array_search($week, $weeks) === false) {
                 $weeks[] = $week;
@@ -109,6 +118,11 @@ class ReportService {
         $days = [];
 
         foreach ($orders as $order) {
+
+            if ($order->getOrderCanceled()) {
+                continue;
+            }
+
             $day = $order->getOrderDate()->format('z');
             if (array_search($day, $days) === false) {
                 $days[] = $day;
@@ -136,22 +150,85 @@ class ReportService {
 
         foreach ($orders as $order) {
 
+            if ($order->getOrderCanceled()) {
+                continue;
+            }
+
             if (!isset($shippingMethods[$order->getShipViaCode()])) {
                 $shippingMethods[$order->getShipViaCode()] = 0;
             }
 
             $shippingMethods[$order->getShipViaCode()] ++;
         }
-        
+
         return $shippingMethods;
-        
+    }
+
+    /**
+     * 
+     * @param Weborder[] $orders
+     */
+    public function calculateTopSellingProducts(array $orders) {
+
+        $products = [];
+
+        foreach ($orders as $order) {
+
+            if ($order->getOrderCanceled()) {
+                continue;
+            }
+
+            foreach ($order->getItems() as $item) {
+
+                if (!isset($products[$item->getSku()])) {
+                    $products[$item->getSku()] = [
+                        'sku' => $item->getSku(),
+                        'name' => $item->getName(),
+                        'quantity_ordered' => 0,
+                        'quantity_shipped' => 0
+                    ];
+                }
+
+                $products[$item->getSku()]['quantity_ordered'] += $item->getQuantity();
+                $products[$item->getSku()]['quantity_shipped'] += $item->getShipped();
+            }
+        }
+
+        return $products;
+    }
+
+    public function calculateFulfilmentRate(array $orders) {
+
+        $data = $this->calculateTopSellingProducts($orders);
+
+        $result = [];
+
+        foreach ($data as $company => $items) {
+            if (!isset($result[$company])) {
+                $result[$company] = ['ordered' => 0, 'shipped' => 0];
+            }
+            foreach ($items as $item) {
+                $result[$company]['ordered'] += $item['quantity_ordered'];
+                $result[$company]['shipped'] += $item['quantity_shipped'];
+            }
+        }
+
+        $response = [];
+
+        foreach ($result as $key => $data) {
+            $response[$key] = $data['shipped'] / $data['ordered'];
+        }
+
+        return $response;
     }
 
     public function generateWebsiteReports(DateTime $startDate, DateTime $endDate) {
 
+        // load orders from website
         $williamsOrders = $this->orderService->getWebsiteOrdersByDate($startDate, $endDate, OrderService::WMS_WILLIAMS);
         $muffsOrders = $this->orderService->getWebsiteOrdersByDate($startDate, $endDate, OrderService::WMS_MUFFS);
 
+        // begin days to ship
         $williamsAvgDaysToShip = $this->calculateWebsiteAverageDaysToShip($williamsOrders);
         $muffsAvgDaysToShip = $this->calculateWebsiteAverageDaysToShip($muffsOrders);
 
@@ -174,7 +251,8 @@ class ReportService {
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/avgDaysToShip.json', json_encode($avgDaysToShip));
-
+        // end days to ship
+        // begin average number of orders
         $williamsAvgNumberOfOrders = $this->calculateAverageNumberOfOrders($williamsOrders);
         $muffsAvgNumberOfOrders = $this->calculateAverageNumberOfOrders($muffsOrders);
 
@@ -195,7 +273,8 @@ class ReportService {
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/avgOrdersPerDay.json', json_encode($avgOrdersPerDay));
-
+        // end average number of orders
+        // begin orders per hour
         $williamsOrdersPerHour = $this->calculateOrdersPerHour($williamsOrders);
         $muffsOrdersPerHour = $this->calculateOrdersPerHour($muffsOrders);
 
@@ -210,35 +289,43 @@ class ReportService {
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/ordersPerHour.json', json_encode($ordersPerHour));
-                                
+        // end orders per hour
+        // begin shipping methods
         $williamsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($williamsOrders);
         $muffsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($muffsOrders);
-                        
+
         $shippingMethodData = [
             'williams' => [],
             'muffs' => []
         ];
-        
+
         foreach ($williamsShippingMethods as $key => $value) {
-            
+
             $shippingMethodData['williams'][] = [
                 'label' => $key,
                 'value' => $value
             ];
-            
         }
-        
+
         foreach ($muffsShippingMethods as $key => $value) {
-            
+
             $shippingMethodData['muffs'][] = [
                 'label' => $key,
                 'value' => $value
             ];
-            
         }
 
         file_put_contents(__DIR__ . '/../../../web/data/shippingMethods.json', json_encode($shippingMethodData));
-        
+        // end shipping methods
+        // begin top products
+        $muffsTopProducts = $this->calculateTopSellingProducts($muffsOrders);
+        $williamsTopProducts = $this->calculateTopSellingProducts($williamsOrders);
+
+        file_put_contents(__DIR__ . '/../../../web/data/products.json', json_encode([
+            'muffs' => $muffsTopProducts,
+            'williams' => $williamsTopProducts
+        ]));
+        // end top products
     }
 
 }

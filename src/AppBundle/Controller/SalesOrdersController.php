@@ -12,63 +12,35 @@ use Symfony\Component\HttpFoundation\Request;
 class SalesOrdersController extends Controller {
 
     /**
-     * @Route("/", name="sales_orders_index")
+     * @Route("/{company}", name="sales_orders_index", defaults={"company" = "WTC"})
      */
-    public function indexAction(Request $request) {
-        return $this->render('sales-orders/index.html.twig');
+    public function indexAction($company) {
+        return $this->render('sales-orders/index.html.twig', [
+                    'company' => $company
+        ]);
     }
 
     /**
-     * @Route("/list", name="sales_orders_list")
+     * @Route("/{company}/list", name="sales_orders_list", defaults={"company" = "WTC"})
      */
-    public function listAction(Request $request) {
-        
+    public function listAction($company, Request $request) {
+
         $manifestId = $request->get('manifestId');
-        
+
         list($orderNumber, $recordSequence) = explode('-', $manifestId);
-        
-        $service = $this->get('app.order_service');
-        
+
+        if ($company == 'MFG') {
+            $service = $this->get('app.mfg_order_service');
+        } else {
+            $service = $this->get('app.order_service');
+        }
+
         $salesOrder = $service->getOrder($orderNumber);
-        
+
         return $this->render('sales-orders/view.html.twig', [
-            'order' => $salesOrder
+                    'order' => $salesOrder,
+                    'company' => $company
         ]);
-        
-    }
-    
-    /**
-     * @Route("/view", name="sales_orders_view")
-     */
-    public function viewAction(Request $request) {
-        
-        $orderNumber = $request->get('orderNumber');
-        
-        $service = $this->get('app.order_service');
-        
-        $salesOrder = $service->getOrder($orderNumber);   
-        
-        return $this->render('sales-orders/view.html.twig', [
-            'order' => $salesOrder
-        ]);
-        
-    }
-    
-    /**
-     * @Route("/carton", name="sales_orders_carton")
-     */
-    public function cartonAction(Request $request) {
-        
-        $ucc = $request->get('ucc');
-        
-        $service = $this->get('app.order_service');
-        
-        $items = $service->getItems($ucc);
-        
-        return $this->render('sales-orders/carton.html.twig', [
-            'items' => $items
-        ]);
-        
     }
 
 }

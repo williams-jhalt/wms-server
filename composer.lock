@@ -1239,16 +1239,16 @@
         },
         {
             "name": "jms/serializer",
-            "version": "1.5.0",
+            "version": "1.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "9dc44f2924a90bf526a2e1c4bb1ce9d772a00a45"
+                "reference": "5e9008cbb0bac2986979d905a87ae48efcf578c4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/9dc44f2924a90bf526a2e1c4bb1ce9d772a00a45",
-                "reference": "9dc44f2924a90bf526a2e1c4bb1ce9d772a00a45",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/5e9008cbb0bac2986979d905a87ae48efcf578c4",
+                "reference": "5e9008cbb0bac2986979d905a87ae48efcf578c4",
                 "shasum": ""
             },
             "require": {
@@ -1261,6 +1261,7 @@
                 "phpoption/phpoption": "^1.1"
             },
             "conflict": {
+                "jms/serializer-bundle": "<1.2.1",
                 "twig/twig": "<1.12"
             },
             "require-dev": {
@@ -1279,12 +1280,14 @@
                 "twig/twig": "~1.12|~2.0"
             },
             "suggest": {
+                "doctrine/cache": "Required if you like to use cache functionality.",
+                "doctrine/collections": "Required if you like to use doctrine collection types as ArrayCollection.",
                 "symfony/yaml": "Required if you'd like to serialize data to YAML format."
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5-dev"
+                    "dev-master": "1.6-dev"
                 }
             },
             "autoload": {
@@ -1311,7 +1314,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2017-02-14T14:35:22+00:00"
+            "time": "2017-03-24T13:11:23+00:00"
         },
         {
             "name": "jms/serializer-bundle",
@@ -3033,12 +3036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/erp-bundle.git",
-                "reference": "9c51a61ed58a3977d96348affe93486f4660dd79"
+                "reference": "e927763ca3146b98f1ade39706efab12134f6f27"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/9c51a61ed58a3977d96348affe93486f4660dd79",
-                "reference": "9c51a61ed58a3977d96348affe93486f4660dd79",
+                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/e927763ca3146b98f1ade39706efab12134f6f27",
+                "reference": "e927763ca3146b98f1ade39706efab12134f6f27",
                 "shasum": ""
             },
             "require": {
@@ -3070,7 +3073,7 @@
                 "source": "https://github.com/williams-jhalt/erp-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/erp-bundle/issues"
             },
-            "time": "2017-03-23 13:55:58"
+            "time": "2017-03-24 18:00:54"
         },
         {
             "name": "williams/wholesale-bundle",

@@ -19,6 +19,35 @@ class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
     protected $source;
     
     /**
+     * 
+     * @param \Williams\ErpBundle\Model\SalesOrder $salesOrder
+     */
+    public function __construct($salesOrder = null) {
+        if ($salesOrder !== null) {
+            $this->customerNumber = $salesOrder->customerNumber;
+            $this->customerPurchaseOrder = $salesOrder->customerPurchaseOrder;
+            $this->open = $salesOrder->open;
+            $this->orderDate = $salesOrder->orderDate;
+            $this->orderNumber = $salesOrder->orderNumber;
+            $this->recordSequence = $salesOrder->recordSequence;
+            $this->shipToAddress1 = $salesOrder->shipToAddress1;
+            $this->shipToAddress2 = $salesOrder->shipToAddress2;
+            $this->shipToAddress3 = $salesOrder->shipToAddress3;
+            $this->shipToCity = $salesOrder->shipToCity;
+            $this->shipToCountry = $salesOrder->shipToCountry;
+            $this->shipToEmail = $salesOrder->shipToEmail;
+            $this->shipToName = $salesOrder->shipToName;
+            $this->shipToPhone = $salesOrder->shipToPhone;
+            $this->shipToState = $salesOrder->shipToState;
+            $this->shipToZip = $salesOrder->shipToZip;
+            $this->shipViaCode = $salesOrder->shipViaCode;
+            $this->sourceCode = $salesOrder->sourceCode;
+            $this->status = $salesOrder->status;
+            $this->webReferenceNumber = $salesOrder->webReferenceNumber;
+        }
+    }
+
+    /**
      *
      * @var ShipmentPackage[]
      */
@@ -91,7 +120,12 @@ class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
      * @return string
      */
     public function getCompany() {
-        return $this->company;
+
+        if (strtolower(substr($this->customerNumber, -1)) == 'i') {
+            return self::COMPANY_MUFFS;
+        } else {
+            return self::COMPANY_WILLIAMS;
+        }
     }
 
     /**
@@ -139,41 +173,38 @@ class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
         $this->cartons = $cartons;
         return $this;
     }
-        
+
     /**
      * Calculate total volume of all cartons (in cubic inches)
      * 
      * @return double
      */
     public function getTotalVolume() {
-        
+
         $volume = 0.0;
-        
+
         foreach ($this->cartons as $carton) {
             $volume += ($carton->getPackageHeight() * $carton->getPackageLength() * $carton->getPackageWidth());
         }
-        
+
         return $volume;
-        
     }
-    
+
     /**
      * Calculate total weight of all cartons (in pounds)
      * 
      * @return double
      */
     public function getTotalWeight() {
-        
+
         $weight = 0.0;
-        
+
         foreach ($this->cartons as $carton) {
-            
+
             $weight += $carton->getShippingWeight();
-            
         }
-        
+
         return $weight;
-        
     }
 
 }

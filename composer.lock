@@ -2233,16 +2233,16 @@
         },
         {
             "name": "symfony/monolog-bundle",
-            "version": "v3.0.3",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/monolog-bundle.git",
-                "reference": "ebce76a39a65495a66c34eb1574cc4b9e35a4e64"
+                "reference": "6f96c7dbb6b2ef70b307a1a6f897153cbca3da47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/ebce76a39a65495a66c34eb1574cc4b9e35a4e64",
-                "reference": "ebce76a39a65495a66c34eb1574cc4b9e35a4e64",
+                "url": "https://api.github.com/repos/symfony/monolog-bundle/zipball/6f96c7dbb6b2ef70b307a1a6f897153cbca3da47",
+                "reference": "6f96c7dbb6b2ef70b307a1a6f897153cbca3da47",
                 "shasum": ""
             },
             "require": {
@@ -2289,7 +2289,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2017-01-10T20:01:51+00:00"
+            "time": "2017-03-26T11:55:59+00:00"
         },
         {
             "name": "symfony/polyfill-apcu",
@@ -3036,12 +3036,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/williams-jhalt/erp-bundle.git",
-                "reference": "e927763ca3146b98f1ade39706efab12134f6f27"
+                "reference": "4c991efea5fe875c58d3fc0247a9c15073d126bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/e927763ca3146b98f1ade39706efab12134f6f27",
-                "reference": "e927763ca3146b98f1ade39706efab12134f6f27",
+                "url": "https://api.github.com/repos/williams-jhalt/erp-bundle/zipball/4c991efea5fe875c58d3fc0247a9c15073d126bd",
+                "reference": "4c991efea5fe875c58d3fc0247a9c15073d126bd",
                 "shasum": ""
             },
             "require": {
@@ -3073,7 +3073,7 @@
                 "source": "https://github.com/williams-jhalt/erp-bundle/tree/master",
                 "issues": "https://github.com/williams-jhalt/erp-bundle/issues"
             },
-            "time": "2017-03-24 18:00:54"
+            "time": "2017-03-27 14:32:34"
         },
         {
             "name": "williams/wholesale-bundle",

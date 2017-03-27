@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#shipmentsTable').DataTable();
+        });
+    </script>
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="col-lg-12">
+        <h1 class="page-header">Shipments</h1>
+    </div>
+
+    <br>
+
+    <h2>Open Shipments</h2>
+
+    <table id="shipmentsTable" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Manifest ID</th>
+                <th>Order Date</th>
+                <th>Picker</th>
+                <th>Picked On</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for shipment in shipments %}
+                <tr>
+                    <td>{{ shipment.manifestId }}</td>
+                    <td>{{ shipment.orderDate|date('Y-m-d') }}</td>
+                    <td>{{ shipment.picker }}</td>
+                    <td>{{ shipment.pickedOn|date('Y-m-d H:i:s') }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

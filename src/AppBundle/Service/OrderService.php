@@ -260,5 +260,47 @@ class OrderService {
 
         return $order;
     }
+    
+    public function findOpenOrders() {
+        
+        $limit = 1000;
+        $offset = 0;
+        
+        $response = [];
+        
+        do {
+            $orders = $this->erp->getSalesOrderRepository()->findOpen($limit, $offset)->getSalesOrders();
+            foreach ($orders as $order) {
+                $salesOrder = new SalesOrder();
+                $this->loadOrderFromErp($salesOrder, $order);
+                $response[] = $salesOrder;
+            }
+            $offset += $limit;
+        } while (count($orders) > 0);
+        
+        return $response;
+        
+    }
+    
+    public function findOpenShipments() {
+        
+        $limit = 1000;
+        $offset = 0;
+        
+        $response = [];
+        
+        do {
+            $shipments = $this->erp->getShipmentRepository()->findOpen($limit, $offset)->getShipments();
+            
+            foreach ($shipments as $shipment) {
+                $response[] = $shipment;
+            }
+            
+            $offset += $limit;
+        } while (count($shipments) > 0);
+        
+        return $response;
+        
+    }
 
 }

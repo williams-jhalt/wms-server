@@ -62,10 +62,12 @@ class ShipmentsController extends Controller {
 
                 $trackingNumbers = "";
 
-                for ($i = 0; $i < $cartonCount; $i++) {
-                    $trackingNumbers += $carton[$i]->getTrackingNumber();
-                    if ($i < $cartonCount - 1) {
-                        $trackingNumbers += ", ";
+                if ($cartonCount > 0) {
+                    for ($i = 0; $i < $cartonCount; $i++) {
+                        $trackingNumbers += $carton[$i]->getTrackingNumber();
+                        if ($i < $cartonCount - 1) {
+                            $trackingNumbers += ", ";
+                        }
                     }
                 }
 

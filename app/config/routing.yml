@@ -5,3 +5,6 @@ app:
 erp_api:
     resource: "@WilliamsErpBundle/Resources/config/routes.yml"
     prefix: /api
+    
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"

@@ -6,6 +6,7 @@ use AppBundle\Service\OrderService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 /**
  * @Route("/shipments")
@@ -23,38 +24,97 @@ class ShipmentsController extends Controller {
      * @Route("/", name="shipments_index")
      */
     public function indexAction() {
+        return $this->render('shipments/index.html.twig');
+    }
 
-        $service = $this->getOrderService();
-        
-        $docRepo = $this->getDoctrine()->getRepository('AppBundle:PickerLog');
+    /**
+     * @param Request $request
+     * @return \AppBundle\Controller\Response
+     * 
+     * @Route("/list", name="shipments_list", options={"expose": true})
+     */
+    public function listAction(Request $request) {
 
-        $openShipments = $service->findOpenShipments();
-        
-        $data = [];
-        
-        foreach ($openShipments as $shipment) {
-            
-            $s = [
-                'manifestId' => $shipment->getManifestId(),
-                'orderDate' => $shipment->getOrderDate(),
-                'picker' => '',
-                'pickedOn' => ''
-            ];
-            
-            $pickerLog = $docRepo->findByOrderNumber($shipment->getManifestId());
-            
-            foreach ($pickerLog as $log) {
-                $s['picker'] = $log->getUser();
-                $s['pickedOn'] = $log->getTimestamp();
+        $isShipped = $request->get('is_shipped');
+        $isPicked = $request->get('is_picked');
+        $draw = (int) $request->get('draw', 1);
+        $start = (int) $request->get('start', 0);
+        $length = (int) $request->get('length', 10);
+        $search = $request->get('search');
+        $order = $request->get('order');
+        $columns = $request->get('columns');
+
+        $cacheItem = $this->get('cache.app')->getItem('shipments_list');
+
+        if (!$cacheItem->isHit()) {
+            $service = $this->getOrderService();
+            $docRepo = $this->getDoctrine()->getRepository('AppBundle:PickerLog');
+            $openShipments = $service->findOpenShipments();
+
+            $resultData = [];
+
+            foreach ($openShipments as $shipment) {
+
+                $picker = $docRepo->findOneByOrderNumber($shipment->getManifestId());
+                $cartons = $service->getCartons($shipment->getOrderNumber());
+                
+                $cartonCount = count($cartons);
+
+                $resultData[] = [
+                    $shipment->getManifestId(),
+                    $shipment->getOrderDate()->format('Y-m-d'),
+                    $picker == null ? "Not Picked" : $picker->getUser(),
+                    $cartonCount > 0 ? "{$cartonCount} Cartons Shipped" : "Not Shipped"
+                ];
             }
-            
-            $data[] = $s;
-            
+
+            $cacheItem->set($resultData);
+            $cacheItem->expiresAfter(300);
+            $this->get('cache.app')->save($cacheItem);
+        } else {
+            $resultData = $cacheItem->get();
         }
 
-        return $this->render('shipments/index.html.twig', [
-                    'shipments' => $data
-        ]);
+        $filtered = [];
+
+        foreach ($resultData as $item) {
+            if (!empty($search['value']) && !preg_match("/.*{$search['value']}.*/", $item[0])) {
+                continue;
+            }
+            if ($isShipped == 'true' && $item[3] == "Not Shipped") {
+                continue;
+            }
+            if ($isPicked == 'true' && $item[2] == "Not Picked") {
+                continue;
+            }
+            $filtered[] = $item;
+        }
+
+        foreach ($order as $o) {
+            usort($filtered, function($a, $b) use ($o) {
+                if ($a[$o['column']] == $b[$o['column']]) {
+                    return 0;
+                }
+                if ($o['dir'] == 'desc') {
+                    return ($a[$o['column']] > $b[$o['column']]) ? -1 : 1;
+                } else {
+                    return ($a[$o['column']] < $b[$o['column']]) ? -1 : 1;
+                }
+            });
+        }
+
+        $data = [
+            'draw' => $draw,
+            'recordsTotal' => count($resultData),
+            'recordsFiltered' => count($filtered),
+            'data' => array_slice($filtered, $start, $length)
+        ];
+
+        $response = new Response();
+        $response->headers->set('Content-Type', 'application/json');
+        $response->setContent(json_encode($data));
+
+        return $response;
     }
 
 }

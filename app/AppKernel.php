@@ -19,6 +19,7 @@ class AppKernel extends Kernel
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
+            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new Williams\ErpBundle\WilliamsErpBundle(),
             new Williams\WholesaleBundle\WilliamsWholesaleBundle(),
             new Williams\WmsBundle\WilliamsWmsBundle(),

@@ -49,6 +49,7 @@
         "knplabs/knp-paginator-bundle": "^2.5",
         "knplabs/knp-menu-bundle": "^2.1",
         "jms/serializer-bundle": "^1.1",
+        "friendsofsymfony/jsrouting-bundle": "dev-master",
         "williams/erp-bundle": "master-dev",
         "williams/wholesale-bundle": "master-dev",
         "williams/wms-bundle": "master-dev",

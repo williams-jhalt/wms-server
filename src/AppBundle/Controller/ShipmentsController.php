@@ -96,7 +96,7 @@ class ShipmentsController extends Controller {
             if (!empty($search['value']) && !preg_match("/.*{$search['value']}.*/", $item[0])) {
                 continue;
             }
-            if ($isShipped == 'true' && $item[3] == "Not Shipped") {
+            if ($isShipped == 'true' && $item[4] == "Not Shipped") {
                 continue;
             }
             if ($isPacked == 'true' && $item[3] == "Not Packed") {

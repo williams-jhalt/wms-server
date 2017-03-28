@@ -10,12 +10,17 @@
                 "ajax": Routing.generate('shipments_list')
             });
             
+            var isShippedChecked = false;
+            var isPickedChecked = false;
+            
             $("input[name='is_shipped']").click(function() {
-                table.ajax.url(Routing.generate('shipments_list', {is_shipped: this.checked, is_picked: $("input[name='is_picked']").checked})).load();
+                table.ajax.url(Routing.generate('shipments_list', {is_shipped: this.checked, is_picked: isPickedChecked})).load();
+                isShippedChecked = this.checked;
             });
             
             $("input[name='is_picked']").click(function() {
-                table.ajax.url(Routing.generate('shipments_list', {is_picked: this.checked, is_shipped: $("input[name='is_shipped']").checked})).load();
+                table.ajax.url(Routing.generate('shipments_list', {is_picked: this.checked, is_shipped: isShippedChecked})).load();
+                isPickedChecked = this.checked;
             });
         });
     </script>

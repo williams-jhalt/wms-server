@@ -35,8 +35,9 @@ class ShipmentsController extends Controller {
      */
     public function listAction(Request $request) {
 
-        $isShipped = $request->get('is_shipped');
+        $isPacked = $request->get('is_packed');
         $isPicked = $request->get('is_picked');
+        $isShipped = $request->get('is_shipped');
         $draw = (int) $request->get('draw', 1);
         $start = (int) $request->get('start', 0);
         $length = (int) $request->get('length', 10);
@@ -64,9 +65,11 @@ class ShipmentsController extends Controller {
 
                 if ($cartonCount > 0) {
                     for ($i = 0; $i < $cartonCount; $i++) {
-                        $trackingNumbers .= $cartons[$i]->getTrackingNumber();
-                        if ($i < $cartonCount - 1) {
-                            $trackingNumbers .= ", ";
+                        if (!empty($cartons[$i]->getTrackingNumber())) {
+                            $trackingNumbers .= $cartons[$i]->getTrackingNumber();
+                            if ($i < $cartonCount - 1) {
+                                $trackingNumbers .= ", ";
+                            }
                         }
                     }
                 }
@@ -75,8 +78,8 @@ class ShipmentsController extends Controller {
                     $shipment->getManifestId(),
                     $shipment->getOrderDate()->format('Y-m-d'),
                     $picker == null ? "Not Picked" : $picker->getUser(),
-                    $cartonCount > 0 ? "{$cartonCount} Cartons Shipped" : "Not Shipped",
-                    $trackingNumbers
+                    $cartonCount > 0 ? "{$cartonCount} Cartons Packed" : "Not Packed",
+                    empty($trackingNumbers) ? "Not Shipped" : $trackingNumbers
                 ];
             }
 
@@ -94,6 +97,9 @@ class ShipmentsController extends Controller {
                 continue;
             }
             if ($isShipped == 'true' && $item[3] == "Not Shipped") {
+                continue;
+            }
+            if ($isPacked == 'true' && $item[3] == "Not Packed") {
                 continue;
             }
             if ($isPicked == 'true' && $item[2] == "Not Picked") {

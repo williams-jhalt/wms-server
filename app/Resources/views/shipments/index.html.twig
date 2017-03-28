@@ -10,16 +10,22 @@
                 "ajax": Routing.generate('shipments_list')
             });
             
-            var isShippedChecked = false;
+            var isPackedChecked = false;
             var isPickedChecked = false;
+            var isShippedChecked = false;
+            
+            $("input[name='is_packed']").click(function() {
+                table.ajax.url(Routing.generate('shipments_list', {is_packed: this.checked, is_picked: isPickedChecked, is_shipped: isShippedChecked})).load();
+                isPackedChecked = this.checked;
+            });
             
             $("input[name='is_shipped']").click(function() {
-                table.ajax.url(Routing.generate('shipments_list', {is_shipped: this.checked, is_picked: isPickedChecked})).load();
+                table.ajax.url(Routing.generate('shipments_list', {is_shipped: this.checked, is_picked: isPickedChecked, is_packed: isPackedChecked})).load();
                 isShippedChecked = this.checked;
             });
             
             $("input[name='is_picked']").click(function() {
-                table.ajax.url(Routing.generate('shipments_list', {is_picked: this.checked, is_shipped: isShippedChecked})).load();
+                table.ajax.url(Routing.generate('shipments_list', {is_picked: this.checked, is_packed: isPackedChecked, is_shipped: isShippedChecked})).load();
                 isPickedChecked = this.checked;
             });
         });
@@ -40,6 +46,12 @@
             <label>
                 <input type="checkbox" name="is_shipped" value="true">
                 Only Show Shipped Orders
+            </label>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="is_packed" value="true">
+                Only Show Packed Orders
             </label>
         </div>
         <div class="checkbox">

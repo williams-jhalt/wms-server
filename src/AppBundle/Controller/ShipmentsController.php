@@ -57,14 +57,24 @@ class ShipmentsController extends Controller {
 
                 $picker = $docRepo->findOneByOrderNumber($shipment->getManifestId());
                 $cartons = $service->getCartons($shipment->getOrderNumber());
-                
+
                 $cartonCount = count($cartons);
+
+                $trackingNumbers = "";
+
+                for ($i = 0; $i < $cartonCount; $i++) {
+                    $trackingNumbers += $carton[$i]->getTrackingNumber();
+                    if ($i < $cartonCount - 1) {
+                        $trackingNumbers += ", ";
+                    }
+                }
 
                 $resultData[] = [
                     $shipment->getManifestId(),
                     $shipment->getOrderDate()->format('Y-m-d'),
                     $picker == null ? "Not Picked" : $picker->getUser(),
-                    $cartonCount > 0 ? "{$cartonCount} Cartons Shipped" : "Not Shipped"
+                    $cartonCount > 0 ? "{$cartonCount} Cartons Shipped" : "Not Shipped",
+                    $trackingNumbers
                 ];
             }
 

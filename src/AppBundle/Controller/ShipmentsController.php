@@ -76,6 +76,7 @@ class ShipmentsController extends Controller {
 
                 $resultData[] = [
                     $shipment->getManifestId(),
+                    $shipment->getWebReferenceNumber(),
                     $shipment->getOrderDate()->format('Y-m-d'),
                     $picker == null ? "Not Picked" : $picker->getUser(),
                     $cartonCount > 0 ? "{$cartonCount} Cartons Packed" : "Not Packed",

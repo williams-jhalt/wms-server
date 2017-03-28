@@ -15,7 +15,7 @@
             });
             
             $("input[name='is_picked']").click(function() {
-                table.ajax.url(Routing.generate('shipments_list', {is_picked: this.checked, is_shipped: $("input[name='is_packed']").checked})).load();
+                table.ajax.url(Routing.generate('shipments_list', {is_picked: this.checked, is_shipped: $("input[name='is_shipped']").checked})).load();
             });
         });
     </script>

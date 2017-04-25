@@ -6,26 +6,30 @@ parameters:
 services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]  
+
+    williams_wholesale.service:
+        class: WholesaleBundle\Service\WholesaleService
+        arguments: [ "%williams_wholesale_url%" ] 
         
-    app.mfg_erp.service:
-        class: Williams\ErpBundle\Service\ErpServerService
-        arguments: [ "%erp_server%", "%erp_username%", "%erp_password%", "MFG", "wms-server-mfg" ] 
+    williams_erp.service:
+        class: ErpBundle\Service\ErpServerService
+        arguments: [ "%erp_server%", "%erp_username%", "%erp_password%", "%erp_company%", "%erp_appname%" ] 
                 
     app.product_service:
         class: AppBundle\Service\ProductService
         arguments: [ "@williams_erp.service", "@williams_wholesale.service" ]
         
     app.connectship_service:
-        class: Williams\ConnectshipBundle\Service\ConnectshipService
+        class: ConnectshipBundle\Service\ConnectshipService
         arguments: [ "%connectship_api_wsdl%" ]
         
     app.williams_wms:
-        class: Williams\WmsBundle\Service\WmsService
+        class: WmsBundle\Service\WmsService
         arguments: [ "%williams_wsdl_url%", "%williams_username%", "%williams_password%" ] 
         
     app.muffs_wms:
-        class: Williams\WmsBundle\Service\WmsService
+        class: WmsBundle\Service\WmsService
         arguments: [ "%muffs_wsdl_url%", "%muffs_username%", "%muffs_password%" ] 
         
     app.export_service:
@@ -36,10 +40,14 @@ services:
         class: AppBundle\Service\OrderService
         arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
         
-    app.mfg_order_service:
-        class: AppBundle\Service\OrderService
-        arguments: [ "@app.mfg_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
-        
     app.reports:
         class: AppBundle\Service\ReportService
         arguments: [ "@app.order_service", "@app.product_service" ]
+        
+    app.logicbroker_handler:
+        class: AppBundle\Service\LogicBrokerHandler
+        arguments: [ "@williams_erp.service" ]
+        
+    app.logicbroker:
+        class: LogicBrokerBundle\Service\LogicBrokerService
+        arguments: [ "%logicbroker_ftp_host%", "%logicbroker_ftp_user%", "%logicbroker_ftp_pass%", "@app.logicbroker_handler", "@doctrine.orm.entity_manager" ]      

@@ -2,9 +2,9 @@
 
 namespace AppBundle\Service;
 
-use Williams\ErpBundle\Service\ErpService;
+use ErpBundle\Service\ErpService;
 use AppBundle\Model\ProductImage;
-use Williams\WholesaleBundle\Service\WholesaleService;
+use WholesaleBundle\Service\WholesaleService;
 
 class ProductService {
 
@@ -65,7 +65,7 @@ class ProductService {
         return $result;
     }
 
-    private function loadProductFromErp(\AppBundle\Model\Product $product, \Williams\ErpBundle\Model\Product $erpProduct) {
+    private function loadProductFromErp(\AppBundle\Model\Product $product, \ErpBundle\Model\Product $erpProduct) {
 
         $product->setBarcode($erpProduct->getBarcode())
                 ->setBinLocation($erpProduct->getBinLocation())
@@ -86,7 +86,7 @@ class ProductService {
         return $product;
     }
 
-    private function loadProductFromWholesale(\AppBundle\Model\Product $product, \Williams\WholesaleBundle\Model\Product $wholesaleProduct) {
+    private function loadProductFromWholesale(\AppBundle\Model\Product $product, \WholesaleBundle\Model\Product $wholesaleProduct) {
 
         $product->setDescription($wholesaleProduct->getDescription())
                 ->setColor($wholesaleProduct->getColor())

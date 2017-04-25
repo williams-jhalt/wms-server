@@ -20,9 +20,11 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new Williams\ErpBundle\WilliamsErpBundle(),
-            new Williams\WholesaleBundle\WilliamsWholesaleBundle(),
-            new Williams\WmsBundle\WilliamsWmsBundle(),
+            new ErpBundle\ErpBundle(),
+            new ConnectshipBundle\ConnectshipBundle(),
+            new WholesaleBundle\WholesaleBundle(),
+            new WmsBundle\WmsBundle(),
+            new LogicBrokerBundle\LogicBrokerBundle(),
             new AppBundle\AppBundle(),
         ];
 

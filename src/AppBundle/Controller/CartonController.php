@@ -12,19 +12,17 @@ use Symfony\Component\HttpFoundation\Request;
 class CartonController extends Controller {
 
     /**
-     * @Route("/{company}", name="carton_index", defaults={"company" = "WTC"})
+     * @Route("/", name="carton_index")
      */
-    public function indexAction($company, Request $request) {
+    public function indexAction(Request $request) {
         // replace this example code with whatever you need
-        return $this->render('carton/index.html.twig', [
-                    'company' => $company
-        ]);
+        return $this->render('carton/index.html.twig');
     }
 
     /**
-     * @Route("/{company}/view", name="carton_view", defaults={"company" = "WTC"})
+     * @Route("/view", name="carton_view")
      */
-    public function viewAction($company, Request $request) {
+    public function viewAction(Request $request) {
 
         $manifestId = $request->get('manifestId');
 
@@ -32,17 +30,12 @@ class CartonController extends Controller {
 
         $repo = $this->getDoctrine()->getRepository('AppBundle:Carton');
 
-        if ($company == 'MFG') {
-            $service = $this->get('app.mfg_order_service');
-        } else {
-            $service = $this->get('app.order_service');
-        }
+        $service = $this->get('app.order_service');
 
         $cartons = $service->getCartons($orderNumber);
 
         return $this->render('carton/view.html.twig', [
                     'manifestId' => $manifestId,
-                    'company' => $company,
                     'cartons' => $cartons
         ]);
     }

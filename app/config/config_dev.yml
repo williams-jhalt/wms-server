@@ -10,11 +10,6 @@ framework:
 web_profiler:
     toolbar: true
     intercept_redirects: false
-    
-doctrine:
-    dbal:
-        driver:   pdo_sqlite
-        path: "%kernel.root_dir%/../var/data/dev.db"
 
 monolog:
     handlers:

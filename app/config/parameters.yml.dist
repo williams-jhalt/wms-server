@@ -36,3 +36,9 @@ parameters:
     muffs_wsdl_url: ~
     muffs_username: ~
     muffs_password: ~
+
+    logicbroker_ftp_host: ~
+    logicbroker_ftp_user: ~
+    logicbroker_ftp_pass: ~
+
+    williams_wholesale_url: ~

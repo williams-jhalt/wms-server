@@ -1,0 +1,33 @@
+williams_erp_sales_orders:
+    type: rest
+    resource: ErpBundle\Controller\SalesOrdersController
+    
+williams_erp_sales_order_items:
+    type: rest
+    parent: williams_erp_sales_orders
+    resource: ErpBundle\Controller\SalesOrderItemsController
+    
+williams_erp_shipments:
+    type: rest
+    parent: williams_erp_sales_orders
+    resource: ErpBundle\Controller\ShipmentsController
+    
+williams_erp_shipment_items:
+    type: rest
+    parent: williams_erp_shipments
+    resource: ErpBundle\Controller\ShipmentItemsController
+    
+williams_erp_cartons:
+    type: rest
+    parent: williams_erp_sales_orders
+    resource: ErpBundle\Controller\ShipmentCartonsController
+    
+williams_erp_invoices:
+    type: rest
+    parent: williams_erp_sales_orders
+    resource: ErpBundle\Controller\InvoicesController
+    
+williams_erp_invoice_items:
+    type: rest
+    parent: williams_erp_invoices
+    resource: ErpBundle\Controller\InvoiceItemsController

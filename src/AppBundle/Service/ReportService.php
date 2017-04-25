@@ -3,7 +3,7 @@
 namespace AppBundle\Service;
 
 use DateTime;
-use Williams\WmsBundle\Model\Weborder;
+use WmsBundle\Model\Weborder;
 use function GuzzleHttp\json_encode;
 
 class ReportService {

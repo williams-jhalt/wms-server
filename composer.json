@@ -16,24 +16,6 @@
             "Tests\\": "tests/"
         }
     },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/williams-jhalt/erp-bundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/williams-jhalt/wholesale-bundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/williams-jhalt/wms-bundle"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/williams-jhalt/connectship-bundle"
-        }
-    ],
     "require": {
         "php": ">=5.5.9",
         "symfony/symfony": "3.2.*",
@@ -50,10 +32,8 @@
         "knplabs/knp-menu-bundle": "^2.1",
         "jms/serializer-bundle": "^1.1",
         "friendsofsymfony/jsrouting-bundle": "dev-master",
-        "williams/erp-bundle": "master-dev",
-        "williams/wholesale-bundle": "master-dev",
-        "williams/wms-bundle": "master-dev",
-        "williams/connectship-bundle": "master-dev"
+        "friendsofsymfony/rest-bundle": "^2.1",
+        "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",

@@ -3,9 +3,9 @@
 namespace AppBundle\Model;
 
 use DateTime;
-use Williams\ErpBundle\Model\ShipmentPackage;
+use ErpBundle\Model\ShipmentPackage;
 
-class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
+class SalesOrder extends \ErpBundle\Model\SalesOrder {
 
     const COMPANY_MUFFS = 'muffs';
     const COMPANY_WILLIAMS = 'williams';
@@ -20,7 +20,7 @@ class SalesOrder extends \Williams\ErpBundle\Model\SalesOrder {
     
     /**
      * 
-     * @param \Williams\ErpBundle\Model\SalesOrder $salesOrder
+     * @param \ErpBundle\Model\SalesOrder $salesOrder
      */
     public function __construct($salesOrder = null) {
         if ($salesOrder !== null) {

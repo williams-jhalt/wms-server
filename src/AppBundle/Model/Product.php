@@ -1,10 +1,10 @@
 <?php
 
-use Williams\WholesaleBundle\Model\ProductImage;
-
 namespace AppBundle\Model;
 
-class Product extends \Williams\ErpBundle\Model\Product {
+use WholesaleBundle\Model\ProductImage;
+
+class Product extends \ErpBundle\Model\Product {
 
     protected $description;
     protected $keywords;

@@ -1,0 +1,106 @@
+<?php
+
+namespace WholesaleBundle\Repository;
+
+use DateTime;
+use Exception;
+use GuzzleHttp\Client;
+use WholesaleBundle\Model\Product;
+use WholesaleBundle\Model\ProductCollection;
+
+class ProductRepository {
+
+    private $client;
+
+    public function __construct(Client $client) {
+        $this->client = $client;
+    }
+
+    public function findAll($limit = 100, $offset = 0) {
+
+        $res = $this->client->get('/rest/products', [
+            'query' => [
+                'format' => 'json',
+                'start' => $offset,
+                'limit' => $limit
+            ]
+        ]);
+
+        if ($res->getStatusCode() != 200) {
+            throw new Exception("Could not get data");
+        }
+
+        $range = $res->getHeader('X-Content-Range');
+
+        $matches = array();
+
+        preg_match('/items (\d+)-(\d+)\/(\d+)/', $range[0], $matches);
+
+        $data = json_decode($res->getBody());
+
+        $response = new ProductCollection();
+        $response->setOffset($matches[1]);
+        $response->setLimit($matches[2]);
+        $response->setTotal($matches[3]);
+
+        $products = array();
+
+        foreach ($data->products as $product) {
+            $products[] = $this->loadProduct($product);
+        }
+
+        $response->setItems($products);
+
+        return $response;
+    }
+
+    public function find($id) {
+
+        $res = $this->client->get('/rest/products/' . $id, [
+            'query' => [
+                'format' => 'json'
+            ]
+        ]);
+
+        if ($res->getStatusCode() != 200) {
+            throw new Exception("Could not get data");
+        }
+
+        $data = json_decode($res->getBody());
+
+        return $this->loadProduct($data->product);
+    }
+
+    private function loadProduct($data) {
+        $t = new Product();
+        $t->setId($data->id)
+                ->setActive($data->active)
+                ->setBarcode($data->barcode)
+                ->setColor($data->color)
+                ->setCreatedOn($data->created_on)
+                ->setUpdatedOn($data->updated_on)
+                ->setDescription($data->description)
+                ->setDiameter($data->diameter)
+                ->setDiscountable($data->discountable)
+                ->setHeight($data->height)
+                ->setKeywords($data->keywords)
+                ->setLength($data->length)
+                ->setManufacturerId($data->manufacturer_id)
+                ->setMaterial($data->material)
+                ->setMaxDiscountRate($data->max_discount_rate)
+                ->setName($data->name)
+                ->setOnSale($data->on_sale)
+                ->setPrice($data->price)
+                ->setReleaseDate(new DateTime($data->release_date))
+                ->setReorderQuantity($data->reorder_quantity)
+                ->setSaleable($data->saleable)
+                ->setSku($data->sku)
+                ->setSockQuantity($data->stock_quantity)
+                ->setTypeId($data->type_id)
+                ->setVideo($data->video)
+                ->setWeight($data->weight)
+                ->setWidth($data->width);
+        return $t;
+    }
+
+}

@@ -5,12 +5,14 @@ namespace AppBundle\Service;
 use AppBundle\Model\SalesOrder;
 use DateTime;
 use Doctrine\ORM\EntityManager;
-use Williams\ConnectshipBundle\Service\ConnectshipService;
-use Williams\ErpBundle\Model\SalesOrder as SalesOrder2;
-use Williams\ErpBundle\Model\ShipmentPackage;
-use Williams\ErpBundle\Service\ErpService;
-use Williams\WmsBundle\Model\Weborder;
-use Williams\WmsBundle\Service\WmsService;
+use ConnectshipBundle\Service\ConnectshipService;
+use ErpBundle\Model\SalesOrder as SalesOrder2;
+use ErpBundle\Model\Shipment;
+use ErpBundle\Model\ShipmentItem;
+use ErpBundle\Model\ShipmentPackage;
+use ErpBundle\Service\ErpService;
+use WmsBundle\Model\Weborder;
+use WmsBundle\Service\WmsService;
 
 class OrderService {
 
@@ -299,6 +301,35 @@ class OrderService {
         } while (count($shipments) > 0);
 
         return $response;
+    }
+    
+    /**
+     * 
+     * @param int $orderNumber
+     * @param int $recordSequence
+     * @return Shipment[]
+     */
+    public function getShipment($orderNumber, $recordSequence = 1) {
+        return $this->erp->getShipmentRepository()->get($orderNumber, $recordSequence);
+    }
+    
+    /**
+     * 
+     * @param int $orderNumber
+     * @param int $recordSequence
+     * @return ShipmentItem[]
+     */
+    public function getShipmentItems($orderNumber, $recordSequence = 1) {
+        return $this->erp->getShipmentRepository()->getItems($orderNumber, $recordSequence)->getItems();
+    }
+    
+    /**
+     * 
+     * @param SalesOrder $order
+     * @return boolean
+     */
+    public function submitOrder(SalesOrder $order) {
+        return $this->erp->getSalesOrderRepository()->submitOrder($order);
     }
 
 }

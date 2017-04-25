@@ -59,10 +59,13 @@
                             <li><a href="{{ path('reports_index') }}">Dashboard</a></li>
                             <li><a href="{{ path('document_tracker_index') }}">Document Tracker</a></li>
                             <li><a href="{{ path('picker_log_index') }}">Picker Log</a></li>
+                            <li><a href="{{ path('picker_log_single_pick') }}">Picker Log (Single)</a></li>
                             <li><a href="{{ path('product_lookup_index') }}">Product Lookup</a></li>
                             <li><a href="{{ path('sales_orders_index') }}">Order Lookup</a></li>
                             <li><a href="{{ path('product_lookup_committed') }}">Committed Products</a></li>
                             <li><a href="{{ path('shipments_index') }}">Open Shipment Report</a></li>
+                            <li><a href="{{ path('logicbroker_customer_index') }}">Logicbroker Customers</a></li>
+                            <li><a href="{{ path('logicbroker_orderstatus_index') }}">Logicbroker Orders</a></li>
                         </ul>
                     </div>
                 </div>
@@ -70,10 +73,10 @@
             </nav>
 
             <div id="page-wrapper" style="min-height: 879px;">
-                {% block pageHeader %}
-                {% endblock %}
-                {% block body %}
-                {% endblock %}
+                <div class="row">
+                    {% block body %}
+                    {% endblock %}
+                </div>
             </div>
 
         </div>
@@ -98,16 +101,17 @@
 
             <!-- Custom Theme JavaScript -->
             <script src="{{ asset('bower_components/blackrockdigital-startbootstrap-sb-admin-2/dist/js/sb-admin-2.js') }}"></script>
-            
+
             <!-- DataTables JavaScript -->
             <script src="{{ asset('bower_components/datatables/media/js/jquery.dataTables.min.js') }}"></script>
             <script src="{{ asset('bower_components/datatables/media/js/dataTables.bootstrap.min.js') }}"></script>
             <script src="{{ asset('bower_components/datatables-responsive/js/dataTables.responsive.js') }}"></script>
-            
+
             <!-- FOS JS Routing -->
             <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
             <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
 
         {% endblock %}
+
     </body>
 </html>

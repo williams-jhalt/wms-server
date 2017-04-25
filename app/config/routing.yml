@@ -1,9 +1,14 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+logicbroker:
+    resource: "@LogicBrokerBundle/Controller/"
+    type:     annotation
+    prefix: /logicbroker
     
 erp_api:
-    resource: "@WilliamsErpBundle/Resources/config/routes.yml"
+    resource: "@ErpBundle/Resources/config/routes.yml"
     prefix: /api
     
 fos_js_routing:

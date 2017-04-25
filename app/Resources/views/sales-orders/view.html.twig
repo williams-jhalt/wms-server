@@ -17,22 +17,7 @@
 
     <br>
 
-    <ul class="nav nav-tabs">
-        <li class="{% if company == 'WTC' %}active{% endif %}">
-            <a href="{{ path('sales_orders_index', {company: 'WTC'}) }}">
-                Williams Trading
-            </a>
-        </li>
-        <li class="{% if company == 'MFG' %}active{% endif %}">
-            <a href="{{ path('sales_orders_index', {company: 'MFG'}) }}">
-                MFG
-            </a>
-        </li>
-    </ul>
-
-    <br>
-
-    <form class="form-inline" id="inputForm" action="{{ path('sales_orders_list', {company: company}) }}" method="post">
+    <form class="form-inline" id="inputForm" action="{{ path('sales_orders_list') }}" method="post">
         <div class="form-group">
             <input class="form-control" type="text" name="manifestId" placeholder="Manifest ID" required>
         </div>

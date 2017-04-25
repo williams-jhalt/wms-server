@@ -4,7 +4,7 @@ namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
-use Williams\WmsBundle\Service\WmsService;
+use WmsBundle\Service\WmsService;
 
 /**
  * @Route("/order-watcher")

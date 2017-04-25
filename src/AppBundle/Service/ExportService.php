@@ -6,9 +6,9 @@ use DateTime;
 use Doctrine\ORM\EntityManager;
 use SplFileInfo;
 use SplFileObject;
-use Williams\ConnectshipBundle\Service\ConnectshipService;
-use Williams\ErpBundle\Service\ErpService;
-use Williams\WmsBundle\Service\WmsService;
+use ConnectshipBundle\Service\ConnectshipService;
+use ErpBundle\Service\ErpService;
+use WmsBundle\Service\WmsService;
 
 class ExportService {
 

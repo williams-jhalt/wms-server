@@ -197,7 +197,6 @@ class CsvInvoiceAdapter {
                     $line->getQuantity(),
                     $line->getQuantityUOM(),
                     $line->getMsrp(),
-                    $line->getDescription(),
                     $line->getItemIdentifier()->getPartnerSKU(),
                     $line->getItemIdentifier()->getSupplierSKU(),
                     $line->getItemIdentifier()->getUpc(),

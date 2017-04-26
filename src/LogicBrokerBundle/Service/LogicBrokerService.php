@@ -99,7 +99,7 @@ class LogicBrokerService {
             $this->em->flush();
 
             #@ftp_delete($ftp, $file);
-            
+
             $fh = null;
 
             unlink($tempfile);
@@ -148,9 +148,14 @@ class LogicBrokerService {
             $adapter->writeData($shipments, $file);
         }
 
+        $file = null;
+
         if ($count == 0) {
+            unlink($tempFile);
             return false;
         }
+        
+        $this->cleanCsv($tempFile);
 
         $ftp = ftp_connect($this->ftpHost);
         $login = ftp_login($ftp, $this->ftpUser, $this->ftpPass);
@@ -168,8 +173,6 @@ class LogicBrokerService {
             $this->em->persist($status);
         }
         $this->em->flush();
-        
-        $file = null;
 
         unlink($tempFile);
     }
@@ -196,9 +199,14 @@ class LogicBrokerService {
             $adapter->writeData($invoices, $file);
         }
 
+        $file = null;
+
         if ($count == 0) {
+            unlink($tempFile);
             return false;
         }
+        
+        $this->cleanCsv($tempFile);
 
         $ftp = ftp_connect($this->ftpHost);
         $login = ftp_login($ftp, $this->ftpUser, $this->ftpPass);
@@ -216,12 +224,12 @@ class LogicBrokerService {
             $this->em->persist($status);
         }
         $this->em->flush();
-        
+
         $file = null;
 
         unlink($tempFile);
     }
-    
+
     public function updateInventory() {
 
         $tempFile = tempnam(sys_get_temp_dir(), "lb");
@@ -229,15 +237,14 @@ class LogicBrokerService {
         $file = new SplFileObject($tempFile, "wb");
 
         $adapter = new CsvInventoryAdapter($file);
-        
+
         $adapter->writeHeader();
-        
+
         $this->handler->writeInventory($adapter);
-        
+
         $file = null;
-        
+
         unlink($tempFile);
-        
     }
 
     public function customerNumberToSenderCompanyId($customerNumber) {
@@ -254,6 +261,48 @@ class LogicBrokerService {
             return null;
         }
         return $customer->getCustomerNumber();
+    }
+
+    public function cleanCsv($inputFile) {
+        
+        $tmpfile = tempnam(sys_get_temp_dir(), "lb");
+        
+        $file = new SplFileObject($inputFile, "rb");
+        $out = new SplFileObject($tmpfile, "wb");
+
+        $populatedFields = [];
+
+        $file->rewind();
+        $file->seek(1);
+        while (!$file->eof()) {
+            $row = $file->fgetcsv();
+            foreach ($row as $key => $value) {
+                if (!isset($populatedFields[$key])) {
+                    $populatedFields[$key] = false;
+                }
+                if (!$populatedFields[$key]) {
+                    $populatedFields[$key] = !empty($value);
+                }
+            }
+        }
+        
+        $file->rewind();
+        while (!$file->eof()) {
+            $row = $file->fgetcsv();
+            $data = [];
+            foreach ($populatedFields as $key => $value) {
+                if ($value && isset($row[$key])) {
+                    $data[] = $row[$key];
+                }
+            }
+            $out->fputcsv($data);
+        }        
+        
+        $file = null;
+        $out = null;
+        
+        rename($tmpfile, $inputFile);
+        
     }
 
 }

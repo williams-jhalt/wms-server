@@ -105,7 +105,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
             $invoice->getIdentifier()->setLinkKey($orderStatus->getLinkKey());
             $invoice->setReceiverCompanyId($orderStatus->getSenderCompanyId());
             $invoice->setInvoiceDate($erpInvoice->getInvoiceDate());
-            $invoice->setInvoiceNumber($erpInvoice->getInvoiceNumber());
+            $invoice->setInvoiceNumber($erpInvoice->getOrderNumber() . "-" . $erpInvoice->getRecordSequence());
             $invoice->setDocumentDate(new DateTime());
             $invoice->setPartnerPO($erpInvoice->getCustomerPurchaseOrder());
             $invoice->setInvoiceTotal($erpInvoice->getNetInvoiceAmount());
@@ -155,6 +155,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
                 $shipment->setDocumentDate(new DateTime());
             }
             $shipment->setPartnerPO($erpShipment->getCustomerPurchaseOrder());
+            $shipment->setShipmentNumber($erpShipment->getManifestId());
 
             $shipmentInfos = $shipment->getShipmentInfos();
 
@@ -178,6 +179,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
                 $trackingNumber = null;
 
                 foreach ($erpPackages->getShipmentPackages() as $erpPackage) {
+                    $trackingNumber = $erpPackage->getTrackingNumber();
                     foreach ($erpPackage->getItems() as $erpPackageItem) {
                         if ($erpPackageItem->getItemNumber() == $erpItem->getItemNumber()) {
                             $trackingNumber = $erpPackage->getTrackingNumber();

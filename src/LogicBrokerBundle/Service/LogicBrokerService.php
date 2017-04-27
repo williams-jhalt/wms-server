@@ -98,7 +98,7 @@ class LogicBrokerService {
             }
             $this->em->flush();
 
-            #@ftp_delete($ftp, $file);
+            @ftp_delete($ftp, $file);
 
             $fh = null;
 
@@ -225,8 +225,6 @@ class LogicBrokerService {
         }
         $this->em->flush();
 
-        $file = null;
-
         unlink($tempFile);
     }
 
@@ -263,6 +261,11 @@ class LogicBrokerService {
         return $customer->getCustomerNumber();
     }
 
+    /**
+     * Remove empty columns from a CSV file
+     * 
+     * @param string $inputFile
+     */
     public function cleanCsv($inputFile) {
         
         $tmpfile = tempnam(sys_get_temp_dir(), "lb");
@@ -278,10 +281,10 @@ class LogicBrokerService {
             $row = $file->fgetcsv();
             foreach ($row as $key => $value) {
                 if (!isset($populatedFields[$key])) {
-                    $populatedFields[$key] = false;
+                    $populatedFields[$key] = false; // initialize key
                 }
                 if (!$populatedFields[$key]) {
-                    $populatedFields[$key] = !empty($value);
+                    $populatedFields[$key] = !empty($value); // if it's empty set to true
                 }
             }
         }

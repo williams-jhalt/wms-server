@@ -46,7 +46,7 @@ services:
         
     app.logicbroker_handler:
         class: AppBundle\Service\LogicBrokerHandler
-        arguments: [ "@williams_erp.service" ]
+        arguments: [ "@williams_erp.service", "@app.connectship_service" ]
         
     app.logicbroker:
         class: LogicBrokerBundle\Service\LogicBrokerService

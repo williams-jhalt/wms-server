@@ -124,6 +124,9 @@ class ExportService {
             }
             $offset += $limit;
         } while (count($invoices) > 0);
+        
+        $headerFh = null;
+        $detailFh = null;
                 
     }
 

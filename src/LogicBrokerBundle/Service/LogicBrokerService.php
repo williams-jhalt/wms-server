@@ -145,7 +145,11 @@ class LogicBrokerService {
         foreach ($orderStatus as $status) {
             $shipments = $this->handler->getShipments($status);
             $count += count($shipments);
-            $adapter->writeData($shipments, $file);
+            if (count($shipments) > 0) {
+                $adapter->writeData($shipments, $file);
+                $status->setStatusCode(600);
+                $this->em->persist($status);
+            }
         }
 
         $file = null;
@@ -154,7 +158,7 @@ class LogicBrokerService {
             unlink($tempFile);
             return false;
         }
-        
+
         $this->cleanCsv($tempFile);
 
         $ftp = ftp_connect($this->ftpHost);
@@ -168,10 +172,6 @@ class LogicBrokerService {
 
         ftp_put($ftp, "/CSV/Outbound/ExtendedShipment/$filename", $tempFile, FTP_ASCII);
 
-        foreach ($orderStatus as $status) {
-            $status->setStatusCode(600);
-            $this->em->persist($status);
-        }
         $this->em->flush();
 
         unlink($tempFile);
@@ -196,7 +196,11 @@ class LogicBrokerService {
         foreach ($orderStatus as $status) {
             $invoices = $this->handler->getInvoices($status);
             $count += count($invoices);
-            $adapter->writeData($invoices, $file);
+            if (count($invoices) > 0) {
+                $adapter->writeData($invoices, $file);
+                $status->setStatusCode(1000);
+                $this->em->persist($status);
+            }
         }
 
         $file = null;
@@ -205,7 +209,7 @@ class LogicBrokerService {
             unlink($tempFile);
             return false;
         }
-        
+
         $this->cleanCsv($tempFile);
 
         $ftp = ftp_connect($this->ftpHost);
@@ -219,10 +223,6 @@ class LogicBrokerService {
 
         ftp_put($ftp, "/CSV/Outbound/Invoice/$filename", $tempFile, FTP_ASCII);
 
-        foreach ($orderStatus as $status) {
-            $status->setStatusCode(1000);
-            $this->em->persist($status);
-        }
         $this->em->flush();
 
         unlink($tempFile);
@@ -267,9 +267,9 @@ class LogicBrokerService {
      * @param string $inputFile
      */
     public function cleanCsv($inputFile) {
-        
+
         $tmpfile = tempnam(sys_get_temp_dir(), "lb");
-        
+
         $file = new SplFileObject($inputFile, "rb");
         $out = new SplFileObject($tmpfile, "wb");
 
@@ -288,7 +288,7 @@ class LogicBrokerService {
                 }
             }
         }
-        
+
         $file->rewind();
         while (!$file->eof()) {
             $row = $file->fgetcsv();
@@ -299,13 +299,12 @@ class LogicBrokerService {
                 }
             }
             $out->fputcsv($data);
-        }        
-        
+        }
+
         $file = null;
         $out = null;
-        
+
         rename($tmpfile, $inputFile);
-        
     }
 
 }

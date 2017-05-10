@@ -6,55 +6,60 @@ use JMS\Serializer\Annotation as JMS;
 
 class ShipmentPackage {
 
-    
     /**
      * @JMS\Type("string")
      * @var string
      */
     protected $trackingNumber;
-    
+
     /**
      * @JMS\Type("double")
      * @var double
      */
     protected $freightCost;
-    
+
     /**
      * @JMS\Type("double")
      * @var double
      */
     protected $shippingWeight;
-    
+
     /**
      * @JMS\Type("string")
      * @var string
      */
     protected $shipViaCode;
-    
+
     /**
      * @JMS\Type("double")
      * @var double
      */
     protected $packageHeight;
-    
+
     /**
      * @JMS\Type("double")
      * @var double
      */
     protected $packageLength;
-    
+
     /**
      * @JMS\Type("double")
      * @var double
      */
     protected $packageWidth;
-    
+
     /**
      * @JMS\Type("string")
      * @var string
      */
     protected $ucc;
-    
+
+    /**
+     * @JMS\Type("string")
+     * @var string
+     */
+    protected $manifestCarrier;
+
     /**
      * @JMS\Type("array<ErpBundle\Model\ShipmentPackageItem>")
      * @var ShipmentPackageItem[]
@@ -220,6 +225,24 @@ class ShipmentPackage {
      */
     public function setItems($items) {
         $this->items = $items;
+        return $this;
+    }
+
+    /**
+     * 
+     * @return string
+     */
+    public function getManifestCarrier() {
+        return $this->manifestCarrier;
+    }
+
+    /**
+     * 
+     * @param string $manifestCarrier
+     * @return ShipmentPackage
+     */
+    public function setManifestCarrier($manifestCarrier) {
+        $this->manifestCarrier = $manifestCarrier;
         return $this;
     }
 

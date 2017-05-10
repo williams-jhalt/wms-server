@@ -290,7 +290,8 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
                         . "oe_ship_pack.pack_weight,"
                         . "oe_ship_pack.pack_height,"
                         . "oe_ship_pack.pack_length,"
-                        . "oe_ship_pack.pack_width";
+                        . "oe_ship_pack.pack_width,"
+                        . "oe_ship_pack.manifest_carrier";
 
                 $result2 = $this->erp->read($query2, $fields2);
 
@@ -301,6 +302,7 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
                     $package->setPackageHeight($result2[0]->oe_ship_pack_pack_height);
                     $package->setPackageLength($result2[0]->oe_ship_pack_pack_length);
                     $package->setPackageWidth($result2[0]->oe_ship_pack_pack_width);
+                    $package->setManifestCarrier($result2[0]->oe_ship_pack_manifest_carrier);
                 }
             }
 

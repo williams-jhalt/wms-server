@@ -171,7 +171,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
             $packages = $erpPackages->getShipmentPackages();
             if (!empty($packages)) {
                 $trackingNumber = $packages[0]->getTrackingNumber();
-                $carrierCode = $this->getCarrierFromTrackingNumber($trackingNumber);
+                $carrierCode = $packages[0]->getManifestCarrier();
                 $shipmentInfo->setCarrierCode($carrierCode);
             } else {
                 $shipmentInfo->setCarrierCode($erpShipment->getShipViaCode());

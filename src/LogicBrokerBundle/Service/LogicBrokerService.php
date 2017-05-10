@@ -151,6 +151,8 @@ class LogicBrokerService {
                 $this->em->persist($status);
             }
         }
+        
+        $file->fflush();
 
         $file = null;
 
@@ -202,6 +204,8 @@ class LogicBrokerService {
                 $this->em->persist($status);
             }
         }
+        
+        $file->fflush();
 
         $file = null;
 
@@ -239,6 +243,8 @@ class LogicBrokerService {
         $adapter->writeHeader();
 
         $this->handler->writeInventory($adapter);
+        
+        $file->fflush();
 
         $file = null;
 
@@ -267,7 +273,7 @@ class LogicBrokerService {
      * @param string $inputFile
      */
     public function cleanCsv($inputFile) {
-
+        
         $tmpfile = tempnam(sys_get_temp_dir(), "lb");
 
         $file = new SplFileObject($inputFile, "rb");
@@ -276,19 +282,22 @@ class LogicBrokerService {
         $populatedFields = [];
 
         $file->rewind();
-        $file->seek(1);
+        $line = 0;
         while (!$file->eof()) {
             $row = $file->fgetcsv();
+            if ($line++ == 0) {
+                continue;
+            }
             foreach ($row as $key => $value) {
                 if (!isset($populatedFields[$key])) {
                     $populatedFields[$key] = false; // initialize key
                 }
                 if (!$populatedFields[$key]) {
-                    $populatedFields[$key] = !empty($value); // if it's empty set to true
+                    $populatedFields[$key] = !empty($value); // if it's not empty set to true
                 }
             }
         }
-
+        
         $file->rewind();
         while (!$file->eof()) {
             $row = $file->fgetcsv();
@@ -300,6 +309,8 @@ class LogicBrokerService {
             }
             $out->fputcsv($data);
         }
+        
+        $out->fflush();
 
         $file = null;
         $out = null;

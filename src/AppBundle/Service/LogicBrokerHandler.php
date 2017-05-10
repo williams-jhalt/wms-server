@@ -193,12 +193,15 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
                 $lineShipmentInfos = $line->getShipmentInfos();
 
                 $trackingNumber = null;
+                $carrierCode = null;
 
                 foreach ($erpPackages->getShipmentPackages() as $erpPackage) {
                     $trackingNumber = $erpPackage->getTrackingNumber();
+                    $carrierCode = $erpPackage->getManifestCarrier();
                     foreach ($erpPackage->getItems() as $erpPackageItem) {
                         if ($erpPackageItem->getItemNumber() == $erpItem->getItemNumber()) {
                             $trackingNumber = $erpPackage->getTrackingNumber();
+                            $carrierCode = $erpPackage->getManifestCarrier();
                             break 2;
                         }
                     }
@@ -210,6 +213,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
                 } else {
                     $lineShipmentInfo->setDateShipped(new DateTime());
                 }
+                $lineShipmentInfo->setCarrierCode($carrierCode);
                 $lineShipmentInfo->setTrackingNumber($trackingNumber);
                 $lineShipmentInfos[] = $lineShipmentInfo;
 

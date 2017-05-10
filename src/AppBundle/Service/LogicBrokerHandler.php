@@ -213,13 +213,15 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
                 } else {
                     $lineShipmentInfo->setDateShipped(new DateTime());
                 }
-                $lineShipmentInfo->setCarrierCode($carrierCode);
+//                $lineShipmentInfo->setCarrierCode($carrierCode);
                 $lineShipmentInfo->setTrackingNumber($trackingNumber);
+                $lineShipmentInfo->setClassCode($carrierCode);
+                $lineShipmentInfo->setQty($erpItem->getQuantityShipped());
                 $lineShipmentInfos[] = $lineShipmentInfo;
 
                 $line->setShipmentInfos($lineShipmentInfos);
 
-                $line->setQuantity($erpItem->getQuantityShipped());
+//                $line->setQuantity($erpItem->getQuantityShipped());
                 $lines[] = $line;
             }
 

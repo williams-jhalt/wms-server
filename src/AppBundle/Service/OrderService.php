@@ -78,14 +78,20 @@ class OrderService {
 
         $this->loadOrderFromErp($order, $erpOrder);
 
-        if (strtoupper(substr($order->getCustomerNumber(), -1)) == 'I') {
-            $weborder = $this->muffsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
-        } else {
-            $weborder = $this->williamsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
-        }
+        try {
 
-        if ($weborder !== null) {
-            $this->loadOrderFromWms($order, $weborder);
+            if (strtoupper(substr($order->getCustomerNumber(), -1)) == 'I') {
+                $weborder = $this->muffsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
+            } else {
+                $weborder = $this->williamsWms->getWeborderRepository()->getOrder($order->getWebsiteId());
+            }
+
+            if ($weborder !== null) {
+                $this->loadOrderFromWms($order, $weborder);
+            }
+            
+        } catch (\Exception $e) {
+            
         }
 
         return $order;
@@ -302,7 +308,7 @@ class OrderService {
 
         return $response;
     }
-    
+
     /**
      * 
      * @param int $orderNumber
@@ -312,7 +318,7 @@ class OrderService {
     public function getShipment($orderNumber, $recordSequence = 1) {
         return $this->erp->getShipmentRepository()->get($orderNumber, $recordSequence);
     }
-    
+
     /**
      * 
      * @param int $orderNumber
@@ -322,7 +328,7 @@ class OrderService {
     public function getShipmentItems($orderNumber, $recordSequence = 1) {
         return $this->erp->getShipmentRepository()->getItems($orderNumber, $recordSequence)->getItems();
     }
-    
+
     /**
      * 
      * @param SalesOrder $order

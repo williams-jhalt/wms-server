@@ -237,24 +237,30 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
 
         $repo = $this->service->getProductRepository();
 
-        $items = $repo->findAll();
+        $limit = 1000;
+        $offset = 0;
 
-        foreach ($items->getProducts() as $item) {
-            
-            if ($item->getDeleted() || !$item->getWebItem()) {
-                continue;
+        $items = $repo->findAll($limit, $offset);
+
+        do {
+
+            foreach ($items->getProducts() as $item) {
+
+                if ($item->getDeleted() || !$item->getWebItem()) {
+                    continue;
+                }
+
+                $inventory = new Inventory();
+                $inventory->setSupplierSKU($item->getItemNumber());
+                $inventory->setQuantity($item->getQuantityOnHand() - $item->getQuantityCommitted());
+                $inventory->setUpc($item->getBarcode());
+                $inventory->setCost($item->getWholesalePrice());
+
+                $adapter->writeLine($inventory);
             }
 
-            $inventory = new Inventory();
-            $inventory->setSupplierSKU($item->getItemNumber());
-            $inventory->setQuantity($item->getQuantityOnHand() - $item->getQuantityCommitted());
-            $inventory->setUpc($item->getBarcode());
-            $inventory->setCost($item->getWholesalePrice());
-
-            $adapter->writeLine($inventory);
-            
-        }
-        
+            $offset += $limit;
+        } while (count($items->getProducts()) > 0);
     }
 
     private function translateCountryCode($code) {

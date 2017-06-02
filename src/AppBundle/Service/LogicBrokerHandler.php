@@ -74,6 +74,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
 
         foreach ($order->getOrderLines() as $line) {
             $item = new ErpOrderItem();
+            $item->setLineNumber($line->getLineNumber());
             $item->setItemNumber($line->getItemIdentifier()->getSupplierSKU());
             $item->setQuantityOrdered($line->getQuantity());
             $items[] = $item;

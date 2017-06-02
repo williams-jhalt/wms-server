@@ -244,15 +244,11 @@ class LogicBrokerService {
 
         $this->handler->writeInventory($adapter);
         
-        echo "Wrote Inventory"; //testing
-        
         $file->fflush();
 
         $file = null;
         
         $this->cleanCsv($tempFile);
-        
-        echo "Cleaned File"; //testing
 
         $ftp = ftp_connect($this->ftpHost);
         $login = ftp_login($ftp, $this->ftpUser, $this->ftpPass);
@@ -272,8 +268,6 @@ class LogicBrokerService {
             ftp_put($ftp, "/ManagedInventory/$partnerid/Outbound/$filename", $tempFile, FTP_ASCII);
         
         }
-        
-        echo "Uploaded Inventory"; //testing
 
         unlink($tempFile);
     }

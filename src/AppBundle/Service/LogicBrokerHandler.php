@@ -240,6 +240,10 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
         $items = $repo->findAll();
 
         foreach ($items->getProducts() as $item) {
+            
+            if ($item->getDeleted() || !$item->getWebItem()) {
+                continue;
+            }
 
             $inventory = new Inventory();
             $inventory->setSupplierSKU($item->getItemNumber());
@@ -248,7 +252,9 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
             $inventory->setCost($item->getWholesalePrice());
 
             $adapter->writeLine($inventory);
+            
         }
+        
     }
 
     private function translateCountryCode($code) {

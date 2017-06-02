@@ -244,9 +244,36 @@ class LogicBrokerService {
 
         $this->handler->writeInventory($adapter);
         
+        echo "Wrote Inventory"; //testing
+        
         $file->fflush();
 
         $file = null;
+        
+        $this->cleanCsv($tempFile);
+        
+        echo "Cleaned File"; //testing
+
+        $ftp = ftp_connect($this->ftpHost);
+        $login = ftp_login($ftp, $this->ftpUser, $this->ftpPass);
+
+        if ((!$ftp) || (!$login)) {
+            throw new Exception("Could Not Connect to FTP");
+        }
+
+        $filename = date("Ymdhis") . "_inventory.csv";
+        
+        $customers = $this->em->getRepository('LogicBrokerBundle:Customer')->findAll();
+        
+        foreach ($customers as $customer) {
+            
+            $partnerid = $customer->getSenderCompanyId();
+
+            ftp_put($ftp, "/ManagedInventory/$partnerid/Outbound/$filename", $tempFile, FTP_ASCII);
+        
+        }
+        
+        echo "Uploaded Inventory"; //testing
 
         unlink($tempFile);
     }
@@ -314,7 +341,7 @@ class LogicBrokerService {
 
         $file = null;
         $out = null;
-
+        
         rename($tmpfile, $inputFile);
     }
 

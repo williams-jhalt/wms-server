@@ -2,12 +2,15 @@
 
 namespace LogicBrokerBundle\Adapter;
 
+use LogicBrokerBundle\Model\Inventory;
+use SplFileObject;
+
 abstract class AbstractInventoryAdapter {
     
     /**
      * @var SplFileObject
      */
-    private $file;
+    protected $file;
     
     public function __construct(SplFileObject $file) {
         $this->file = $file;

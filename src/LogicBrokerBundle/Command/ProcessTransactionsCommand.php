@@ -28,9 +28,9 @@ class ProcessTransactionsCommand extends ContainerAwareCommand {
         $output->write("Submitting Invoices...");
         $service->submitInvoices();
         $output->write("Done\n");        
-//        $output->write("Updating Inventory...");        
-//        $service->updateInventory();
-//        $output->write("Done\n");        
+        $output->write("Updating Inventory...");        
+        $service->updateInventory();
+        $output->write("Done\n");        
         $output->write("Finished!\n\n");
     }
     

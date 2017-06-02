@@ -235,27 +235,20 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
 
     public function writeInventory(AbstractInventoryAdapter $adapter) {
 
-        $limit = 1000;
-        $offset = 0;
-
         $repo = $this->service->getProductRepository();
 
-        do {
+        $items = $repo->findAll();
 
-            $items = $repo->findAll($limit, $offset);
+        foreach ($items->getProducts() as $item) {
 
-            foreach ($items->getProducts() as $item) {
+            $inventory = new Inventory();
+            $inventory->setSupplierSKU($item->getItemNumber());
+            $inventory->setQuantity($item->getQuantityOnHand() - $item->getQuantityCommitted());
+            $inventory->setUpc($item->getBarcode());
+            $inventory->setCost($item->getWholesalePrice());
 
-                $inventory = new Inventory();
-                $inventory->setSupplierSKU($item->getItemNumber());
-                $inventory->setQuantity($item->getQuantityOnHand() - $item->getQuantityCommitted());
-                $inventory->setUpc($item->getBarcode());
-
-                $adapter->writeLine($inventory);
-            }
-
-            $offset += $limit;
-        } while (count($items) > 0);
+            $adapter->writeLine($inventory);
+        }
     }
 
     private function translateCountryCode($code) {

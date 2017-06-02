@@ -240,9 +240,9 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
         $limit = 1000;
         $offset = 0;
 
-        $items = $repo->findAll($limit, $offset);
-
         do {
+
+            $items = $repo->findAll($limit, $offset);
 
             foreach ($items->getProducts() as $item) {
 

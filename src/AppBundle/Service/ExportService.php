@@ -150,8 +150,8 @@ class ExportService {
 
         $this->exportInvoiceData($customerNumber, $startDate, $endDate, false, $headerFile, $detailFile);
 
-        $headerFileName = $destination . $customerNumber . "_" . $endDate->format('Ymd') . "_header.csv";
-        $detailFileName = $destination . $customerNumber . "_" . $endDate->format('Ymd') . "_detail.csv";
+        $headerFileName = $destination . $customerNumber . "_" . $startDate->format('Ymd') . "_" . $endDate->format('Ymd') . "_header.csv";
+        $detailFileName = $destination . $customerNumber . "_" . $startDate->format('Ymd') . "_" . $endDate->format('Ymd') . "_detail.csv";
 
         $ftp = ftp_connect($hostname);
         ftp_login($ftp, $username, $password);

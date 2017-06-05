@@ -21,7 +21,7 @@ class UploadInvoicesCommand extends ContainerAwareCommand {
 
     protected function execute(InputInterface $input, OutputInterface $output) {
         
-        $startDate = new DateTime("yesterday");
+        $startDate = new DateTime("three weeks ago");
         $endDate = new DateTime("tomorrow");
 
         $service = $this->getContainer()->get('app.export_service');

@@ -315,7 +315,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
             "UPS United States Next Day Air Early A.M. - Saturday Delivery, Adult Signature Required, COD" => "/^1Z\w{6}AA\d{8}$/",
             "UPS Mail Innovations" => "/^92748.*/",
             "UPS SurePost" => "/^1Z\w{6}Y[T|W]\d{8}$/",
-            "USPS Express" => "/^94001.*/",
+            "USPS First Class" => "/^94001.*/",
             "USPS Priority Mail" => "/^94055.*/",
             "USPS Certified Mail" => "/^94073.*/",
             "USPS Priority Mail Express 1-Day" => "/^94817.*/",

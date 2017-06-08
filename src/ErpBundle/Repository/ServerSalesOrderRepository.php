@@ -344,7 +344,7 @@ class ServerSalesOrderRepository extends AbstractServerRepository implements Sal
                 'line' => empty($item->getLineNumber()) ? $key + 1 : $item->getLineNumber(),
                 'item' => $item->getItemNumber(),
                 'qty_ord' => $item->getQuantityOrdered(),
-                'unit_price' => $erpItem->getWholesalePrice(),
+//                'unit_price' => $erpItem->getWholesalePrice(),
                 'um_o' => $erpItem->getUnitOfMeasure(),
                 'company_cu' => $this->erp->getCompany(),
                 'company_it' => $this->erp->getCompany(),

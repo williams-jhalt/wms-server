@@ -17,6 +17,13 @@ class SalesOrdersController extends Controller {
     public function indexAction() {
         return $this->render('sales-orders/index.html.twig');
     }
+    
+    /**
+     * @Route("/MFG", name="sales_orders_index_mfg")
+     */
+    public function mfgIndexAction() {
+        return $this->render('sales-orders/mfg_index.html.twig');
+    }
 
     /**
      * @Route("/list", name="sales_orders_list")
@@ -27,11 +34,29 @@ class SalesOrdersController extends Controller {
 
         list($orderNumber, $recordSequence) = explode('-', $manifestId);
 
-            $service = $this->get('app.order_service');
+        $service = $this->get('app.order_service');
 
         $salesOrder = $service->getOrder($orderNumber);
 
         return $this->render('sales-orders/view.html.twig', [
+                    'order' => $salesOrder
+        ]);
+    }
+
+    /**
+     * @Route("/MFG/list", name="sales_orders_list_mfg")
+     */
+    public function mfgListAction(Request $request) {
+
+        $manifestId = $request->get('manifestId');
+
+        list($orderNumber, $recordSequence) = explode('-', $manifestId);
+
+        $service = $this->get('app.mfg_order_service');
+
+        $salesOrder = $service->getOrder($orderNumber);
+
+        return $this->render('sales-orders/mfg_view.html.twig', [
                     'order' => $salesOrder
         ]);
     }

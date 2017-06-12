@@ -15,6 +15,10 @@ services:
     williams_erp.service:
         class: ErpBundle\Service\ErpServerService
         arguments: [ "%erp_server%", "%erp_username%", "%erp_password%", "%erp_company%", "%erp_appname%" ] 
+        
+    williams_erp.mfg_service:
+        class: ErpBundle\Service\ErpServerService
+        arguments: [ "%erp_server%", "%erp_username%", "%erp_password%", "MFG", "%erp_appname%" ] 
                 
     app.product_service:
         class: AppBundle\Service\ProductService
@@ -39,6 +43,10 @@ services:
     app.order_service:
         class: AppBundle\Service\OrderService
         arguments: [ "@williams_erp.service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
+        
+    app.mfg_order_service:
+        class: AppBundle\Service\OrderService
+        arguments: [ "@williams_erp.mfg_service", "@app.connectship_service", "@app.muffs_wms", "@app.williams_wms", "@doctrine.orm.entity_manager" ]
         
     app.reports:
         class: AppBundle\Service\ReportService

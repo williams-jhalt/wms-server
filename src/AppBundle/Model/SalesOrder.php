@@ -206,5 +206,22 @@ class SalesOrder extends \ErpBundle\Model\SalesOrder {
 
         return $weight;
     }
+    
+    /**
+     * Calculate total cost for all shipments
+     * 
+     * @return double
+     */
+    public function getTotalFreightCost() {
+        
+        $freight = 0.0;
+        
+        foreach ($this->cartons as $carton) {
+            $freight += $carton->getFreightCost();
+        }
+        
+        return $freight;
+        
+    }
 
 }

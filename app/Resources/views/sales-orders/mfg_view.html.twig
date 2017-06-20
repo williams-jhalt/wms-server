@@ -40,6 +40,10 @@
                 <th>Total Weight</th>
                 <td>{{ order.totalWeight }} lbs</td>
             </tr>
+            <tr>
+                <th>Total Freight Cost</th>
+                <td>${{ order.totalFreightCost|number_format(2) }}</td>
+            </tr>
         </tbody>        
     </table>
 

@@ -337,7 +337,7 @@ class ServerSalesOrderRepository extends AbstractServerRepository implements Sal
             $erpItem = $this->erp
                     ->getProductRepository()
                     ->getByItemNumber($item->getItemNumber());
-
+            
             $itemData[] = array(
                 'order_ext' => $order->getWebOrderNumber(),
                 'customer' => $order->getCustomerNumber(),
@@ -349,7 +349,9 @@ class ServerSalesOrderRepository extends AbstractServerRepository implements Sal
                 'company_cu' => $this->erp->getCompany(),
                 'company_it' => $this->erp->getCompany(),
                 'company_oe' => $this->erp->getCompany(),
-                'warehouse' => $this->erp->getWarehouse()
+                'warehouse' => $this->erp->getWarehouse(),
+                'override_price' => 'no',
+                'misc_log' => array('yes')
             );
         }
 

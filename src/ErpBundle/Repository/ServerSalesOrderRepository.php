@@ -338,21 +338,26 @@ class ServerSalesOrderRepository extends AbstractServerRepository implements Sal
                     ->getProductRepository()
                     ->getByItemNumber($item->getItemNumber());
             
-            $itemData[] = array(
-                'order_ext' => $order->getWebOrderNumber(),
-                'customer' => $order->getCustomerNumber(),
-                'line' => empty($item->getLineNumber()) ? $key + 1 : $item->getLineNumber(),
-                'item' => $item->getItemNumber(),
-                'qty_ord' => $item->getQuantityOrdered(),
-//                'unit_price' => $erpItem->getWholesalePrice(),
-                'um_o' => $erpItem->getUnitOfMeasure(),
-                'company_cu' => $this->erp->getCompany(),
-                'company_it' => $this->erp->getCompany(),
-                'company_oe' => $this->erp->getCompany(),
-                'warehouse' => $this->erp->getWarehouse(),
-                'override_price' => 'no',
-                'misc_log' => array('yes')
-            );
+            if ($erpItem) {
+            
+                $itemData[] = array(
+                    'order_ext' => $order->getWebOrderNumber(),
+                    'customer' => $order->getCustomerNumber(),
+                    'line' => empty($item->getLineNumber()) ? $key + 1 : $item->getLineNumber(),
+                    'item' => $item->getItemNumber(),
+                    'qty_ord' => $item->getQuantityOrdered(),
+    //                'unit_price' => $erpItem->getWholesalePrice(),
+                    'um_o' => $erpItem->getUnitOfMeasure(),
+                    'company_cu' => $this->erp->getCompany(),
+                    'company_it' => $this->erp->getCompany(),
+                    'company_oe' => $this->erp->getCompany(),
+                    'warehouse' => $this->erp->getWarehouse(),
+                    'override_price' => 'no',
+                    'misc_log' => array('yes')
+                );
+            
+            }
+            
         }
 
         $this->erp->create('ec_oeline', $itemData, false);

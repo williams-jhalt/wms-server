@@ -22,8 +22,14 @@ class OrderStatusController extends Controller {
      * @Route("/list", name="logicbroker_orderstatus_list")
      */
     public function listAction(Request $request) {
+        
+        $status = $request->get('status', 150);
 
-        $orderStatuses = $this->getDoctrine()->getRepository('LogicBrokerBundle:OrderStatus')->findAll();
+        $orderStatuses = $this->getDoctrine()->getRepository('LogicBrokerBundle:OrderStatus')->findBy(array(
+            'statusCode' => $status            
+        ), array(
+            'logicBrokerKey' => 'desc'
+        ));
 
         return $this->render('@LogicBroker/orderstatus/list.html.twig', [
             'items' => $orderStatuses

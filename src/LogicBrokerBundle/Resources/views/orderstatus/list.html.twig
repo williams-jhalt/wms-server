@@ -1,7 +1,20 @@
 {% extends '@LogicBroker/layout.html.twig' %}
 
 {% block williams_logicbroker_content %}
-    
+
+    <div class="row">
+        <div class="col-sm-12">
+            <nav class="navbar navbar-default">
+                <ul class="nav navbar-nav">
+                    <li {% if app.request.get('status') == 150 %}class="active"{% endif %}><a href="{{ path('logicbroker_orderstatus_list', {status: 150}) }}">New</a></li>
+                    <li {% if app.request.get('status') == 500 %}class="active"{% endif %}><a href="{{ path('logicbroker_orderstatus_list', {status: 500}) }}">Received</a></li>
+                    <li {% if app.request.get('status') == 600 %}class="active"{% endif %}><a href="{{ path('logicbroker_orderstatus_list', {status: 600}) }}">Shipped</a></li>
+                    <li {% if app.request.get('status') == 1000 %}class="active"{% endif %}><a href="{{ path('logicbroker_orderstatus_list', {status: 1000}) }}">Complete</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
     Total Orders: {{ items|length }}<br>
 
     <div class="col-sm-12">

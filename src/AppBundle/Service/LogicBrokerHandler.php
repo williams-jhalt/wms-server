@@ -217,7 +217,7 @@ class LogicBrokerHandler implements LogicBrokerHandlerInterface {
                 }
 //                $lineShipmentInfo->setCarrierCode($carrierCode);
                 $lineShipmentInfo->setTrackingNumber($trackingNumber);
-                $lineShipmentInfo->setClassCode($carrierCode);
+                $lineShipmentInfo->setClassCode($this->getServiceLevelFromTrackingNumber($trackingNumber));
                 $lineShipmentInfo->setServiceLevelCode($this->getServiceLevelFromTrackingNumber($trackingNumber));
                 $lineShipmentInfo->setQty($erpItem->getQuantityShipped());
                 $lineShipmentInfos[] = $lineShipmentInfo;

@@ -42,3 +42,7 @@ parameters:
     logicbroker_ftp_pass: ~
 
     williams_wholesale_url: ~
+
+    dsco_ftp_host: ~
+    dsco_ftp_user: ~
+    dsco_ftp_pass: ~

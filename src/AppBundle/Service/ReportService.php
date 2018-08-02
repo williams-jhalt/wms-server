@@ -250,7 +250,7 @@ class ReportService {
             $avgDaysToShip[$i]['williams'] = round($williamsAvgDaysToShip[$day], 2);
         }
 
-        file_put_contents(__DIR__ . '/../../../web/data/avgDaysToShip.json', json_encode($avgDaysToShip));
+        file_put_contents(__DIR__ . '/../../../public/data/avgDaysToShip.json', json_encode($avgDaysToShip));
         // end days to ship
         // begin average number of orders
         $williamsAvgNumberOfOrders = $this->calculateAverageNumberOfOrders($williamsOrders);
@@ -272,7 +272,7 @@ class ReportService {
             $avgOrdersPerDay[$i]['williams'] = $williamsAvgNumberOfOrders[$day];
         }
 
-        file_put_contents(__DIR__ . '/../../../web/data/avgOrdersPerDay.json', json_encode($avgOrdersPerDay));
+        file_put_contents(__DIR__ . '/../../../public/data/avgOrdersPerDay.json', json_encode($avgOrdersPerDay));
         // end average number of orders
         // begin orders per hour
         $williamsOrdersPerHour = $this->calculateOrdersPerHour($williamsOrders);
@@ -288,7 +288,7 @@ class ReportService {
             ];
         }
 
-        file_put_contents(__DIR__ . '/../../../web/data/ordersPerHour.json', json_encode($ordersPerHour));
+        file_put_contents(__DIR__ . '/../../../public/data/ordersPerHour.json', json_encode($ordersPerHour));
         // end orders per hour
         // begin shipping methods
         $williamsShippingMethods = $this->calculateOrdersByRequestedShippingMethod($williamsOrders);
@@ -315,13 +315,13 @@ class ReportService {
             ];
         }
 
-        file_put_contents(__DIR__ . '/../../../web/data/shippingMethods.json', json_encode($shippingMethodData));
+        file_put_contents(__DIR__ . '/../../../public/data/shippingMethods.json', json_encode($shippingMethodData));
         // end shipping methods
         // begin top products
         $muffsTopProducts = $this->calculateTopSellingProducts($muffsOrders);
         $williamsTopProducts = $this->calculateTopSellingProducts($williamsOrders);
 
-        file_put_contents(__DIR__ . '/../../../web/data/products.json', json_encode([
+        file_put_contents(__DIR__ . '/../../../public/data/products.json', json_encode([
             'muffs' => $muffsTopProducts,
             'williams' => $williamsTopProducts
         ]));

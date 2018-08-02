@@ -21,6 +21,10 @@ class ManufacturerCollection {
         return $this->total;
     }
 
+    /**
+     * 
+     * @return Manufacturers[]
+     */
     public function getItems() {
         return $this->items;
     }

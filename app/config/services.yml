@@ -22,7 +22,7 @@ services:
                 
     app.product_service:
         class: AppBundle\Service\ProductService
-        arguments: [ "@williams_erp.service", "@williams_wholesale.service" ]
+        arguments: [ "@williams_erp.service", "@williams_wholesale.service", "@doctrine.orm.entity_manager" ]
         
     app.connectship_service:
         class: ConnectshipBundle\Service\ConnectshipService

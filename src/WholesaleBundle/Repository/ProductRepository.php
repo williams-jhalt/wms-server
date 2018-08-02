@@ -16,6 +16,13 @@ class ProductRepository {
         $this->client = $client;
     }
 
+    /**
+     * 
+     * @param int $limit
+     * @param int $offset
+     * @return ProductCollection
+     * @throws Exception
+     */
     public function findAll($limit = 100, $offset = 0) {
 
         $res = $this->client->get('/rest/products', [
@@ -99,7 +106,17 @@ class ProductRepository {
                 ->setTypeId($data->type_id)
                 ->setVideo($data->video)
                 ->setWeight($data->weight)
-                ->setWidth($data->width);
+                ->setWidth($data->width)
+                ->setBrand($data->brand)
+                ->setProductLength($data->product_length)
+                ->setInsertableLength($data->insertable_length)
+                ->setRealistic($data->realistic)
+                ->setBalls($data->balls)
+                ->setSuctionCup($data->suction_cup)
+                ->setHarness($data->harness)
+                ->setVibrating($data->vibrating)
+                ->setDoubleEnded($data->double_ended)
+                ->setCircumference($data->circumference);
         return $t;
     }
 

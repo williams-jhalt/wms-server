@@ -2,8 +2,9 @@
 
 namespace AppBundle\Service;
 
-use ErpBundle\Service\ErpService;
 use AppBundle\Model\ProductImage;
+use Doctrine\ORM\EntityManager;
+use ErpBundle\Service\ErpService;
 use WholesaleBundle\Service\WholesaleService;
 
 class ProductService {
@@ -19,9 +20,16 @@ class ProductService {
      */
     private $wholesale;
 
-    public function __construct(ErpService $erp, WholesaleService $wholesale) {
+    /**
+     *
+     * @var EntityManager
+     */
+    private $em;
+
+    public function __construct(ErpService $erp, WholesaleService $wholesale, EntityManager $em) {
         $this->erp = $erp;
         $this->wholesale = $wholesale;
+        $this->em = $em;
     }
 
     public function findBySearchTerms($searchTerms, $limit = 25, $offset = 0) {
@@ -37,6 +45,10 @@ class ProductService {
             $this->loadProductFromErp($t, $product);
             $wholesaleProduct = $this->wholesale->getProductRepository()->find($product->getItemNumber());
             $this->loadProductFromWholesale($t, $wholesaleProduct);
+            $dimensions = $this->em->getRepository(\AppBundle\Entity\ProductDimension::class)->findOneByBarcode($t->getBarcode());
+            if ($dimensions !== null) {
+                $this->loadProductFromDimensions($t, $dimensions);
+            }
             $result[] = $t;
         }
 
@@ -107,6 +119,27 @@ class ProductService {
         }
 
         $product->setImages($images);
+
+        return $product;
+    }
+
+    private function loadProductFromDimensions(\AppBundle\Model\Product $product, \AppBundle\Entity\ProductDimension $dim) {
+
+        if (empty($t->getHeight())) {
+            $product->setHeight($dim->getHeight());
+        }
+
+        if (empty($t->getLength())) {
+            $product->setLength($dim->getLength());
+        }
+
+        if (empty($t->getWidth())) {
+            $product->setWidth($dim->getWidth());
+        }
+
+        if (empty($t->getWeight())) {
+            $product->setWeight($dim->getWeight());
+        }
 
         return $product;
     }

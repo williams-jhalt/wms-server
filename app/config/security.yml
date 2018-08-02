@@ -10,7 +10,7 @@ security:
         api_provider:
             memory:
                 users:
-                    %erp_connector_username%:
+                    "%erp_connector_username%":
                         password: "%erp_connector_password%"
                         roles: ROLE_WEBSERVICE
 

@@ -3,10 +3,9 @@
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
 
-class AppKernel extends Kernel
-{
-    public function registerBundles()
-    {
+class AppKernel extends Kernel {
+
+    public function registerBundles() {
         $bundles = [
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -20,11 +19,13 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
             new FOS\RestBundle\FOSRestBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
             new ErpBundle\ErpBundle(),
             new ConnectshipBundle\ConnectshipBundle(),
             new WholesaleBundle\WholesaleBundle(),
             new WmsBundle\WmsBundle(),
             new LogicBrokerBundle\LogicBrokerBundle(),
+            new DscoBundle\DscoBundle(),
             new AppBundle\AppBundle(),
         ];
 
@@ -33,28 +34,26 @@ class AppKernel extends Kernel
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
+            $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
         }
 
         return $bundles;
     }
 
-    public function getRootDir()
-    {
+    public function getRootDir() {
         return __DIR__;
     }
 
-    public function getCacheDir()
-    {
-        return dirname(__DIR__).'/var/cache/'.$this->getEnvironment();
+    public function getCacheDir() {
+        return dirname(__DIR__) . '/var/cache/' . $this->getEnvironment();
     }
 
-    public function getLogDir()
-    {
-        return dirname(__DIR__).'/var/logs';
+    public function getLogDir() {
+        return dirname(__DIR__) . '/var/logs';
     }
 
-    public function registerContainerConfiguration(LoaderInterface $loader)
-    {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+    public function registerContainerConfiguration(LoaderInterface $loader) {
+        $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
+
 }

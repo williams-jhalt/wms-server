@@ -19,7 +19,7 @@
 
     <form class="form-inline" action="{{ path('product_lookup_search') }}" method="get">
         <div class="form-group">
-            <input class="form-control" type="text" name="searchTerms">
+            <input class="form-control" type="text" name="searchTerms" placeholder="SKU or Barcode">
         </div>
         <button class="btn btn-default" type="submit">Search</button>
     </form>
@@ -43,7 +43,11 @@
                     <b>Bin:</b> {{ item.binLocation }}<br>
                     <b>In Stock:</b> {{ item.quantityOnHand }}<br>
                     <b>Committed:</b> {{ item.quantityCommitted }}<br>
-                    <b>Available:</b> {{ item.quantityOnHand - item.quantityCommitted }}
+                    <b>Available:</b> {{ item.quantityOnHand - item.quantityCommitted }}<br>
+                    <b>Height:</b> {{ item.height }}<br>
+                    <b>Length:</b> {{ item.length }}<br>
+                    <b>Width:</b> {{ item.width }}<br>
+                    <b>Weight:</b> {{ item.weight }}
                 </div>
             </div>
         </div>

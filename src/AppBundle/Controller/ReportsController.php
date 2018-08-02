@@ -28,7 +28,7 @@ class ReportsController extends Controller {
         $reports = [];
 
         $finder = new Finder();
-        $finder->files()->name("*.json")->in(__DIR__ . '/../../../web/data/');
+        $finder->files()->name("*.json")->in(__DIR__ . '/../../../public/data/');
 
         foreach ($finder as $file) {
             $reports[] = [

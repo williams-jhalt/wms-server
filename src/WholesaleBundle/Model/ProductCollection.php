@@ -21,6 +21,10 @@ class ProductCollection {
         return $this->total;
     }
 
+    /**
+     * 
+     * @return Product[]
+     */
     public function getItems() {
         return $this->items;
     }

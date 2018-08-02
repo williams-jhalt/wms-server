@@ -31,6 +31,16 @@ class Product {
     private $maxDiscountRate;
     private $typeId;
     private $saleable;
+    private $brand;
+    private $productLength;
+    private $insertableLength;
+    private $realistic;
+    private $balls;
+    private $suctionCup;
+    private $harness;
+    private $vibrating;
+    private $doubleEnded;
+    private $circumference;
 
     public function getId() {
         return $this->id;
@@ -272,6 +282,96 @@ class Product {
 
     public function setSaleable($saleable) {
         $this->saleable = $saleable;
+        return $this;
+    }
+
+    public function getBrand() {
+        return $this->brand;
+    }
+
+    public function getProductLength() {
+        return $this->productLength;
+    }
+
+    public function getInsertableLength() {
+        return $this->insertableLength;
+    }
+
+    public function getRealistic() {
+        return $this->realistic;
+    }
+
+    public function getBalls() {
+        return $this->balls;
+    }
+
+    public function getSuctionCup() {
+        return $this->suctionCup;
+    }
+
+    public function getHarness() {
+        return $this->harness;
+    }
+
+    public function getVibrating() {
+        return $this->vibrating;
+    }
+
+    public function getDoubleEnded() {
+        return $this->doubleEnded;
+    }
+
+    public function getCircumference() {
+        return $this->circumference;
+    }
+
+    public function setBrand($brand) {
+        $this->brand = $brand;
+        return $this;
+    }
+
+    public function setProductLength($productLength) {
+        $this->productLength = $productLength;
+        return $this;
+    }
+
+    public function setInsertableLength($insertableLength) {
+        $this->insertableLength = $insertableLength;
+        return $this;
+    }
+
+    public function setRealistic($realistic) {
+        $this->realistic = $realistic;
+        return $this;
+    }
+
+    public function setBalls($balls) {
+        $this->balls = $balls;
+        return $this;
+    }
+
+    public function setSuctionCup($suctionCup) {
+        $this->suctionCup = $suctionCup;
+        return $this;
+    }
+
+    public function setHarness($harness) {
+        $this->harness = $harness;
+        return $this;
+    }
+
+    public function setVibrating($vibrating) {
+        $this->vibrating = $vibrating;
+        return $this;
+    }
+
+    public function setDoubleEnded($doubleEnded) {
+        $this->doubleEnded = $doubleEnded;
+        return $this;
+    }
+
+    public function setCircumference($circumference) {
+        $this->circumference = $circumference;
         return $this;
     }
 

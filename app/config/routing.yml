@@ -6,6 +6,11 @@ logicbroker:
     resource: "@LogicBrokerBundle/Controller/"
     type:     annotation
     prefix: /logicbroker
+
+dsco:
+    resource: "@DscoBundle/Controller/"
+    type:     annotation
+    prefix: /dsco
     
 erp_api:
     resource: "@ErpBundle/Resources/config/routes.yml"

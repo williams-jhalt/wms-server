@@ -15,6 +15,13 @@ class ManufacturerRepository {
         $this->client = $client;
     }
 
+    /**
+     * 
+     * @param int $limit
+     * @param int $offset
+     * @return ManufacturerCollection
+     * @throws Exception
+     */
     public function findAll($limit = 100, $offset = 0) {
 
         $res = $this->client->get('/rest/manufacturers', [
@@ -25,11 +32,9 @@ class ManufacturerRepository {
             ]
         ]);
 
-        if ($res->getStatusCode() != 200) {
-            throw new Exception("Could not get data");
-        }
-
         $range = $res->getHeader('X-Content-Range');
+        
+        print_r($range);
 
         $matches = array();
 
@@ -53,6 +58,12 @@ class ManufacturerRepository {
         return $response;
     }
 
+    /**
+     * 
+     * @param int $id
+     * @return Manufacturer
+     * @throws Exception
+     */
     public function find($id) {
 
         $res = $this->client->get('/rest/manufacturers/' . $id, [
@@ -70,6 +81,11 @@ class ManufacturerRepository {
         return $this->loadManufacturer($data->manufacturer);
     }
 
+    /**
+     * 
+     * @param array $data
+     * @return Manufacturer
+     */
     private function loadManufacturer($data) {
         $t = new Manufacturer();
         $t->setId($data->id)

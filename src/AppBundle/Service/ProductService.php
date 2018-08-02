@@ -125,19 +125,19 @@ class ProductService {
 
     private function loadProductFromDimensions(\AppBundle\Model\Product $product, \AppBundle\Entity\ProductDimension $dim) {
 
-        if (empty($t->getHeight())) {
+        if (empty($product->getHeight())) {
             $product->setHeight($dim->getHeight());
         }
 
-        if (empty($t->getLength())) {
+        if (empty($product->getLength())) {
             $product->setLength($dim->getLength());
         }
 
-        if (empty($t->getWidth())) {
+        if (empty($product->getWidth())) {
             $product->setWidth($dim->getWidth());
         }
 
-        if (empty($t->getWeight())) {
+        if (empty($product->getWeight())) {
             $product->setWeight($dim->getWeight());
         }
 

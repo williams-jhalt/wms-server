@@ -97,17 +97,17 @@ class Product {
     private $detail;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Manufacturer", inversedBy="products")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Manufacturer", inversedBy="products", cascade={"persist"})
      */
     private $manufacturer;
 
     /**
-     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\ProductType", inversedBy="products")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\ProductType", inversedBy="products", cascade={"persist"})
      */
     private $productType;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductAttachment", mappedBy="product", orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductAttachment", mappedBy="product", orphanRemoval=true, cascade={"persist", "remove"})
      */
     private $attachments;
 
@@ -118,6 +118,7 @@ class Product {
 
     public function __construct() {
         $this->attachments = new ArrayCollection();
+        $this->detail = new ProductDetail();
     }
 
     public function getId() {
@@ -344,6 +345,11 @@ class Product {
      */
     public function setUpdateAtValue() {
         $this->updatedOn = new DateTime();
+    }
+
+    public function setAttachments($attachments) {
+        $this->attachments = $attachments;
+        return $this;
     }
 
 }

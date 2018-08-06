@@ -15,6 +15,13 @@ class ProductTypeRepository {
         $this->client = $client;
     }
 
+    /**
+     * 
+     * @param int $limit
+     * @param int $offset
+     * @return ProductTypeCollection
+     * @throws Exception
+     */
     public function findAll($limit = 100, $offset = 0) {
 
         $res = $this->client->get('/rest/product-types', [
@@ -53,9 +60,15 @@ class ProductTypeRepository {
         return $response;
     }
 
+    /**
+     * 
+     * @param mixed $id
+     * @return ProductType
+     * @throws Exception
+     */
     public function find($id) {
 
-        $res = $this->client->get('GET', '/rest/product-types/' . $id, [
+        $res = $this->client->get('/rest/product-types/' . $id, [
             'query' => [
                 'format' => 'json'
             ]
@@ -70,6 +83,11 @@ class ProductTypeRepository {
         return $this->loadProductType($data->type);
     }
 
+    /**
+     * 
+     * @param stdClass $data
+     * @return ProductType
+     */
     private function loadProductType($data) {
         $t = new ProductType();
         $t->setId($data->id)

@@ -33,8 +33,6 @@ class ManufacturerRepository {
         ]);
 
         $range = $res->getHeader('X-Content-Range');
-        
-        print_r($range);
 
         $matches = array();
 
@@ -60,7 +58,7 @@ class ManufacturerRepository {
 
     /**
      * 
-     * @param int $id
+     * @param mixed $id
      * @return Manufacturer
      * @throws Exception
      */

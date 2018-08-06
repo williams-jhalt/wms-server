@@ -11,6 +11,7 @@
 
         {% for product in products %}
             <div>
+                <div class="pull-right"><a class="btn btn-danger" href="{{ path('catalog_remove', {id: product.id, searchTerms: searchTerms}) }}">Remove</a></div>
                 <p><a href="{{ path('catalog_edit', {id: product.id, searchTerms: searchTerms}) }}">{{ product.itemNumber }} - {{ product.name }}</a></p>
                 {% if product.detail %}
                     <p>{{ product.detail.description }}</p>

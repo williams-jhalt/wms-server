@@ -30,24 +30,24 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <b>{{ item.itemNumber }}</b> - {{ item.name }}
+                <b><a href="{{ path('product_lookup_edit', {id: item.id, searchTerms: app.request.get('searchTerms')}) }}">{{ item.itemNumber }}</a></b> - {{ item.name }}
             </div>
             <div class="panel-body">
                 <div class="col-sm-3">
-                    {% if item.images|length > 0 %}
-                        <img class="img-responsive" src="{{ item.images[0].imageMediumUrl }}" style="max-height: 150px;">
+                    {% if item.attachments|length > 0 %}
+                        <img class="img-responsive" src="{{ item.attachments[0].url }}" style="max-height: 150px;">
                     {% endif %}
                 </div>
-                <div class="col-sm-6">{{ item.description }}</div>
+                <div class="col-sm-6">{{ item.detail.description }}</div>
                 <div class="col-sm-3">
                     <b>Bin:</b> {{ item.binLocation }}<br>
                     <b>In Stock:</b> {{ item.quantityOnHand }}<br>
                     <b>Committed:</b> {{ item.quantityCommitted }}<br>
                     <b>Available:</b> {{ item.quantityOnHand - item.quantityCommitted }}<br>
-                    <b>Height:</b> {{ item.height }}<br>
-                    <b>Length:</b> {{ item.length }}<br>
-                    <b>Width:</b> {{ item.width }}<br>
-                    <b>Weight:</b> {{ item.weight }}
+                    <b>Height:</b> {{ item.detail.packageHeight }}<br>
+                    <b>Length:</b> {{ item.detail.packageLength }}<br>
+                    <b>Width:</b> {{ item.detail.packageWidth }}<br>
+                    <b>Weight:</b> {{ item.detail.packageWeight }}
                 </div>
             </div>
         </div>

@@ -52,11 +52,11 @@ class CatalogController extends Controller {
     public function editAction($id, Request $request) {
 
         $searchTerms = $request->get('searchTerms');
-        
+
         $product = $this->getDoctrine()->getRepository(Product::class)->find($id);
-        
+
         $detail = $product->getDetail();
-        
+
         if ($detail == null) {
             $detail = new ProductDetail();
         }
@@ -77,6 +77,18 @@ class CatalogController extends Controller {
                     'product' => $product,
                     'form' => $form->createView()
         ]);
+    }
+
+    /**
+     * @Route("/remove/{id}", name="catalog_remove")
+     */
+    public function removeAction($id, Request $request) {
+        $searchTerms = $request->get('searchTerms');
+        $product = $this->getDoctrine()->getRepository(Product::class)->find($id);
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($product);
+        $em->flush();
+        return $this->redirectToRoute('catalog_search', ['searchTerms' => $searchTerms]);
     }
 
 }

@@ -2,6 +2,8 @@
 
 namespace AppBundle\Entity;
 
+use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -83,7 +85,7 @@ class ProductDetail {
     private $mapPrice;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\ProductAttribute", mappedBy="detail", orphanRemoval=true, cascade={"persist", "remove"})
      */
     private $attributes;
 
@@ -96,6 +98,10 @@ class ProductDetail {
      * @ORM\Column(type="datetime")
      */
     private $updatedOn;
+    
+    public function __construct() {
+        $this->attributes = new ArrayCollection();
+    }
 
     public function getId() {
         return $this->id;
@@ -259,19 +265,40 @@ class ProductDetail {
         return $this;
     }
 
+    public function addAttribute(ProductAttribute $attribute) {
+        if (!$this->attributes->contains($attribute)) {
+            $this->attributes[] = $attribute;
+            $attribute->setDetail($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAttribute(ProductAttribute $attribute) {
+        if ($this->attributes->contains($attribute)) {
+            $this->attributes->removeElement($attribute);
+            // set the owning side to null (unless already changed)
+            if ($attribute->getDetail() === $this) {
+                $attribute->getDetail(null);
+            }
+        }
+
+        return $this;
+    }
+
     /**
      * @ORM\PrePersist
      */
     public function setCreatedAtValue() {
-        $this->createdOn = new \DateTime();
-        $this->updatedOn = new \DateTime();
+        $this->createdOn = new DateTime();
+        $this->updatedOn = new DateTime();
     }
 
     /**
      * @ORM\PreUpdate
      */
     public function setUpdateAtValue() {
-        $this->updatedOn = new \DateTime();
+        $this->updatedOn = new DateTime();
     }
 
 }

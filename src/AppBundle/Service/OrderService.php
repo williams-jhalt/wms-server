@@ -96,6 +96,14 @@ class OrderService {
 
         return $order;
     }
+    
+    /**
+     * @return SalesOrderItem[]
+     */
+    public function getOrderItems($orderNumber) {
+        $erpOrderItems = $this->erp->getSalesOrderRepository()->getItems($orderNumber);
+        return $erpOrderItems->getItems();        
+    }
 
     /**
      * @return ShipmentPackage[]
@@ -215,7 +223,7 @@ class OrderService {
 
                 if (!empty($erpOrder->getWebReferenceNumber())) {
                     $salesOrder->setSource(SalesOrder::SOURCE_WEBSITE);
-                    $weborder = $this->williamsWms->getWeborderRepository()->getOrder($salesOrder->getWebsiteId());
+                    $weborder = $this->muffsWms->getWeborderRepository()->getOrder($salesOrder->getWebsiteId());
                     $this->loadOrderFromWms($salesOrder, $weborder);
                 } else {
                     $salesOrder->setSource(SalesOrder::SOURCE_CSR);

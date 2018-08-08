@@ -184,10 +184,10 @@ class SalesOrder extends \ErpBundle\Model\SalesOrder {
         $volume = 0.0;
 
         foreach ($this->cartons as $carton) {
-            $volume += ($carton->getPackageHeight() * $carton->getPackageLength() * $carton->getPackageWidth());
+            $volume += ((double) $carton->getPackageHeight() * (double) $carton->getPackageLength() * (double) $carton->getPackageWidth());
         }
 
-        return $volume;
+        return (double) $volume;
     }
 
     /**
@@ -204,7 +204,7 @@ class SalesOrder extends \ErpBundle\Model\SalesOrder {
             $weight += $carton->getShippingWeight();
         }
 
-        return $weight;
+        return (double) $weight;
     }
     
     /**
@@ -220,7 +220,7 @@ class SalesOrder extends \ErpBundle\Model\SalesOrder {
             $freight += $carton->getFreightCost();
         }
         
-        return $freight;
+        return (double) $freight;
         
     }
 

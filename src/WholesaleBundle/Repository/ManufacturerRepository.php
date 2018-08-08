@@ -75,6 +75,10 @@ class ManufacturerRepository {
         }
 
         $data = json_decode($res->getBody());
+        
+        if ($data->manufacturer == null) {
+            return null;
+        }
 
         return $this->loadManufacturer($data->manufacturer);
     }

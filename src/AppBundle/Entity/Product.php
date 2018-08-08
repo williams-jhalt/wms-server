@@ -255,6 +255,10 @@ class Product {
         return $this;
     }
 
+    /**
+     * 
+     * @return ProductDetail
+     */
     public function getDetail() {
         return $this->detail;
     }

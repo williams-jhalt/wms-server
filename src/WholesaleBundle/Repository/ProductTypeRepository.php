@@ -32,10 +32,6 @@ class ProductTypeRepository {
             ]
         ]);
 
-        if ($res->getStatusCode() != 200) {
-            throw new Exception("Could not get data");
-        }
-
         $range = $res->getHeader('X-Content-Range');
 
         $matches = array();
@@ -79,6 +75,10 @@ class ProductTypeRepository {
         }
 
         $data = json_decode($res->getBody());
+        
+        if ($data->type == null) {
+            return null;
+        }
 
         return $this->loadProductType($data->type);
     }

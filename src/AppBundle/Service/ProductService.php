@@ -47,6 +47,15 @@ class ProductService {
         return $result;
     }
 
+    public function getByItemNumber($itemNumber) {
+
+        $repo = $this->erp->getProductRepository();
+
+        $product = $repo->getByItemNumber($itemNumber);
+
+        return $this->buildProductFromErp($product);
+    }
+
     /**
      * @param int $limit
      * @param int $offset
@@ -214,9 +223,9 @@ class ProductService {
 
                 $localProduct->setProductType($type);
             }
-            
+
             $attachments = $localProduct->getAttachments();
-                        
+
             foreach ($product->getImages() as $image) {
                 $attachment = new \AppBundle\Entity\ProductAttachment();
                 $attachment->setUrl($image->getImageUrl());
@@ -226,9 +235,9 @@ class ProductService {
                 $attachment->setProduct($localProduct);
                 $attachments[] = $attachment;
             }
-            
+
             $localProduct->setAttachments($attachments);
-            
+
             $detail = $localProduct->getDetail();
 
             $detail->setName($wholesaleProduct->getName());
@@ -241,18 +250,16 @@ class ProductService {
             $detail->setDimUnit("IN");
             $detail->setWeightUnit("LB");
 
-            $attributes = $detail->getAttributes();
-            (!empty($wholesaleProduct->getProductLength())) ? $attributes[] = new ProductAttribute('product_length', $wholesaleProduct->getProductLength()) : null;
-            (!empty($wholesaleProduct->getInsertableLength())) ? $attributes[] = new ProductAttribute('insertable_length', $wholesaleProduct->getInsertableLength()) : null;
-            (!empty($wholesaleProduct->getRealistic())) ? $attributes[] = new ProductAttribute('realistic', $wholesaleProduct->getRealistic()) : null;
-            (!empty($wholesaleProduct->getBalls())) ? $attributes[] = new ProductAttribute('balls', $wholesaleProduct->getBalls()) : null;
-            (!empty($wholesaleProduct->getSuctionCup())) ? $attributes[] = new ProductAttribute('suction_cup', $wholesaleProduct->getSuctionCup()) : null;
-            (!empty($wholesaleProduct->getHarness())) ? $attributes[] = new ProductAttribute('harness', $wholesaleProduct->getHarness()) : null;
-            (!empty($wholesaleProduct->getVibrating())) ? $attributes[] = new ProductAttribute('vibrating', $wholesaleProduct->getVibrating()) : null;
-            (!empty($wholesaleProduct->getDoubleEnded())) ? $attributes[] = new ProductAttribute('double_ended', $wholesaleProduct->getDoubleEnded()) : null;
-            (!empty($wholesaleProduct->getCircumference())) ? $attributes[] = new ProductAttribute('circumference', $wholesaleProduct->getCircumference()) : null;
+            (!empty($wholesaleProduct->getProductLength())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'product_length', $wholesaleProduct->getProductLength())) : null;
+            (!empty($wholesaleProduct->getInsertableLength())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'insertable_length', $wholesaleProduct->getInsertableLength())) : null;
+            (!empty($wholesaleProduct->getRealistic())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'realistic', $wholesaleProduct->getRealistic())) : null;
+            (!empty($wholesaleProduct->getBalls())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'balls', $wholesaleProduct->getBalls())) : null;
+            (!empty($wholesaleProduct->getSuctionCup())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'suction_cup', $wholesaleProduct->getSuctionCup())) : null;
+            (!empty($wholesaleProduct->getHarness())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'harness', $wholesaleProduct->getHarness())) : null;
+            (!empty($wholesaleProduct->getVibrating())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'vibrating', $wholesaleProduct->getVibrating())) : null;
+            (!empty($wholesaleProduct->getDoubleEnded())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'double_ended', $wholesaleProduct->getDoubleEnded())) : null;
+            (!empty($wholesaleProduct->getCircumference())) ? $detail->addAttribute(new \AppBundle\Entity\ProductAttribute($detail, 'circumference', $wholesaleProduct->getCircumference())) : null;
 
-            $detail->setAttributes($attributes);
             $localProduct->setDetail($detail);
 
             $this->em->persist($localProduct);

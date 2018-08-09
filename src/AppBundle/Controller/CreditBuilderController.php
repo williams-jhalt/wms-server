@@ -51,7 +51,11 @@ class CreditBuilderController extends Controller {
 
         $manifestId = $request->get('manifestId');
 
-        list($orderNumber, $recordSequence) = explode('-', $manifestId);
+        if (strpos($manifestId, '-') !== false) {
+            list($orderNumber, $recordSequence) = explode('-', $manifestId);
+        } else {
+            $orderNumber = $manifestId;
+        }
 
         $service = $this->getOrderService();
         $productService = $this->getProductService();

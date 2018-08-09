@@ -145,8 +145,8 @@
                         response[company] = new Number(result[company]['shipped'] / result[company]['ordered']).toFixed(4);
                     }
                     
-                    $('#muffsFulfilmentRate').html((response['muffs'] * 100) + "%");
-                    $('#williamsFulfilmentRate').html((response['williams'] * 100) + "%");
+                    $('#muffsFulfilmentRate').html(((response['muffs'] * 100)).toPrecision(4) + "%");
+                    $('#williamsFulfilmentRate').html(((response['williams'] * 100)).toPrecision(4) + "%");
 
                     var muffsData = new Array();
 

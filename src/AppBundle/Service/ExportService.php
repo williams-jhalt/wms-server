@@ -155,6 +155,7 @@ class ExportService {
 
         $ftp = ftp_connect($hostname);
         ftp_login($ftp, $username, $password);
+        ftp_pasv($ftp, true);
         ftp_put($ftp, $headerFileName, $headerFile->getPathname(), FTP_ASCII);
         ftp_put($ftp, $detailFileName, $detailFile->getPathname(), FTP_ASCII);
         ftp_close($ftp);

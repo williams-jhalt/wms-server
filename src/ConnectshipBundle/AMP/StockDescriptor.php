@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class StockDescriptor
-{
+class StockDescriptor {
 
     /**
      * @var string $symbol
@@ -35,118 +34,104 @@ class StockDescriptor
      */
     protected $printAreas = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return string
      */
-    public function getSymbol()
-    {
-      return $this->symbol;
+    public function getSymbol() {
+        return $this->symbol;
     }
 
     /**
      * @param string $symbol
      * @return \ConnectshipBundle\AMP\StockDescriptor
      */
-    public function setSymbol($symbol)
-    {
-      $this->symbol = $symbol;
-      return $this;
+    public function setSymbol($symbol) {
+        $this->symbol = $symbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
-      return $this->name;
+    public function getName() {
+        return $this->name;
     }
 
     /**
      * @param string $name
      * @return \ConnectshipBundle\AMP\StockDescriptor
      */
-    public function setName($name)
-    {
-      $this->name = $name;
-      return $this;
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getWidth()
-    {
-      return $this->width;
+    public function getWidth() {
+        return $this->width;
     }
 
     /**
      * @param int $width
      * @return \ConnectshipBundle\AMP\StockDescriptor
      */
-    public function setWidth($width)
-    {
-      $this->width = $width;
-      return $this;
+    public function setWidth($width) {
+        $this->width = $width;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getHeight()
-    {
-      return $this->height;
+    public function getHeight() {
+        return $this->height;
     }
 
     /**
      * @param int $height
      * @return \ConnectshipBundle\AMP\StockDescriptor
      */
-    public function setHeight($height)
-    {
-      $this->height = $height;
-      return $this;
+    public function setHeight($height) {
+        $this->height = $height;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getTopFirst()
-    {
-      return $this->topFirst;
+    public function getTopFirst() {
+        return $this->topFirst;
     }
 
     /**
      * @param boolean $topFirst
      * @return \ConnectshipBundle\AMP\StockDescriptor
      */
-    public function setTopFirst($topFirst)
-    {
-      $this->topFirst = $topFirst;
-      return $this;
+    public function setTopFirst($topFirst) {
+        $this->topFirst = $topFirst;
+        return $this;
     }
 
     /**
      * @return PrintAreaList
      */
-    public function getPrintAreas()
-    {
-      return $this->printAreas;
+    public function getPrintAreas() {
+        return $this->printAreas;
     }
 
     /**
      * @param PrintAreaList $printAreas
      * @return \ConnectshipBundle\AMP\StockDescriptor
      */
-    public function setPrintAreas($printAreas)
-    {
-      $this->printAreas = $printAreas;
-      return $this;
+    public function setPrintAreas($printAreas) {
+        $this->printAreas = $printAreas;
+        return $this;
     }
 
 }

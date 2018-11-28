@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class CompoundResult
-{
+class CompoundResult {
 
     /**
      * @var CloseOutResponse $closeOutResponse
@@ -259,806 +258,721 @@ class CompoundResult
      * @param VoidPackagesResponse $voidPackagesResponse
      * @param string $asyncCorrelationData
      */
-    public function __construct($closeOutResponse, $createGroupResponse, $customOperationResponse, $deleteShipFilesResponse, $deleteTransmitItemsResponse, $getGroupResponse, $getSchemaResponse, $getShipperInformationResponse, $listCarriersResponse, $listCloseOutItemsResponse, $listCountriesResponse, $listCountryServicesResponse, $listCurrenciesResponse, $listDocumentsResponse, $listDocumentFormatsResponse, $listGroupingsResponse, $listGroupsResponse, $listIncotermsResponse, $listLocalPortsResponse, $listPackagingTypesResponse, $listPaymentTypesResponse, $listPrinterDevicesResponse, $listServicesResponse, $listShipFilesResponse, $listShippersResponse, $listStocksResponse, $listTransmitItemsResponse, $listUnitsResponse, $listWindowsPrintersResponse, $modifyContainerResponse, $modifyGroupResponse, $modifyPackagesResponse, $printResponse, $printXmlResponse, $rateResponse, $reprocessResponse, $searchResponse, $shipResponse, $transmitResponse, $validateAddressResponse, $voidPackagesResponse, $asyncCorrelationData)
-    {
-      $this->closeOutResponse = $closeOutResponse;
-      $this->createGroupResponse = $createGroupResponse;
-      $this->customOperationResponse = $customOperationResponse;
-      $this->deleteShipFilesResponse = $deleteShipFilesResponse;
-      $this->deleteTransmitItemsResponse = $deleteTransmitItemsResponse;
-      $this->getGroupResponse = $getGroupResponse;
-      $this->getSchemaResponse = $getSchemaResponse;
-      $this->getShipperInformationResponse = $getShipperInformationResponse;
-      $this->listCarriersResponse = $listCarriersResponse;
-      $this->listCloseOutItemsResponse = $listCloseOutItemsResponse;
-      $this->listCountriesResponse = $listCountriesResponse;
-      $this->listCountryServicesResponse = $listCountryServicesResponse;
-      $this->listCurrenciesResponse = $listCurrenciesResponse;
-      $this->listDocumentsResponse = $listDocumentsResponse;
-      $this->listDocumentFormatsResponse = $listDocumentFormatsResponse;
-      $this->listGroupingsResponse = $listGroupingsResponse;
-      $this->listGroupsResponse = $listGroupsResponse;
-      $this->listIncotermsResponse = $listIncotermsResponse;
-      $this->listLocalPortsResponse = $listLocalPortsResponse;
-      $this->listPackagingTypesResponse = $listPackagingTypesResponse;
-      $this->listPaymentTypesResponse = $listPaymentTypesResponse;
-      $this->listPrinterDevicesResponse = $listPrinterDevicesResponse;
-      $this->listServicesResponse = $listServicesResponse;
-      $this->listShipFilesResponse = $listShipFilesResponse;
-      $this->listShippersResponse = $listShippersResponse;
-      $this->listStocksResponse = $listStocksResponse;
-      $this->listTransmitItemsResponse = $listTransmitItemsResponse;
-      $this->listUnitsResponse = $listUnitsResponse;
-      $this->listWindowsPrintersResponse = $listWindowsPrintersResponse;
-      $this->modifyContainerResponse = $modifyContainerResponse;
-      $this->modifyGroupResponse = $modifyGroupResponse;
-      $this->modifyPackagesResponse = $modifyPackagesResponse;
-      $this->printResponse = $printResponse;
-      $this->printXmlResponse = $printXmlResponse;
-      $this->rateResponse = $rateResponse;
-      $this->reprocessResponse = $reprocessResponse;
-      $this->searchResponse = $searchResponse;
-      $this->shipResponse = $shipResponse;
-      $this->transmitResponse = $transmitResponse;
-      $this->validateAddressResponse = $validateAddressResponse;
-      $this->voidPackagesResponse = $voidPackagesResponse;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($closeOutResponse, $createGroupResponse, $customOperationResponse, $deleteShipFilesResponse, $deleteTransmitItemsResponse, $getGroupResponse, $getSchemaResponse, $getShipperInformationResponse, $listCarriersResponse, $listCloseOutItemsResponse, $listCountriesResponse, $listCountryServicesResponse, $listCurrenciesResponse, $listDocumentsResponse, $listDocumentFormatsResponse, $listGroupingsResponse, $listGroupsResponse, $listIncotermsResponse, $listLocalPortsResponse, $listPackagingTypesResponse, $listPaymentTypesResponse, $listPrinterDevicesResponse, $listServicesResponse, $listShipFilesResponse, $listShippersResponse, $listStocksResponse, $listTransmitItemsResponse, $listUnitsResponse, $listWindowsPrintersResponse, $modifyContainerResponse, $modifyGroupResponse, $modifyPackagesResponse, $printResponse, $printXmlResponse, $rateResponse, $reprocessResponse, $searchResponse, $shipResponse, $transmitResponse, $validateAddressResponse, $voidPackagesResponse, $asyncCorrelationData) {
+        $this->closeOutResponse = $closeOutResponse;
+        $this->createGroupResponse = $createGroupResponse;
+        $this->customOperationResponse = $customOperationResponse;
+        $this->deleteShipFilesResponse = $deleteShipFilesResponse;
+        $this->deleteTransmitItemsResponse = $deleteTransmitItemsResponse;
+        $this->getGroupResponse = $getGroupResponse;
+        $this->getSchemaResponse = $getSchemaResponse;
+        $this->getShipperInformationResponse = $getShipperInformationResponse;
+        $this->listCarriersResponse = $listCarriersResponse;
+        $this->listCloseOutItemsResponse = $listCloseOutItemsResponse;
+        $this->listCountriesResponse = $listCountriesResponse;
+        $this->listCountryServicesResponse = $listCountryServicesResponse;
+        $this->listCurrenciesResponse = $listCurrenciesResponse;
+        $this->listDocumentsResponse = $listDocumentsResponse;
+        $this->listDocumentFormatsResponse = $listDocumentFormatsResponse;
+        $this->listGroupingsResponse = $listGroupingsResponse;
+        $this->listGroupsResponse = $listGroupsResponse;
+        $this->listIncotermsResponse = $listIncotermsResponse;
+        $this->listLocalPortsResponse = $listLocalPortsResponse;
+        $this->listPackagingTypesResponse = $listPackagingTypesResponse;
+        $this->listPaymentTypesResponse = $listPaymentTypesResponse;
+        $this->listPrinterDevicesResponse = $listPrinterDevicesResponse;
+        $this->listServicesResponse = $listServicesResponse;
+        $this->listShipFilesResponse = $listShipFilesResponse;
+        $this->listShippersResponse = $listShippersResponse;
+        $this->listStocksResponse = $listStocksResponse;
+        $this->listTransmitItemsResponse = $listTransmitItemsResponse;
+        $this->listUnitsResponse = $listUnitsResponse;
+        $this->listWindowsPrintersResponse = $listWindowsPrintersResponse;
+        $this->modifyContainerResponse = $modifyContainerResponse;
+        $this->modifyGroupResponse = $modifyGroupResponse;
+        $this->modifyPackagesResponse = $modifyPackagesResponse;
+        $this->printResponse = $printResponse;
+        $this->printXmlResponse = $printXmlResponse;
+        $this->rateResponse = $rateResponse;
+        $this->reprocessResponse = $reprocessResponse;
+        $this->searchResponse = $searchResponse;
+        $this->shipResponse = $shipResponse;
+        $this->transmitResponse = $transmitResponse;
+        $this->validateAddressResponse = $validateAddressResponse;
+        $this->voidPackagesResponse = $voidPackagesResponse;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return CloseOutResponse
      */
-    public function getCloseOutResponse()
-    {
-      return $this->closeOutResponse;
+    public function getCloseOutResponse() {
+        return $this->closeOutResponse;
     }
 
     /**
      * @param CloseOutResponse $closeOutResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setCloseOutResponse($closeOutResponse)
-    {
-      $this->closeOutResponse = $closeOutResponse;
-      return $this;
+    public function setCloseOutResponse($closeOutResponse) {
+        $this->closeOutResponse = $closeOutResponse;
+        return $this;
     }
 
     /**
      * @return CreateGroupResponse
      */
-    public function getCreateGroupResponse()
-    {
-      return $this->createGroupResponse;
+    public function getCreateGroupResponse() {
+        return $this->createGroupResponse;
     }
 
     /**
      * @param CreateGroupResponse $createGroupResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setCreateGroupResponse($createGroupResponse)
-    {
-      $this->createGroupResponse = $createGroupResponse;
-      return $this;
+    public function setCreateGroupResponse($createGroupResponse) {
+        $this->createGroupResponse = $createGroupResponse;
+        return $this;
     }
 
     /**
      * @return CustomOperationResponse
      */
-    public function getCustomOperationResponse()
-    {
-      return $this->customOperationResponse;
+    public function getCustomOperationResponse() {
+        return $this->customOperationResponse;
     }
 
     /**
      * @param CustomOperationResponse $customOperationResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setCustomOperationResponse($customOperationResponse)
-    {
-      $this->customOperationResponse = $customOperationResponse;
-      return $this;
+    public function setCustomOperationResponse($customOperationResponse) {
+        $this->customOperationResponse = $customOperationResponse;
+        return $this;
     }
 
     /**
      * @return DeleteShipFilesResponse
      */
-    public function getDeleteShipFilesResponse()
-    {
-      return $this->deleteShipFilesResponse;
+    public function getDeleteShipFilesResponse() {
+        return $this->deleteShipFilesResponse;
     }
 
     /**
      * @param DeleteShipFilesResponse $deleteShipFilesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setDeleteShipFilesResponse($deleteShipFilesResponse)
-    {
-      $this->deleteShipFilesResponse = $deleteShipFilesResponse;
-      return $this;
+    public function setDeleteShipFilesResponse($deleteShipFilesResponse) {
+        $this->deleteShipFilesResponse = $deleteShipFilesResponse;
+        return $this;
     }
 
     /**
      * @return DeleteTransmitItemsResponse
      */
-    public function getDeleteTransmitItemsResponse()
-    {
-      return $this->deleteTransmitItemsResponse;
+    public function getDeleteTransmitItemsResponse() {
+        return $this->deleteTransmitItemsResponse;
     }
 
     /**
      * @param DeleteTransmitItemsResponse $deleteTransmitItemsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setDeleteTransmitItemsResponse($deleteTransmitItemsResponse)
-    {
-      $this->deleteTransmitItemsResponse = $deleteTransmitItemsResponse;
-      return $this;
+    public function setDeleteTransmitItemsResponse($deleteTransmitItemsResponse) {
+        $this->deleteTransmitItemsResponse = $deleteTransmitItemsResponse;
+        return $this;
     }
 
     /**
      * @return GetGroupResponse
      */
-    public function getGetGroupResponse()
-    {
-      return $this->getGroupResponse;
+    public function getGetGroupResponse() {
+        return $this->getGroupResponse;
     }
 
     /**
      * @param GetGroupResponse $getGroupResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setGetGroupResponse($getGroupResponse)
-    {
-      $this->getGroupResponse = $getGroupResponse;
-      return $this;
+    public function setGetGroupResponse($getGroupResponse) {
+        $this->getGroupResponse = $getGroupResponse;
+        return $this;
     }
 
     /**
      * @return GetSchemaResponse
      */
-    public function getGetSchemaResponse()
-    {
-      return $this->getSchemaResponse;
+    public function getGetSchemaResponse() {
+        return $this->getSchemaResponse;
     }
 
     /**
      * @param GetSchemaResponse $getSchemaResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setGetSchemaResponse($getSchemaResponse)
-    {
-      $this->getSchemaResponse = $getSchemaResponse;
-      return $this;
+    public function setGetSchemaResponse($getSchemaResponse) {
+        $this->getSchemaResponse = $getSchemaResponse;
+        return $this;
     }
 
     /**
      * @return GetShipperInformationResponse
      */
-    public function getGetShipperInformationResponse()
-    {
-      return $this->getShipperInformationResponse;
+    public function getGetShipperInformationResponse() {
+        return $this->getShipperInformationResponse;
     }
 
     /**
      * @param GetShipperInformationResponse $getShipperInformationResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setGetShipperInformationResponse($getShipperInformationResponse)
-    {
-      $this->getShipperInformationResponse = $getShipperInformationResponse;
-      return $this;
+    public function setGetShipperInformationResponse($getShipperInformationResponse) {
+        $this->getShipperInformationResponse = $getShipperInformationResponse;
+        return $this;
     }
 
     /**
      * @return ListCarriersResponse
      */
-    public function getListCarriersResponse()
-    {
-      return $this->listCarriersResponse;
+    public function getListCarriersResponse() {
+        return $this->listCarriersResponse;
     }
 
     /**
      * @param ListCarriersResponse $listCarriersResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListCarriersResponse($listCarriersResponse)
-    {
-      $this->listCarriersResponse = $listCarriersResponse;
-      return $this;
+    public function setListCarriersResponse($listCarriersResponse) {
+        $this->listCarriersResponse = $listCarriersResponse;
+        return $this;
     }
 
     /**
      * @return ListCloseOutItemsResponse
      */
-    public function getListCloseOutItemsResponse()
-    {
-      return $this->listCloseOutItemsResponse;
+    public function getListCloseOutItemsResponse() {
+        return $this->listCloseOutItemsResponse;
     }
 
     /**
      * @param ListCloseOutItemsResponse $listCloseOutItemsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListCloseOutItemsResponse($listCloseOutItemsResponse)
-    {
-      $this->listCloseOutItemsResponse = $listCloseOutItemsResponse;
-      return $this;
+    public function setListCloseOutItemsResponse($listCloseOutItemsResponse) {
+        $this->listCloseOutItemsResponse = $listCloseOutItemsResponse;
+        return $this;
     }
 
     /**
      * @return ListCountriesResponse
      */
-    public function getListCountriesResponse()
-    {
-      return $this->listCountriesResponse;
+    public function getListCountriesResponse() {
+        return $this->listCountriesResponse;
     }
 
     /**
      * @param ListCountriesResponse $listCountriesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListCountriesResponse($listCountriesResponse)
-    {
-      $this->listCountriesResponse = $listCountriesResponse;
-      return $this;
+    public function setListCountriesResponse($listCountriesResponse) {
+        $this->listCountriesResponse = $listCountriesResponse;
+        return $this;
     }
 
     /**
      * @return ListCountryServicesResponse
      */
-    public function getListCountryServicesResponse()
-    {
-      return $this->listCountryServicesResponse;
+    public function getListCountryServicesResponse() {
+        return $this->listCountryServicesResponse;
     }
 
     /**
      * @param ListCountryServicesResponse $listCountryServicesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListCountryServicesResponse($listCountryServicesResponse)
-    {
-      $this->listCountryServicesResponse = $listCountryServicesResponse;
-      return $this;
+    public function setListCountryServicesResponse($listCountryServicesResponse) {
+        $this->listCountryServicesResponse = $listCountryServicesResponse;
+        return $this;
     }
 
     /**
      * @return ListCurrenciesResponse
      */
-    public function getListCurrenciesResponse()
-    {
-      return $this->listCurrenciesResponse;
+    public function getListCurrenciesResponse() {
+        return $this->listCurrenciesResponse;
     }
 
     /**
      * @param ListCurrenciesResponse $listCurrenciesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListCurrenciesResponse($listCurrenciesResponse)
-    {
-      $this->listCurrenciesResponse = $listCurrenciesResponse;
-      return $this;
+    public function setListCurrenciesResponse($listCurrenciesResponse) {
+        $this->listCurrenciesResponse = $listCurrenciesResponse;
+        return $this;
     }
 
     /**
      * @return ListDocumentsResponse
      */
-    public function getListDocumentsResponse()
-    {
-      return $this->listDocumentsResponse;
+    public function getListDocumentsResponse() {
+        return $this->listDocumentsResponse;
     }
 
     /**
      * @param ListDocumentsResponse $listDocumentsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListDocumentsResponse($listDocumentsResponse)
-    {
-      $this->listDocumentsResponse = $listDocumentsResponse;
-      return $this;
+    public function setListDocumentsResponse($listDocumentsResponse) {
+        $this->listDocumentsResponse = $listDocumentsResponse;
+        return $this;
     }
 
     /**
      * @return ListDocumentFormatsResponse
      */
-    public function getListDocumentFormatsResponse()
-    {
-      return $this->listDocumentFormatsResponse;
+    public function getListDocumentFormatsResponse() {
+        return $this->listDocumentFormatsResponse;
     }
 
     /**
      * @param ListDocumentFormatsResponse $listDocumentFormatsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListDocumentFormatsResponse($listDocumentFormatsResponse)
-    {
-      $this->listDocumentFormatsResponse = $listDocumentFormatsResponse;
-      return $this;
+    public function setListDocumentFormatsResponse($listDocumentFormatsResponse) {
+        $this->listDocumentFormatsResponse = $listDocumentFormatsResponse;
+        return $this;
     }
 
     /**
      * @return ListGroupingsResponse
      */
-    public function getListGroupingsResponse()
-    {
-      return $this->listGroupingsResponse;
+    public function getListGroupingsResponse() {
+        return $this->listGroupingsResponse;
     }
 
     /**
      * @param ListGroupingsResponse $listGroupingsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListGroupingsResponse($listGroupingsResponse)
-    {
-      $this->listGroupingsResponse = $listGroupingsResponse;
-      return $this;
+    public function setListGroupingsResponse($listGroupingsResponse) {
+        $this->listGroupingsResponse = $listGroupingsResponse;
+        return $this;
     }
 
     /**
      * @return ListGroupsResponse
      */
-    public function getListGroupsResponse()
-    {
-      return $this->listGroupsResponse;
+    public function getListGroupsResponse() {
+        return $this->listGroupsResponse;
     }
 
     /**
      * @param ListGroupsResponse $listGroupsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListGroupsResponse($listGroupsResponse)
-    {
-      $this->listGroupsResponse = $listGroupsResponse;
-      return $this;
+    public function setListGroupsResponse($listGroupsResponse) {
+        $this->listGroupsResponse = $listGroupsResponse;
+        return $this;
     }
 
     /**
      * @return ListIncotermsResponse
      */
-    public function getListIncotermsResponse()
-    {
-      return $this->listIncotermsResponse;
+    public function getListIncotermsResponse() {
+        return $this->listIncotermsResponse;
     }
 
     /**
      * @param ListIncotermsResponse $listIncotermsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListIncotermsResponse($listIncotermsResponse)
-    {
-      $this->listIncotermsResponse = $listIncotermsResponse;
-      return $this;
+    public function setListIncotermsResponse($listIncotermsResponse) {
+        $this->listIncotermsResponse = $listIncotermsResponse;
+        return $this;
     }
 
     /**
      * @return ListLocalPortsResponse
      */
-    public function getListLocalPortsResponse()
-    {
-      return $this->listLocalPortsResponse;
+    public function getListLocalPortsResponse() {
+        return $this->listLocalPortsResponse;
     }
 
     /**
      * @param ListLocalPortsResponse $listLocalPortsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListLocalPortsResponse($listLocalPortsResponse)
-    {
-      $this->listLocalPortsResponse = $listLocalPortsResponse;
-      return $this;
+    public function setListLocalPortsResponse($listLocalPortsResponse) {
+        $this->listLocalPortsResponse = $listLocalPortsResponse;
+        return $this;
     }
 
     /**
      * @return ListPackagingTypesResponse
      */
-    public function getListPackagingTypesResponse()
-    {
-      return $this->listPackagingTypesResponse;
+    public function getListPackagingTypesResponse() {
+        return $this->listPackagingTypesResponse;
     }
 
     /**
      * @param ListPackagingTypesResponse $listPackagingTypesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListPackagingTypesResponse($listPackagingTypesResponse)
-    {
-      $this->listPackagingTypesResponse = $listPackagingTypesResponse;
-      return $this;
+    public function setListPackagingTypesResponse($listPackagingTypesResponse) {
+        $this->listPackagingTypesResponse = $listPackagingTypesResponse;
+        return $this;
     }
 
     /**
      * @return ListPaymentTypesResponse
      */
-    public function getListPaymentTypesResponse()
-    {
-      return $this->listPaymentTypesResponse;
+    public function getListPaymentTypesResponse() {
+        return $this->listPaymentTypesResponse;
     }
 
     /**
      * @param ListPaymentTypesResponse $listPaymentTypesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListPaymentTypesResponse($listPaymentTypesResponse)
-    {
-      $this->listPaymentTypesResponse = $listPaymentTypesResponse;
-      return $this;
+    public function setListPaymentTypesResponse($listPaymentTypesResponse) {
+        $this->listPaymentTypesResponse = $listPaymentTypesResponse;
+        return $this;
     }
 
     /**
      * @return ListPrinterDevicesResponse
      */
-    public function getListPrinterDevicesResponse()
-    {
-      return $this->listPrinterDevicesResponse;
+    public function getListPrinterDevicesResponse() {
+        return $this->listPrinterDevicesResponse;
     }
 
     /**
      * @param ListPrinterDevicesResponse $listPrinterDevicesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListPrinterDevicesResponse($listPrinterDevicesResponse)
-    {
-      $this->listPrinterDevicesResponse = $listPrinterDevicesResponse;
-      return $this;
+    public function setListPrinterDevicesResponse($listPrinterDevicesResponse) {
+        $this->listPrinterDevicesResponse = $listPrinterDevicesResponse;
+        return $this;
     }
 
     /**
      * @return ListServicesResponse
      */
-    public function getListServicesResponse()
-    {
-      return $this->listServicesResponse;
+    public function getListServicesResponse() {
+        return $this->listServicesResponse;
     }
 
     /**
      * @param ListServicesResponse $listServicesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListServicesResponse($listServicesResponse)
-    {
-      $this->listServicesResponse = $listServicesResponse;
-      return $this;
+    public function setListServicesResponse($listServicesResponse) {
+        $this->listServicesResponse = $listServicesResponse;
+        return $this;
     }
 
     /**
      * @return ListShipFilesResponse
      */
-    public function getListShipFilesResponse()
-    {
-      return $this->listShipFilesResponse;
+    public function getListShipFilesResponse() {
+        return $this->listShipFilesResponse;
     }
 
     /**
      * @param ListShipFilesResponse $listShipFilesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListShipFilesResponse($listShipFilesResponse)
-    {
-      $this->listShipFilesResponse = $listShipFilesResponse;
-      return $this;
+    public function setListShipFilesResponse($listShipFilesResponse) {
+        $this->listShipFilesResponse = $listShipFilesResponse;
+        return $this;
     }
 
     /**
      * @return ListShippersResponse
      */
-    public function getListShippersResponse()
-    {
-      return $this->listShippersResponse;
+    public function getListShippersResponse() {
+        return $this->listShippersResponse;
     }
 
     /**
      * @param ListShippersResponse $listShippersResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListShippersResponse($listShippersResponse)
-    {
-      $this->listShippersResponse = $listShippersResponse;
-      return $this;
+    public function setListShippersResponse($listShippersResponse) {
+        $this->listShippersResponse = $listShippersResponse;
+        return $this;
     }
 
     /**
      * @return ListStocksResponse
      */
-    public function getListStocksResponse()
-    {
-      return $this->listStocksResponse;
+    public function getListStocksResponse() {
+        return $this->listStocksResponse;
     }
 
     /**
      * @param ListStocksResponse $listStocksResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListStocksResponse($listStocksResponse)
-    {
-      $this->listStocksResponse = $listStocksResponse;
-      return $this;
+    public function setListStocksResponse($listStocksResponse) {
+        $this->listStocksResponse = $listStocksResponse;
+        return $this;
     }
 
     /**
      * @return ListTransmitItemsResponse
      */
-    public function getListTransmitItemsResponse()
-    {
-      return $this->listTransmitItemsResponse;
+    public function getListTransmitItemsResponse() {
+        return $this->listTransmitItemsResponse;
     }
 
     /**
      * @param ListTransmitItemsResponse $listTransmitItemsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListTransmitItemsResponse($listTransmitItemsResponse)
-    {
-      $this->listTransmitItemsResponse = $listTransmitItemsResponse;
-      return $this;
+    public function setListTransmitItemsResponse($listTransmitItemsResponse) {
+        $this->listTransmitItemsResponse = $listTransmitItemsResponse;
+        return $this;
     }
 
     /**
      * @return ListUnitsResponse
      */
-    public function getListUnitsResponse()
-    {
-      return $this->listUnitsResponse;
+    public function getListUnitsResponse() {
+        return $this->listUnitsResponse;
     }
 
     /**
      * @param ListUnitsResponse $listUnitsResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListUnitsResponse($listUnitsResponse)
-    {
-      $this->listUnitsResponse = $listUnitsResponse;
-      return $this;
+    public function setListUnitsResponse($listUnitsResponse) {
+        $this->listUnitsResponse = $listUnitsResponse;
+        return $this;
     }
 
     /**
      * @return ListWindowsPrintersResponse
      */
-    public function getListWindowsPrintersResponse()
-    {
-      return $this->listWindowsPrintersResponse;
+    public function getListWindowsPrintersResponse() {
+        return $this->listWindowsPrintersResponse;
     }
 
     /**
      * @param ListWindowsPrintersResponse $listWindowsPrintersResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setListWindowsPrintersResponse($listWindowsPrintersResponse)
-    {
-      $this->listWindowsPrintersResponse = $listWindowsPrintersResponse;
-      return $this;
+    public function setListWindowsPrintersResponse($listWindowsPrintersResponse) {
+        $this->listWindowsPrintersResponse = $listWindowsPrintersResponse;
+        return $this;
     }
 
     /**
      * @return ModifyContainerResponse
      */
-    public function getModifyContainerResponse()
-    {
-      return $this->modifyContainerResponse;
+    public function getModifyContainerResponse() {
+        return $this->modifyContainerResponse;
     }
 
     /**
      * @param ModifyContainerResponse $modifyContainerResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setModifyContainerResponse($modifyContainerResponse)
-    {
-      $this->modifyContainerResponse = $modifyContainerResponse;
-      return $this;
+    public function setModifyContainerResponse($modifyContainerResponse) {
+        $this->modifyContainerResponse = $modifyContainerResponse;
+        return $this;
     }
 
     /**
      * @return ModifyGroupResponse
      */
-    public function getModifyGroupResponse()
-    {
-      return $this->modifyGroupResponse;
+    public function getModifyGroupResponse() {
+        return $this->modifyGroupResponse;
     }
 
     /**
      * @param ModifyGroupResponse $modifyGroupResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setModifyGroupResponse($modifyGroupResponse)
-    {
-      $this->modifyGroupResponse = $modifyGroupResponse;
-      return $this;
+    public function setModifyGroupResponse($modifyGroupResponse) {
+        $this->modifyGroupResponse = $modifyGroupResponse;
+        return $this;
     }
 
     /**
      * @return ModifyPackagesResponse
      */
-    public function getModifyPackagesResponse()
-    {
-      return $this->modifyPackagesResponse;
+    public function getModifyPackagesResponse() {
+        return $this->modifyPackagesResponse;
     }
 
     /**
      * @param ModifyPackagesResponse $modifyPackagesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setModifyPackagesResponse($modifyPackagesResponse)
-    {
-      $this->modifyPackagesResponse = $modifyPackagesResponse;
-      return $this;
+    public function setModifyPackagesResponse($modifyPackagesResponse) {
+        $this->modifyPackagesResponse = $modifyPackagesResponse;
+        return $this;
     }
 
     /**
      * @return PrintResponse
      */
-    public function getPrintResponse()
-    {
-      return $this->printResponse;
+    public function getPrintResponse() {
+        return $this->printResponse;
     }
 
     /**
      * @param PrintResponse $printResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setPrintResponse($printResponse)
-    {
-      $this->printResponse = $printResponse;
-      return $this;
+    public function setPrintResponse($printResponse) {
+        $this->printResponse = $printResponse;
+        return $this;
     }
 
     /**
      * @return PrintXmlResponse
      */
-    public function getPrintXmlResponse()
-    {
-      return $this->printXmlResponse;
+    public function getPrintXmlResponse() {
+        return $this->printXmlResponse;
     }
 
     /**
      * @param PrintXmlResponse $printXmlResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setPrintXmlResponse($printXmlResponse)
-    {
-      $this->printXmlResponse = $printXmlResponse;
-      return $this;
+    public function setPrintXmlResponse($printXmlResponse) {
+        $this->printXmlResponse = $printXmlResponse;
+        return $this;
     }
 
     /**
      * @return RateResponse
      */
-    public function getRateResponse()
-    {
-      return $this->rateResponse;
+    public function getRateResponse() {
+        return $this->rateResponse;
     }
 
     /**
      * @param RateResponse $rateResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setRateResponse($rateResponse)
-    {
-      $this->rateResponse = $rateResponse;
-      return $this;
+    public function setRateResponse($rateResponse) {
+        $this->rateResponse = $rateResponse;
+        return $this;
     }
 
     /**
      * @return ReprocessResponse
      */
-    public function getReprocessResponse()
-    {
-      return $this->reprocessResponse;
+    public function getReprocessResponse() {
+        return $this->reprocessResponse;
     }
 
     /**
      * @param ReprocessResponse $reprocessResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setReprocessResponse($reprocessResponse)
-    {
-      $this->reprocessResponse = $reprocessResponse;
-      return $this;
+    public function setReprocessResponse($reprocessResponse) {
+        $this->reprocessResponse = $reprocessResponse;
+        return $this;
     }
 
     /**
      * @return SearchResponse
      */
-    public function getSearchResponse()
-    {
-      return $this->searchResponse;
+    public function getSearchResponse() {
+        return $this->searchResponse;
     }
 
     /**
      * @param SearchResponse $searchResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setSearchResponse($searchResponse)
-    {
-      $this->searchResponse = $searchResponse;
-      return $this;
+    public function setSearchResponse($searchResponse) {
+        $this->searchResponse = $searchResponse;
+        return $this;
     }
 
     /**
      * @return ShipResponse
      */
-    public function getShipResponse()
-    {
-      return $this->shipResponse;
+    public function getShipResponse() {
+        return $this->shipResponse;
     }
 
     /**
      * @param ShipResponse $shipResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setShipResponse($shipResponse)
-    {
-      $this->shipResponse = $shipResponse;
-      return $this;
+    public function setShipResponse($shipResponse) {
+        $this->shipResponse = $shipResponse;
+        return $this;
     }
 
     /**
      * @return TransmitResponse
      */
-    public function getTransmitResponse()
-    {
-      return $this->transmitResponse;
+    public function getTransmitResponse() {
+        return $this->transmitResponse;
     }
 
     /**
      * @param TransmitResponse $transmitResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setTransmitResponse($transmitResponse)
-    {
-      $this->transmitResponse = $transmitResponse;
-      return $this;
+    public function setTransmitResponse($transmitResponse) {
+        $this->transmitResponse = $transmitResponse;
+        return $this;
     }
 
     /**
      * @return ValidateAddressResponse
      */
-    public function getValidateAddressResponse()
-    {
-      return $this->validateAddressResponse;
+    public function getValidateAddressResponse() {
+        return $this->validateAddressResponse;
     }
 
     /**
      * @param ValidateAddressResponse $validateAddressResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setValidateAddressResponse($validateAddressResponse)
-    {
-      $this->validateAddressResponse = $validateAddressResponse;
-      return $this;
+    public function setValidateAddressResponse($validateAddressResponse) {
+        $this->validateAddressResponse = $validateAddressResponse;
+        return $this;
     }
 
     /**
      * @return VoidPackagesResponse
      */
-    public function getVoidPackagesResponse()
-    {
-      return $this->voidPackagesResponse;
+    public function getVoidPackagesResponse() {
+        return $this->voidPackagesResponse;
     }
 
     /**
      * @param VoidPackagesResponse $voidPackagesResponse
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setVoidPackagesResponse($voidPackagesResponse)
-    {
-      $this->voidPackagesResponse = $voidPackagesResponse;
-      return $this;
+    public function setVoidPackagesResponse($voidPackagesResponse) {
+        $this->voidPackagesResponse = $voidPackagesResponse;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\CompoundResult
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class TransmitItem
-{
+class TransmitItem {
 
     /**
      * @var string $symbol
@@ -37,103 +36,92 @@ class TransmitItem
      * @param int $status
      * @param StringList $files
      */
-    public function __construct($symbol, $name, $sequence, $status, $files)
-    {
-      $this->symbol = $symbol;
-      $this->name = $name;
-      $this->sequence = $sequence;
-      $this->status = $status;
-      $this->files = $files;
+    public function __construct($symbol, $name, $sequence, $status, $files) {
+        $this->symbol = $symbol;
+        $this->name = $name;
+        $this->sequence = $sequence;
+        $this->status = $status;
+        $this->files = $files;
     }
 
     /**
      * @return string
      */
-    public function getSymbol()
-    {
-      return $this->symbol;
+    public function getSymbol() {
+        return $this->symbol;
     }
 
     /**
      * @param string $symbol
      * @return \ConnectshipBundle\AMP\TransmitItem
      */
-    public function setSymbol($symbol)
-    {
-      $this->symbol = $symbol;
-      return $this;
+    public function setSymbol($symbol) {
+        $this->symbol = $symbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
-      return $this->name;
+    public function getName() {
+        return $this->name;
     }
 
     /**
      * @param string $name
      * @return \ConnectshipBundle\AMP\TransmitItem
      */
-    public function setName($name)
-    {
-      $this->name = $name;
-      return $this;
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getSequence()
-    {
-      return $this->sequence;
+    public function getSequence() {
+        return $this->sequence;
     }
 
     /**
      * @param int $sequence
      * @return \ConnectshipBundle\AMP\TransmitItem
      */
-    public function setSequence($sequence)
-    {
-      $this->sequence = $sequence;
-      return $this;
+    public function setSequence($sequence) {
+        $this->sequence = $sequence;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getStatus()
-    {
-      return $this->status;
+    public function getStatus() {
+        return $this->status;
     }
 
     /**
      * @param int $status
      * @return \ConnectshipBundle\AMP\TransmitItem
      */
-    public function setStatus($status)
-    {
-      $this->status = $status;
-      return $this;
+    public function setStatus($status) {
+        $this->status = $status;
+        return $this;
     }
 
     /**
      * @return StringList
      */
-    public function getFiles()
-    {
-      return $this->files;
+    public function getFiles() {
+        return $this->files;
     }
 
     /**
      * @param StringList $files
      * @return \ConnectshipBundle\AMP\TransmitItem
      */
-    public function setFiles($files)
-    {
-      $this->files = $files;
-      return $this;
+    public function setFiles($files) {
+        $this->files = $files;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class NameAddress
-{
+class NameAddress {
 
     /**
      * @var string $company
@@ -90,316 +89,280 @@ class NameAddress
      */
     protected $cassCertified = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return string
      */
-    public function getCompany()
-    {
-      return $this->company;
+    public function getCompany() {
+        return $this->company;
     }
 
     /**
      * @param string $company
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setCompany($company)
-    {
-      $this->company = $company;
-      return $this;
+    public function setCompany($company) {
+        $this->company = $company;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getContact()
-    {
-      return $this->contact;
+    public function getContact() {
+        return $this->contact;
     }
 
     /**
      * @param string $contact
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setContact($contact)
-    {
-      $this->contact = $contact;
-      return $this;
+    public function setContact($contact) {
+        $this->contact = $contact;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAddress1()
-    {
-      return $this->address1;
+    public function getAddress1() {
+        return $this->address1;
     }
 
     /**
      * @param string $address1
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setAddress1($address1)
-    {
-      $this->address1 = $address1;
-      return $this;
+    public function setAddress1($address1) {
+        $this->address1 = $address1;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAddress2()
-    {
-      return $this->address2;
+    public function getAddress2() {
+        return $this->address2;
     }
 
     /**
      * @param string $address2
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setAddress2($address2)
-    {
-      $this->address2 = $address2;
-      return $this;
+    public function setAddress2($address2) {
+        $this->address2 = $address2;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAddress3()
-    {
-      return $this->address3;
+    public function getAddress3() {
+        return $this->address3;
     }
 
     /**
      * @param string $address3
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setAddress3($address3)
-    {
-      $this->address3 = $address3;
-      return $this;
+    public function setAddress3($address3) {
+        $this->address3 = $address3;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCity()
-    {
-      return $this->city;
+    public function getCity() {
+        return $this->city;
     }
 
     /**
      * @param string $city
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setCity($city)
-    {
-      $this->city = $city;
-      return $this;
+    public function setCity($city) {
+        $this->city = $city;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getStateProvince()
-    {
-      return $this->stateProvince;
+    public function getStateProvince() {
+        return $this->stateProvince;
     }
 
     /**
      * @param string $stateProvince
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setStateProvince($stateProvince)
-    {
-      $this->stateProvince = $stateProvince;
-      return $this;
+    public function setStateProvince($stateProvince) {
+        $this->stateProvince = $stateProvince;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostalCode()
-    {
-      return $this->postalCode;
+    public function getPostalCode() {
+        return $this->postalCode;
     }
 
     /**
      * @param string $postalCode
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setPostalCode($postalCode)
-    {
-      $this->postalCode = $postalCode;
-      return $this;
+    public function setPostalCode($postalCode) {
+        $this->postalCode = $postalCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCountrySymbol()
-    {
-      return $this->countrySymbol;
+    public function getCountrySymbol() {
+        return $this->countrySymbol;
     }
 
     /**
      * @param string $countrySymbol
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setCountrySymbol($countrySymbol)
-    {
-      $this->countrySymbol = $countrySymbol;
-      return $this;
+    public function setCountrySymbol($countrySymbol) {
+        $this->countrySymbol = $countrySymbol;
+        return $this;
     }
 
     /**
      * @return countryCode
      */
-    public function getCountryCode()
-    {
-      return $this->countryCode;
+    public function getCountryCode() {
+        return $this->countryCode;
     }
 
     /**
      * @param countryCode $countryCode
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setCountryCode($countryCode)
-    {
-      $this->countryCode = $countryCode;
-      return $this;
+    public function setCountryCode($countryCode) {
+        $this->countryCode = $countryCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAltCountryName()
-    {
-      return $this->altCountryName;
+    public function getAltCountryName() {
+        return $this->altCountryName;
     }
 
     /**
      * @param string $altCountryName
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setAltCountryName($altCountryName)
-    {
-      $this->altCountryName = $altCountryName;
-      return $this;
+    public function setAltCountryName($altCountryName) {
+        $this->altCountryName = $altCountryName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPhone()
-    {
-      return $this->phone;
+    public function getPhone() {
+        return $this->phone;
     }
 
     /**
      * @param string $phone
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setPhone($phone)
-    {
-      $this->phone = $phone;
-      return $this;
+    public function setPhone($phone) {
+        $this->phone = $phone;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getFax()
-    {
-      return $this->fax;
+    public function getFax() {
+        return $this->fax;
     }
 
     /**
      * @param string $fax
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setFax($fax)
-    {
-      $this->fax = $fax;
-      return $this;
+    public function setFax($fax) {
+        $this->fax = $fax;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSms()
-    {
-      return $this->sms;
+    public function getSms() {
+        return $this->sms;
     }
 
     /**
      * @param string $sms
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setSms($sms)
-    {
-      $this->sms = $sms;
-      return $this;
+    public function setSms($sms) {
+        $this->sms = $sms;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getResidential()
-    {
-      return $this->residential;
+    public function getResidential() {
+        return $this->residential;
     }
 
     /**
      * @param boolean $residential
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setResidential($residential)
-    {
-      $this->residential = $residential;
-      return $this;
+    public function setResidential($residential) {
+        $this->residential = $residential;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPoBox()
-    {
-      return $this->poBox;
+    public function getPoBox() {
+        return $this->poBox;
     }
 
     /**
      * @param boolean $poBox
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setPoBox($poBox)
-    {
-      $this->poBox = $poBox;
-      return $this;
+    public function setPoBox($poBox) {
+        $this->poBox = $poBox;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getCassCertified()
-    {
-      return $this->cassCertified;
+    public function getCassCertified() {
+        return $this->cassCertified;
     }
 
     /**
      * @param boolean $cassCertified
      * @return \ConnectshipBundle\AMP\NameAddress
      */
-    public function setCassCertified($cassCertified)
-    {
-      $this->cassCertified = $cassCertified;
-      return $this;
+    public function setCassCertified($cassCertified) {
+        $this->cassCertified = $cassCertified;
+        return $this;
     }
 
 }

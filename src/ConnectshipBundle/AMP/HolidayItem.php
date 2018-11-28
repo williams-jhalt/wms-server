@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class HolidayItem
-{
+class HolidayItem {
 
     /**
      * @var string $key
@@ -19,46 +18,41 @@ class HolidayItem
      * @param string $key
      * @param HolidayList $value
      */
-    public function __construct($key, $value)
-    {
-      $this->key = $key;
-      $this->value = $value;
+    public function __construct($key, $value) {
+        $this->key = $key;
+        $this->value = $value;
     }
 
     /**
      * @return string
      */
-    public function getKey()
-    {
-      return $this->key;
+    public function getKey() {
+        return $this->key;
     }
 
     /**
      * @param string $key
      * @return \ConnectshipBundle\AMP\HolidayItem
      */
-    public function setKey($key)
-    {
-      $this->key = $key;
-      return $this;
+    public function setKey($key) {
+        $this->key = $key;
+        return $this;
     }
 
     /**
      * @return HolidayList
      */
-    public function getValue()
-    {
-      return $this->value;
+    public function getValue() {
+        return $this->value;
     }
 
     /**
      * @param HolidayList $value
      * @return \ConnectshipBundle\AMP\HolidayItem
      */
-    public function setValue($value)
-    {
-      $this->value = $value;
-      return $this;
+    public function setValue($value) {
+        $this->value = $value;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ShipFile
-{
+class ShipFile {
 
     /**
      * @var string $symbol
@@ -31,84 +30,75 @@ class ShipFile
      * @param int $sequence
      * @param Dictionary $attributes
      */
-    public function __construct($symbol, $name, $sequence, $attributes)
-    {
-      $this->symbol = $symbol;
-      $this->name = $name;
-      $this->sequence = $sequence;
-      $this->attributes = $attributes;
+    public function __construct($symbol, $name, $sequence, $attributes) {
+        $this->symbol = $symbol;
+        $this->name = $name;
+        $this->sequence = $sequence;
+        $this->attributes = $attributes;
     }
 
     /**
      * @return string
      */
-    public function getSymbol()
-    {
-      return $this->symbol;
+    public function getSymbol() {
+        return $this->symbol;
     }
 
     /**
      * @param string $symbol
      * @return \ConnectshipBundle\AMP\ShipFile
      */
-    public function setSymbol($symbol)
-    {
-      $this->symbol = $symbol;
-      return $this;
+    public function setSymbol($symbol) {
+        $this->symbol = $symbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
-      return $this->name;
+    public function getName() {
+        return $this->name;
     }
 
     /**
      * @param string $name
      * @return \ConnectshipBundle\AMP\ShipFile
      */
-    public function setName($name)
-    {
-      $this->name = $name;
-      return $this;
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getSequence()
-    {
-      return $this->sequence;
+    public function getSequence() {
+        return $this->sequence;
     }
 
     /**
      * @param int $sequence
      * @return \ConnectshipBundle\AMP\ShipFile
      */
-    public function setSequence($sequence)
-    {
-      $this->sequence = $sequence;
-      return $this;
+    public function setSequence($sequence) {
+        $this->sequence = $sequence;
+        return $this;
     }
 
     /**
      * @return Dictionary
      */
-    public function getAttributes()
-    {
-      return $this->attributes;
+    public function getAttributes() {
+        return $this->attributes;
     }
 
     /**
      * @param Dictionary $attributes
      * @return \ConnectshipBundle\AMP\ShipFile
      */
-    public function setAttributes($attributes)
-    {
-      $this->attributes = $attributes;
-      return $this;
+    public function setAttributes($attributes) {
+        $this->attributes = $attributes;
+        return $this;
     }
 
 }

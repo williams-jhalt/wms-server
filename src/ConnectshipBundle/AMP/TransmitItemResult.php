@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class TransmitItemResult
-{
+class TransmitItemResult {
 
     /**
      * @var int $code
@@ -25,65 +24,58 @@ class TransmitItemResult
      * @param string $message
      * @param Identity $transmitItem
      */
-    public function __construct($code, $message, $transmitItem)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->transmitItem = $transmitItem;
+    public function __construct($code, $message, $transmitItem) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->transmitItem = $transmitItem;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\TransmitItemResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\TransmitItemResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return Identity
      */
-    public function getTransmitItem()
-    {
-      return $this->transmitItem;
+    public function getTransmitItem() {
+        return $this->transmitItem;
     }
 
     /**
      * @param Identity $transmitItem
      * @return \ConnectshipBundle\AMP\TransmitItemResult
      */
-    public function setTransmitItem($transmitItem)
-    {
-      $this->transmitItem = $transmitItem;
-      return $this;
+    public function setTransmitItem($transmitItem) {
+        $this->transmitItem = $transmitItem;
+        return $this;
     }
 
 }

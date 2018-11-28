@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class VoidResult
-{
+class VoidResult {
 
     /**
      * @var int $code
@@ -35,101 +34,90 @@ class VoidResult
      * @param string $message
      * @param VoidPackageResultList $resultData
      */
-    public function __construct($code, $message, $resultData)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->resultData = $resultData;
+    public function __construct($code, $message, $resultData) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->resultData = $resultData;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\VoidResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\VoidResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return VoidPackageResultList
      */
-    public function getResultData()
-    {
-      return $this->resultData;
+    public function getResultData() {
+        return $this->resultData;
     }
 
     /**
      * @param VoidPackageResultList $resultData
      * @return \ConnectshipBundle\AMP\VoidResult
      */
-    public function setResultData($resultData)
-    {
-      $this->resultData = $resultData;
-      return $this;
+    public function setResultData($resultData) {
+        $this->resultData = $resultData;
+        return $this;
     }
 
     /**
      * @return IntegerList
      */
-    public function getAdditionalVoidedPackages()
-    {
-      return $this->additionalVoidedPackages;
+    public function getAdditionalVoidedPackages() {
+        return $this->additionalVoidedPackages;
     }
 
     /**
      * @param IntegerList $additionalVoidedPackages
      * @return \ConnectshipBundle\AMP\VoidResult
      */
-    public function setAdditionalVoidedPackages($additionalVoidedPackages)
-    {
-      $this->additionalVoidedPackages = $additionalVoidedPackages;
-      return $this;
+    public function setAdditionalVoidedPackages($additionalVoidedPackages) {
+        $this->additionalVoidedPackages = $additionalVoidedPackages;
+        return $this;
     }
 
     /**
      * @return IntegerList
      */
-    public function getModifiedPackages()
-    {
-      return $this->modifiedPackages;
+    public function getModifiedPackages() {
+        return $this->modifiedPackages;
     }
 
     /**
      * @param IntegerList $modifiedPackages
      * @return \ConnectshipBundle\AMP\VoidResult
      */
-    public function setModifiedPackages($modifiedPackages)
-    {
-      $this->modifiedPackages = $modifiedPackages;
-      return $this;
+    public function setModifiedPackages($modifiedPackages) {
+        $this->modifiedPackages = $modifiedPackages;
+        return $this;
     }
 
 }

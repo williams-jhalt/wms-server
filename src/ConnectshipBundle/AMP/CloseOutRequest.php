@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class CloseOutRequest
-{
+class CloseOutRequest {
 
     /**
      * @var string $carrier
@@ -55,160 +54,143 @@ class CloseOutRequest
      * @param contextControlSetting $contextControl
      * @param string $asyncCorrelationData
      */
-    public function __construct($carrier, $shipper, $closeOutItem, $preProcess, $postProcess, $locale, $contextControl, $asyncCorrelationData)
-    {
-      $this->carrier = $carrier;
-      $this->shipper = $shipper;
-      $this->closeOutItem = $closeOutItem;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->contextControl = $contextControl;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($carrier, $shipper, $closeOutItem, $preProcess, $postProcess, $locale, $contextControl, $asyncCorrelationData) {
+        $this->carrier = $carrier;
+        $this->shipper = $shipper;
+        $this->closeOutItem = $closeOutItem;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->contextControl = $contextControl;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return string
      */
-    public function getCarrier()
-    {
-      return $this->carrier;
+    public function getCarrier() {
+        return $this->carrier;
     }
 
     /**
      * @param string $carrier
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setCarrier($carrier)
-    {
-      $this->carrier = $carrier;
-      return $this;
+    public function setCarrier($carrier) {
+        $this->carrier = $carrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipper()
-    {
-      return $this->shipper;
+    public function getShipper() {
+        return $this->shipper;
     }
 
     /**
      * @param string $shipper
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setShipper($shipper)
-    {
-      $this->shipper = $shipper;
-      return $this;
+    public function setShipper($shipper) {
+        $this->shipper = $shipper;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCloseOutItem()
-    {
-      return $this->closeOutItem;
+    public function getCloseOutItem() {
+        return $this->closeOutItem;
     }
 
     /**
      * @param string $closeOutItem
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setCloseOutItem($closeOutItem)
-    {
-      $this->closeOutItem = $closeOutItem;
-      return $this;
+    public function setCloseOutItem($closeOutItem) {
+        $this->closeOutItem = $closeOutItem;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return contextControlSetting
      */
-    public function getContextControl()
-    {
-      return $this->contextControl;
+    public function getContextControl() {
+        return $this->contextControl;
     }
 
     /**
      * @param contextControlSetting $contextControl
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setContextControl($contextControl)
-    {
-      $this->contextControl = $contextControl;
-      return $this;
+    public function setContextControl($contextControl) {
+        $this->contextControl = $contextControl;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\CloseOutRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

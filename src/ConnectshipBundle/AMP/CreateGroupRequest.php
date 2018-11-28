@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class CreateGroupRequest
-{
+class CreateGroupRequest {
 
     /**
      * @var string $carrier
@@ -49,141 +48,126 @@ class CreateGroupRequest
      * @param language $locale
      * @param string $asyncCorrelationData
      */
-    public function __construct($carrier, $grouping, $groupData, $preProcess, $postProcess, $locale, $asyncCorrelationData)
-    {
-      $this->carrier = $carrier;
-      $this->grouping = $grouping;
-      $this->groupData = $groupData;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($carrier, $grouping, $groupData, $preProcess, $postProcess, $locale, $asyncCorrelationData) {
+        $this->carrier = $carrier;
+        $this->grouping = $grouping;
+        $this->groupData = $groupData;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return string
      */
-    public function getCarrier()
-    {
-      return $this->carrier;
+    public function getCarrier() {
+        return $this->carrier;
     }
 
     /**
      * @param string $carrier
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setCarrier($carrier)
-    {
-      $this->carrier = $carrier;
-      return $this;
+    public function setCarrier($carrier) {
+        $this->carrier = $carrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getGrouping()
-    {
-      return $this->grouping;
+    public function getGrouping() {
+        return $this->grouping;
     }
 
     /**
      * @param string $grouping
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setGrouping($grouping)
-    {
-      $this->grouping = $grouping;
-      return $this;
+    public function setGrouping($grouping) {
+        $this->grouping = $grouping;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getGroupData()
-    {
-      return $this->groupData;
+    public function getGroupData() {
+        return $this->groupData;
     }
 
     /**
      * @param DataDictionary $groupData
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setGroupData($groupData)
-    {
-      $this->groupData = $groupData;
-      return $this;
+    public function setGroupData($groupData) {
+        $this->groupData = $groupData;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\CreateGroupRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

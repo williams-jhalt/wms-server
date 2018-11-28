@@ -2,11 +2,10 @@
 
 namespace ConnectshipBundle\AMP;
 
-class contextControlSetting
-{
+class contextControlSetting {
+
     const __default = 'clear';
     const clear = 'clear';
     const preserve = 'preserve';
-
 
 }

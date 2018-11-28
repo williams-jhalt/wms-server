@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class DocumentResult
-{
+class DocumentResult {
 
     /**
      * @var int $code
@@ -29,82 +28,73 @@ class DocumentResult
      * @param int $code
      * @param string $message
      */
-    public function __construct($code, $message)
-    {
-      $this->code = $code;
-      $this->message = $message;
+    public function __construct($code, $message) {
+        $this->code = $code;
+        $this->message = $message;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\DocumentResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\DocumentResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return PrintItem
      */
-    public function getSourceItem()
-    {
-      return $this->sourceItem;
+    public function getSourceItem() {
+        return $this->sourceItem;
     }
 
     /**
      * @param PrintItem $sourceItem
      * @return \ConnectshipBundle\AMP\DocumentResult
      */
-    public function setSourceItem($sourceItem)
-    {
-      $this->sourceItem = $sourceItem;
-      return $this;
+    public function setSourceItem($sourceItem) {
+        $this->sourceItem = $sourceItem;
+        return $this;
     }
 
     /**
      * @return DocumentOutput
      */
-    public function getOutput()
-    {
-      return $this->output;
+    public function getOutput() {
+        return $this->output;
     }
 
     /**
      * @param DocumentOutput $output
      * @return \ConnectshipBundle\AMP\DocumentResult
      */
-    public function setOutput($output)
-    {
-      $this->output = $output;
-      return $this;
+    public function setOutput($output) {
+        $this->output = $output;
+        return $this;
     }
 
 }

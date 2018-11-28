@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class CompoundOperation
-{
+class CompoundOperation {
 
     /**
      * @var CloseOutRequest $closeOutRequest
@@ -283,882 +282,789 @@ class CompoundOperation
      * @param string $asyncCorrelationData
      * @param boolean $stopOnFailure
      */
-    public function __construct($closeOutRequest, $createGroupRequest, $customOperationRequest, $deleteShipFilesRequest, $deleteTransmitItemsRequest, $getGroupRequest, $getSchemaRequest, $getShipperInformationRequest, $listCarriersRequest, $listCloseOutItemsRequest, $listCountriesRequest, $listCountryServicesRequest, $listCurrenciesRequest, $listDocumentsRequest, $listDocumentFormatsRequest, $listGroupingsRequest, $listGroupsRequest, $listIncotermsRequest, $listLocalPortsRequest, $listPackagingTypesRequest, $listPaymentTypesRequest, $listPrinterDevicesRequest, $listServicesRequest, $listShipFilesRequest, $listShippersRequest, $listStocksRequest, $listTransmitItemsRequest, $listUnitsRequest, $listWindowsPrintersRequest, $modifyContainerRequest, $modifyGroupRequest, $modifyPackagesRequest, $printRequest, $printXmlRequest, $rateRequest, $reprocessRequest, $searchRequest, $shipRequest, $transmitRequest, $validateAddressRequest, $voidPackagesRequest, $preProcess, $postProcess, $locale, $asyncCorrelationData, $stopOnFailure)
-    {
-      $this->closeOutRequest = $closeOutRequest;
-      $this->createGroupRequest = $createGroupRequest;
-      $this->customOperationRequest = $customOperationRequest;
-      $this->deleteShipFilesRequest = $deleteShipFilesRequest;
-      $this->deleteTransmitItemsRequest = $deleteTransmitItemsRequest;
-      $this->getGroupRequest = $getGroupRequest;
-      $this->getSchemaRequest = $getSchemaRequest;
-      $this->getShipperInformationRequest = $getShipperInformationRequest;
-      $this->listCarriersRequest = $listCarriersRequest;
-      $this->listCloseOutItemsRequest = $listCloseOutItemsRequest;
-      $this->listCountriesRequest = $listCountriesRequest;
-      $this->listCountryServicesRequest = $listCountryServicesRequest;
-      $this->listCurrenciesRequest = $listCurrenciesRequest;
-      $this->listDocumentsRequest = $listDocumentsRequest;
-      $this->listDocumentFormatsRequest = $listDocumentFormatsRequest;
-      $this->listGroupingsRequest = $listGroupingsRequest;
-      $this->listGroupsRequest = $listGroupsRequest;
-      $this->listIncotermsRequest = $listIncotermsRequest;
-      $this->listLocalPortsRequest = $listLocalPortsRequest;
-      $this->listPackagingTypesRequest = $listPackagingTypesRequest;
-      $this->listPaymentTypesRequest = $listPaymentTypesRequest;
-      $this->listPrinterDevicesRequest = $listPrinterDevicesRequest;
-      $this->listServicesRequest = $listServicesRequest;
-      $this->listShipFilesRequest = $listShipFilesRequest;
-      $this->listShippersRequest = $listShippersRequest;
-      $this->listStocksRequest = $listStocksRequest;
-      $this->listTransmitItemsRequest = $listTransmitItemsRequest;
-      $this->listUnitsRequest = $listUnitsRequest;
-      $this->listWindowsPrintersRequest = $listWindowsPrintersRequest;
-      $this->modifyContainerRequest = $modifyContainerRequest;
-      $this->modifyGroupRequest = $modifyGroupRequest;
-      $this->modifyPackagesRequest = $modifyPackagesRequest;
-      $this->printRequest = $printRequest;
-      $this->printXmlRequest = $printXmlRequest;
-      $this->rateRequest = $rateRequest;
-      $this->reprocessRequest = $reprocessRequest;
-      $this->searchRequest = $searchRequest;
-      $this->shipRequest = $shipRequest;
-      $this->transmitRequest = $transmitRequest;
-      $this->validateAddressRequest = $validateAddressRequest;
-      $this->voidPackagesRequest = $voidPackagesRequest;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      $this->stopOnFailure = $stopOnFailure;
+    public function __construct($closeOutRequest, $createGroupRequest, $customOperationRequest, $deleteShipFilesRequest, $deleteTransmitItemsRequest, $getGroupRequest, $getSchemaRequest, $getShipperInformationRequest, $listCarriersRequest, $listCloseOutItemsRequest, $listCountriesRequest, $listCountryServicesRequest, $listCurrenciesRequest, $listDocumentsRequest, $listDocumentFormatsRequest, $listGroupingsRequest, $listGroupsRequest, $listIncotermsRequest, $listLocalPortsRequest, $listPackagingTypesRequest, $listPaymentTypesRequest, $listPrinterDevicesRequest, $listServicesRequest, $listShipFilesRequest, $listShippersRequest, $listStocksRequest, $listTransmitItemsRequest, $listUnitsRequest, $listWindowsPrintersRequest, $modifyContainerRequest, $modifyGroupRequest, $modifyPackagesRequest, $printRequest, $printXmlRequest, $rateRequest, $reprocessRequest, $searchRequest, $shipRequest, $transmitRequest, $validateAddressRequest, $voidPackagesRequest, $preProcess, $postProcess, $locale, $asyncCorrelationData, $stopOnFailure) {
+        $this->closeOutRequest = $closeOutRequest;
+        $this->createGroupRequest = $createGroupRequest;
+        $this->customOperationRequest = $customOperationRequest;
+        $this->deleteShipFilesRequest = $deleteShipFilesRequest;
+        $this->deleteTransmitItemsRequest = $deleteTransmitItemsRequest;
+        $this->getGroupRequest = $getGroupRequest;
+        $this->getSchemaRequest = $getSchemaRequest;
+        $this->getShipperInformationRequest = $getShipperInformationRequest;
+        $this->listCarriersRequest = $listCarriersRequest;
+        $this->listCloseOutItemsRequest = $listCloseOutItemsRequest;
+        $this->listCountriesRequest = $listCountriesRequest;
+        $this->listCountryServicesRequest = $listCountryServicesRequest;
+        $this->listCurrenciesRequest = $listCurrenciesRequest;
+        $this->listDocumentsRequest = $listDocumentsRequest;
+        $this->listDocumentFormatsRequest = $listDocumentFormatsRequest;
+        $this->listGroupingsRequest = $listGroupingsRequest;
+        $this->listGroupsRequest = $listGroupsRequest;
+        $this->listIncotermsRequest = $listIncotermsRequest;
+        $this->listLocalPortsRequest = $listLocalPortsRequest;
+        $this->listPackagingTypesRequest = $listPackagingTypesRequest;
+        $this->listPaymentTypesRequest = $listPaymentTypesRequest;
+        $this->listPrinterDevicesRequest = $listPrinterDevicesRequest;
+        $this->listServicesRequest = $listServicesRequest;
+        $this->listShipFilesRequest = $listShipFilesRequest;
+        $this->listShippersRequest = $listShippersRequest;
+        $this->listStocksRequest = $listStocksRequest;
+        $this->listTransmitItemsRequest = $listTransmitItemsRequest;
+        $this->listUnitsRequest = $listUnitsRequest;
+        $this->listWindowsPrintersRequest = $listWindowsPrintersRequest;
+        $this->modifyContainerRequest = $modifyContainerRequest;
+        $this->modifyGroupRequest = $modifyGroupRequest;
+        $this->modifyPackagesRequest = $modifyPackagesRequest;
+        $this->printRequest = $printRequest;
+        $this->printXmlRequest = $printXmlRequest;
+        $this->rateRequest = $rateRequest;
+        $this->reprocessRequest = $reprocessRequest;
+        $this->searchRequest = $searchRequest;
+        $this->shipRequest = $shipRequest;
+        $this->transmitRequest = $transmitRequest;
+        $this->validateAddressRequest = $validateAddressRequest;
+        $this->voidPackagesRequest = $voidPackagesRequest;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        $this->stopOnFailure = $stopOnFailure;
     }
 
     /**
      * @return CloseOutRequest
      */
-    public function getCloseOutRequest()
-    {
-      return $this->closeOutRequest;
+    public function getCloseOutRequest() {
+        return $this->closeOutRequest;
     }
 
     /**
      * @param CloseOutRequest $closeOutRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setCloseOutRequest($closeOutRequest)
-    {
-      $this->closeOutRequest = $closeOutRequest;
-      return $this;
+    public function setCloseOutRequest($closeOutRequest) {
+        $this->closeOutRequest = $closeOutRequest;
+        return $this;
     }
 
     /**
      * @return CreateGroupRequest
      */
-    public function getCreateGroupRequest()
-    {
-      return $this->createGroupRequest;
+    public function getCreateGroupRequest() {
+        return $this->createGroupRequest;
     }
 
     /**
      * @param CreateGroupRequest $createGroupRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setCreateGroupRequest($createGroupRequest)
-    {
-      $this->createGroupRequest = $createGroupRequest;
-      return $this;
+    public function setCreateGroupRequest($createGroupRequest) {
+        $this->createGroupRequest = $createGroupRequest;
+        return $this;
     }
 
     /**
      * @return CustomOperationRequest
      */
-    public function getCustomOperationRequest()
-    {
-      return $this->customOperationRequest;
+    public function getCustomOperationRequest() {
+        return $this->customOperationRequest;
     }
 
     /**
      * @param CustomOperationRequest $customOperationRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setCustomOperationRequest($customOperationRequest)
-    {
-      $this->customOperationRequest = $customOperationRequest;
-      return $this;
+    public function setCustomOperationRequest($customOperationRequest) {
+        $this->customOperationRequest = $customOperationRequest;
+        return $this;
     }
 
     /**
      * @return DeleteShipFilesRequest
      */
-    public function getDeleteShipFilesRequest()
-    {
-      return $this->deleteShipFilesRequest;
+    public function getDeleteShipFilesRequest() {
+        return $this->deleteShipFilesRequest;
     }
 
     /**
      * @param DeleteShipFilesRequest $deleteShipFilesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setDeleteShipFilesRequest($deleteShipFilesRequest)
-    {
-      $this->deleteShipFilesRequest = $deleteShipFilesRequest;
-      return $this;
+    public function setDeleteShipFilesRequest($deleteShipFilesRequest) {
+        $this->deleteShipFilesRequest = $deleteShipFilesRequest;
+        return $this;
     }
 
     /**
      * @return DeleteTransmitItemsRequest
      */
-    public function getDeleteTransmitItemsRequest()
-    {
-      return $this->deleteTransmitItemsRequest;
+    public function getDeleteTransmitItemsRequest() {
+        return $this->deleteTransmitItemsRequest;
     }
 
     /**
      * @param DeleteTransmitItemsRequest $deleteTransmitItemsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setDeleteTransmitItemsRequest($deleteTransmitItemsRequest)
-    {
-      $this->deleteTransmitItemsRequest = $deleteTransmitItemsRequest;
-      return $this;
+    public function setDeleteTransmitItemsRequest($deleteTransmitItemsRequest) {
+        $this->deleteTransmitItemsRequest = $deleteTransmitItemsRequest;
+        return $this;
     }
 
     /**
      * @return GetGroupRequest
      */
-    public function getGetGroupRequest()
-    {
-      return $this->getGroupRequest;
+    public function getGetGroupRequest() {
+        return $this->getGroupRequest;
     }
 
     /**
      * @param GetGroupRequest $getGroupRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setGetGroupRequest($getGroupRequest)
-    {
-      $this->getGroupRequest = $getGroupRequest;
-      return $this;
+    public function setGetGroupRequest($getGroupRequest) {
+        $this->getGroupRequest = $getGroupRequest;
+        return $this;
     }
 
     /**
      * @return GetSchemaRequest
      */
-    public function getGetSchemaRequest()
-    {
-      return $this->getSchemaRequest;
+    public function getGetSchemaRequest() {
+        return $this->getSchemaRequest;
     }
 
     /**
      * @param GetSchemaRequest $getSchemaRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setGetSchemaRequest($getSchemaRequest)
-    {
-      $this->getSchemaRequest = $getSchemaRequest;
-      return $this;
+    public function setGetSchemaRequest($getSchemaRequest) {
+        $this->getSchemaRequest = $getSchemaRequest;
+        return $this;
     }
 
     /**
      * @return GetShipperInformationRequest
      */
-    public function getGetShipperInformationRequest()
-    {
-      return $this->getShipperInformationRequest;
+    public function getGetShipperInformationRequest() {
+        return $this->getShipperInformationRequest;
     }
 
     /**
      * @param GetShipperInformationRequest $getShipperInformationRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setGetShipperInformationRequest($getShipperInformationRequest)
-    {
-      $this->getShipperInformationRequest = $getShipperInformationRequest;
-      return $this;
+    public function setGetShipperInformationRequest($getShipperInformationRequest) {
+        $this->getShipperInformationRequest = $getShipperInformationRequest;
+        return $this;
     }
 
     /**
      * @return ListCarriersRequest
      */
-    public function getListCarriersRequest()
-    {
-      return $this->listCarriersRequest;
+    public function getListCarriersRequest() {
+        return $this->listCarriersRequest;
     }
 
     /**
      * @param ListCarriersRequest $listCarriersRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListCarriersRequest($listCarriersRequest)
-    {
-      $this->listCarriersRequest = $listCarriersRequest;
-      return $this;
+    public function setListCarriersRequest($listCarriersRequest) {
+        $this->listCarriersRequest = $listCarriersRequest;
+        return $this;
     }
 
     /**
      * @return ListCloseOutItemsRequest
      */
-    public function getListCloseOutItemsRequest()
-    {
-      return $this->listCloseOutItemsRequest;
+    public function getListCloseOutItemsRequest() {
+        return $this->listCloseOutItemsRequest;
     }
 
     /**
      * @param ListCloseOutItemsRequest $listCloseOutItemsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListCloseOutItemsRequest($listCloseOutItemsRequest)
-    {
-      $this->listCloseOutItemsRequest = $listCloseOutItemsRequest;
-      return $this;
+    public function setListCloseOutItemsRequest($listCloseOutItemsRequest) {
+        $this->listCloseOutItemsRequest = $listCloseOutItemsRequest;
+        return $this;
     }
 
     /**
      * @return ListCountriesRequest
      */
-    public function getListCountriesRequest()
-    {
-      return $this->listCountriesRequest;
+    public function getListCountriesRequest() {
+        return $this->listCountriesRequest;
     }
 
     /**
      * @param ListCountriesRequest $listCountriesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListCountriesRequest($listCountriesRequest)
-    {
-      $this->listCountriesRequest = $listCountriesRequest;
-      return $this;
+    public function setListCountriesRequest($listCountriesRequest) {
+        $this->listCountriesRequest = $listCountriesRequest;
+        return $this;
     }
 
     /**
      * @return ListCountryServicesRequest
      */
-    public function getListCountryServicesRequest()
-    {
-      return $this->listCountryServicesRequest;
+    public function getListCountryServicesRequest() {
+        return $this->listCountryServicesRequest;
     }
 
     /**
      * @param ListCountryServicesRequest $listCountryServicesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListCountryServicesRequest($listCountryServicesRequest)
-    {
-      $this->listCountryServicesRequest = $listCountryServicesRequest;
-      return $this;
+    public function setListCountryServicesRequest($listCountryServicesRequest) {
+        $this->listCountryServicesRequest = $listCountryServicesRequest;
+        return $this;
     }
 
     /**
      * @return ListCurrenciesRequest
      */
-    public function getListCurrenciesRequest()
-    {
-      return $this->listCurrenciesRequest;
+    public function getListCurrenciesRequest() {
+        return $this->listCurrenciesRequest;
     }
 
     /**
      * @param ListCurrenciesRequest $listCurrenciesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListCurrenciesRequest($listCurrenciesRequest)
-    {
-      $this->listCurrenciesRequest = $listCurrenciesRequest;
-      return $this;
+    public function setListCurrenciesRequest($listCurrenciesRequest) {
+        $this->listCurrenciesRequest = $listCurrenciesRequest;
+        return $this;
     }
 
     /**
      * @return ListDocumentsRequest
      */
-    public function getListDocumentsRequest()
-    {
-      return $this->listDocumentsRequest;
+    public function getListDocumentsRequest() {
+        return $this->listDocumentsRequest;
     }
 
     /**
      * @param ListDocumentsRequest $listDocumentsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListDocumentsRequest($listDocumentsRequest)
-    {
-      $this->listDocumentsRequest = $listDocumentsRequest;
-      return $this;
+    public function setListDocumentsRequest($listDocumentsRequest) {
+        $this->listDocumentsRequest = $listDocumentsRequest;
+        return $this;
     }
 
     /**
      * @return ListDocumentFormatsRequest
      */
-    public function getListDocumentFormatsRequest()
-    {
-      return $this->listDocumentFormatsRequest;
+    public function getListDocumentFormatsRequest() {
+        return $this->listDocumentFormatsRequest;
     }
 
     /**
      * @param ListDocumentFormatsRequest $listDocumentFormatsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListDocumentFormatsRequest($listDocumentFormatsRequest)
-    {
-      $this->listDocumentFormatsRequest = $listDocumentFormatsRequest;
-      return $this;
+    public function setListDocumentFormatsRequest($listDocumentFormatsRequest) {
+        $this->listDocumentFormatsRequest = $listDocumentFormatsRequest;
+        return $this;
     }
 
     /**
      * @return ListGroupingsRequest
      */
-    public function getListGroupingsRequest()
-    {
-      return $this->listGroupingsRequest;
+    public function getListGroupingsRequest() {
+        return $this->listGroupingsRequest;
     }
 
     /**
      * @param ListGroupingsRequest $listGroupingsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListGroupingsRequest($listGroupingsRequest)
-    {
-      $this->listGroupingsRequest = $listGroupingsRequest;
-      return $this;
+    public function setListGroupingsRequest($listGroupingsRequest) {
+        $this->listGroupingsRequest = $listGroupingsRequest;
+        return $this;
     }
 
     /**
      * @return ListGroupsRequest
      */
-    public function getListGroupsRequest()
-    {
-      return $this->listGroupsRequest;
+    public function getListGroupsRequest() {
+        return $this->listGroupsRequest;
     }
 
     /**
      * @param ListGroupsRequest $listGroupsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListGroupsRequest($listGroupsRequest)
-    {
-      $this->listGroupsRequest = $listGroupsRequest;
-      return $this;
+    public function setListGroupsRequest($listGroupsRequest) {
+        $this->listGroupsRequest = $listGroupsRequest;
+        return $this;
     }
 
     /**
      * @return ListIncotermsRequest
      */
-    public function getListIncotermsRequest()
-    {
-      return $this->listIncotermsRequest;
+    public function getListIncotermsRequest() {
+        return $this->listIncotermsRequest;
     }
 
     /**
      * @param ListIncotermsRequest $listIncotermsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListIncotermsRequest($listIncotermsRequest)
-    {
-      $this->listIncotermsRequest = $listIncotermsRequest;
-      return $this;
+    public function setListIncotermsRequest($listIncotermsRequest) {
+        $this->listIncotermsRequest = $listIncotermsRequest;
+        return $this;
     }
 
     /**
      * @return ListLocalPortsRequest
      */
-    public function getListLocalPortsRequest()
-    {
-      return $this->listLocalPortsRequest;
+    public function getListLocalPortsRequest() {
+        return $this->listLocalPortsRequest;
     }
 
     /**
      * @param ListLocalPortsRequest $listLocalPortsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListLocalPortsRequest($listLocalPortsRequest)
-    {
-      $this->listLocalPortsRequest = $listLocalPortsRequest;
-      return $this;
+    public function setListLocalPortsRequest($listLocalPortsRequest) {
+        $this->listLocalPortsRequest = $listLocalPortsRequest;
+        return $this;
     }
 
     /**
      * @return ListPackagingTypesRequest
      */
-    public function getListPackagingTypesRequest()
-    {
-      return $this->listPackagingTypesRequest;
+    public function getListPackagingTypesRequest() {
+        return $this->listPackagingTypesRequest;
     }
 
     /**
      * @param ListPackagingTypesRequest $listPackagingTypesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListPackagingTypesRequest($listPackagingTypesRequest)
-    {
-      $this->listPackagingTypesRequest = $listPackagingTypesRequest;
-      return $this;
+    public function setListPackagingTypesRequest($listPackagingTypesRequest) {
+        $this->listPackagingTypesRequest = $listPackagingTypesRequest;
+        return $this;
     }
 
     /**
      * @return ListPaymentTypesRequest
      */
-    public function getListPaymentTypesRequest()
-    {
-      return $this->listPaymentTypesRequest;
+    public function getListPaymentTypesRequest() {
+        return $this->listPaymentTypesRequest;
     }
 
     /**
      * @param ListPaymentTypesRequest $listPaymentTypesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListPaymentTypesRequest($listPaymentTypesRequest)
-    {
-      $this->listPaymentTypesRequest = $listPaymentTypesRequest;
-      return $this;
+    public function setListPaymentTypesRequest($listPaymentTypesRequest) {
+        $this->listPaymentTypesRequest = $listPaymentTypesRequest;
+        return $this;
     }
 
     /**
      * @return ListPrinterDevicesRequest
      */
-    public function getListPrinterDevicesRequest()
-    {
-      return $this->listPrinterDevicesRequest;
+    public function getListPrinterDevicesRequest() {
+        return $this->listPrinterDevicesRequest;
     }
 
     /**
      * @param ListPrinterDevicesRequest $listPrinterDevicesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListPrinterDevicesRequest($listPrinterDevicesRequest)
-    {
-      $this->listPrinterDevicesRequest = $listPrinterDevicesRequest;
-      return $this;
+    public function setListPrinterDevicesRequest($listPrinterDevicesRequest) {
+        $this->listPrinterDevicesRequest = $listPrinterDevicesRequest;
+        return $this;
     }
 
     /**
      * @return ListServicesRequest
      */
-    public function getListServicesRequest()
-    {
-      return $this->listServicesRequest;
+    public function getListServicesRequest() {
+        return $this->listServicesRequest;
     }
 
     /**
      * @param ListServicesRequest $listServicesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListServicesRequest($listServicesRequest)
-    {
-      $this->listServicesRequest = $listServicesRequest;
-      return $this;
+    public function setListServicesRequest($listServicesRequest) {
+        $this->listServicesRequest = $listServicesRequest;
+        return $this;
     }
 
     /**
      * @return ListShipFilesRequest
      */
-    public function getListShipFilesRequest()
-    {
-      return $this->listShipFilesRequest;
+    public function getListShipFilesRequest() {
+        return $this->listShipFilesRequest;
     }
 
     /**
      * @param ListShipFilesRequest $listShipFilesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListShipFilesRequest($listShipFilesRequest)
-    {
-      $this->listShipFilesRequest = $listShipFilesRequest;
-      return $this;
+    public function setListShipFilesRequest($listShipFilesRequest) {
+        $this->listShipFilesRequest = $listShipFilesRequest;
+        return $this;
     }
 
     /**
      * @return ListShippersRequest
      */
-    public function getListShippersRequest()
-    {
-      return $this->listShippersRequest;
+    public function getListShippersRequest() {
+        return $this->listShippersRequest;
     }
 
     /**
      * @param ListShippersRequest $listShippersRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListShippersRequest($listShippersRequest)
-    {
-      $this->listShippersRequest = $listShippersRequest;
-      return $this;
+    public function setListShippersRequest($listShippersRequest) {
+        $this->listShippersRequest = $listShippersRequest;
+        return $this;
     }
 
     /**
      * @return ListStocksRequest
      */
-    public function getListStocksRequest()
-    {
-      return $this->listStocksRequest;
+    public function getListStocksRequest() {
+        return $this->listStocksRequest;
     }
 
     /**
      * @param ListStocksRequest $listStocksRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListStocksRequest($listStocksRequest)
-    {
-      $this->listStocksRequest = $listStocksRequest;
-      return $this;
+    public function setListStocksRequest($listStocksRequest) {
+        $this->listStocksRequest = $listStocksRequest;
+        return $this;
     }
 
     /**
      * @return ListTransmitItemsRequest
      */
-    public function getListTransmitItemsRequest()
-    {
-      return $this->listTransmitItemsRequest;
+    public function getListTransmitItemsRequest() {
+        return $this->listTransmitItemsRequest;
     }
 
     /**
      * @param ListTransmitItemsRequest $listTransmitItemsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListTransmitItemsRequest($listTransmitItemsRequest)
-    {
-      $this->listTransmitItemsRequest = $listTransmitItemsRequest;
-      return $this;
+    public function setListTransmitItemsRequest($listTransmitItemsRequest) {
+        $this->listTransmitItemsRequest = $listTransmitItemsRequest;
+        return $this;
     }
 
     /**
      * @return ListUnitsRequest
      */
-    public function getListUnitsRequest()
-    {
-      return $this->listUnitsRequest;
+    public function getListUnitsRequest() {
+        return $this->listUnitsRequest;
     }
 
     /**
      * @param ListUnitsRequest $listUnitsRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListUnitsRequest($listUnitsRequest)
-    {
-      $this->listUnitsRequest = $listUnitsRequest;
-      return $this;
+    public function setListUnitsRequest($listUnitsRequest) {
+        $this->listUnitsRequest = $listUnitsRequest;
+        return $this;
     }
 
     /**
      * @return ListWindowsPrintersRequest
      */
-    public function getListWindowsPrintersRequest()
-    {
-      return $this->listWindowsPrintersRequest;
+    public function getListWindowsPrintersRequest() {
+        return $this->listWindowsPrintersRequest;
     }
 
     /**
      * @param ListWindowsPrintersRequest $listWindowsPrintersRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setListWindowsPrintersRequest($listWindowsPrintersRequest)
-    {
-      $this->listWindowsPrintersRequest = $listWindowsPrintersRequest;
-      return $this;
+    public function setListWindowsPrintersRequest($listWindowsPrintersRequest) {
+        $this->listWindowsPrintersRequest = $listWindowsPrintersRequest;
+        return $this;
     }
 
     /**
      * @return ModifyContainerRequest
      */
-    public function getModifyContainerRequest()
-    {
-      return $this->modifyContainerRequest;
+    public function getModifyContainerRequest() {
+        return $this->modifyContainerRequest;
     }
 
     /**
      * @param ModifyContainerRequest $modifyContainerRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setModifyContainerRequest($modifyContainerRequest)
-    {
-      $this->modifyContainerRequest = $modifyContainerRequest;
-      return $this;
+    public function setModifyContainerRequest($modifyContainerRequest) {
+        $this->modifyContainerRequest = $modifyContainerRequest;
+        return $this;
     }
 
     /**
      * @return ModifyGroupRequest
      */
-    public function getModifyGroupRequest()
-    {
-      return $this->modifyGroupRequest;
+    public function getModifyGroupRequest() {
+        return $this->modifyGroupRequest;
     }
 
     /**
      * @param ModifyGroupRequest $modifyGroupRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setModifyGroupRequest($modifyGroupRequest)
-    {
-      $this->modifyGroupRequest = $modifyGroupRequest;
-      return $this;
+    public function setModifyGroupRequest($modifyGroupRequest) {
+        $this->modifyGroupRequest = $modifyGroupRequest;
+        return $this;
     }
 
     /**
      * @return ModifyPackagesRequest
      */
-    public function getModifyPackagesRequest()
-    {
-      return $this->modifyPackagesRequest;
+    public function getModifyPackagesRequest() {
+        return $this->modifyPackagesRequest;
     }
 
     /**
      * @param ModifyPackagesRequest $modifyPackagesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setModifyPackagesRequest($modifyPackagesRequest)
-    {
-      $this->modifyPackagesRequest = $modifyPackagesRequest;
-      return $this;
+    public function setModifyPackagesRequest($modifyPackagesRequest) {
+        $this->modifyPackagesRequest = $modifyPackagesRequest;
+        return $this;
     }
 
     /**
      * @return PrintRequest
      */
-    public function getPrintRequest()
-    {
-      return $this->printRequest;
+    public function getPrintRequest() {
+        return $this->printRequest;
     }
 
     /**
      * @param PrintRequest $printRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setPrintRequest($printRequest)
-    {
-      $this->printRequest = $printRequest;
-      return $this;
+    public function setPrintRequest($printRequest) {
+        $this->printRequest = $printRequest;
+        return $this;
     }
 
     /**
      * @return PrintXmlRequest
      */
-    public function getPrintXmlRequest()
-    {
-      return $this->printXmlRequest;
+    public function getPrintXmlRequest() {
+        return $this->printXmlRequest;
     }
 
     /**
      * @param PrintXmlRequest $printXmlRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setPrintXmlRequest($printXmlRequest)
-    {
-      $this->printXmlRequest = $printXmlRequest;
-      return $this;
+    public function setPrintXmlRequest($printXmlRequest) {
+        $this->printXmlRequest = $printXmlRequest;
+        return $this;
     }
 
     /**
      * @return RateRequest
      */
-    public function getRateRequest()
-    {
-      return $this->rateRequest;
+    public function getRateRequest() {
+        return $this->rateRequest;
     }
 
     /**
      * @param RateRequest $rateRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setRateRequest($rateRequest)
-    {
-      $this->rateRequest = $rateRequest;
-      return $this;
+    public function setRateRequest($rateRequest) {
+        $this->rateRequest = $rateRequest;
+        return $this;
     }
 
     /**
      * @return ReprocessRequest
      */
-    public function getReprocessRequest()
-    {
-      return $this->reprocessRequest;
+    public function getReprocessRequest() {
+        return $this->reprocessRequest;
     }
 
     /**
      * @param ReprocessRequest $reprocessRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setReprocessRequest($reprocessRequest)
-    {
-      $this->reprocessRequest = $reprocessRequest;
-      return $this;
+    public function setReprocessRequest($reprocessRequest) {
+        $this->reprocessRequest = $reprocessRequest;
+        return $this;
     }
 
     /**
      * @return SearchRequest
      */
-    public function getSearchRequest()
-    {
-      return $this->searchRequest;
+    public function getSearchRequest() {
+        return $this->searchRequest;
     }
 
     /**
      * @param SearchRequest $searchRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setSearchRequest($searchRequest)
-    {
-      $this->searchRequest = $searchRequest;
-      return $this;
+    public function setSearchRequest($searchRequest) {
+        $this->searchRequest = $searchRequest;
+        return $this;
     }
 
     /**
      * @return ShipRequest
      */
-    public function getShipRequest()
-    {
-      return $this->shipRequest;
+    public function getShipRequest() {
+        return $this->shipRequest;
     }
 
     /**
      * @param ShipRequest $shipRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setShipRequest($shipRequest)
-    {
-      $this->shipRequest = $shipRequest;
-      return $this;
+    public function setShipRequest($shipRequest) {
+        $this->shipRequest = $shipRequest;
+        return $this;
     }
 
     /**
      * @return TransmitRequest
      */
-    public function getTransmitRequest()
-    {
-      return $this->transmitRequest;
+    public function getTransmitRequest() {
+        return $this->transmitRequest;
     }
 
     /**
      * @param TransmitRequest $transmitRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setTransmitRequest($transmitRequest)
-    {
-      $this->transmitRequest = $transmitRequest;
-      return $this;
+    public function setTransmitRequest($transmitRequest) {
+        $this->transmitRequest = $transmitRequest;
+        return $this;
     }
 
     /**
      * @return ValidateAddressRequest
      */
-    public function getValidateAddressRequest()
-    {
-      return $this->validateAddressRequest;
+    public function getValidateAddressRequest() {
+        return $this->validateAddressRequest;
     }
 
     /**
      * @param ValidateAddressRequest $validateAddressRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setValidateAddressRequest($validateAddressRequest)
-    {
-      $this->validateAddressRequest = $validateAddressRequest;
-      return $this;
+    public function setValidateAddressRequest($validateAddressRequest) {
+        $this->validateAddressRequest = $validateAddressRequest;
+        return $this;
     }
 
     /**
      * @return VoidPackagesRequest
      */
-    public function getVoidPackagesRequest()
-    {
-      return $this->voidPackagesRequest;
+    public function getVoidPackagesRequest() {
+        return $this->voidPackagesRequest;
     }
 
     /**
      * @param VoidPackagesRequest $voidPackagesRequest
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setVoidPackagesRequest($voidPackagesRequest)
-    {
-      $this->voidPackagesRequest = $voidPackagesRequest;
-      return $this;
+    public function setVoidPackagesRequest($voidPackagesRequest) {
+        $this->voidPackagesRequest = $voidPackagesRequest;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getStopOnFailure()
-    {
-      return $this->stopOnFailure;
+    public function getStopOnFailure() {
+        return $this->stopOnFailure;
     }
 
     /**
      * @param boolean $stopOnFailure
      * @return \ConnectshipBundle\AMP\CompoundOperation
      */
-    public function setStopOnFailure($stopOnFailure)
-    {
-      $this->stopOnFailure = $stopOnFailure;
-      return $this;
+    public function setStopOnFailure($stopOnFailure) {
+        $this->stopOnFailure = $stopOnFailure;
+        return $this;
     }
 
 }

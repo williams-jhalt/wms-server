@@ -22,6 +22,10 @@ class Product extends \ErpBundle\Model\Product {
     protected $maxDiscountRate;
     protected $saleable;
     protected $images;
+    
+    public function __construct() {
+        $this->images = array();        
+    }
 
     public function getDescription() {
         return $this->description;

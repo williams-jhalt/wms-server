@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class OutputItemList
-{
+class OutputItemList {
 
     /**
      * @var base64Binary[] $binaryOutput
@@ -15,46 +14,40 @@ class OutputItemList
      */
     protected $outputFile = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return base64Binary[]
      */
-    public function getBinaryOutput()
-    {
-      return $this->binaryOutput;
+    public function getBinaryOutput() {
+        return $this->binaryOutput;
     }
 
     /**
      * @param base64Binary[] $binaryOutput
      * @return \ConnectshipBundle\AMP\OutputItemList
      */
-    public function setBinaryOutput(array $binaryOutput = null)
-    {
-      $this->binaryOutput = $binaryOutput;
-      return $this;
+    public function setBinaryOutput(array $binaryOutput = null) {
+        $this->binaryOutput = $binaryOutput;
+        return $this;
     }
 
     /**
      * @return string[]
      */
-    public function getOutputFile()
-    {
-      return $this->outputFile;
+    public function getOutputFile() {
+        return $this->outputFile;
     }
 
     /**
      * @param string[] $outputFile
      * @return \ConnectshipBundle\AMP\OutputItemList
      */
-    public function setOutputFile(array $outputFile = null)
-    {
-      $this->outputFile = $outputFile;
-      return $this;
+    public function setOutputFile(array $outputFile = null) {
+        $this->outputFile = $outputFile;
+        return $this;
     }
 
 }

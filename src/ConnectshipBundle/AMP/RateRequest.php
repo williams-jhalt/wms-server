@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class RateRequest
-{
+class RateRequest {
 
     /**
      * @var ServiceList $services
@@ -54,159 +53,142 @@ class RateRequest
      * @param language $locale
      * @param string $asyncCorrelationData
      */
-    public function __construct($services, $defaults, $packages, $preProcess, $postProcess, $locale, $asyncCorrelationData)
-    {
-      $this->services = $services;
-      $this->defaults = $defaults;
-      $this->packages = $packages;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($services, $defaults, $packages, $preProcess, $postProcess, $locale, $asyncCorrelationData) {
+        $this->services = $services;
+        $this->defaults = $defaults;
+        $this->packages = $packages;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return ServiceList
      */
-    public function getServices()
-    {
-      return $this->services;
+    public function getServices() {
+        return $this->services;
     }
 
     /**
      * @param ServiceList $services
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setServices($services)
-    {
-      $this->services = $services;
-      return $this;
+    public function setServices($services) {
+        $this->services = $services;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getDefaults()
-    {
-      return $this->defaults;
+    public function getDefaults() {
+        return $this->defaults;
     }
 
     /**
      * @param DataDictionary $defaults
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setDefaults($defaults)
-    {
-      $this->defaults = $defaults;
-      return $this;
+    public function setDefaults($defaults) {
+        $this->defaults = $defaults;
+        return $this;
     }
 
     /**
      * @return DataDictionaryList
      */
-    public function getPackages()
-    {
-      return $this->packages;
+    public function getPackages() {
+        return $this->packages;
     }
 
     /**
      * @param DataDictionaryList $packages
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setPackages($packages)
-    {
-      $this->packages = $packages;
-      return $this;
+    public function setPackages($packages) {
+        $this->packages = $packages;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getSortType()
-    {
-      return $this->sortType;
+    public function getSortType() {
+        return $this->sortType;
     }
 
     /**
      * @param enumItem $sortType
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setSortType($sortType)
-    {
-      $this->sortType = $sortType;
-      return $this;
+    public function setSortType($sortType) {
+        $this->sortType = $sortType;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\RateRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ErrorResponse
-{
+class ErrorResponse {
 
     /**
      * @var Result $result
@@ -13,27 +12,24 @@ class ErrorResponse
     /**
      * @param Result $result
      */
-    public function __construct($result)
-    {
-      $this->result = $result;
+    public function __construct($result) {
+        $this->result = $result;
     }
 
     /**
      * @return Result
      */
-    public function getResult()
-    {
-      return $this->result;
+    public function getResult() {
+        return $this->result;
     }
 
     /**
      * @param Result $result
      * @return \ConnectshipBundle\AMP\ErrorResponse
      */
-    public function setResult($result)
-    {
-      $this->result = $result;
-      return $this;
+    public function setResult($result) {
+        $this->result = $result;
+        return $this;
     }
 
 }

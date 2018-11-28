@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class DocumentOutput
-{
+class DocumentOutput {
 
     /**
      * @var anyType $xmlOutput
@@ -30,100 +29,88 @@ class DocumentOutput
      */
     protected $outputList = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return anyType
      */
-    public function getXmlOutput()
-    {
-      return $this->xmlOutput;
+    public function getXmlOutput() {
+        return $this->xmlOutput;
     }
 
     /**
      * @param anyType $xmlOutput
      * @return \ConnectshipBundle\AMP\DocumentOutput
      */
-    public function setXmlOutput($xmlOutput)
-    {
-      $this->xmlOutput = $xmlOutput;
-      return $this;
+    public function setXmlOutput($xmlOutput) {
+        $this->xmlOutput = $xmlOutput;
+        return $this;
     }
 
     /**
      * @return base64Binary
      */
-    public function getBinaryOutput()
-    {
-      return $this->binaryOutput;
+    public function getBinaryOutput() {
+        return $this->binaryOutput;
     }
 
     /**
      * @param base64Binary $binaryOutput
      * @return \ConnectshipBundle\AMP\DocumentOutput
      */
-    public function setBinaryOutput($binaryOutput)
-    {
-      $this->binaryOutput = $binaryOutput;
-      return $this;
+    public function setBinaryOutput($binaryOutput) {
+        $this->binaryOutput = $binaryOutput;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getOutputFile()
-    {
-      return $this->outputFile;
+    public function getOutputFile() {
+        return $this->outputFile;
     }
 
     /**
      * @param string $outputFile
      * @return \ConnectshipBundle\AMP\DocumentOutput
      */
-    public function setOutputFile($outputFile)
-    {
-      $this->outputFile = $outputFile;
-      return $this;
+    public function setOutputFile($outputFile) {
+        $this->outputFile = $outputFile;
+        return $this;
     }
 
     /**
      * @return ImageItemList
      */
-    public function getImageList()
-    {
-      return $this->imageList;
+    public function getImageList() {
+        return $this->imageList;
     }
 
     /**
      * @param ImageItemList $imageList
      * @return \ConnectshipBundle\AMP\DocumentOutput
      */
-    public function setImageList($imageList)
-    {
-      $this->imageList = $imageList;
-      return $this;
+    public function setImageList($imageList) {
+        $this->imageList = $imageList;
+        return $this;
     }
 
     /**
      * @return OutputItemList
      */
-    public function getOutputList()
-    {
-      return $this->outputList;
+    public function getOutputList() {
+        return $this->outputList;
     }
 
     /**
      * @param OutputItemList $outputList
      * @return \ConnectshipBundle\AMP\DocumentOutput
      */
-    public function setOutputList($outputList)
-    {
-      $this->outputList = $outputList;
-      return $this;
+    public function setOutputList($outputList) {
+        $this->outputList = $outputList;
+        return $this;
     }
 
 }

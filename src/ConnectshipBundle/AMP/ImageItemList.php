@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ImageItemList
-{
+class ImageItemList {
 
     /**
      * @var base64Binary[] $imageOutput
@@ -15,46 +14,40 @@ class ImageItemList
      */
     protected $imageFile = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return base64Binary[]
      */
-    public function getImageOutput()
-    {
-      return $this->imageOutput;
+    public function getImageOutput() {
+        return $this->imageOutput;
     }
 
     /**
      * @param base64Binary[] $imageOutput
      * @return \ConnectshipBundle\AMP\ImageItemList
      */
-    public function setImageOutput(array $imageOutput = null)
-    {
-      $this->imageOutput = $imageOutput;
-      return $this;
+    public function setImageOutput(array $imageOutput = null) {
+        $this->imageOutput = $imageOutput;
+        return $this;
     }
 
     /**
      * @return string[]
      */
-    public function getImageFile()
-    {
-      return $this->imageFile;
+    public function getImageFile() {
+        return $this->imageFile;
     }
 
     /**
      * @param string[] $imageFile
      * @return \ConnectshipBundle\AMP\ImageItemList
      */
-    public function setImageFile(array $imageFile = null)
-    {
-      $this->imageFile = $imageFile;
-      return $this;
+    public function setImageFile(array $imageFile = null) {
+        $this->imageFile = $imageFile;
+        return $this;
     }
 
 }

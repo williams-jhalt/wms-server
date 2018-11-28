@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class PackageResult
-{
+class PackageResult {
 
     /**
      * @var int $code
@@ -31,84 +30,75 @@ class PackageResult
      * @param DataDictionary $resultData
      * @param string $externalKey
      */
-    public function __construct($code, $message, $resultData, $externalKey)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->resultData = $resultData;
-      $this->externalKey = $externalKey;
+    public function __construct($code, $message, $resultData, $externalKey) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->resultData = $resultData;
+        $this->externalKey = $externalKey;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\PackageResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\PackageResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getResultData()
-    {
-      return $this->resultData;
+    public function getResultData() {
+        return $this->resultData;
     }
 
     /**
      * @param DataDictionary $resultData
      * @return \ConnectshipBundle\AMP\PackageResult
      */
-    public function setResultData($resultData)
-    {
-      $this->resultData = $resultData;
-      return $this;
+    public function setResultData($resultData) {
+        $this->resultData = $resultData;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExternalKey()
-    {
-      return $this->externalKey;
+    public function getExternalKey() {
+        return $this->externalKey;
     }
 
     /**
      * @param string $externalKey
      * @return \ConnectshipBundle\AMP\PackageResult
      */
-    public function setExternalKey($externalKey)
-    {
-      $this->externalKey = $externalKey;
-      return $this;
+    public function setExternalKey($externalKey) {
+        $this->externalKey = $externalKey;
+        return $this;
     }
 
 }

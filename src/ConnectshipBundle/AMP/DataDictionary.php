@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class DataDictionary
-{
+class DataDictionary {
 
     /**
      * @var boolean $additionalHandling
@@ -2148,7713 +2147,6856 @@ class DataDictionary
     /**
      * @param string $externalKey
      */
-    public function __construct($externalKey)
-    {
-      $this->externalKey = $externalKey;
+    public function __construct($externalKey) {
+        $this->externalKey = $externalKey;
     }
 
     /**
      * @return boolean
      */
-    public function getAdditionalHandling()
-    {
-      return $this->additionalHandling;
+    public function getAdditionalHandling() {
+        return $this->additionalHandling;
     }
 
     /**
      * @param boolean $additionalHandling
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAdditionalHandling($additionalHandling)
-    {
-      $this->additionalHandling = $additionalHandling;
-      return $this;
+    public function setAdditionalHandling($additionalHandling) {
+        $this->additionalHandling = $additionalHandling;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getAdditionalHandlingFee()
-    {
-      return $this->additionalHandlingFee;
+    public function getAdditionalHandlingFee() {
+        return $this->additionalHandlingFee;
     }
 
     /**
      * @param Money $additionalHandlingFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAdditionalHandlingFee($additionalHandlingFee)
-    {
-      $this->additionalHandlingFee = $additionalHandlingFee;
-      return $this;
+    public function setAdditionalHandlingFee($additionalHandlingFee) {
+        $this->additionalHandlingFee = $additionalHandlingFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getAdditionalHandlingType()
-    {
-      return $this->additionalHandlingType;
+    public function getAdditionalHandlingType() {
+        return $this->additionalHandlingType;
     }
 
     /**
      * @param enumItem $additionalHandlingType
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAdditionalHandlingType($additionalHandlingType)
-    {
-      $this->additionalHandlingType = $additionalHandlingType;
-      return $this;
+    public function setAdditionalHandlingType($additionalHandlingType) {
+        $this->additionalHandlingType = $additionalHandlingType;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getAdditionalHardcopyDocumentation()
-    {
-      return $this->additionalHardcopyDocumentation;
+    public function getAdditionalHardcopyDocumentation() {
+        return $this->additionalHardcopyDocumentation;
     }
 
     /**
      * @param boolean $additionalHardcopyDocumentation
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAdditionalHardcopyDocumentation($additionalHardcopyDocumentation)
-    {
-      $this->additionalHardcopyDocumentation = $additionalHardcopyDocumentation;
-      return $this;
+    public function setAdditionalHardcopyDocumentation($additionalHardcopyDocumentation) {
+        $this->additionalHardcopyDocumentation = $additionalHardcopyDocumentation;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getAddressChangeNotification()
-    {
-      return $this->addressChangeNotification;
+    public function getAddressChangeNotification() {
+        return $this->addressChangeNotification;
     }
 
     /**
      * @param boolean $addressChangeNotification
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAddressChangeNotification($addressChangeNotification)
-    {
-      $this->addressChangeNotification = $addressChangeNotification;
-      return $this;
+    public function setAddressChangeNotification($addressChangeNotification) {
+        $this->addressChangeNotification = $addressChangeNotification;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAesTransactionNumber()
-    {
-      return $this->aesTransactionNumber;
+    public function getAesTransactionNumber() {
+        return $this->aesTransactionNumber;
     }
 
     /**
      * @param string $aesTransactionNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAesTransactionNumber($aesTransactionNumber)
-    {
-      $this->aesTransactionNumber = $aesTransactionNumber;
-      return $this;
+    public function setAesTransactionNumber($aesTransactionNumber) {
+        $this->aesTransactionNumber = $aesTransactionNumber;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getAirFreightFee()
-    {
-      return $this->airFreightFee;
+    public function getAirFreightFee() {
+        return $this->airFreightFee;
     }
 
     /**
      * @param Money $airFreightFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAirFreightFee($airFreightFee)
-    {
-      $this->airFreightFee = $airFreightFee;
-      return $this;
+    public function setAirFreightFee($airFreightFee) {
+        $this->airFreightFee = $airFreightFee;
+        return $this;
     }
 
     /**
      * @return AlcoholItemList
      */
-    public function getAlcoholContents()
-    {
-      return $this->alcoholContents;
+    public function getAlcoholContents() {
+        return $this->alcoholContents;
     }
 
     /**
      * @param AlcoholItemList $alcoholContents
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAlcoholContents($alcoholContents)
-    {
-      $this->alcoholContents = $alcoholContents;
-      return $this;
+    public function setAlcoholContents($alcoholContents) {
+        $this->alcoholContents = $alcoholContents;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getAppointmentDelivery()
-    {
-      return $this->appointmentDelivery;
+    public function getAppointmentDelivery() {
+        return $this->appointmentDelivery;
     }
 
     /**
      * @param boolean $appointmentDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAppointmentDelivery($appointmentDelivery)
-    {
-      $this->appointmentDelivery = $appointmentDelivery;
-      return $this;
+    public function setAppointmentDelivery($appointmentDelivery) {
+        $this->appointmentDelivery = $appointmentDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getAppointmentDeliveryFee()
-    {
-      return $this->appointmentDeliveryFee;
+    public function getAppointmentDeliveryFee() {
+        return $this->appointmentDeliveryFee;
     }
 
     /**
      * @param Money $appointmentDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setAppointmentDeliveryFee($appointmentDeliveryFee)
-    {
-      $this->appointmentDeliveryFee = $appointmentDeliveryFee;
-      return $this;
+    public function setAppointmentDeliveryFee($appointmentDeliveryFee) {
+        $this->appointmentDeliveryFee = $appointmentDeliveryFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getApportionedBase()
-    {
-      return $this->apportionedBase;
+    public function getApportionedBase() {
+        return $this->apportionedBase;
     }
 
     /**
      * @param Money $apportionedBase
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setApportionedBase($apportionedBase)
-    {
-      $this->apportionedBase = $apportionedBase;
-      return $this;
+    public function setApportionedBase($apportionedBase) {
+        $this->apportionedBase = $apportionedBase;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getApportionedDiscount()
-    {
-      return $this->apportionedDiscount;
+    public function getApportionedDiscount() {
+        return $this->apportionedDiscount;
     }
 
     /**
      * @param Money $apportionedDiscount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setApportionedDiscount($apportionedDiscount)
-    {
-      $this->apportionedDiscount = $apportionedDiscount;
-      return $this;
+    public function setApportionedDiscount($apportionedDiscount) {
+        $this->apportionedDiscount = $apportionedDiscount;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getApportionedSpecial()
-    {
-      return $this->apportionedSpecial;
+    public function getApportionedSpecial() {
+        return $this->apportionedSpecial;
     }
 
     /**
      * @param Money $apportionedSpecial
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setApportionedSpecial($apportionedSpecial)
-    {
-      $this->apportionedSpecial = $apportionedSpecial;
-      return $this;
+    public function setApportionedSpecial($apportionedSpecial) {
+        $this->apportionedSpecial = $apportionedSpecial;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getApportionedTotal()
-    {
-      return $this->apportionedTotal;
+    public function getApportionedTotal() {
+        return $this->apportionedTotal;
     }
 
     /**
      * @param Money $apportionedTotal
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setApportionedTotal($apportionedTotal)
-    {
-      $this->apportionedTotal = $apportionedTotal;
-      return $this;
+    public function setApportionedTotal($apportionedTotal) {
+        $this->apportionedTotal = $apportionedTotal;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getArriveDate()
-    {
-      return $this->arriveDate;
+    public function getArriveDate() {
+        return $this->arriveDate;
     }
 
     /**
      * @param date $arriveDate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setArriveDate($arriveDate)
-    {
-      $this->arriveDate = $arriveDate;
-      return $this;
+    public function setArriveDate($arriveDate) {
+        $this->arriveDate = $arriveDate;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBarCode()
-    {
-      return $this->barCode;
+    public function getBarCode() {
+        return $this->barCode;
     }
 
     /**
      * @param string $barCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBarCode($barCode)
-    {
-      $this->barCode = $barCode;
-      return $this;
+    public function setBarCode($barCode) {
+        $this->barCode = $barCode;
+        return $this;
     }
 
     /**
      * @return base64Binary
      */
-    public function getBarCodeBinary()
-    {
-      return $this->barCodeBinary;
+    public function getBarCodeBinary() {
+        return $this->barCodeBinary;
     }
 
     /**
      * @param base64Binary $barCodeBinary
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBarCodeBinary($barCodeBinary)
-    {
-      $this->barCodeBinary = $barCodeBinary;
-      return $this;
+    public function setBarCodeBinary($barCodeBinary) {
+        $this->barCodeBinary = $barCodeBinary;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBarCode2()
-    {
-      return $this->barCode2;
+    public function getBarCode2() {
+        return $this->barCode2;
     }
 
     /**
      * @param string $barCode2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBarCode2($barCode2)
-    {
-      $this->barCode2 = $barCode2;
-      return $this;
+    public function setBarCode2($barCode2) {
+        $this->barCode2 = $barCode2;
+        return $this;
     }
 
     /**
      * @return base64Binary
      */
-    public function getBarCode2Binary()
-    {
-      return $this->barCode2Binary;
+    public function getBarCode2Binary() {
+        return $this->barCode2Binary;
     }
 
     /**
      * @param base64Binary $barCode2Binary
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBarCode2Binary($barCode2Binary)
-    {
-      $this->barCode2Binary = $barCode2Binary;
-      return $this;
+    public function setBarCode2Binary($barCode2Binary) {
+        $this->barCode2Binary = $barCode2Binary;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBarCode3()
-    {
-      return $this->barCode3;
+    public function getBarCode3() {
+        return $this->barCode3;
     }
 
     /**
      * @param string $barCode3
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBarCode3($barCode3)
-    {
-      $this->barCode3 = $barCode3;
-      return $this;
+    public function setBarCode3($barCode3) {
+        $this->barCode3 = $barCode3;
+        return $this;
     }
 
     /**
      * @return base64Binary
      */
-    public function getBarCode3Binary()
-    {
-      return $this->barCode3Binary;
+    public function getBarCode3Binary() {
+        return $this->barCode3Binary;
     }
 
     /**
      * @param base64Binary $barCode3Binary
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBarCode3Binary($barCode3Binary)
-    {
-      $this->barCode3Binary = $barCode3Binary;
-      return $this;
+    public function setBarCode3Binary($barCode3Binary) {
+        $this->barCode3Binary = $barCode3Binary;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getBase()
-    {
-      return $this->base;
+    public function getBase() {
+        return $this->base;
     }
 
     /**
      * @param Money $base
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBase($base)
-    {
-      $this->base = $base;
-      return $this;
+    public function setBase($base) {
+        $this->base = $base;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getBillingFee()
-    {
-      return $this->billingFee;
+    public function getBillingFee() {
+        return $this->billingFee;
     }
 
     /**
      * @param Money $billingFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBillingFee($billingFee)
-    {
-      $this->billingFee = $billingFee;
-      return $this;
+    public function setBillingFee($billingFee) {
+        $this->billingFee = $billingFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBolComment()
-    {
-      return $this->bolComment;
+    public function getBolComment() {
+        return $this->bolComment;
     }
 
     /**
      * @param string $bolComment
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBolComment($bolComment)
-    {
-      $this->bolComment = $bolComment;
-      return $this;
+    public function setBolComment($bolComment) {
+        $this->bolComment = $bolComment;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBolLegalStatement()
-    {
-      return $this->bolLegalStatement;
+    public function getBolLegalStatement() {
+        return $this->bolLegalStatement;
     }
 
     /**
      * @param string $bolLegalStatement
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBolLegalStatement($bolLegalStatement)
-    {
-      $this->bolLegalStatement = $bolLegalStatement;
-      return $this;
+    public function setBolLegalStatement($bolLegalStatement) {
+        $this->bolLegalStatement = $bolLegalStatement;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getBorderProcessingFee()
-    {
-      return $this->borderProcessingFee;
+    public function getBorderProcessingFee() {
+        return $this->borderProcessingFee;
     }
 
     /**
      * @param Money $borderProcessingFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBorderProcessingFee($borderProcessingFee)
-    {
-      $this->borderProcessingFee = $borderProcessingFee;
-      return $this;
+    public function setBorderProcessingFee($borderProcessingFee) {
+        $this->borderProcessingFee = $borderProcessingFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getBrokerageMethod()
-    {
-      return $this->brokerageMethod;
+    public function getBrokerageMethod() {
+        return $this->brokerageMethod;
     }
 
     /**
      * @param enumItem $brokerageMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBrokerageMethod($brokerageMethod)
-    {
-      $this->brokerageMethod = $brokerageMethod;
-      return $this;
+    public function setBrokerageMethod($brokerageMethod) {
+        $this->brokerageMethod = $brokerageMethod;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getBrokerageThirdPartyBilling()
-    {
-      return $this->brokerageThirdPartyBilling;
+    public function getBrokerageThirdPartyBilling() {
+        return $this->brokerageThirdPartyBilling;
     }
 
     /**
      * @param boolean $brokerageThirdPartyBilling
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBrokerageThirdPartyBilling($brokerageThirdPartyBilling)
-    {
-      $this->brokerageThirdPartyBilling = $brokerageThirdPartyBilling;
-      return $this;
+    public function setBrokerageThirdPartyBilling($brokerageThirdPartyBilling) {
+        $this->brokerageThirdPartyBilling = $brokerageThirdPartyBilling;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getBrokerageThirdPartyBillingAccount()
-    {
-      return $this->brokerageThirdPartyBillingAccount;
+    public function getBrokerageThirdPartyBillingAccount() {
+        return $this->brokerageThirdPartyBillingAccount;
     }
 
     /**
      * @param string $brokerageThirdPartyBillingAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBrokerageThirdPartyBillingAccount($brokerageThirdPartyBillingAccount)
-    {
-      $this->brokerageThirdPartyBillingAccount = $brokerageThirdPartyBillingAccount;
-      return $this;
+    public function setBrokerageThirdPartyBillingAccount($brokerageThirdPartyBillingAccount) {
+        $this->brokerageThirdPartyBillingAccount = $brokerageThirdPartyBillingAccount;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getBrokerageThirdPartyBillingAddress()
-    {
-      return $this->brokerageThirdPartyBillingAddress;
+    public function getBrokerageThirdPartyBillingAddress() {
+        return $this->brokerageThirdPartyBillingAddress;
     }
 
     /**
      * @param NameAddress $brokerageThirdPartyBillingAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBrokerageThirdPartyBillingAddress($brokerageThirdPartyBillingAddress)
-    {
-      $this->brokerageThirdPartyBillingAddress = $brokerageThirdPartyBillingAddress;
-      return $this;
+    public function setBrokerageThirdPartyBillingAddress($brokerageThirdPartyBillingAddress) {
+        $this->brokerageThirdPartyBillingAddress = $brokerageThirdPartyBillingAddress;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getBundleId()
-    {
-      return $this->bundleId;
+    public function getBundleId() {
+        return $this->bundleId;
     }
 
     /**
      * @param int $bundleId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBundleId($bundleId)
-    {
-      $this->bundleId = $bundleId;
-      return $this;
+    public function setBundleId($bundleId) {
+        $this->bundleId = $bundleId;
+        return $this;
     }
 
     /**
      * @return IntegerList
      */
-    public function getBundleIdList()
-    {
-      return $this->bundleIdList;
+    public function getBundleIdList() {
+        return $this->bundleIdList;
     }
 
     /**
      * @param IntegerList $bundleIdList
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setBundleIdList($bundleIdList)
-    {
-      $this->bundleIdList = $bundleIdList;
-      return $this;
+    public function setBundleIdList($bundleIdList) {
+        $this->bundleIdList = $bundleIdList;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getCalltag()
-    {
-      return $this->calltag;
+    public function getCalltag() {
+        return $this->calltag;
     }
 
     /**
      * @param boolean $calltag
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCalltag($calltag)
-    {
-      $this->calltag = $calltag;
-      return $this;
+    public function setCalltag($calltag) {
+        $this->calltag = $calltag;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCalltagFee()
-    {
-      return $this->calltagFee;
+    public function getCalltagFee() {
+        return $this->calltagFee;
     }
 
     /**
      * @param Money $calltagFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCalltagFee($calltagFee)
-    {
-      $this->calltagFee = $calltagFee;
-      return $this;
+    public function setCalltagFee($calltagFee) {
+        $this->calltagFee = $calltagFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCalltagNumber()
-    {
-      return $this->calltagNumber;
+    public function getCalltagNumber() {
+        return $this->calltagNumber;
     }
 
     /**
      * @param string $calltagNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCalltagNumber($calltagNumber)
-    {
-      $this->calltagNumber = $calltagNumber;
-      return $this;
+    public function setCalltagNumber($calltagNumber) {
+        $this->calltagNumber = $calltagNumber;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getCarbonNeutral()
-    {
-      return $this->carbonNeutral;
+    public function getCarbonNeutral() {
+        return $this->carbonNeutral;
     }
 
     /**
      * @param boolean $carbonNeutral
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarbonNeutral($carbonNeutral)
-    {
-      $this->carbonNeutral = $carbonNeutral;
-      return $this;
+    public function setCarbonNeutral($carbonNeutral) {
+        $this->carbonNeutral = $carbonNeutral;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCarbonNeutralFee()
-    {
-      return $this->carbonNeutralFee;
+    public function getCarbonNeutralFee() {
+        return $this->carbonNeutralFee;
     }
 
     /**
      * @param Money $carbonNeutralFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarbonNeutralFee($carbonNeutralFee)
-    {
-      $this->carbonNeutralFee = $carbonNeutralFee;
-      return $this;
+    public function setCarbonNeutralFee($carbonNeutralFee) {
+        $this->carbonNeutralFee = $carbonNeutralFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCarrierCostSurcharge()
-    {
-      return $this->carrierCostSurcharge;
+    public function getCarrierCostSurcharge() {
+        return $this->carrierCostSurcharge;
     }
 
     /**
      * @param Money $carrierCostSurcharge
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierCostSurcharge($carrierCostSurcharge)
-    {
-      $this->carrierCostSurcharge = $carrierCostSurcharge;
-      return $this;
+    public function setCarrierCostSurcharge($carrierCostSurcharge) {
+        $this->carrierCostSurcharge = $carrierCostSurcharge;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCarrierInstructions()
-    {
-      return $this->carrierInstructions;
+    public function getCarrierInstructions() {
+        return $this->carrierInstructions;
     }
 
     /**
      * @param string $carrierInstructions
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierInstructions($carrierInstructions)
-    {
-      $this->carrierInstructions = $carrierInstructions;
-      return $this;
+    public function setCarrierInstructions($carrierInstructions) {
+        $this->carrierInstructions = $carrierInstructions;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getCarrierMonitoring()
-    {
-      return $this->carrierMonitoring;
+    public function getCarrierMonitoring() {
+        return $this->carrierMonitoring;
     }
 
     /**
      * @param boolean $carrierMonitoring
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierMonitoring($carrierMonitoring)
-    {
-      $this->carrierMonitoring = $carrierMonitoring;
-      return $this;
+    public function setCarrierMonitoring($carrierMonitoring) {
+        $this->carrierMonitoring = $carrierMonitoring;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCarrierMonitoringFee()
-    {
-      return $this->carrierMonitoringFee;
+    public function getCarrierMonitoringFee() {
+        return $this->carrierMonitoringFee;
     }
 
     /**
      * @param Money $carrierMonitoringFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierMonitoringFee($carrierMonitoringFee)
-    {
-      $this->carrierMonitoringFee = $carrierMonitoringFee;
-      return $this;
+    public function setCarrierMonitoringFee($carrierMonitoringFee) {
+        $this->carrierMonitoringFee = $carrierMonitoringFee;
+        return $this;
     }
 
     /**
      * @return enumList
      */
-    public function getCarrierMonitoringPurpose()
-    {
-      return $this->carrierMonitoringPurpose;
+    public function getCarrierMonitoringPurpose() {
+        return $this->carrierMonitoringPurpose;
     }
 
     /**
      * @param enumList $carrierMonitoringPurpose
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierMonitoringPurpose($carrierMonitoringPurpose)
-    {
-      $this->carrierMonitoringPurpose = $carrierMonitoringPurpose;
-      return $this;
+    public function setCarrierMonitoringPurpose($carrierMonitoringPurpose) {
+        $this->carrierMonitoringPurpose = $carrierMonitoringPurpose;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCarrierName()
-    {
-      return $this->carrierName;
+    public function getCarrierName() {
+        return $this->carrierName;
     }
 
     /**
      * @param string $carrierName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierName($carrierName)
-    {
-      $this->carrierName = $carrierName;
-      return $this;
+    public function setCarrierName($carrierName) {
+        $this->carrierName = $carrierName;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getCarrierTenderMethod()
-    {
-      return $this->carrierTenderMethod;
+    public function getCarrierTenderMethod() {
+        return $this->carrierTenderMethod;
     }
 
     /**
      * @param enumItem $carrierTenderMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCarrierTenderMethod($carrierTenderMethod)
-    {
-      $this->carrierTenderMethod = $carrierTenderMethod;
-      return $this;
+    public function setCarrierTenderMethod($carrierTenderMethod) {
+        $this->carrierTenderMethod = $carrierTenderMethod;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getCertifiedMail()
-    {
-      return $this->certifiedMail;
+    public function getCertifiedMail() {
+        return $this->certifiedMail;
     }
 
     /**
      * @param boolean $certifiedMail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCertifiedMail($certifiedMail)
-    {
-      $this->certifiedMail = $certifiedMail;
-      return $this;
+    public function setCertifiedMail($certifiedMail) {
+        $this->certifiedMail = $certifiedMail;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCertifiedMailFee()
-    {
-      return $this->certifiedMailFee;
+    public function getCertifiedMailFee() {
+        return $this->certifiedMailFee;
     }
 
     /**
      * @param Money $certifiedMailFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCertifiedMailFee($certifiedMailFee)
-    {
-      $this->certifiedMailFee = $certifiedMailFee;
-      return $this;
+    public function setCertifiedMailFee($certifiedMailFee) {
+        $this->certifiedMailFee = $certifiedMailFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getCertOfOriginMethod()
-    {
-      return $this->certOfOriginMethod;
+    public function getCertOfOriginMethod() {
+        return $this->certOfOriginMethod;
     }
 
     /**
      * @param enumItem $certOfOriginMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCertOfOriginMethod($certOfOriginMethod)
-    {
-      $this->certOfOriginMethod = $certOfOriginMethod;
-      return $this;
+    public function setCertOfOriginMethod($certOfOriginMethod) {
+        $this->certOfOriginMethod = $certOfOriginMethod;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getChainOfSignature()
-    {
-      return $this->chainOfSignature;
+    public function getChainOfSignature() {
+        return $this->chainOfSignature;
     }
 
     /**
      * @param boolean $chainOfSignature
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setChainOfSignature($chainOfSignature)
-    {
-      $this->chainOfSignature = $chainOfSignature;
-      return $this;
+    public function setChainOfSignature($chainOfSignature) {
+        $this->chainOfSignature = $chainOfSignature;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getChainOfSignatureFee()
-    {
-      return $this->chainOfSignatureFee;
+    public function getChainOfSignatureFee() {
+        return $this->chainOfSignatureFee;
     }
 
     /**
      * @param Money $chainOfSignatureFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setChainOfSignatureFee($chainOfSignatureFee)
-    {
-      $this->chainOfSignatureFee = $chainOfSignatureFee;
-      return $this;
+    public function setChainOfSignatureFee($chainOfSignatureFee) {
+        $this->chainOfSignatureFee = $chainOfSignatureFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getChargesOnDocumentation()
-    {
-      return $this->chargesOnDocumentation;
+    public function getChargesOnDocumentation() {
+        return $this->chargesOnDocumentation;
     }
 
     /**
      * @param enumItem $chargesOnDocumentation
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setChargesOnDocumentation($chargesOnDocumentation)
-    {
-      $this->chargesOnDocumentation = $chargesOnDocumentation;
-      return $this;
+    public function setChargesOnDocumentation($chargesOnDocumentation) {
+        $this->chargesOnDocumentation = $chargesOnDocumentation;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getCodAlternateNumber()
-    {
-      return $this->codAlternateNumber;
+    public function getCodAlternateNumber() {
+        return $this->codAlternateNumber;
     }
 
     /**
      * @param boolean $codAlternateNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodAlternateNumber($codAlternateNumber)
-    {
-      $this->codAlternateNumber = $codAlternateNumber;
-      return $this;
+    public function setCodAlternateNumber($codAlternateNumber) {
+        $this->codAlternateNumber = $codAlternateNumber;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCodAmount()
-    {
-      return $this->codAmount;
+    public function getCodAmount() {
+        return $this->codAmount;
     }
 
     /**
      * @param Money $codAmount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodAmount($codAmount)
-    {
-      $this->codAmount = $codAmount;
-      return $this;
+    public function setCodAmount($codAmount) {
+        $this->codAmount = $codAmount;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getCodFee()
-    {
-      return $this->codFee;
+    public function getCodFee() {
+        return $this->codFee;
     }
 
     /**
      * @param Money $codFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodFee($codFee)
-    {
-      $this->codFee = $codFee;
-      return $this;
+    public function setCodFee($codFee) {
+        $this->codFee = $codFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodInstructions()
-    {
-      return $this->codInstructions;
+    public function getCodInstructions() {
+        return $this->codInstructions;
     }
 
     /**
      * @param string $codInstructions
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodInstructions($codInstructions)
-    {
-      $this->codInstructions = $codInstructions;
-      return $this;
+    public function setCodInstructions($codInstructions) {
+        $this->codInstructions = $codInstructions;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodMasterTrackingNumber()
-    {
-      return $this->codMasterTrackingNumber;
+    public function getCodMasterTrackingNumber() {
+        return $this->codMasterTrackingNumber;
     }
 
     /**
      * @param string $codMasterTrackingNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodMasterTrackingNumber($codMasterTrackingNumber)
-    {
-      $this->codMasterTrackingNumber = $codMasterTrackingNumber;
-      return $this;
+    public function setCodMasterTrackingNumber($codMasterTrackingNumber) {
+        $this->codMasterTrackingNumber = $codMasterTrackingNumber;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getCodMethod()
-    {
-      return $this->codMethod;
+    public function getCodMethod() {
+        return $this->codMethod;
     }
 
     /**
      * @param enumItem $codMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodMethod($codMethod)
-    {
-      $this->codMethod = $codMethod;
-      return $this;
+    public function setCodMethod($codMethod) {
+        $this->codMethod = $codMethod;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodNumber()
-    {
-      return $this->codNumber;
+    public function getCodNumber() {
+        return $this->codNumber;
     }
 
     /**
      * @param string $codNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodNumber($codNumber)
-    {
-      $this->codNumber = $codNumber;
-      return $this;
+    public function setCodNumber($codNumber) {
+        $this->codNumber = $codNumber;
+        return $this;
     }
 
     /**
      * @return enumList
      */
-    public function getCodPaymentMethod()
-    {
-      return $this->codPaymentMethod;
+    public function getCodPaymentMethod() {
+        return $this->codPaymentMethod;
     }
 
     /**
      * @param enumList $codPaymentMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodPaymentMethod($codPaymentMethod)
-    {
-      $this->codPaymentMethod = $codPaymentMethod;
-      return $this;
+    public function setCodPaymentMethod($codPaymentMethod) {
+        $this->codPaymentMethod = $codPaymentMethod;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getCodPaymentMethodPostDatedCheckDate()
-    {
-      return $this->codPaymentMethodPostDatedCheckDate;
+    public function getCodPaymentMethodPostDatedCheckDate() {
+        return $this->codPaymentMethodPostDatedCheckDate;
     }
 
     /**
      * @param date $codPaymentMethodPostDatedCheckDate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodPaymentMethodPostDatedCheckDate($codPaymentMethodPostDatedCheckDate)
-    {
-      $this->codPaymentMethodPostDatedCheckDate = $codPaymentMethodPostDatedCheckDate;
-      return $this;
+    public function setCodPaymentMethodPostDatedCheckDate($codPaymentMethodPostDatedCheckDate) {
+        $this->codPaymentMethodPostDatedCheckDate = $codPaymentMethodPostDatedCheckDate;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodPayorAddressEmail()
-    {
-      return $this->codPayorAddressEmail;
+    public function getCodPayorAddressEmail() {
+        return $this->codPayorAddressEmail;
     }
 
     /**
      * @param string $codPayorAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodPayorAddressEmail($codPayorAddressEmail)
-    {
-      $this->codPayorAddressEmail = $codPayorAddressEmail;
-      return $this;
+    public function setCodPayorAddressEmail($codPayorAddressEmail) {
+        $this->codPayorAddressEmail = $codPayorAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodPayorInstructions()
-    {
-      return $this->codPayorInstructions;
+    public function getCodPayorInstructions() {
+        return $this->codPayorInstructions;
     }
 
     /**
      * @param string $codPayorInstructions
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodPayorInstructions($codPayorInstructions)
-    {
-      $this->codPayorInstructions = $codPayorInstructions;
-      return $this;
+    public function setCodPayorInstructions($codPayorInstructions) {
+        $this->codPayorInstructions = $codPayorInstructions;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodPendingFeePayorPercentage()
-    {
-      return $this->codPendingFeePayorPercentage;
+    public function getCodPendingFeePayorPercentage() {
+        return $this->codPendingFeePayorPercentage;
     }
 
     /**
      * @param string $codPendingFeePayorPercentage
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodPendingFeePayorPercentage($codPendingFeePayorPercentage)
-    {
-      $this->codPendingFeePayorPercentage = $codPendingFeePayorPercentage;
-      return $this;
+    public function setCodPendingFeePayorPercentage($codPendingFeePayorPercentage) {
+        $this->codPendingFeePayorPercentage = $codPendingFeePayorPercentage;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getCodReturnAddress()
-    {
-      return $this->codReturnAddress;
+    public function getCodReturnAddress() {
+        return $this->codReturnAddress;
     }
 
     /**
      * @param NameAddress $codReturnAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodReturnAddress($codReturnAddress)
-    {
-      $this->codReturnAddress = $codReturnAddress;
-      return $this;
+    public function setCodReturnAddress($codReturnAddress) {
+        $this->codReturnAddress = $codReturnAddress;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getCodReturnMethod()
-    {
-      return $this->codReturnMethod;
+    public function getCodReturnMethod() {
+        return $this->codReturnMethod;
     }
 
     /**
      * @param enumItem $codReturnMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodReturnMethod($codReturnMethod)
-    {
-      $this->codReturnMethod = $codReturnMethod;
-      return $this;
+    public function setCodReturnMethod($codReturnMethod) {
+        $this->codReturnMethod = $codReturnMethod;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCodReturnTrackingNumber()
-    {
-      return $this->codReturnTrackingNumber;
+    public function getCodReturnTrackingNumber() {
+        return $this->codReturnTrackingNumber;
     }
 
     /**
      * @param string $codReturnTrackingNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCodReturnTrackingNumber($codReturnTrackingNumber)
-    {
-      $this->codReturnTrackingNumber = $codReturnTrackingNumber;
-      return $this;
+    public function setCodReturnTrackingNumber($codReturnTrackingNumber) {
+        $this->codReturnTrackingNumber = $codReturnTrackingNumber;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getComments()
-    {
-      return $this->comments;
+    public function getComments() {
+        return $this->comments;
     }
 
     /**
      * @param string $comments
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setComments($comments)
-    {
-      $this->comments = $comments;
-      return $this;
+    public function setComments($comments) {
+        $this->comments = $comments;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getCommercialInvoiceMethod()
-    {
-      return $this->commercialInvoiceMethod;
+    public function getCommercialInvoiceMethod() {
+        return $this->commercialInvoiceMethod;
     }
 
     /**
      * @param enumItem $commercialInvoiceMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCommercialInvoiceMethod($commercialInvoiceMethod)
-    {
-      $this->commercialInvoiceMethod = $commercialInvoiceMethod;
-      return $this;
+    public function setCommercialInvoiceMethod($commercialInvoiceMethod) {
+        $this->commercialInvoiceMethod = $commercialInvoiceMethod;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCommitmentCode()
-    {
-      return $this->commitmentCode;
+    public function getCommitmentCode() {
+        return $this->commitmentCode;
     }
 
     /**
      * @param string $commitmentCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCommitmentCode($commitmentCode)
-    {
-      $this->commitmentCode = $commitmentCode;
-      return $this;
+    public function setCommitmentCode($commitmentCode) {
+        $this->commitmentCode = $commitmentCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCommodityClass()
-    {
-      return $this->commodityClass;
+    public function getCommodityClass() {
+        return $this->commodityClass;
     }
 
     /**
      * @param string $commodityClass
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCommodityClass($commodityClass)
-    {
-      $this->commodityClass = $commodityClass;
-      return $this;
+    public function setCommodityClass($commodityClass) {
+        $this->commodityClass = $commodityClass;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getCommodityCondition()
-    {
-      return $this->commodityCondition;
+    public function getCommodityCondition() {
+        return $this->commodityCondition;
     }
 
     /**
      * @param enumItem $commodityCondition
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCommodityCondition($commodityCondition)
-    {
-      $this->commodityCondition = $commodityCondition;
-      return $this;
+    public function setCommodityCondition($commodityCondition) {
+        $this->commodityCondition = $commodityCondition;
+        return $this;
     }
 
     /**
      * @return CommodityList
      */
-    public function getCommodityContents()
-    {
-      return $this->commodityContents;
+    public function getCommodityContents() {
+        return $this->commodityContents;
     }
 
     /**
      * @param CommodityList $commodityContents
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCommodityContents($commodityContents)
-    {
-      $this->commodityContents = $commodityContents;
-      return $this;
+    public function setCommodityContents($commodityContents) {
+        $this->commodityContents = $commodityContents;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getConsignee()
-    {
-      return $this->consignee;
+    public function getConsignee() {
+        return $this->consignee;
     }
 
     /**
      * @param NameAddress $consignee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsignee($consignee)
-    {
-      $this->consignee = $consignee;
-      return $this;
+    public function setConsignee($consignee) {
+        $this->consignee = $consignee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeAccount()
-    {
-      return $this->consigneeAccount;
+    public function getConsigneeAccount() {
+        return $this->consigneeAccount;
     }
 
     /**
      * @param string $consigneeAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeAccount($consigneeAccount)
-    {
-      $this->consigneeAccount = $consigneeAccount;
-      return $this;
+    public function setConsigneeAccount($consigneeAccount) {
+        $this->consigneeAccount = $consigneeAccount;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeBillingId()
-    {
-      return $this->consigneeBillingId;
+    public function getConsigneeBillingId() {
+        return $this->consigneeBillingId;
     }
 
     /**
      * @param string $consigneeBillingId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeBillingId($consigneeBillingId)
-    {
-      $this->consigneeBillingId = $consigneeBillingId;
-      return $this;
+    public function setConsigneeBillingId($consigneeBillingId) {
+        $this->consigneeBillingId = $consigneeBillingId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeCode()
-    {
-      return $this->consigneeCode;
+    public function getConsigneeCode() {
+        return $this->consigneeCode;
     }
 
     /**
      * @param string $consigneeCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeCode($consigneeCode)
-    {
-      $this->consigneeCode = $consigneeCode;
-      return $this;
+    public function setConsigneeCode($consigneeCode) {
+        $this->consigneeCode = $consigneeCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeCustomsId()
-    {
-      return $this->consigneeCustomsId;
+    public function getConsigneeCustomsId() {
+        return $this->consigneeCustomsId;
     }
 
     /**
      * @param string $consigneeCustomsId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeCustomsId($consigneeCustomsId)
-    {
-      $this->consigneeCustomsId = $consigneeCustomsId;
-      return $this;
+    public function setConsigneeCustomsId($consigneeCustomsId) {
+        $this->consigneeCustomsId = $consigneeCustomsId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeEmail()
-    {
-      return $this->consigneeEmail;
+    public function getConsigneeEmail() {
+        return $this->consigneeEmail;
     }
 
     /**
      * @param string $consigneeEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeEmail($consigneeEmail)
-    {
-      $this->consigneeEmail = $consigneeEmail;
-      return $this;
+    public function setConsigneeEmail($consigneeEmail) {
+        $this->consigneeEmail = $consigneeEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeReference()
-    {
-      return $this->consigneeReference;
+    public function getConsigneeReference() {
+        return $this->consigneeReference;
     }
 
     /**
      * @param string $consigneeReference
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeReference($consigneeReference)
-    {
-      $this->consigneeReference = $consigneeReference;
-      return $this;
+    public function setConsigneeReference($consigneeReference) {
+        $this->consigneeReference = $consigneeReference;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeTaxId()
-    {
-      return $this->consigneeTaxId;
+    public function getConsigneeTaxId() {
+        return $this->consigneeTaxId;
     }
 
     /**
      * @param string $consigneeTaxId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeTaxId($consigneeTaxId)
-    {
-      $this->consigneeTaxId = $consigneeTaxId;
-      return $this;
+    public function setConsigneeTaxId($consigneeTaxId) {
+        $this->consigneeTaxId = $consigneeTaxId;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getConsigneeTaxIdType()
-    {
-      return $this->consigneeTaxIdType;
+    public function getConsigneeTaxIdType() {
+        return $this->consigneeTaxIdType;
     }
 
     /**
      * @param enumItem $consigneeTaxIdType
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeTaxIdType($consigneeTaxIdType)
-    {
-      $this->consigneeTaxIdType = $consigneeTaxIdType;
-      return $this;
+    public function setConsigneeTaxIdType($consigneeTaxIdType) {
+        $this->consigneeTaxIdType = $consigneeTaxIdType;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getConsigneeThirdPartyBilling()
-    {
-      return $this->consigneeThirdPartyBilling;
+    public function getConsigneeThirdPartyBilling() {
+        return $this->consigneeThirdPartyBilling;
     }
 
     /**
      * @param boolean $consigneeThirdPartyBilling
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeThirdPartyBilling($consigneeThirdPartyBilling)
-    {
-      $this->consigneeThirdPartyBilling = $consigneeThirdPartyBilling;
-      return $this;
+    public function setConsigneeThirdPartyBilling($consigneeThirdPartyBilling) {
+        $this->consigneeThirdPartyBilling = $consigneeThirdPartyBilling;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsigneeThirdPartyBillingAccount()
-    {
-      return $this->consigneeThirdPartyBillingAccount;
+    public function getConsigneeThirdPartyBillingAccount() {
+        return $this->consigneeThirdPartyBillingAccount;
     }
 
     /**
      * @param string $consigneeThirdPartyBillingAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeThirdPartyBillingAccount($consigneeThirdPartyBillingAccount)
-    {
-      $this->consigneeThirdPartyBillingAccount = $consigneeThirdPartyBillingAccount;
-      return $this;
+    public function setConsigneeThirdPartyBillingAccount($consigneeThirdPartyBillingAccount) {
+        $this->consigneeThirdPartyBillingAccount = $consigneeThirdPartyBillingAccount;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getConsigneeThirdPartyBillingAddress()
-    {
-      return $this->consigneeThirdPartyBillingAddress;
+    public function getConsigneeThirdPartyBillingAddress() {
+        return $this->consigneeThirdPartyBillingAddress;
     }
 
     /**
      * @param NameAddress $consigneeThirdPartyBillingAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsigneeThirdPartyBillingAddress($consigneeThirdPartyBillingAddress)
-    {
-      $this->consigneeThirdPartyBillingAddress = $consigneeThirdPartyBillingAddress;
-      return $this;
+    public function setConsigneeThirdPartyBillingAddress($consigneeThirdPartyBillingAddress) {
+        $this->consigneeThirdPartyBillingAddress = $consigneeThirdPartyBillingAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsolidationCarrier()
-    {
-      return $this->consolidationCarrier;
+    public function getConsolidationCarrier() {
+        return $this->consolidationCarrier;
     }
 
     /**
      * @param string $consolidationCarrier
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsolidationCarrier($consolidationCarrier)
-    {
-      $this->consolidationCarrier = $consolidationCarrier;
-      return $this;
+    public function setConsolidationCarrier($consolidationCarrier) {
+        $this->consolidationCarrier = $consolidationCarrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsolidationCode()
-    {
-      return $this->consolidationCode;
+    public function getConsolidationCode() {
+        return $this->consolidationCode;
     }
 
     /**
      * @param string $consolidationCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsolidationCode($consolidationCode)
-    {
-      $this->consolidationCode = $consolidationCode;
-      return $this;
+    public function setConsolidationCode($consolidationCode) {
+        $this->consolidationCode = $consolidationCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getConsolidationFlag()
-    {
-      return $this->consolidationFlag;
+    public function getConsolidationFlag() {
+        return $this->consolidationFlag;
     }
 
     /**
      * @param boolean $consolidationFlag
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsolidationFlag($consolidationFlag)
-    {
-      $this->consolidationFlag = $consolidationFlag;
-      return $this;
+    public function setConsolidationFlag($consolidationFlag) {
+        $this->consolidationFlag = $consolidationFlag;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getConsolidationId()
-    {
-      return $this->consolidationId;
+    public function getConsolidationId() {
+        return $this->consolidationId;
     }
 
     /**
      * @param int $consolidationId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsolidationId($consolidationId)
-    {
-      $this->consolidationId = $consolidationId;
-      return $this;
+    public function setConsolidationId($consolidationId) {
+        $this->consolidationId = $consolidationId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsolidationShipmentId()
-    {
-      return $this->consolidationShipmentId;
+    public function getConsolidationShipmentId() {
+        return $this->consolidationShipmentId;
     }
 
     /**
      * @param string $consolidationShipmentId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsolidationShipmentId($consolidationShipmentId)
-    {
-      $this->consolidationShipmentId = $consolidationShipmentId;
-      return $this;
+    public function setConsolidationShipmentId($consolidationShipmentId) {
+        $this->consolidationShipmentId = $consolidationShipmentId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getConsolidationType()
-    {
-      return $this->consolidationType;
+    public function getConsolidationType() {
+        return $this->consolidationType;
     }
 
     /**
      * @param string $consolidationType
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setConsolidationType($consolidationType)
-    {
-      $this->consolidationType = $consolidationType;
-      return $this;
+    public function setConsolidationType($consolidationType) {
+        $this->consolidationType = $consolidationType;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getContainerCode()
-    {
-      return $this->containerCode;
+    public function getContainerCode() {
+        return $this->containerCode;
     }
 
     /**
      * @param string $containerCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setContainerCode($containerCode)
-    {
-      $this->containerCode = $containerCode;
-      return $this;
+    public function setContainerCode($containerCode) {
+        $this->containerCode = $containerCode;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getCustomsBroker()
-    {
-      return $this->customsBroker;
+    public function getCustomsBroker() {
+        return $this->customsBroker;
     }
 
     /**
      * @param NameAddress $customsBroker
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCustomsBroker($customsBroker)
-    {
-      $this->customsBroker = $customsBroker;
-      return $this;
+    public function setCustomsBroker($customsBroker) {
+        $this->customsBroker = $customsBroker;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCustomsBrokerCode()
-    {
-      return $this->customsBrokerCode;
+    public function getCustomsBrokerCode() {
+        return $this->customsBrokerCode;
     }
 
     /**
      * @param string $customsBrokerCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCustomsBrokerCode($customsBrokerCode)
-    {
-      $this->customsBrokerCode = $customsBrokerCode;
-      return $this;
+    public function setCustomsBrokerCode($customsBrokerCode) {
+        $this->customsBrokerCode = $customsBrokerCode;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getCycleCount()
-    {
-      return $this->cycleCount;
+    public function getCycleCount() {
+        return $this->cycleCount;
     }
 
     /**
      * @param int $cycleCount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setCycleCount($cycleCount)
-    {
-      $this->cycleCount = $cycleCount;
-      return $this;
+    public function setCycleCount($cycleCount) {
+        $this->cycleCount = $cycleCount;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDeclaredValueAmount()
-    {
-      return $this->declaredValueAmount;
+    public function getDeclaredValueAmount() {
+        return $this->declaredValueAmount;
     }
 
     /**
      * @param Money $declaredValueAmount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeclaredValueAmount($declaredValueAmount)
-    {
-      $this->declaredValueAmount = $declaredValueAmount;
-      return $this;
+    public function setDeclaredValueAmount($declaredValueAmount) {
+        $this->declaredValueAmount = $declaredValueAmount;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDeclaredValueCustoms()
-    {
-      return $this->declaredValueCustoms;
+    public function getDeclaredValueCustoms() {
+        return $this->declaredValueCustoms;
     }
 
     /**
      * @param Money $declaredValueCustoms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeclaredValueCustoms($declaredValueCustoms)
-    {
-      $this->declaredValueCustoms = $declaredValueCustoms;
-      return $this;
+    public function setDeclaredValueCustoms($declaredValueCustoms) {
+        $this->declaredValueCustoms = $declaredValueCustoms;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDeclaredValueFee()
-    {
-      return $this->declaredValueFee;
+    public function getDeclaredValueFee() {
+        return $this->declaredValueFee;
     }
 
     /**
      * @param Money $declaredValueFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeclaredValueFee($declaredValueFee)
-    {
-      $this->declaredValueFee = $declaredValueFee;
-      return $this;
+    public function setDeclaredValueFee($declaredValueFee) {
+        $this->declaredValueFee = $declaredValueFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeconsolidationCarrier()
-    {
-      return $this->deconsolidationCarrier;
+    public function getDeconsolidationCarrier() {
+        return $this->deconsolidationCarrier;
     }
 
     /**
      * @param string $deconsolidationCarrier
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeconsolidationCarrier($deconsolidationCarrier)
-    {
-      $this->deconsolidationCarrier = $deconsolidationCarrier;
-      return $this;
+    public function setDeconsolidationCarrier($deconsolidationCarrier) {
+        $this->deconsolidationCarrier = $deconsolidationCarrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryAreaCode()
-    {
-      return $this->deliveryAreaCode;
+    public function getDeliveryAreaCode() {
+        return $this->deliveryAreaCode;
     }
 
     /**
      * @param string $deliveryAreaCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryAreaCode($deliveryAreaCode)
-    {
-      $this->deliveryAreaCode = $deliveryAreaCode;
-      return $this;
+    public function setDeliveryAreaCode($deliveryAreaCode) {
+        $this->deliveryAreaCode = $deliveryAreaCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryExceptionNotification()
-    {
-      return $this->deliveryExceptionNotification;
+    public function getDeliveryExceptionNotification() {
+        return $this->deliveryExceptionNotification;
     }
 
     /**
      * @param boolean $deliveryExceptionNotification
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotification($deliveryExceptionNotification)
-    {
-      $this->deliveryExceptionNotification = $deliveryExceptionNotification;
-      return $this;
+    public function setDeliveryExceptionNotification($deliveryExceptionNotification) {
+        $this->deliveryExceptionNotification = $deliveryExceptionNotification;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryExceptionNotificationAddressEmail()
-    {
-      return $this->deliveryExceptionNotificationAddressEmail;
+    public function getDeliveryExceptionNotificationAddressEmail() {
+        return $this->deliveryExceptionNotificationAddressEmail;
     }
 
     /**
      * @param string $deliveryExceptionNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotificationAddressEmail($deliveryExceptionNotificationAddressEmail)
-    {
-      $this->deliveryExceptionNotificationAddressEmail = $deliveryExceptionNotificationAddressEmail;
-      return $this;
+    public function setDeliveryExceptionNotificationAddressEmail($deliveryExceptionNotificationAddressEmail) {
+        $this->deliveryExceptionNotificationAddressEmail = $deliveryExceptionNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryExceptionNotificationDescription()
-    {
-      return $this->deliveryExceptionNotificationDescription;
+    public function getDeliveryExceptionNotificationDescription() {
+        return $this->deliveryExceptionNotificationDescription;
     }
 
     /**
      * @param string $deliveryExceptionNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotificationDescription($deliveryExceptionNotificationDescription)
-    {
-      $this->deliveryExceptionNotificationDescription = $deliveryExceptionNotificationDescription;
-      return $this;
+    public function setDeliveryExceptionNotificationDescription($deliveryExceptionNotificationDescription) {
+        $this->deliveryExceptionNotificationDescription = $deliveryExceptionNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryExceptionNotificationEmail()
-    {
-      return $this->deliveryExceptionNotificationEmail;
+    public function getDeliveryExceptionNotificationEmail() {
+        return $this->deliveryExceptionNotificationEmail;
     }
 
     /**
      * @param boolean $deliveryExceptionNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotificationEmail($deliveryExceptionNotificationEmail)
-    {
-      $this->deliveryExceptionNotificationEmail = $deliveryExceptionNotificationEmail;
-      return $this;
+    public function setDeliveryExceptionNotificationEmail($deliveryExceptionNotificationEmail) {
+        $this->deliveryExceptionNotificationEmail = $deliveryExceptionNotificationEmail;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDeliveryExceptionNotificationFee()
-    {
-      return $this->deliveryExceptionNotificationFee;
+    public function getDeliveryExceptionNotificationFee() {
+        return $this->deliveryExceptionNotificationFee;
     }
 
     /**
      * @param Money $deliveryExceptionNotificationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotificationFee($deliveryExceptionNotificationFee)
-    {
-      $this->deliveryExceptionNotificationFee = $deliveryExceptionNotificationFee;
-      return $this;
+    public function setDeliveryExceptionNotificationFee($deliveryExceptionNotificationFee) {
+        $this->deliveryExceptionNotificationFee = $deliveryExceptionNotificationFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryExceptionNotificationSenderName()
-    {
-      return $this->deliveryExceptionNotificationSenderName;
+    public function getDeliveryExceptionNotificationSenderName() {
+        return $this->deliveryExceptionNotificationSenderName;
     }
 
     /**
      * @param string $deliveryExceptionNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotificationSenderName($deliveryExceptionNotificationSenderName)
-    {
-      $this->deliveryExceptionNotificationSenderName = $deliveryExceptionNotificationSenderName;
-      return $this;
+    public function setDeliveryExceptionNotificationSenderName($deliveryExceptionNotificationSenderName) {
+        $this->deliveryExceptionNotificationSenderName = $deliveryExceptionNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryExceptionNotificationSubjectText()
-    {
-      return $this->deliveryExceptionNotificationSubjectText;
+    public function getDeliveryExceptionNotificationSubjectText() {
+        return $this->deliveryExceptionNotificationSubjectText;
     }
 
     /**
      * @param string $deliveryExceptionNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryExceptionNotificationSubjectText($deliveryExceptionNotificationSubjectText)
-    {
-      $this->deliveryExceptionNotificationSubjectText = $deliveryExceptionNotificationSubjectText;
-      return $this;
+    public function setDeliveryExceptionNotificationSubjectText($deliveryExceptionNotificationSubjectText) {
+        $this->deliveryExceptionNotificationSubjectText = $deliveryExceptionNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getDeliveryMethod()
-    {
-      return $this->deliveryMethod;
+    public function getDeliveryMethod() {
+        return $this->deliveryMethod;
     }
 
     /**
      * @param enumItem $deliveryMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryMethod($deliveryMethod)
-    {
-      $this->deliveryMethod = $deliveryMethod;
-      return $this;
+    public function setDeliveryMethod($deliveryMethod) {
+        $this->deliveryMethod = $deliveryMethod;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryNotificationAccount()
-    {
-      return $this->deliveryNotificationAccount;
+    public function getDeliveryNotificationAccount() {
+        return $this->deliveryNotificationAccount;
     }
 
     /**
      * @param string $deliveryNotificationAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationAccount($deliveryNotificationAccount)
-    {
-      $this->deliveryNotificationAccount = $deliveryNotificationAccount;
-      return $this;
+    public function setDeliveryNotificationAccount($deliveryNotificationAccount) {
+        $this->deliveryNotificationAccount = $deliveryNotificationAccount;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getDeliveryNotificationAddress()
-    {
-      return $this->deliveryNotificationAddress;
+    public function getDeliveryNotificationAddress() {
+        return $this->deliveryNotificationAddress;
     }
 
     /**
      * @param NameAddress $deliveryNotificationAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationAddress($deliveryNotificationAddress)
-    {
-      $this->deliveryNotificationAddress = $deliveryNotificationAddress;
-      return $this;
+    public function setDeliveryNotificationAddress($deliveryNotificationAddress) {
+        $this->deliveryNotificationAddress = $deliveryNotificationAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryNotificationAddressEmail()
-    {
-      return $this->deliveryNotificationAddressEmail;
+    public function getDeliveryNotificationAddressEmail() {
+        return $this->deliveryNotificationAddressEmail;
     }
 
     /**
      * @param string $deliveryNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationAddressEmail($deliveryNotificationAddressEmail)
-    {
-      $this->deliveryNotificationAddressEmail = $deliveryNotificationAddressEmail;
-      return $this;
+    public function setDeliveryNotificationAddressEmail($deliveryNotificationAddressEmail) {
+        $this->deliveryNotificationAddressEmail = $deliveryNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryNotificationDescription()
-    {
-      return $this->deliveryNotificationDescription;
+    public function getDeliveryNotificationDescription() {
+        return $this->deliveryNotificationDescription;
     }
 
     /**
      * @param string $deliveryNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationDescription($deliveryNotificationDescription)
-    {
-      $this->deliveryNotificationDescription = $deliveryNotificationDescription;
-      return $this;
+    public function setDeliveryNotificationDescription($deliveryNotificationDescription) {
+        $this->deliveryNotificationDescription = $deliveryNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryNotificationEmail()
-    {
-      return $this->deliveryNotificationEmail;
+    public function getDeliveryNotificationEmail() {
+        return $this->deliveryNotificationEmail;
     }
 
     /**
      * @param boolean $deliveryNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationEmail($deliveryNotificationEmail)
-    {
-      $this->deliveryNotificationEmail = $deliveryNotificationEmail;
-      return $this;
+    public function setDeliveryNotificationEmail($deliveryNotificationEmail) {
+        $this->deliveryNotificationEmail = $deliveryNotificationEmail;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDeliveryNotificationFee()
-    {
-      return $this->deliveryNotificationFee;
+    public function getDeliveryNotificationFee() {
+        return $this->deliveryNotificationFee;
     }
 
     /**
      * @param Money $deliveryNotificationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationFee($deliveryNotificationFee)
-    {
-      $this->deliveryNotificationFee = $deliveryNotificationFee;
-      return $this;
+    public function setDeliveryNotificationFee($deliveryNotificationFee) {
+        $this->deliveryNotificationFee = $deliveryNotificationFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryNotificationFile()
-    {
-      return $this->deliveryNotificationFile;
+    public function getDeliveryNotificationFile() {
+        return $this->deliveryNotificationFile;
     }
 
     /**
      * @param boolean $deliveryNotificationFile
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationFile($deliveryNotificationFile)
-    {
-      $this->deliveryNotificationFile = $deliveryNotificationFile;
-      return $this;
+    public function setDeliveryNotificationFile($deliveryNotificationFile) {
+        $this->deliveryNotificationFile = $deliveryNotificationFile;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryNotificationPhone()
-    {
-      return $this->deliveryNotificationPhone;
+    public function getDeliveryNotificationPhone() {
+        return $this->deliveryNotificationPhone;
     }
 
     /**
      * @param boolean $deliveryNotificationPhone
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationPhone($deliveryNotificationPhone)
-    {
-      $this->deliveryNotificationPhone = $deliveryNotificationPhone;
-      return $this;
+    public function setDeliveryNotificationPhone($deliveryNotificationPhone) {
+        $this->deliveryNotificationPhone = $deliveryNotificationPhone;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryNotificationSenderName()
-    {
-      return $this->deliveryNotificationSenderName;
+    public function getDeliveryNotificationSenderName() {
+        return $this->deliveryNotificationSenderName;
     }
 
     /**
      * @param string $deliveryNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationSenderName($deliveryNotificationSenderName)
-    {
-      $this->deliveryNotificationSenderName = $deliveryNotificationSenderName;
-      return $this;
+    public function setDeliveryNotificationSenderName($deliveryNotificationSenderName) {
+        $this->deliveryNotificationSenderName = $deliveryNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryNotificationSms()
-    {
-      return $this->deliveryNotificationSms;
+    public function getDeliveryNotificationSms() {
+        return $this->deliveryNotificationSms;
     }
 
     /**
      * @param boolean $deliveryNotificationSms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationSms($deliveryNotificationSms)
-    {
-      $this->deliveryNotificationSms = $deliveryNotificationSms;
-      return $this;
+    public function setDeliveryNotificationSms($deliveryNotificationSms) {
+        $this->deliveryNotificationSms = $deliveryNotificationSms;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDeliveryNotificationSubjectText()
-    {
-      return $this->deliveryNotificationSubjectText;
+    public function getDeliveryNotificationSubjectText() {
+        return $this->deliveryNotificationSubjectText;
     }
 
     /**
      * @param string $deliveryNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationSubjectText($deliveryNotificationSubjectText)
-    {
-      $this->deliveryNotificationSubjectText = $deliveryNotificationSubjectText;
-      return $this;
+    public function setDeliveryNotificationSubjectText($deliveryNotificationSubjectText) {
+        $this->deliveryNotificationSubjectText = $deliveryNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliveryNotificationVerbal()
-    {
-      return $this->deliveryNotificationVerbal;
+    public function getDeliveryNotificationVerbal() {
+        return $this->deliveryNotificationVerbal;
     }
 
     /**
      * @param boolean $deliveryNotificationVerbal
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryNotificationVerbal($deliveryNotificationVerbal)
-    {
-      $this->deliveryNotificationVerbal = $deliveryNotificationVerbal;
-      return $this;
+    public function setDeliveryNotificationVerbal($deliveryNotificationVerbal) {
+        $this->deliveryNotificationVerbal = $deliveryNotificationVerbal;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDeliveryWindowFee()
-    {
-      return $this->deliveryWindowFee;
+    public function getDeliveryWindowFee() {
+        return $this->deliveryWindowFee;
     }
 
     /**
      * @param Money $deliveryWindowFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliveryWindowFee($deliveryWindowFee)
-    {
-      $this->deliveryWindowFee = $deliveryWindowFee;
-      return $this;
+    public function setDeliveryWindowFee($deliveryWindowFee) {
+        $this->deliveryWindowFee = $deliveryWindowFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDeliverToDoor()
-    {
-      return $this->deliverToDoor;
+    public function getDeliverToDoor() {
+        return $this->deliverToDoor;
     }
 
     /**
      * @param boolean $deliverToDoor
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDeliverToDoor($deliverToDoor)
-    {
-      $this->deliverToDoor = $deliverToDoor;
-      return $this;
+    public function setDeliverToDoor($deliverToDoor) {
+        $this->deliverToDoor = $deliverToDoor;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDescription()
-    {
-      return $this->description;
+    public function getDescription() {
+        return $this->description;
     }
 
     /**
      * @param string $description
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDescription($description)
-    {
-      $this->description = $description;
-      return $this;
+    public function setDescription($description) {
+        $this->description = $description;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDestinationAirportCode()
-    {
-      return $this->destinationAirportCode;
+    public function getDestinationAirportCode() {
+        return $this->destinationAirportCode;
     }
 
     /**
      * @param string $destinationAirportCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDestinationAirportCode($destinationAirportCode)
-    {
-      $this->destinationAirportCode = $destinationAirportCode;
-      return $this;
+    public function setDestinationAirportCode($destinationAirportCode) {
+        $this->destinationAirportCode = $destinationAirportCode;
+        return $this;
     }
 
     /**
      * @return Dimensions
      */
-    public function getDimension()
-    {
-      return $this->dimension;
+    public function getDimension() {
+        return $this->dimension;
     }
 
     /**
      * @param Dimensions $dimension
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDimension($dimension)
-    {
-      $this->dimension = $dimension;
-      return $this;
+    public function setDimension($dimension) {
+        $this->dimension = $dimension;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDimensionalWeightRated()
-    {
-      return $this->dimensionalWeightRated;
+    public function getDimensionalWeightRated() {
+        return $this->dimensionalWeightRated;
     }
 
     /**
      * @param boolean $dimensionalWeightRated
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDimensionalWeightRated($dimensionalWeightRated)
-    {
-      $this->dimensionalWeightRated = $dimensionalWeightRated;
-      return $this;
+    public function setDimensionalWeightRated($dimensionalWeightRated) {
+        $this->dimensionalWeightRated = $dimensionalWeightRated;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDirectDelivery()
-    {
-      return $this->directDelivery;
+    public function getDirectDelivery() {
+        return $this->directDelivery;
     }
 
     /**
      * @param boolean $directDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDirectDelivery($directDelivery)
-    {
-      $this->directDelivery = $directDelivery;
-      return $this;
+    public function setDirectDelivery($directDelivery) {
+        $this->directDelivery = $directDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDirectDeliveryFee()
-    {
-      return $this->directDeliveryFee;
+    public function getDirectDeliveryFee() {
+        return $this->directDeliveryFee;
     }
 
     /**
      * @param Money $directDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDirectDeliveryFee($directDeliveryFee)
-    {
-      $this->directDeliveryFee = $directDeliveryFee;
-      return $this;
+    public function setDirectDeliveryFee($directDeliveryFee) {
+        $this->directDeliveryFee = $directDeliveryFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDiscount()
-    {
-      return $this->discount;
+    public function getDiscount() {
+        return $this->discount;
     }
 
     /**
      * @param Money $discount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDiscount($discount)
-    {
-      $this->discount = $discount;
-      return $this;
+    public function setDiscount($discount) {
+        $this->discount = $discount;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getDispositionMethod()
-    {
-      return $this->dispositionMethod;
+    public function getDispositionMethod() {
+        return $this->dispositionMethod;
     }
 
     /**
      * @param enumItem $dispositionMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDispositionMethod($dispositionMethod)
-    {
-      $this->dispositionMethod = $dispositionMethod;
-      return $this;
+    public function setDispositionMethod($dispositionMethod) {
+        $this->dispositionMethod = $dispositionMethod;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDistributionCode()
-    {
-      return $this->distributionCode;
+    public function getDistributionCode() {
+        return $this->distributionCode;
     }
 
     /**
      * @param string $distributionCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDistributionCode($distributionCode)
-    {
-      $this->distributionCode = $distributionCode;
-      return $this;
+    public function setDistributionCode($distributionCode) {
+        $this->distributionCode = $distributionCode;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getDocumentationConsignee()
-    {
-      return $this->documentationConsignee;
+    public function getDocumentationConsignee() {
+        return $this->documentationConsignee;
     }
 
     /**
      * @param NameAddress $documentationConsignee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDocumentationConsignee($documentationConsignee)
-    {
-      $this->documentationConsignee = $documentationConsignee;
-      return $this;
+    public function setDocumentationConsignee($documentationConsignee) {
+        $this->documentationConsignee = $documentationConsignee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDocumentationFee()
-    {
-      return $this->documentationFee;
+    public function getDocumentationFee() {
+        return $this->documentationFee;
     }
 
     /**
      * @param Money $documentationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDocumentationFee($documentationFee)
-    {
-      $this->documentationFee = $documentationFee;
-      return $this;
+    public function setDocumentationFee($documentationFee) {
+        $this->documentationFee = $documentationFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getDocumentsOnly()
-    {
-      return $this->documentsOnly;
+    public function getDocumentsOnly() {
+        return $this->documentsOnly;
     }
 
     /**
      * @param boolean $documentsOnly
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDocumentsOnly($documentsOnly)
-    {
-      $this->documentsOnly = $documentsOnly;
-      return $this;
+    public function setDocumentsOnly($documentsOnly) {
+        $this->documentsOnly = $documentsOnly;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getDropoffAppointmentDate()
-    {
-      return $this->dropoffAppointmentDate;
+    public function getDropoffAppointmentDate() {
+        return $this->dropoffAppointmentDate;
     }
 
     /**
      * @param date $dropoffAppointmentDate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDropoffAppointmentDate($dropoffAppointmentDate)
-    {
-      $this->dropoffAppointmentDate = $dropoffAppointmentDate;
-      return $this;
+    public function setDropoffAppointmentDate($dropoffAppointmentDate) {
+        $this->dropoffAppointmentDate = $dropoffAppointmentDate;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDropoffAppointmentNumber()
-    {
-      return $this->dropoffAppointmentNumber;
+    public function getDropoffAppointmentNumber() {
+        return $this->dropoffAppointmentNumber;
     }
 
     /**
      * @param string $dropoffAppointmentNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDropoffAppointmentNumber($dropoffAppointmentNumber)
-    {
-      $this->dropoffAppointmentNumber = $dropoffAppointmentNumber;
-      return $this;
+    public function setDropoffAppointmentNumber($dropoffAppointmentNumber) {
+        $this->dropoffAppointmentNumber = $dropoffAppointmentNumber;
+        return $this;
     }
 
     /**
      * @return time
      */
-    public function getDropoffAppointmentTime()
-    {
-      return $this->dropoffAppointmentTime;
+    public function getDropoffAppointmentTime() {
+        return $this->dropoffAppointmentTime;
     }
 
     /**
      * @param time $dropoffAppointmentTime
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDropoffAppointmentTime($dropoffAppointmentTime)
-    {
-      $this->dropoffAppointmentTime = $dropoffAppointmentTime;
-      return $this;
+    public function setDropoffAppointmentTime($dropoffAppointmentTime) {
+        $this->dropoffAppointmentTime = $dropoffAppointmentTime;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDryIceFee()
-    {
-      return $this->dryIceFee;
+    public function getDryIceFee() {
+        return $this->dryIceFee;
     }
 
     /**
      * @param Money $dryIceFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDryIceFee($dryIceFee)
-    {
-      $this->dryIceFee = $dryIceFee;
-      return $this;
+    public function setDryIceFee($dryIceFee) {
+        $this->dryIceFee = $dryIceFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getDryIcePurpose()
-    {
-      return $this->dryIcePurpose;
+    public function getDryIcePurpose() {
+        return $this->dryIcePurpose;
     }
 
     /**
      * @param enumItem $dryIcePurpose
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDryIcePurpose($dryIcePurpose)
-    {
-      $this->dryIcePurpose = $dryIcePurpose;
-      return $this;
+    public function setDryIcePurpose($dryIcePurpose) {
+        $this->dryIcePurpose = $dryIcePurpose;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getDryIceRegulationSet()
-    {
-      return $this->dryIceRegulationSet;
+    public function getDryIceRegulationSet() {
+        return $this->dryIceRegulationSet;
     }
 
     /**
      * @param enumItem $dryIceRegulationSet
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDryIceRegulationSet($dryIceRegulationSet)
-    {
-      $this->dryIceRegulationSet = $dryIceRegulationSet;
-      return $this;
+    public function setDryIceRegulationSet($dryIceRegulationSet) {
+        $this->dryIceRegulationSet = $dryIceRegulationSet;
+        return $this;
     }
 
     /**
      * @return Weight
      */
-    public function getDryIceWeight()
-    {
-      return $this->dryIceWeight;
+    public function getDryIceWeight() {
+        return $this->dryIceWeight;
     }
 
     /**
      * @param Weight $dryIceWeight
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDryIceWeight($dryIceWeight)
-    {
-      $this->dryIceWeight = $dryIceWeight;
-      return $this;
+    public function setDryIceWeight($dryIceWeight) {
+        $this->dryIceWeight = $dryIceWeight;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getDutyFee()
-    {
-      return $this->dutyFee;
+    public function getDutyFee() {
+        return $this->dutyFee;
     }
 
     /**
      * @param Money $dutyFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setDutyFee($dutyFee)
-    {
-      $this->dutyFee = $dutyFee;
-      return $this;
+    public function setDutyFee($dutyFee) {
+        $this->dutyFee = $dutyFee;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getEarliestDeliveryDate()
-    {
-      return $this->earliestDeliveryDate;
+    public function getEarliestDeliveryDate() {
+        return $this->earliestDeliveryDate;
     }
 
     /**
      * @param date $earliestDeliveryDate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEarliestDeliveryDate($earliestDeliveryDate)
-    {
-      $this->earliestDeliveryDate = $earliestDeliveryDate;
-      return $this;
+    public function setEarliestDeliveryDate($earliestDeliveryDate) {
+        $this->earliestDeliveryDate = $earliestDeliveryDate;
+        return $this;
     }
 
     /**
      * @return time
      */
-    public function getEarliestDeliveryTime()
-    {
-      return $this->earliestDeliveryTime;
+    public function getEarliestDeliveryTime() {
+        return $this->earliestDeliveryTime;
     }
 
     /**
      * @param time $earliestDeliveryTime
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEarliestDeliveryTime($earliestDeliveryTime)
-    {
-      $this->earliestDeliveryTime = $earliestDeliveryTime;
-      return $this;
+    public function setEarliestDeliveryTime($earliestDeliveryTime) {
+        $this->earliestDeliveryTime = $earliestDeliveryTime;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getEarlyDeliveryFee()
-    {
-      return $this->earlyDeliveryFee;
+    public function getEarlyDeliveryFee() {
+        return $this->earlyDeliveryFee;
     }
 
     /**
      * @param Money $earlyDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEarlyDeliveryFee($earlyDeliveryFee)
-    {
-      $this->earlyDeliveryFee = $earlyDeliveryFee;
-      return $this;
+    public function setEarlyDeliveryFee($earlyDeliveryFee) {
+        $this->earlyDeliveryFee = $earlyDeliveryFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getEeiNotificationAddressEmail()
-    {
-      return $this->eeiNotificationAddressEmail;
+    public function getEeiNotificationAddressEmail() {
+        return $this->eeiNotificationAddressEmail;
     }
 
     /**
      * @param string $eeiNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEeiNotificationAddressEmail($eeiNotificationAddressEmail)
-    {
-      $this->eeiNotificationAddressEmail = $eeiNotificationAddressEmail;
-      return $this;
+    public function setEeiNotificationAddressEmail($eeiNotificationAddressEmail) {
+        $this->eeiNotificationAddressEmail = $eeiNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getEeiNotificationDescription()
-    {
-      return $this->eeiNotificationDescription;
+    public function getEeiNotificationDescription() {
+        return $this->eeiNotificationDescription;
     }
 
     /**
      * @param string $eeiNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEeiNotificationDescription($eeiNotificationDescription)
-    {
-      $this->eeiNotificationDescription = $eeiNotificationDescription;
-      return $this;
+    public function setEeiNotificationDescription($eeiNotificationDescription) {
+        $this->eeiNotificationDescription = $eeiNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getEeiNotificationEmail()
-    {
-      return $this->eeiNotificationEmail;
+    public function getEeiNotificationEmail() {
+        return $this->eeiNotificationEmail;
     }
 
     /**
      * @param boolean $eeiNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEeiNotificationEmail($eeiNotificationEmail)
-    {
-      $this->eeiNotificationEmail = $eeiNotificationEmail;
-      return $this;
+    public function setEeiNotificationEmail($eeiNotificationEmail) {
+        $this->eeiNotificationEmail = $eeiNotificationEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getEeiNotificationSenderName()
-    {
-      return $this->eeiNotificationSenderName;
+    public function getEeiNotificationSenderName() {
+        return $this->eeiNotificationSenderName;
     }
 
     /**
      * @param string $eeiNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEeiNotificationSenderName($eeiNotificationSenderName)
-    {
-      $this->eeiNotificationSenderName = $eeiNotificationSenderName;
-      return $this;
+    public function setEeiNotificationSenderName($eeiNotificationSenderName) {
+        $this->eeiNotificationSenderName = $eeiNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getEeiNotificationSubjectText()
-    {
-      return $this->eeiNotificationSubjectText;
+    public function getEeiNotificationSubjectText() {
+        return $this->eeiNotificationSubjectText;
     }
 
     /**
      * @param string $eeiNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEeiNotificationSubjectText($eeiNotificationSubjectText)
-    {
-      $this->eeiNotificationSubjectText = $eeiNotificationSubjectText;
-      return $this;
+    public function setEeiNotificationSubjectText($eeiNotificationSubjectText) {
+        $this->eeiNotificationSubjectText = $eeiNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getEntryNumber()
-    {
-      return $this->entryNumber;
+    public function getEntryNumber() {
+        return $this->entryNumber;
     }
 
     /**
      * @param string $entryNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEntryNumber($entryNumber)
-    {
-      $this->entryNumber = $entryNumber;
-      return $this;
+    public function setEntryNumber($entryNumber) {
+        $this->entryNumber = $entryNumber;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getEveningDelivery()
-    {
-      return $this->eveningDelivery;
+    public function getEveningDelivery() {
+        return $this->eveningDelivery;
     }
 
     /**
      * @param boolean $eveningDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEveningDelivery($eveningDelivery)
-    {
-      $this->eveningDelivery = $eveningDelivery;
-      return $this;
+    public function setEveningDelivery($eveningDelivery) {
+        $this->eveningDelivery = $eveningDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getEveningDeliveryFee()
-    {
-      return $this->eveningDeliveryFee;
+    public function getEveningDeliveryFee() {
+        return $this->eveningDeliveryFee;
     }
 
     /**
      * @param Money $eveningDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setEveningDeliveryFee($eveningDeliveryFee)
-    {
-      $this->eveningDeliveryFee = $eveningDeliveryFee;
-      return $this;
+    public function setEveningDeliveryFee($eveningDeliveryFee) {
+        $this->eveningDeliveryFee = $eveningDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getExchange()
-    {
-      return $this->exchange;
+    public function getExchange() {
+        return $this->exchange;
     }
 
     /**
      * @param boolean $exchange
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExchange($exchange)
-    {
-      $this->exchange = $exchange;
-      return $this;
+    public function setExchange($exchange) {
+        $this->exchange = $exchange;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getExchangeFee()
-    {
-      return $this->exchangeFee;
+    public function getExchangeFee() {
+        return $this->exchangeFee;
     }
 
     /**
      * @param Money $exchangeFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExchangeFee($exchangeFee)
-    {
-      $this->exchangeFee = $exchangeFee;
-      return $this;
+    public function setExchangeFee($exchangeFee) {
+        $this->exchangeFee = $exchangeFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getExchangeMethod()
-    {
-      return $this->exchangeMethod;
+    public function getExchangeMethod() {
+        return $this->exchangeMethod;
     }
 
     /**
      * @param enumItem $exchangeMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExchangeMethod($exchangeMethod)
-    {
-      $this->exchangeMethod = $exchangeMethod;
-      return $this;
+    public function setExchangeMethod($exchangeMethod) {
+        $this->exchangeMethod = $exchangeMethod;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getExporter()
-    {
-      return $this->exporter;
+    public function getExporter() {
+        return $this->exporter;
     }
 
     /**
      * @param NameAddress $exporter
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExporter($exporter)
-    {
-      $this->exporter = $exporter;
-      return $this;
+    public function setExporter($exporter) {
+        $this->exporter = $exporter;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExporterAccount()
-    {
-      return $this->exporterAccount;
+    public function getExporterAccount() {
+        return $this->exporterAccount;
     }
 
     /**
      * @param string $exporterAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExporterAccount($exporterAccount)
-    {
-      $this->exporterAccount = $exporterAccount;
-      return $this;
+    public function setExporterAccount($exporterAccount) {
+        $this->exporterAccount = $exporterAccount;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExporterTaxId()
-    {
-      return $this->exporterTaxId;
+    public function getExporterTaxId() {
+        return $this->exporterTaxId;
     }
 
     /**
      * @param string $exporterTaxId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExporterTaxId($exporterTaxId)
-    {
-      $this->exporterTaxId = $exporterTaxId;
-      return $this;
+    public function setExporterTaxId($exporterTaxId) {
+        $this->exporterTaxId = $exporterTaxId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExportDeclarationStatement()
-    {
-      return $this->exportDeclarationStatement;
+    public function getExportDeclarationStatement() {
+        return $this->exportDeclarationStatement;
     }
 
     /**
      * @param string $exportDeclarationStatement
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExportDeclarationStatement($exportDeclarationStatement)
-    {
-      $this->exportDeclarationStatement = $exportDeclarationStatement;
-      return $this;
+    public function setExportDeclarationStatement($exportDeclarationStatement) {
+        $this->exportDeclarationStatement = $exportDeclarationStatement;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExportInformationCode()
-    {
-      return $this->exportInformationCode;
+    public function getExportInformationCode() {
+        return $this->exportInformationCode;
     }
 
     /**
      * @param string $exportInformationCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExportInformationCode($exportInformationCode)
-    {
-      $this->exportInformationCode = $exportInformationCode;
-      return $this;
+    public function setExportInformationCode($exportInformationCode) {
+        $this->exportInformationCode = $exportInformationCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExportReason()
-    {
-      return $this->exportReason;
+    public function getExportReason() {
+        return $this->exportReason;
     }
 
     /**
      * @param string $exportReason
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExportReason($exportReason)
-    {
-      $this->exportReason = $exportReason;
-      return $this;
+    public function setExportReason($exportReason) {
+        $this->exportReason = $exportReason;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getExtendedAreaFee()
-    {
-      return $this->extendedAreaFee;
+    public function getExtendedAreaFee() {
+        return $this->extendedAreaFee;
     }
 
     /**
      * @param Money $extendedAreaFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExtendedAreaFee($extendedAreaFee)
-    {
-      $this->extendedAreaFee = $extendedAreaFee;
-      return $this;
+    public function setExtendedAreaFee($extendedAreaFee) {
+        $this->extendedAreaFee = $extendedAreaFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getFlats()
-    {
-      return $this->flats;
+    public function getFlats() {
+        return $this->flats;
     }
 
     /**
      * @param boolean $flats
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setFlats($flats)
-    {
-      $this->flats = $flats;
-      return $this;
+    public function setFlats($flats) {
+        $this->flats = $flats;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getForkliftDelivery()
-    {
-      return $this->forkliftDelivery;
+    public function getForkliftDelivery() {
+        return $this->forkliftDelivery;
     }
 
     /**
      * @param boolean $forkliftDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setForkliftDelivery($forkliftDelivery)
-    {
-      $this->forkliftDelivery = $forkliftDelivery;
-      return $this;
+    public function setForkliftDelivery($forkliftDelivery) {
+        $this->forkliftDelivery = $forkliftDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getForkliftDeliveryFee()
-    {
-      return $this->forkliftDeliveryFee;
+    public function getForkliftDeliveryFee() {
+        return $this->forkliftDeliveryFee;
     }
 
     /**
      * @param Money $forkliftDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setForkliftDeliveryFee($forkliftDeliveryFee)
-    {
-      $this->forkliftDeliveryFee = $forkliftDeliveryFee;
-      return $this;
+    public function setForkliftDeliveryFee($forkliftDeliveryFee) {
+        $this->forkliftDeliveryFee = $forkliftDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getForkliftPickup()
-    {
-      return $this->forkliftPickup;
+    public function getForkliftPickup() {
+        return $this->forkliftPickup;
     }
 
     /**
      * @param boolean $forkliftPickup
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setForkliftPickup($forkliftPickup)
-    {
-      $this->forkliftPickup = $forkliftPickup;
-      return $this;
+    public function setForkliftPickup($forkliftPickup) {
+        $this->forkliftPickup = $forkliftPickup;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getForkliftPickupFee()
-    {
-      return $this->forkliftPickupFee;
+    public function getForkliftPickupFee() {
+        return $this->forkliftPickupFee;
     }
 
     /**
      * @param Money $forkliftPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setForkliftPickupFee($forkliftPickupFee)
-    {
-      $this->forkliftPickupFee = $forkliftPickupFee;
-      return $this;
+    public function setForkliftPickupFee($forkliftPickupFee) {
+        $this->forkliftPickupFee = $forkliftPickupFee;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getForwardingAgent()
-    {
-      return $this->forwardingAgent;
+    public function getForwardingAgent() {
+        return $this->forwardingAgent;
     }
 
     /**
      * @param NameAddress $forwardingAgent
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setForwardingAgent($forwardingAgent)
-    {
-      $this->forwardingAgent = $forwardingAgent;
-      return $this;
+    public function setForwardingAgent($forwardingAgent) {
+        $this->forwardingAgent = $forwardingAgent;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getForwardingAgentTaxId()
-    {
-      return $this->forwardingAgentTaxId;
+    public function getForwardingAgentTaxId() {
+        return $this->forwardingAgentTaxId;
     }
 
     /**
      * @param string $forwardingAgentTaxId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setForwardingAgentTaxId($forwardingAgentTaxId)
-    {
-      $this->forwardingAgentTaxId = $forwardingAgentTaxId;
-      return $this;
+    public function setForwardingAgentTaxId($forwardingAgentTaxId) {
+        $this->forwardingAgentTaxId = $forwardingAgentTaxId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getFtzIdentifier()
-    {
-      return $this->ftzIdentifier;
+    public function getFtzIdentifier() {
+        return $this->ftzIdentifier;
     }
 
     /**
      * @param string $ftzIdentifier
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setFtzIdentifier($ftzIdentifier)
-    {
-      $this->ftzIdentifier = $ftzIdentifier;
-      return $this;
+    public function setFtzIdentifier($ftzIdentifier) {
+        $this->ftzIdentifier = $ftzIdentifier;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getFuelSurcharge()
-    {
-      return $this->fuelSurcharge;
+    public function getFuelSurcharge() {
+        return $this->fuelSurcharge;
     }
 
     /**
      * @param Money $fuelSurcharge
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setFuelSurcharge($fuelSurcharge)
-    {
-      $this->fuelSurcharge = $fuelSurcharge;
-      return $this;
+    public function setFuelSurcharge($fuelSurcharge) {
+        $this->fuelSurcharge = $fuelSurcharge;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getGoodsInFreeCirculation()
-    {
-      return $this->goodsInFreeCirculation;
+    public function getGoodsInFreeCirculation() {
+        return $this->goodsInFreeCirculation;
     }
 
     /**
      * @param boolean $goodsInFreeCirculation
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setGoodsInFreeCirculation($goodsInFreeCirculation)
-    {
-      $this->goodsInFreeCirculation = $goodsInFreeCirculation;
-      return $this;
+    public function setGoodsInFreeCirculation($goodsInFreeCirculation) {
+        $this->goodsInFreeCirculation = $goodsInFreeCirculation;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getGoodsOrigin()
-    {
-      return $this->goodsOrigin;
+    public function getGoodsOrigin() {
+        return $this->goodsOrigin;
     }
 
     /**
      * @param NameAddress $goodsOrigin
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setGoodsOrigin($goodsOrigin)
-    {
-      $this->goodsOrigin = $goodsOrigin;
-      return $this;
+    public function setGoodsOrigin($goodsOrigin) {
+        $this->goodsOrigin = $goodsOrigin;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getGroundsaver()
-    {
-      return $this->groundsaver;
+    public function getGroundsaver() {
+        return $this->groundsaver;
     }
 
     /**
      * @param boolean $groundsaver
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setGroundsaver($groundsaver)
-    {
-      $this->groundsaver = $groundsaver;
-      return $this;
+    public function setGroundsaver($groundsaver) {
+        $this->groundsaver = $groundsaver;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getHalNotificationAddress()
-    {
-      return $this->halNotificationAddress;
+    public function getHalNotificationAddress() {
+        return $this->halNotificationAddress;
     }
 
     /**
      * @param NameAddress $halNotificationAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationAddress($halNotificationAddress)
-    {
-      $this->halNotificationAddress = $halNotificationAddress;
-      return $this;
+    public function setHalNotificationAddress($halNotificationAddress) {
+        $this->halNotificationAddress = $halNotificationAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHalNotificationAddressEmail()
-    {
-      return $this->halNotificationAddressEmail;
+    public function getHalNotificationAddressEmail() {
+        return $this->halNotificationAddressEmail;
     }
 
     /**
      * @param string $halNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationAddressEmail($halNotificationAddressEmail)
-    {
-      $this->halNotificationAddressEmail = $halNotificationAddressEmail;
-      return $this;
+    public function setHalNotificationAddressEmail($halNotificationAddressEmail) {
+        $this->halNotificationAddressEmail = $halNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHalNotificationDescription()
-    {
-      return $this->halNotificationDescription;
+    public function getHalNotificationDescription() {
+        return $this->halNotificationDescription;
     }
 
     /**
      * @param string $halNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationDescription($halNotificationDescription)
-    {
-      $this->halNotificationDescription = $halNotificationDescription;
-      return $this;
+    public function setHalNotificationDescription($halNotificationDescription) {
+        $this->halNotificationDescription = $halNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHalNotificationEmail()
-    {
-      return $this->halNotificationEmail;
+    public function getHalNotificationEmail() {
+        return $this->halNotificationEmail;
     }
 
     /**
      * @param boolean $halNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationEmail($halNotificationEmail)
-    {
-      $this->halNotificationEmail = $halNotificationEmail;
-      return $this;
+    public function setHalNotificationEmail($halNotificationEmail) {
+        $this->halNotificationEmail = $halNotificationEmail;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getHalNotificationLocale()
-    {
-      return $this->halNotificationLocale;
+    public function getHalNotificationLocale() {
+        return $this->halNotificationLocale;
     }
 
     /**
      * @param language $halNotificationLocale
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationLocale($halNotificationLocale)
-    {
-      $this->halNotificationLocale = $halNotificationLocale;
-      return $this;
+    public function setHalNotificationLocale($halNotificationLocale) {
+        $this->halNotificationLocale = $halNotificationLocale;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHalNotificationPhone()
-    {
-      return $this->halNotificationPhone;
+    public function getHalNotificationPhone() {
+        return $this->halNotificationPhone;
     }
 
     /**
      * @param boolean $halNotificationPhone
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationPhone($halNotificationPhone)
-    {
-      $this->halNotificationPhone = $halNotificationPhone;
-      return $this;
+    public function setHalNotificationPhone($halNotificationPhone) {
+        $this->halNotificationPhone = $halNotificationPhone;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHalNotificationSenderName()
-    {
-      return $this->halNotificationSenderName;
+    public function getHalNotificationSenderName() {
+        return $this->halNotificationSenderName;
     }
 
     /**
      * @param string $halNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationSenderName($halNotificationSenderName)
-    {
-      $this->halNotificationSenderName = $halNotificationSenderName;
-      return $this;
+    public function setHalNotificationSenderName($halNotificationSenderName) {
+        $this->halNotificationSenderName = $halNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHalNotificationSms()
-    {
-      return $this->halNotificationSms;
+    public function getHalNotificationSms() {
+        return $this->halNotificationSms;
     }
 
     /**
      * @param boolean $halNotificationSms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationSms($halNotificationSms)
-    {
-      $this->halNotificationSms = $halNotificationSms;
-      return $this;
+    public function setHalNotificationSms($halNotificationSms) {
+        $this->halNotificationSms = $halNotificationSms;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHalNotificationSubjectText()
-    {
-      return $this->halNotificationSubjectText;
+    public function getHalNotificationSubjectText() {
+        return $this->halNotificationSubjectText;
     }
 
     /**
      * @param string $halNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHalNotificationSubjectText($halNotificationSubjectText)
-    {
-      $this->halNotificationSubjectText = $halNotificationSubjectText;
-      return $this;
+    public function setHalNotificationSubjectText($halNotificationSubjectText) {
+        $this->halNotificationSubjectText = $halNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmat()
-    {
-      return $this->hazmat;
+    public function getHazmat() {
+        return $this->hazmat;
     }
 
     /**
      * @param boolean $hazmat
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmat($hazmat)
-    {
-      $this->hazmat = $hazmat;
-      return $this;
+    public function setHazmat($hazmat) {
+        $this->hazmat = $hazmat;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatAllPackedInOne()
-    {
-      return $this->hazmatAllPackedInOne;
+    public function getHazmatAllPackedInOne() {
+        return $this->hazmatAllPackedInOne;
     }
 
     /**
      * @param boolean $hazmatAllPackedInOne
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatAllPackedInOne($hazmatAllPackedInOne)
-    {
-      $this->hazmatAllPackedInOne = $hazmatAllPackedInOne;
-      return $this;
+    public function setHazmatAllPackedInOne($hazmatAllPackedInOne) {
+        $this->hazmatAllPackedInOne = $hazmatAllPackedInOne;
+        return $this;
     }
 
     /**
      * @return HazmatItemList
      */
-    public function getHazmatContents()
-    {
-      return $this->hazmatContents;
+    public function getHazmatContents() {
+        return $this->hazmatContents;
     }
 
     /**
      * @param HazmatItemList $hazmatContents
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatContents($hazmatContents)
-    {
-      $this->hazmatContents = $hazmatContents;
-      return $this;
+    public function setHazmatContents($hazmatContents) {
+        $this->hazmatContents = $hazmatContents;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHazmatFee()
-    {
-      return $this->hazmatFee;
+    public function getHazmatFee() {
+        return $this->hazmatFee;
     }
 
     /**
      * @param Money $hazmatFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatFee($hazmatFee)
-    {
-      $this->hazmatFee = $hazmatFee;
-      return $this;
+    public function setHazmatFee($hazmatFee) {
+        $this->hazmatFee = $hazmatFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatHandlingInformation()
-    {
-      return $this->hazmatHandlingInformation;
+    public function getHazmatHandlingInformation() {
+        return $this->hazmatHandlingInformation;
     }
 
     /**
      * @param string $hazmatHandlingInformation
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatHandlingInformation($hazmatHandlingInformation)
-    {
-      $this->hazmatHandlingInformation = $hazmatHandlingInformation;
-      return $this;
+    public function setHazmatHandlingInformation($hazmatHandlingInformation) {
+        $this->hazmatHandlingInformation = $hazmatHandlingInformation;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatOverpack()
-    {
-      return $this->hazmatOverpack;
+    public function getHazmatOverpack() {
+        return $this->hazmatOverpack;
     }
 
     /**
      * @param boolean $hazmatOverpack
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatOverpack($hazmatOverpack)
-    {
-      $this->hazmatOverpack = $hazmatOverpack;
-      return $this;
+    public function setHazmatOverpack($hazmatOverpack) {
+        $this->hazmatOverpack = $hazmatOverpack;
+        return $this;
     }
 
     /**
      * @return float
      */
-    public function getHazmatQValue()
-    {
-      return $this->hazmatQValue;
+    public function getHazmatQValue() {
+        return $this->hazmatQValue;
     }
 
     /**
      * @param float $hazmatQValue
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatQValue($hazmatQValue)
-    {
-      $this->hazmatQValue = $hazmatQValue;
-      return $this;
+    public function setHazmatQValue($hazmatQValue) {
+        $this->hazmatQValue = $hazmatQValue;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getHazmatSignatoryAddress()
-    {
-      return $this->hazmatSignatoryAddress;
+    public function getHazmatSignatoryAddress() {
+        return $this->hazmatSignatoryAddress;
     }
 
     /**
      * @param NameAddress $hazmatSignatoryAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatSignatoryAddress($hazmatSignatoryAddress)
-    {
-      $this->hazmatSignatoryAddress = $hazmatSignatoryAddress;
-      return $this;
+    public function setHazmatSignatoryAddress($hazmatSignatoryAddress) {
+        $this->hazmatSignatoryAddress = $hazmatSignatoryAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatSignatoryTitle()
-    {
-      return $this->hazmatSignatoryTitle;
+    public function getHazmatSignatoryTitle() {
+        return $this->hazmatSignatoryTitle;
     }
 
     /**
      * @param string $hazmatSignatoryTitle
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHazmatSignatoryTitle($hazmatSignatoryTitle)
-    {
-      $this->hazmatSignatoryTitle = $hazmatSignatoryTitle;
-      return $this;
+    public function setHazmatSignatoryTitle($hazmatSignatoryTitle) {
+        $this->hazmatSignatoryTitle = $hazmatSignatoryTitle;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHealthInsurance()
-    {
-      return $this->healthInsurance;
+    public function getHealthInsurance() {
+        return $this->healthInsurance;
     }
 
     /**
      * @param boolean $healthInsurance
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHealthInsurance($healthInsurance)
-    {
-      $this->healthInsurance = $healthInsurance;
-      return $this;
+    public function setHealthInsurance($healthInsurance) {
+        $this->healthInsurance = $healthInsurance;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHealthInsuranceFee()
-    {
-      return $this->healthInsuranceFee;
+    public function getHealthInsuranceFee() {
+        return $this->healthInsuranceFee;
     }
 
     /**
      * @param Money $healthInsuranceFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHealthInsuranceFee($healthInsuranceFee)
-    {
-      $this->healthInsuranceFee = $healthInsuranceFee;
-      return $this;
+    public function setHealthInsuranceFee($healthInsuranceFee) {
+        $this->healthInsuranceFee = $healthInsuranceFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHelperDelivery()
-    {
-      return $this->helperDelivery;
+    public function getHelperDelivery() {
+        return $this->helperDelivery;
     }
 
     /**
      * @param boolean $helperDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHelperDelivery($helperDelivery)
-    {
-      $this->helperDelivery = $helperDelivery;
-      return $this;
+    public function setHelperDelivery($helperDelivery) {
+        $this->helperDelivery = $helperDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHelperDeliveryFee()
-    {
-      return $this->helperDeliveryFee;
+    public function getHelperDeliveryFee() {
+        return $this->helperDeliveryFee;
     }
 
     /**
      * @param Money $helperDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHelperDeliveryFee($helperDeliveryFee)
-    {
-      $this->helperDeliveryFee = $helperDeliveryFee;
-      return $this;
+    public function setHelperDeliveryFee($helperDeliveryFee) {
+        $this->helperDeliveryFee = $helperDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHelperPickup()
-    {
-      return $this->helperPickup;
+    public function getHelperPickup() {
+        return $this->helperPickup;
     }
 
     /**
      * @param boolean $helperPickup
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHelperPickup($helperPickup)
-    {
-      $this->helperPickup = $helperPickup;
-      return $this;
+    public function setHelperPickup($helperPickup) {
+        $this->helperPickup = $helperPickup;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHelperPickupFee()
-    {
-      return $this->helperPickupFee;
+    public function getHelperPickupFee() {
+        return $this->helperPickupFee;
     }
 
     /**
      * @param Money $helperPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHelperPickupFee($helperPickupFee)
-    {
-      $this->helperPickupFee = $helperPickupFee;
-      return $this;
+    public function setHelperPickupFee($helperPickupFee) {
+        $this->helperPickupFee = $helperPickupFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHoldAtLocation()
-    {
-      return $this->holdAtLocation;
+    public function getHoldAtLocation() {
+        return $this->holdAtLocation;
     }
 
     /**
      * @param boolean $holdAtLocation
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHoldAtLocation($holdAtLocation)
-    {
-      $this->holdAtLocation = $holdAtLocation;
-      return $this;
+    public function setHoldAtLocation($holdAtLocation) {
+        $this->holdAtLocation = $holdAtLocation;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getHoldAtLocationAddress()
-    {
-      return $this->holdAtLocationAddress;
+    public function getHoldAtLocationAddress() {
+        return $this->holdAtLocationAddress;
     }
 
     /**
      * @param NameAddress $holdAtLocationAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHoldAtLocationAddress($holdAtLocationAddress)
-    {
-      $this->holdAtLocationAddress = $holdAtLocationAddress;
-      return $this;
+    public function setHoldAtLocationAddress($holdAtLocationAddress) {
+        $this->holdAtLocationAddress = $holdAtLocationAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHoldAtLocationFacilityId()
-    {
-      return $this->holdAtLocationFacilityId;
+    public function getHoldAtLocationFacilityId() {
+        return $this->holdAtLocationFacilityId;
     }
 
     /**
      * @param string $holdAtLocationFacilityId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHoldAtLocationFacilityId($holdAtLocationFacilityId)
-    {
-      $this->holdAtLocationFacilityId = $holdAtLocationFacilityId;
-      return $this;
+    public function setHoldAtLocationFacilityId($holdAtLocationFacilityId) {
+        $this->holdAtLocationFacilityId = $holdAtLocationFacilityId;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHoldAtLocationFee()
-    {
-      return $this->holdAtLocationFee;
+    public function getHoldAtLocationFee() {
+        return $this->holdAtLocationFee;
     }
 
     /**
      * @param Money $holdAtLocationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHoldAtLocationFee($holdAtLocationFee)
-    {
-      $this->holdAtLocationFee = $holdAtLocationFee;
-      return $this;
+    public function setHoldAtLocationFee($holdAtLocationFee) {
+        $this->holdAtLocationFee = $holdAtLocationFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHoldAtLocationReleaseCode()
-    {
-      return $this->holdAtLocationReleaseCode;
+    public function getHoldAtLocationReleaseCode() {
+        return $this->holdAtLocationReleaseCode;
     }
 
     /**
      * @param string $holdAtLocationReleaseCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHoldAtLocationReleaseCode($holdAtLocationReleaseCode)
-    {
-      $this->holdAtLocationReleaseCode = $holdAtLocationReleaseCode;
-      return $this;
+    public function setHoldAtLocationReleaseCode($holdAtLocationReleaseCode) {
+        $this->holdAtLocationReleaseCode = $holdAtLocationReleaseCode;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHoldAtLocationType()
-    {
-      return $this->holdAtLocationType;
+    public function getHoldAtLocationType() {
+        return $this->holdAtLocationType;
     }
 
     /**
      * @param enumItem $holdAtLocationType
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHoldAtLocationType($holdAtLocationType)
-    {
-      $this->holdAtLocationType = $holdAtLocationType;
-      return $this;
+    public function setHoldAtLocationType($holdAtLocationType) {
+        $this->holdAtLocationType = $holdAtLocationType;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHolidayDelivery()
-    {
-      return $this->holidayDelivery;
+    public function getHolidayDelivery() {
+        return $this->holidayDelivery;
     }
 
     /**
      * @param boolean $holidayDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHolidayDelivery($holidayDelivery)
-    {
-      $this->holidayDelivery = $holidayDelivery;
-      return $this;
+    public function setHolidayDelivery($holidayDelivery) {
+        $this->holidayDelivery = $holidayDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHolidayDeliveryFee()
-    {
-      return $this->holidayDeliveryFee;
+    public function getHolidayDeliveryFee() {
+        return $this->holidayDeliveryFee;
     }
 
     /**
      * @param Money $holidayDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHolidayDeliveryFee($holidayDeliveryFee)
-    {
-      $this->holidayDeliveryFee = $holidayDeliveryFee;
-      return $this;
+    public function setHolidayDeliveryFee($holidayDeliveryFee) {
+        $this->holidayDeliveryFee = $holidayDeliveryFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getHolidayPickupFee()
-    {
-      return $this->holidayPickupFee;
+    public function getHolidayPickupFee() {
+        return $this->holidayPickupFee;
     }
 
     /**
      * @param Money $holidayPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHolidayPickupFee($holidayPickupFee)
-    {
-      $this->holidayPickupFee = $holidayPickupFee;
-      return $this;
+    public function setHolidayPickupFee($holidayPickupFee) {
+        $this->holidayPickupFee = $holidayPickupFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHubCode()
-    {
-      return $this->hubCode;
+    public function getHubCode() {
+        return $this->hubCode;
     }
 
     /**
      * @param string $hubCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHubCode($hubCode)
-    {
-      $this->hubCode = $hubCode;
-      return $this;
+    public function setHubCode($hubCode) {
+        $this->hubCode = $hubCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHundredweightRated()
-    {
-      return $this->hundredweightRated;
+    public function getHundredweightRated() {
+        return $this->hundredweightRated;
     }
 
     /**
      * @param boolean $hundredweightRated
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setHundredweightRated($hundredweightRated)
-    {
-      $this->hundredweightRated = $hundredweightRated;
-      return $this;
+    public function setHundredweightRated($hundredweightRated) {
+        $this->hundredweightRated = $hundredweightRated;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getImpbNonComplianceFee()
-    {
-      return $this->impbNonComplianceFee;
+    public function getImpbNonComplianceFee() {
+        return $this->impbNonComplianceFee;
     }
 
     /**
      * @param Money $impbNonComplianceFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setImpbNonComplianceFee($impbNonComplianceFee)
-    {
-      $this->impbNonComplianceFee = $impbNonComplianceFee;
-      return $this;
+    public function setImpbNonComplianceFee($impbNonComplianceFee) {
+        $this->impbNonComplianceFee = $impbNonComplianceFee;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getImporterOfRecord()
-    {
-      return $this->importerOfRecord;
+    public function getImporterOfRecord() {
+        return $this->importerOfRecord;
     }
 
     /**
      * @param NameAddress $importerOfRecord
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setImporterOfRecord($importerOfRecord)
-    {
-      $this->importerOfRecord = $importerOfRecord;
-      return $this;
+    public function setImporterOfRecord($importerOfRecord) {
+        $this->importerOfRecord = $importerOfRecord;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getImporterOfRecordAccount()
-    {
-      return $this->importerOfRecordAccount;
+    public function getImporterOfRecordAccount() {
+        return $this->importerOfRecordAccount;
     }
 
     /**
      * @param string $importerOfRecordAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setImporterOfRecordAccount($importerOfRecordAccount)
-    {
-      $this->importerOfRecordAccount = $importerOfRecordAccount;
-      return $this;
+    public function setImporterOfRecordAccount($importerOfRecordAccount) {
+        $this->importerOfRecordAccount = $importerOfRecordAccount;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getImporterOfRecordTaxId()
-    {
-      return $this->importerOfRecordTaxId;
+    public function getImporterOfRecordTaxId() {
+        return $this->importerOfRecordTaxId;
     }
 
     /**
      * @param string $importerOfRecordTaxId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setImporterOfRecordTaxId($importerOfRecordTaxId)
-    {
-      $this->importerOfRecordTaxId = $importerOfRecordTaxId;
-      return $this;
+    public function setImporterOfRecordTaxId($importerOfRecordTaxId) {
+        $this->importerOfRecordTaxId = $importerOfRecordTaxId;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getImportDelivery()
-    {
-      return $this->importDelivery;
+    public function getImportDelivery() {
+        return $this->importDelivery;
     }
 
     /**
      * @param boolean $importDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setImportDelivery($importDelivery)
-    {
-      $this->importDelivery = $importDelivery;
-      return $this;
+    public function setImportDelivery($importDelivery) {
+        $this->importDelivery = $importDelivery;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getInbondCode()
-    {
-      return $this->inbondCode;
+    public function getInbondCode() {
+        return $this->inbondCode;
     }
 
     /**
      * @param enumItem $inbondCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInbondCode($inbondCode)
-    {
-      $this->inbondCode = $inbondCode;
-      return $this;
+    public function setInbondCode($inbondCode) {
+        $this->inbondCode = $inbondCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getInsideDelivery()
-    {
-      return $this->insideDelivery;
+    public function getInsideDelivery() {
+        return $this->insideDelivery;
     }
 
     /**
      * @param boolean $insideDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInsideDelivery($insideDelivery)
-    {
-      $this->insideDelivery = $insideDelivery;
-      return $this;
+    public function setInsideDelivery($insideDelivery) {
+        $this->insideDelivery = $insideDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getInsideDeliveryFee()
-    {
-      return $this->insideDeliveryFee;
+    public function getInsideDeliveryFee() {
+        return $this->insideDeliveryFee;
     }
 
     /**
      * @param Money $insideDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInsideDeliveryFee($insideDeliveryFee)
-    {
-      $this->insideDeliveryFee = $insideDeliveryFee;
-      return $this;
+    public function setInsideDeliveryFee($insideDeliveryFee) {
+        $this->insideDeliveryFee = $insideDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getInsidePickup()
-    {
-      return $this->insidePickup;
+    public function getInsidePickup() {
+        return $this->insidePickup;
     }
 
     /**
      * @param boolean $insidePickup
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInsidePickup($insidePickup)
-    {
-      $this->insidePickup = $insidePickup;
-      return $this;
+    public function setInsidePickup($insidePickup) {
+        $this->insidePickup = $insidePickup;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getInsidePickupFee()
-    {
-      return $this->insidePickupFee;
+    public function getInsidePickupFee() {
+        return $this->insidePickupFee;
     }
 
     /**
      * @param Money $insidePickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInsidePickupFee($insidePickupFee)
-    {
-      $this->insidePickupFee = $insidePickupFee;
-      return $this;
+    public function setInsidePickupFee($insidePickupFee) {
+        $this->insidePickupFee = $insidePickupFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getInsuranceMethod()
-    {
-      return $this->insuranceMethod;
+    public function getInsuranceMethod() {
+        return $this->insuranceMethod;
     }
 
     /**
      * @param enumItem $insuranceMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInsuranceMethod($insuranceMethod)
-    {
-      $this->insuranceMethod = $insuranceMethod;
-      return $this;
+    public function setInsuranceMethod($insuranceMethod) {
+        $this->insuranceMethod = $insuranceMethod;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getInvoiceDiscount()
-    {
-      return $this->invoiceDiscount;
+    public function getInvoiceDiscount() {
+        return $this->invoiceDiscount;
     }
 
     /**
      * @param Money $invoiceDiscount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInvoiceDiscount($invoiceDiscount)
-    {
-      $this->invoiceDiscount = $invoiceDiscount;
-      return $this;
+    public function setInvoiceDiscount($invoiceDiscount) {
+        $this->invoiceDiscount = $invoiceDiscount;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getInvoiceFreight()
-    {
-      return $this->invoiceFreight;
+    public function getInvoiceFreight() {
+        return $this->invoiceFreight;
     }
 
     /**
      * @param Money $invoiceFreight
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInvoiceFreight($invoiceFreight)
-    {
-      $this->invoiceFreight = $invoiceFreight;
-      return $this;
+    public function setInvoiceFreight($invoiceFreight) {
+        $this->invoiceFreight = $invoiceFreight;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getInvoiceInsuranceFee()
-    {
-      return $this->invoiceInsuranceFee;
+    public function getInvoiceInsuranceFee() {
+        return $this->invoiceInsuranceFee;
     }
 
     /**
      * @param Money $invoiceInsuranceFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInvoiceInsuranceFee($invoiceInsuranceFee)
-    {
-      $this->invoiceInsuranceFee = $invoiceInsuranceFee;
-      return $this;
+    public function setInvoiceInsuranceFee($invoiceInsuranceFee) {
+        $this->invoiceInsuranceFee = $invoiceInsuranceFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getInvoiceOtherFee()
-    {
-      return $this->invoiceOtherFee;
+    public function getInvoiceOtherFee() {
+        return $this->invoiceOtherFee;
     }
 
     /**
      * @param Money $invoiceOtherFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInvoiceOtherFee($invoiceOtherFee)
-    {
-      $this->invoiceOtherFee = $invoiceOtherFee;
-      return $this;
+    public function setInvoiceOtherFee($invoiceOtherFee) {
+        $this->invoiceOtherFee = $invoiceOtherFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getInTransitNotification()
-    {
-      return $this->inTransitNotification;
+    public function getInTransitNotification() {
+        return $this->inTransitNotification;
     }
 
     /**
      * @param boolean $inTransitNotification
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInTransitNotification($inTransitNotification)
-    {
-      $this->inTransitNotification = $inTransitNotification;
-      return $this;
+    public function setInTransitNotification($inTransitNotification) {
+        $this->inTransitNotification = $inTransitNotification;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getInTransitNotificationAddressEmail()
-    {
-      return $this->inTransitNotificationAddressEmail;
+    public function getInTransitNotificationAddressEmail() {
+        return $this->inTransitNotificationAddressEmail;
     }
 
     /**
      * @param string $inTransitNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInTransitNotificationAddressEmail($inTransitNotificationAddressEmail)
-    {
-      $this->inTransitNotificationAddressEmail = $inTransitNotificationAddressEmail;
-      return $this;
+    public function setInTransitNotificationAddressEmail($inTransitNotificationAddressEmail) {
+        $this->inTransitNotificationAddressEmail = $inTransitNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getInTransitNotificationDescription()
-    {
-      return $this->inTransitNotificationDescription;
+    public function getInTransitNotificationDescription() {
+        return $this->inTransitNotificationDescription;
     }
 
     /**
      * @param string $inTransitNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInTransitNotificationDescription($inTransitNotificationDescription)
-    {
-      $this->inTransitNotificationDescription = $inTransitNotificationDescription;
-      return $this;
+    public function setInTransitNotificationDescription($inTransitNotificationDescription) {
+        $this->inTransitNotificationDescription = $inTransitNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getInTransitNotificationEmail()
-    {
-      return $this->inTransitNotificationEmail;
+    public function getInTransitNotificationEmail() {
+        return $this->inTransitNotificationEmail;
     }
 
     /**
      * @param boolean $inTransitNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInTransitNotificationEmail($inTransitNotificationEmail)
-    {
-      $this->inTransitNotificationEmail = $inTransitNotificationEmail;
-      return $this;
+    public function setInTransitNotificationEmail($inTransitNotificationEmail) {
+        $this->inTransitNotificationEmail = $inTransitNotificationEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getInTransitNotificationSenderName()
-    {
-      return $this->inTransitNotificationSenderName;
+    public function getInTransitNotificationSenderName() {
+        return $this->inTransitNotificationSenderName;
     }
 
     /**
      * @param string $inTransitNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInTransitNotificationSenderName($inTransitNotificationSenderName)
-    {
-      $this->inTransitNotificationSenderName = $inTransitNotificationSenderName;
-      return $this;
+    public function setInTransitNotificationSenderName($inTransitNotificationSenderName) {
+        $this->inTransitNotificationSenderName = $inTransitNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getInTransitNotificationSubjectText()
-    {
-      return $this->inTransitNotificationSubjectText;
+    public function getInTransitNotificationSubjectText() {
+        return $this->inTransitNotificationSubjectText;
     }
 
     /**
      * @param string $inTransitNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setInTransitNotificationSubjectText($inTransitNotificationSubjectText)
-    {
-      $this->inTransitNotificationSubjectText = $inTransitNotificationSubjectText;
-      return $this;
+    public function setInTransitNotificationSubjectText($inTransitNotificationSubjectText) {
+        $this->inTransitNotificationSubjectText = $inTransitNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getIsoUniqueIdentifier()
-    {
-      return $this->isoUniqueIdentifier;
+    public function getIsoUniqueIdentifier() {
+        return $this->isoUniqueIdentifier;
     }
 
     /**
      * @param string $isoUniqueIdentifier
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setIsoUniqueIdentifier($isoUniqueIdentifier)
-    {
-      $this->isoUniqueIdentifier = $isoUniqueIdentifier;
-      return $this;
+    public function setIsoUniqueIdentifier($isoUniqueIdentifier) {
+        $this->isoUniqueIdentifier = $isoUniqueIdentifier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getItemNumber()
-    {
-      return $this->itemNumber;
+    public function getItemNumber() {
+        return $this->itemNumber;
     }
 
     /**
      * @param string $itemNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setItemNumber($itemNumber)
-    {
-      $this->itemNumber = $itemNumber;
-      return $this;
+    public function setItemNumber($itemNumber) {
+        $this->itemNumber = $itemNumber;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getLargePackage()
-    {
-      return $this->largePackage;
+    public function getLargePackage() {
+        return $this->largePackage;
     }
 
     /**
      * @param boolean $largePackage
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLargePackage($largePackage)
-    {
-      $this->largePackage = $largePackage;
-      return $this;
+    public function setLargePackage($largePackage) {
+        $this->largePackage = $largePackage;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getLargePackageFee()
-    {
-      return $this->largePackageFee;
+    public function getLargePackageFee() {
+        return $this->largePackageFee;
     }
 
     /**
      * @param Money $largePackageFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLargePackageFee($largePackageFee)
-    {
-      $this->largePackageFee = $largePackageFee;
-      return $this;
+    public function setLargePackageFee($largePackageFee) {
+        $this->largePackageFee = $largePackageFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getLargePallet()
-    {
-      return $this->largePallet;
+    public function getLargePallet() {
+        return $this->largePallet;
     }
 
     /**
      * @param boolean $largePallet
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLargePallet($largePallet)
-    {
-      $this->largePallet = $largePallet;
-      return $this;
+    public function setLargePallet($largePallet) {
+        $this->largePallet = $largePallet;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getLargePalletFee()
-    {
-      return $this->largePalletFee;
+    public function getLargePalletFee() {
+        return $this->largePalletFee;
     }
 
     /**
      * @param Money $largePalletFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLargePalletFee($largePalletFee)
-    {
-      $this->largePalletFee = $largePalletFee;
-      return $this;
+    public function setLargePalletFee($largePalletFee) {
+        $this->largePalletFee = $largePalletFee;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getLatestDeliveryDate()
-    {
-      return $this->latestDeliveryDate;
+    public function getLatestDeliveryDate() {
+        return $this->latestDeliveryDate;
     }
 
     /**
      * @param date $latestDeliveryDate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLatestDeliveryDate($latestDeliveryDate)
-    {
-      $this->latestDeliveryDate = $latestDeliveryDate;
-      return $this;
+    public function setLatestDeliveryDate($latestDeliveryDate) {
+        $this->latestDeliveryDate = $latestDeliveryDate;
+        return $this;
     }
 
     /**
      * @return time
      */
-    public function getLatestDeliveryTime()
-    {
-      return $this->latestDeliveryTime;
+    public function getLatestDeliveryTime() {
+        return $this->latestDeliveryTime;
     }
 
     /**
      * @param time $latestDeliveryTime
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLatestDeliveryTime($latestDeliveryTime)
-    {
-      $this->latestDeliveryTime = $latestDeliveryTime;
-      return $this;
+    public function setLatestDeliveryTime($latestDeliveryTime) {
+        $this->latestDeliveryTime = $latestDeliveryTime;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getLicenseVerificationFee()
-    {
-      return $this->licenseVerificationFee;
+    public function getLicenseVerificationFee() {
+        return $this->licenseVerificationFee;
     }
 
     /**
      * @param Money $licenseVerificationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLicenseVerificationFee($licenseVerificationFee)
-    {
-      $this->licenseVerificationFee = $licenseVerificationFee;
-      return $this;
+    public function setLicenseVerificationFee($licenseVerificationFee) {
+        $this->licenseVerificationFee = $licenseVerificationFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getLiftgateDelivery()
-    {
-      return $this->liftgateDelivery;
+    public function getLiftgateDelivery() {
+        return $this->liftgateDelivery;
     }
 
     /**
      * @param boolean $liftgateDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLiftgateDelivery($liftgateDelivery)
-    {
-      $this->liftgateDelivery = $liftgateDelivery;
-      return $this;
+    public function setLiftgateDelivery($liftgateDelivery) {
+        $this->liftgateDelivery = $liftgateDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getLiftgateDeliveryFee()
-    {
-      return $this->liftgateDeliveryFee;
+    public function getLiftgateDeliveryFee() {
+        return $this->liftgateDeliveryFee;
     }
 
     /**
      * @param Money $liftgateDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLiftgateDeliveryFee($liftgateDeliveryFee)
-    {
-      $this->liftgateDeliveryFee = $liftgateDeliveryFee;
-      return $this;
+    public function setLiftgateDeliveryFee($liftgateDeliveryFee) {
+        $this->liftgateDeliveryFee = $liftgateDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getLiftgatePickup()
-    {
-      return $this->liftgatePickup;
+    public function getLiftgatePickup() {
+        return $this->liftgatePickup;
     }
 
     /**
      * @param boolean $liftgatePickup
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLiftgatePickup($liftgatePickup)
-    {
-      $this->liftgatePickup = $liftgatePickup;
-      return $this;
+    public function setLiftgatePickup($liftgatePickup) {
+        $this->liftgatePickup = $liftgatePickup;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getLiftgatePickupFee()
-    {
-      return $this->liftgatePickupFee;
+    public function getLiftgatePickupFee() {
+        return $this->liftgatePickupFee;
     }
 
     /**
      * @param Money $liftgatePickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLiftgatePickupFee($liftgatePickupFee)
-    {
-      $this->liftgatePickupFee = $liftgatePickupFee;
-      return $this;
+    public function setLiftgatePickupFee($liftgatePickupFee) {
+        $this->liftgatePickupFee = $liftgatePickupFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getLithiumBatteriesContainedInEquipment()
-    {
-      return $this->lithiumBatteriesContainedInEquipment;
+    public function getLithiumBatteriesContainedInEquipment() {
+        return $this->lithiumBatteriesContainedInEquipment;
     }
 
     /**
      * @param boolean $lithiumBatteriesContainedInEquipment
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLithiumBatteriesContainedInEquipment($lithiumBatteriesContainedInEquipment)
-    {
-      $this->lithiumBatteriesContainedInEquipment = $lithiumBatteriesContainedInEquipment;
-      return $this;
+    public function setLithiumBatteriesContainedInEquipment($lithiumBatteriesContainedInEquipment) {
+        $this->lithiumBatteriesContainedInEquipment = $lithiumBatteriesContainedInEquipment;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getLocationId()
-    {
-      return $this->locationId;
+    public function getLocationId() {
+        return $this->locationId;
     }
 
     /**
      * @param string $locationId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setLocationId($locationId)
-    {
-      $this->locationId = $locationId;
-      return $this;
+    public function setLocationId($locationId) {
+        $this->locationId = $locationId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMarkings()
-    {
-      return $this->markings;
+    public function getMarkings() {
+        return $this->markings;
     }
 
     /**
      * @param string $markings
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMarkings($markings)
-    {
-      $this->markings = $markings;
-      return $this;
+    public function setMarkings($markings) {
+        $this->markings = $markings;
+        return $this;
     }
 
     /**
      * @return StringList
      */
-    public function getMaxicode()
-    {
-      return $this->maxicode;
+    public function getMaxicode() {
+        return $this->maxicode;
     }
 
     /**
      * @param StringList $maxicode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMaxicode($maxicode)
-    {
-      $this->maxicode = $maxicode;
-      return $this;
+    public function setMaxicode($maxicode) {
+        $this->maxicode = $maxicode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMiscReference1()
-    {
-      return $this->miscReference1;
+    public function getMiscReference1() {
+        return $this->miscReference1;
     }
 
     /**
      * @param string $miscReference1
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMiscReference1($miscReference1)
-    {
-      $this->miscReference1 = $miscReference1;
-      return $this;
+    public function setMiscReference1($miscReference1) {
+        $this->miscReference1 = $miscReference1;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMiscReference2()
-    {
-      return $this->miscReference2;
+    public function getMiscReference2() {
+        return $this->miscReference2;
     }
 
     /**
      * @param string $miscReference2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMiscReference2($miscReference2)
-    {
-      $this->miscReference2 = $miscReference2;
-      return $this;
+    public function setMiscReference2($miscReference2) {
+        $this->miscReference2 = $miscReference2;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMiscReference3()
-    {
-      return $this->miscReference3;
+    public function getMiscReference3() {
+        return $this->miscReference3;
     }
 
     /**
      * @param string $miscReference3
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMiscReference3($miscReference3)
-    {
-      $this->miscReference3 = $miscReference3;
-      return $this;
+    public function setMiscReference3($miscReference3) {
+        $this->miscReference3 = $miscReference3;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMiscReference4()
-    {
-      return $this->miscReference4;
+    public function getMiscReference4() {
+        return $this->miscReference4;
     }
 
     /**
      * @param string $miscReference4
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMiscReference4($miscReference4)
-    {
-      $this->miscReference4 = $miscReference4;
-      return $this;
+    public function setMiscReference4($miscReference4) {
+        $this->miscReference4 = $miscReference4;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMiscReference5()
-    {
-      return $this->miscReference5;
+    public function getMiscReference5() {
+        return $this->miscReference5;
     }
 
     /**
      * @param string $miscReference5
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMiscReference5($miscReference5)
-    {
-      $this->miscReference5 = $miscReference5;
-      return $this;
+    public function setMiscReference5($miscReference5) {
+        $this->miscReference5 = $miscReference5;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getMms()
-    {
-      return $this->mms;
+    public function getMms() {
+        return $this->mms;
     }
 
     /**
      * @param boolean $mms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMms($mms)
-    {
-      $this->mms = $mms;
-      return $this;
+    public function setMms($mms) {
+        $this->mms = $mms;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMmsPieceId()
-    {
-      return $this->mmsPieceId;
+    public function getMmsPieceId() {
+        return $this->mmsPieceId;
     }
 
     /**
      * @param string $mmsPieceId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMmsPieceId($mmsPieceId)
-    {
-      $this->mmsPieceId = $mmsPieceId;
-      return $this;
+    public function setMmsPieceId($mmsPieceId) {
+        $this->mmsPieceId = $mmsPieceId;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getMsn()
-    {
-      return $this->msn;
+    public function getMsn() {
+        return $this->msn;
     }
 
     /**
      * @param int $msn
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMsn($msn)
-    {
-      $this->msn = $msn;
-      return $this;
+    public function setMsn($msn) {
+        $this->msn = $msn;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getMultiPieceFee()
-    {
-      return $this->multiPieceFee;
+    public function getMultiPieceFee() {
+        return $this->multiPieceFee;
     }
 
     /**
      * @param Money $multiPieceFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setMultiPieceFee($multiPieceFee)
-    {
-      $this->multiPieceFee = $multiPieceFee;
-      return $this;
+    public function setMultiPieceFee($multiPieceFee) {
+        $this->multiPieceFee = $multiPieceFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getNeutralDeliveryService()
-    {
-      return $this->neutralDeliveryService;
+    public function getNeutralDeliveryService() {
+        return $this->neutralDeliveryService;
     }
 
     /**
      * @param boolean $neutralDeliveryService
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNeutralDeliveryService($neutralDeliveryService)
-    {
-      $this->neutralDeliveryService = $neutralDeliveryService;
-      return $this;
+    public function setNeutralDeliveryService($neutralDeliveryService) {
+        $this->neutralDeliveryService = $neutralDeliveryService;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getNeutralDeliveryServiceFee()
-    {
-      return $this->neutralDeliveryServiceFee;
+    public function getNeutralDeliveryServiceFee() {
+        return $this->neutralDeliveryServiceFee;
     }
 
     /**
      * @param Money $neutralDeliveryServiceFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNeutralDeliveryServiceFee($neutralDeliveryServiceFee)
-    {
-      $this->neutralDeliveryServiceFee = $neutralDeliveryServiceFee;
-      return $this;
+    public function setNeutralDeliveryServiceFee($neutralDeliveryServiceFee) {
+        $this->neutralDeliveryServiceFee = $neutralDeliveryServiceFee;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getNofnSequence()
-    {
-      return $this->nofnSequence;
+    public function getNofnSequence() {
+        return $this->nofnSequence;
     }
 
     /**
      * @param int $nofnSequence
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNofnSequence($nofnSequence)
-    {
-      $this->nofnSequence = $nofnSequence;
-      return $this;
+    public function setNofnSequence($nofnSequence) {
+        $this->nofnSequence = $nofnSequence;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getNofnSequenceBundle()
-    {
-      return $this->nofnSequenceBundle;
+    public function getNofnSequenceBundle() {
+        return $this->nofnSequenceBundle;
     }
 
     /**
      * @param int $nofnSequenceBundle
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNofnSequenceBundle($nofnSequenceBundle)
-    {
-      $this->nofnSequenceBundle = $nofnSequenceBundle;
-      return $this;
+    public function setNofnSequenceBundle($nofnSequenceBundle) {
+        $this->nofnSequenceBundle = $nofnSequenceBundle;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getNofnTotal()
-    {
-      return $this->nofnTotal;
+    public function getNofnTotal() {
+        return $this->nofnTotal;
     }
 
     /**
      * @param int $nofnTotal
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNofnTotal($nofnTotal)
-    {
-      $this->nofnTotal = $nofnTotal;
-      return $this;
+    public function setNofnTotal($nofnTotal) {
+        $this->nofnTotal = $nofnTotal;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getNofnTotalBundle()
-    {
-      return $this->nofnTotalBundle;
+    public function getNofnTotalBundle() {
+        return $this->nofnTotalBundle;
     }
 
     /**
      * @param int $nofnTotalBundle
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNofnTotalBundle($nofnTotalBundle)
-    {
-      $this->nofnTotalBundle = $nofnTotalBundle;
-      return $this;
+    public function setNofnTotalBundle($nofnTotalBundle) {
+        $this->nofnTotalBundle = $nofnTotalBundle;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getNonhazardousLithiumBatteries()
-    {
-      return $this->nonhazardousLithiumBatteries;
+    public function getNonhazardousLithiumBatteries() {
+        return $this->nonhazardousLithiumBatteries;
     }
 
     /**
      * @param boolean $nonhazardousLithiumBatteries
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNonhazardousLithiumBatteries($nonhazardousLithiumBatteries)
-    {
-      $this->nonhazardousLithiumBatteries = $nonhazardousLithiumBatteries;
-      return $this;
+    public function setNonhazardousLithiumBatteries($nonhazardousLithiumBatteries) {
+        $this->nonhazardousLithiumBatteries = $nonhazardousLithiumBatteries;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getNonmachinableMail()
-    {
-      return $this->nonmachinableMail;
+    public function getNonmachinableMail() {
+        return $this->nonmachinableMail;
     }
 
     /**
      * @param boolean $nonmachinableMail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNonmachinableMail($nonmachinableMail)
-    {
-      $this->nonmachinableMail = $nonmachinableMail;
-      return $this;
+    public function setNonmachinableMail($nonmachinableMail) {
+        $this->nonmachinableMail = $nonmachinableMail;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getNonmachinableMailFee()
-    {
-      return $this->nonmachinableMailFee;
+    public function getNonmachinableMailFee() {
+        return $this->nonmachinableMailFee;
     }
 
     /**
      * @param Money $nonmachinableMailFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNonmachinableMailFee($nonmachinableMailFee)
-    {
-      $this->nonmachinableMailFee = $nonmachinableMailFee;
-      return $this;
+    public function setNonmachinableMailFee($nonmachinableMailFee) {
+        $this->nonmachinableMailFee = $nonmachinableMailFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getNonrectangular()
-    {
-      return $this->nonrectangular;
+    public function getNonrectangular() {
+        return $this->nonrectangular;
     }
 
     /**
      * @param boolean $nonrectangular
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNonrectangular($nonrectangular)
-    {
-      $this->nonrectangular = $nonrectangular;
-      return $this;
+    public function setNonrectangular($nonrectangular) {
+        $this->nonrectangular = $nonrectangular;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getNonstandardMail()
-    {
-      return $this->nonstandardMail;
+    public function getNonstandardMail() {
+        return $this->nonstandardMail;
     }
 
     /**
      * @param boolean $nonstandardMail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNonstandardMail($nonstandardMail)
-    {
-      $this->nonstandardMail = $nonstandardMail;
-      return $this;
+    public function setNonstandardMail($nonstandardMail) {
+        $this->nonstandardMail = $nonstandardMail;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getNonstandardMailFee()
-    {
-      return $this->nonstandardMailFee;
+    public function getNonstandardMailFee() {
+        return $this->nonstandardMailFee;
     }
 
     /**
      * @param Money $nonstandardMailFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNonstandardMailFee($nonstandardMailFee)
-    {
-      $this->nonstandardMailFee = $nonstandardMailFee;
-      return $this;
+    public function setNonstandardMailFee($nonstandardMailFee) {
+        $this->nonstandardMailFee = $nonstandardMailFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getNotificationFailureAddressEmail()
-    {
-      return $this->notificationFailureAddressEmail;
+    public function getNotificationFailureAddressEmail() {
+        return $this->notificationFailureAddressEmail;
     }
 
     /**
      * @param string $notificationFailureAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNotificationFailureAddressEmail($notificationFailureAddressEmail)
-    {
-      $this->notificationFailureAddressEmail = $notificationFailureAddressEmail;
-      return $this;
+    public function setNotificationFailureAddressEmail($notificationFailureAddressEmail) {
+        $this->notificationFailureAddressEmail = $notificationFailureAddressEmail;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getNotFlatMachinable()
-    {
-      return $this->notFlatMachinable;
+    public function getNotFlatMachinable() {
+        return $this->notFlatMachinable;
     }
 
     /**
      * @param boolean $notFlatMachinable
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setNotFlatMachinable($notFlatMachinable)
-    {
-      $this->notFlatMachinable = $notFlatMachinable;
-      return $this;
+    public function setNotFlatMachinable($notFlatMachinable) {
+        $this->notFlatMachinable = $notFlatMachinable;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getOffshoreFee()
-    {
-      return $this->offshoreFee;
+    public function getOffshoreFee() {
+        return $this->offshoreFee;
     }
 
     /**
      * @param Money $offshoreFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOffshoreFee($offshoreFee)
-    {
-      $this->offshoreFee = $offshoreFee;
-      return $this;
+    public function setOffshoreFee($offshoreFee) {
+        $this->offshoreFee = $offshoreFee;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getOriginatorShipdate()
-    {
-      return $this->originatorShipdate;
+    public function getOriginatorShipdate() {
+        return $this->originatorShipdate;
     }
 
     /**
      * @param date $originatorShipdate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOriginatorShipdate($originatorShipdate)
-    {
-      $this->originatorShipdate = $originatorShipdate;
-      return $this;
+    public function setOriginatorShipdate($originatorShipdate) {
+        $this->originatorShipdate = $originatorShipdate;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getOriginatorTrackingNumber()
-    {
-      return $this->originatorTrackingNumber;
+    public function getOriginatorTrackingNumber() {
+        return $this->originatorTrackingNumber;
     }
 
     /**
      * @param string $originatorTrackingNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOriginatorTrackingNumber($originatorTrackingNumber)
-    {
-      $this->originatorTrackingNumber = $originatorTrackingNumber;
-      return $this;
+    public function setOriginatorTrackingNumber($originatorTrackingNumber) {
+        $this->originatorTrackingNumber = $originatorTrackingNumber;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getOriginAddress()
-    {
-      return $this->originAddress;
+    public function getOriginAddress() {
+        return $this->originAddress;
     }
 
     /**
      * @param NameAddress $originAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOriginAddress($originAddress)
-    {
-      $this->originAddress = $originAddress;
-      return $this;
+    public function setOriginAddress($originAddress) {
+        $this->originAddress = $originAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getOriginDescription()
-    {
-      return $this->originDescription;
+    public function getOriginDescription() {
+        return $this->originDescription;
     }
 
     /**
      * @param string $originDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOriginDescription($originDescription)
-    {
-      $this->originDescription = $originDescription;
-      return $this;
+    public function setOriginDescription($originDescription) {
+        $this->originDescription = $originDescription;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getOtherCharges()
-    {
-      return $this->otherCharges;
+    public function getOtherCharges() {
+        return $this->otherCharges;
     }
 
     /**
      * @param anyType $otherCharges
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOtherCharges($otherCharges)
-    {
-      $this->otherCharges = $otherCharges;
-      return $this;
+    public function setOtherCharges($otherCharges) {
+        $this->otherCharges = $otherCharges;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getOversize()
-    {
-      return $this->oversize;
+    public function getOversize() {
+        return $this->oversize;
     }
 
     /**
      * @param boolean $oversize
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOversize($oversize)
-    {
-      $this->oversize = $oversize;
-      return $this;
+    public function setOversize($oversize) {
+        $this->oversize = $oversize;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getOversizeFee()
-    {
-      return $this->oversizeFee;
+    public function getOversizeFee() {
+        return $this->oversizeFee;
     }
 
     /**
      * @param Money $oversizeFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOversizeFee($oversizeFee)
-    {
-      $this->oversizeFee = $oversizeFee;
-      return $this;
+    public function setOversizeFee($oversizeFee) {
+        $this->oversizeFee = $oversizeFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getOverDimensionFee()
-    {
-      return $this->overDimensionFee;
+    public function getOverDimensionFee() {
+        return $this->overDimensionFee;
     }
 
     /**
      * @param Money $overDimensionFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setOverDimensionFee($overDimensionFee)
-    {
-      $this->overDimensionFee = $overDimensionFee;
-      return $this;
+    public function setOverDimensionFee($overDimensionFee) {
+        $this->overDimensionFee = $overDimensionFee;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getPackageListId()
-    {
-      return $this->packageListId;
+    public function getPackageListId() {
+        return $this->packageListId;
     }
 
     /**
      * @param int $packageListId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPackageListId($packageListId)
-    {
-      $this->packageListId = $packageListId;
-      return $this;
+    public function setPackageListId($packageListId) {
+        $this->packageListId = $packageListId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPackaging()
-    {
-      return $this->packaging;
+    public function getPackaging() {
+        return $this->packaging;
     }
 
     /**
      * @param string $packaging
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPackaging($packaging)
-    {
-      $this->packaging = $packaging;
-      return $this;
+    public function setPackaging($packaging) {
+        $this->packaging = $packaging;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPackagingDescription()
-    {
-      return $this->packagingDescription;
+    public function getPackagingDescription() {
+        return $this->packagingDescription;
     }
 
     /**
      * @param string $packagingDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPackagingDescription($packagingDescription)
-    {
-      $this->packagingDescription = $packagingDescription;
-      return $this;
+    public function setPackagingDescription($packagingDescription) {
+        $this->packagingDescription = $packagingDescription;
+        return $this;
     }
 
     /**
      * @return Weight
      */
-    public function getPackagingTareWeight()
-    {
-      return $this->packagingTareWeight;
+    public function getPackagingTareWeight() {
+        return $this->packagingTareWeight;
     }
 
     /**
      * @param Weight $packagingTareWeight
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPackagingTareWeight($packagingTareWeight)
-    {
-      $this->packagingTareWeight = $packagingTareWeight;
-      return $this;
+    public function setPackagingTareWeight($packagingTareWeight) {
+        $this->packagingTareWeight = $packagingTareWeight;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getPalletFee()
-    {
-      return $this->palletFee;
+    public function getPalletFee() {
+        return $this->palletFee;
     }
 
     /**
      * @param Money $palletFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPalletFee($palletFee)
-    {
-      $this->palletFee = $palletFee;
-      return $this;
+    public function setPalletFee($palletFee) {
+        $this->palletFee = $palletFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPalletJackDelivery()
-    {
-      return $this->palletJackDelivery;
+    public function getPalletJackDelivery() {
+        return $this->palletJackDelivery;
     }
 
     /**
      * @param boolean $palletJackDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPalletJackDelivery($palletJackDelivery)
-    {
-      $this->palletJackDelivery = $palletJackDelivery;
-      return $this;
+    public function setPalletJackDelivery($palletJackDelivery) {
+        $this->palletJackDelivery = $palletJackDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getPalletJackDeliveryFee()
-    {
-      return $this->palletJackDeliveryFee;
+    public function getPalletJackDeliveryFee() {
+        return $this->palletJackDeliveryFee;
     }
 
     /**
      * @param Money $palletJackDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPalletJackDeliveryFee($palletJackDeliveryFee)
-    {
-      $this->palletJackDeliveryFee = $palletJackDeliveryFee;
-      return $this;
+    public function setPalletJackDeliveryFee($palletJackDeliveryFee) {
+        $this->palletJackDeliveryFee = $palletJackDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPalletJackPickup()
-    {
-      return $this->palletJackPickup;
+    public function getPalletJackPickup() {
+        return $this->palletJackPickup;
     }
 
     /**
      * @param boolean $palletJackPickup
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPalletJackPickup($palletJackPickup)
-    {
-      $this->palletJackPickup = $palletJackPickup;
-      return $this;
+    public function setPalletJackPickup($palletJackPickup) {
+        $this->palletJackPickup = $palletJackPickup;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getPalletJackPickupFee()
-    {
-      return $this->palletJackPickupFee;
+    public function getPalletJackPickupFee() {
+        return $this->palletJackPickupFee;
     }
 
     /**
      * @param Money $palletJackPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPalletJackPickupFee($palletJackPickupFee)
-    {
-      $this->palletJackPickupFee = $palletJackPickupFee;
-      return $this;
+    public function setPalletJackPickupFee($palletJackPickupFee) {
+        $this->palletJackPickupFee = $palletJackPickupFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getParcelAirlift()
-    {
-      return $this->parcelAirlift;
+    public function getParcelAirlift() {
+        return $this->parcelAirlift;
     }
 
     /**
      * @param boolean $parcelAirlift
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setParcelAirlift($parcelAirlift)
-    {
-      $this->parcelAirlift = $parcelAirlift;
-      return $this;
+    public function setParcelAirlift($parcelAirlift) {
+        $this->parcelAirlift = $parcelAirlift;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getParcelAirliftFee()
-    {
-      return $this->parcelAirliftFee;
+    public function getParcelAirliftFee() {
+        return $this->parcelAirliftFee;
     }
 
     /**
      * @param Money $parcelAirliftFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setParcelAirliftFee($parcelAirliftFee)
-    {
-      $this->parcelAirliftFee = $parcelAirliftFee;
-      return $this;
+    public function setParcelAirliftFee($parcelAirliftFee) {
+        $this->parcelAirliftFee = $parcelAirliftFee;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getParentContainer()
-    {
-      return $this->parentContainer;
+    public function getParentContainer() {
+        return $this->parentContainer;
     }
 
     /**
      * @param DataDictionary $parentContainer
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setParentContainer($parentContainer)
-    {
-      $this->parentContainer = $parentContainer;
-      return $this;
+    public function setParentContainer($parentContainer) {
+        $this->parentContainer = $parentContainer;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getParentContainerCode()
-    {
-      return $this->parentContainerCode;
+    public function getParentContainerCode() {
+        return $this->parentContainerCode;
     }
 
     /**
      * @param string $parentContainerCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setParentContainerCode($parentContainerCode)
-    {
-      $this->parentContainerCode = $parentContainerCode;
-      return $this;
+    public function setParentContainerCode($parentContainerCode) {
+        $this->parentContainerCode = $parentContainerCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPartiesRelated()
-    {
-      return $this->partiesRelated;
+    public function getPartiesRelated() {
+        return $this->partiesRelated;
     }
 
     /**
      * @param boolean $partiesRelated
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPartiesRelated($partiesRelated)
-    {
-      $this->partiesRelated = $partiesRelated;
-      return $this;
+    public function setPartiesRelated($partiesRelated) {
+        $this->partiesRelated = $partiesRelated;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPerishable()
-    {
-      return $this->perishable;
+    public function getPerishable() {
+        return $this->perishable;
     }
 
     /**
      * @param boolean $perishable
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPerishable($perishable)
-    {
-      $this->perishable = $perishable;
-      return $this;
+    public function setPerishable($perishable) {
+        $this->perishable = $perishable;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPharmacyDelivery()
-    {
-      return $this->pharmacyDelivery;
+    public function getPharmacyDelivery() {
+        return $this->pharmacyDelivery;
     }
 
     /**
      * @param boolean $pharmacyDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPharmacyDelivery($pharmacyDelivery)
-    {
-      $this->pharmacyDelivery = $pharmacyDelivery;
-      return $this;
+    public function setPharmacyDelivery($pharmacyDelivery) {
+        $this->pharmacyDelivery = $pharmacyDelivery;
+        return $this;
     }
 
     /**
      * @return time
      */
-    public function getPickupTime()
-    {
-      return $this->pickupTime;
+    public function getPickupTime() {
+        return $this->pickupTime;
     }
 
     /**
      * @param time $pickupTime
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPickupTime($pickupTime)
-    {
-      $this->pickupTime = $pickupTime;
-      return $this;
+    public function setPickupTime($pickupTime) {
+        $this->pickupTime = $pickupTime;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getPieceCount()
-    {
-      return $this->pieceCount;
+    public function getPieceCount() {
+        return $this->pieceCount;
     }
 
     /**
      * @param int $pieceCount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPieceCount($pieceCount)
-    {
-      $this->pieceCount = $pieceCount;
-      return $this;
+    public function setPieceCount($pieceCount) {
+        $this->pieceCount = $pieceCount;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getPieceCountFee()
-    {
-      return $this->pieceCountFee;
+    public function getPieceCountFee() {
+        return $this->pieceCountFee;
     }
 
     /**
      * @param Money $pieceCountFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPieceCountFee($pieceCountFee)
-    {
-      $this->pieceCountFee = $pieceCountFee;
-      return $this;
+    public function setPieceCountFee($pieceCountFee) {
+        $this->pieceCountFee = $pieceCountFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPoaIncluded()
-    {
-      return $this->poaIncluded;
+    public function getPoaIncluded() {
+        return $this->poaIncluded;
     }
 
     /**
      * @param boolean $poaIncluded
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPoaIncluded($poaIncluded)
-    {
-      $this->poaIncluded = $poaIncluded;
-      return $this;
+    public function setPoaIncluded($poaIncluded) {
+        $this->poaIncluded = $poaIncluded;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPortOfEntry()
-    {
-      return $this->portOfEntry;
+    public function getPortOfEntry() {
+        return $this->portOfEntry;
     }
 
     /**
      * @param string $portOfEntry
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPortOfEntry($portOfEntry)
-    {
-      $this->portOfEntry = $portOfEntry;
-      return $this;
+    public function setPortOfEntry($portOfEntry) {
+        $this->portOfEntry = $portOfEntry;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getPreAlertNotificationAddress()
-    {
-      return $this->preAlertNotificationAddress;
+    public function getPreAlertNotificationAddress() {
+        return $this->preAlertNotificationAddress;
     }
 
     /**
      * @param NameAddress $preAlertNotificationAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationAddress($preAlertNotificationAddress)
-    {
-      $this->preAlertNotificationAddress = $preAlertNotificationAddress;
-      return $this;
+    public function setPreAlertNotificationAddress($preAlertNotificationAddress) {
+        $this->preAlertNotificationAddress = $preAlertNotificationAddress;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreAlertNotificationAddressEmail()
-    {
-      return $this->preAlertNotificationAddressEmail;
+    public function getPreAlertNotificationAddressEmail() {
+        return $this->preAlertNotificationAddressEmail;
     }
 
     /**
      * @param string $preAlertNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationAddressEmail($preAlertNotificationAddressEmail)
-    {
-      $this->preAlertNotificationAddressEmail = $preAlertNotificationAddressEmail;
-      return $this;
+    public function setPreAlertNotificationAddressEmail($preAlertNotificationAddressEmail) {
+        $this->preAlertNotificationAddressEmail = $preAlertNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreAlertNotificationDescription()
-    {
-      return $this->preAlertNotificationDescription;
+    public function getPreAlertNotificationDescription() {
+        return $this->preAlertNotificationDescription;
     }
 
     /**
      * @param string $preAlertNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationDescription($preAlertNotificationDescription)
-    {
-      $this->preAlertNotificationDescription = $preAlertNotificationDescription;
-      return $this;
+    public function setPreAlertNotificationDescription($preAlertNotificationDescription) {
+        $this->preAlertNotificationDescription = $preAlertNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPreAlertNotificationEmail()
-    {
-      return $this->preAlertNotificationEmail;
+    public function getPreAlertNotificationEmail() {
+        return $this->preAlertNotificationEmail;
     }
 
     /**
      * @param boolean $preAlertNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationEmail($preAlertNotificationEmail)
-    {
-      $this->preAlertNotificationEmail = $preAlertNotificationEmail;
-      return $this;
+    public function setPreAlertNotificationEmail($preAlertNotificationEmail) {
+        $this->preAlertNotificationEmail = $preAlertNotificationEmail;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getPreAlertNotificationLocale()
-    {
-      return $this->preAlertNotificationLocale;
+    public function getPreAlertNotificationLocale() {
+        return $this->preAlertNotificationLocale;
     }
 
     /**
      * @param language $preAlertNotificationLocale
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationLocale($preAlertNotificationLocale)
-    {
-      $this->preAlertNotificationLocale = $preAlertNotificationLocale;
-      return $this;
+    public function setPreAlertNotificationLocale($preAlertNotificationLocale) {
+        $this->preAlertNotificationLocale = $preAlertNotificationLocale;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPreAlertNotificationPhone()
-    {
-      return $this->preAlertNotificationPhone;
+    public function getPreAlertNotificationPhone() {
+        return $this->preAlertNotificationPhone;
     }
 
     /**
      * @param boolean $preAlertNotificationPhone
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationPhone($preAlertNotificationPhone)
-    {
-      $this->preAlertNotificationPhone = $preAlertNotificationPhone;
-      return $this;
+    public function setPreAlertNotificationPhone($preAlertNotificationPhone) {
+        $this->preAlertNotificationPhone = $preAlertNotificationPhone;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreAlertNotificationSenderName()
-    {
-      return $this->preAlertNotificationSenderName;
+    public function getPreAlertNotificationSenderName() {
+        return $this->preAlertNotificationSenderName;
     }
 
     /**
      * @param string $preAlertNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationSenderName($preAlertNotificationSenderName)
-    {
-      $this->preAlertNotificationSenderName = $preAlertNotificationSenderName;
-      return $this;
+    public function setPreAlertNotificationSenderName($preAlertNotificationSenderName) {
+        $this->preAlertNotificationSenderName = $preAlertNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPreAlertNotificationSms()
-    {
-      return $this->preAlertNotificationSms;
+    public function getPreAlertNotificationSms() {
+        return $this->preAlertNotificationSms;
     }
 
     /**
      * @param boolean $preAlertNotificationSms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationSms($preAlertNotificationSms)
-    {
-      $this->preAlertNotificationSms = $preAlertNotificationSms;
-      return $this;
+    public function setPreAlertNotificationSms($preAlertNotificationSms) {
+        $this->preAlertNotificationSms = $preAlertNotificationSms;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreAlertNotificationSubjectText()
-    {
-      return $this->preAlertNotificationSubjectText;
+    public function getPreAlertNotificationSubjectText() {
+        return $this->preAlertNotificationSubjectText;
     }
 
     /**
      * @param string $preAlertNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPreAlertNotificationSubjectText($preAlertNotificationSubjectText)
-    {
-      $this->preAlertNotificationSubjectText = $preAlertNotificationSubjectText;
-      return $this;
+    public function setPreAlertNotificationSubjectText($preAlertNotificationSubjectText) {
+        $this->preAlertNotificationSubjectText = $preAlertNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getPriorDeliveryNotificationConsignee()
-    {
-      return $this->priorDeliveryNotificationConsignee;
+    public function getPriorDeliveryNotificationConsignee() {
+        return $this->priorDeliveryNotificationConsignee;
     }
 
     /**
      * @param boolean $priorDeliveryNotificationConsignee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPriorDeliveryNotificationConsignee($priorDeliveryNotificationConsignee)
-    {
-      $this->priorDeliveryNotificationConsignee = $priorDeliveryNotificationConsignee;
-      return $this;
+    public function setPriorDeliveryNotificationConsignee($priorDeliveryNotificationConsignee) {
+        $this->priorDeliveryNotificationConsignee = $priorDeliveryNotificationConsignee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getPriorDeliveryNotificationFee()
-    {
-      return $this->priorDeliveryNotificationFee;
+    public function getPriorDeliveryNotificationFee() {
+        return $this->priorDeliveryNotificationFee;
     }
 
     /**
      * @param Money $priorDeliveryNotificationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setPriorDeliveryNotificationFee($priorDeliveryNotificationFee)
-    {
-      $this->priorDeliveryNotificationFee = $priorDeliveryNotificationFee;
-      return $this;
+    public function setPriorDeliveryNotificationFee($priorDeliveryNotificationFee) {
+        $this->priorDeliveryNotificationFee = $priorDeliveryNotificationFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProactiveRecovery()
-    {
-      return $this->proactiveRecovery;
+    public function getProactiveRecovery() {
+        return $this->proactiveRecovery;
     }
 
     /**
      * @param boolean $proactiveRecovery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProactiveRecovery($proactiveRecovery)
-    {
-      $this->proactiveRecovery = $proactiveRecovery;
-      return $this;
+    public function setProactiveRecovery($proactiveRecovery) {
+        $this->proactiveRecovery = $proactiveRecovery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getProactiveRecoveryFee()
-    {
-      return $this->proactiveRecoveryFee;
+    public function getProactiveRecoveryFee() {
+        return $this->proactiveRecoveryFee;
     }
 
     /**
      * @param Money $proactiveRecoveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProactiveRecoveryFee($proactiveRecoveryFee)
-    {
-      $this->proactiveRecoveryFee = $proactiveRecoveryFee;
-      return $this;
+    public function setProactiveRecoveryFee($proactiveRecoveryFee) {
+        $this->proactiveRecoveryFee = $proactiveRecoveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProof()
-    {
-      return $this->proof;
+    public function getProof() {
+        return $this->proof;
     }
 
     /**
      * @param boolean $proof
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProof($proof)
-    {
-      $this->proof = $proof;
-      return $this;
+    public function setProof($proof) {
+        $this->proof = $proof;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getProofFee()
-    {
-      return $this->proofFee;
+    public function getProofFee() {
+        return $this->proofFee;
     }
 
     /**
      * @param Money $proofFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofFee($proofFee)
-    {
-      $this->proofFee = $proofFee;
-      return $this;
+    public function setProofFee($proofFee) {
+        $this->proofFee = $proofFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getProofNumber()
-    {
-      return $this->proofNumber;
+    public function getProofNumber() {
+        return $this->proofNumber;
     }
 
     /**
      * @param string $proofNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofNumber($proofNumber)
-    {
-      $this->proofNumber = $proofNumber;
-      return $this;
+    public function setProofNumber($proofNumber) {
+        $this->proofNumber = $proofNumber;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProofRequireSignature()
-    {
-      return $this->proofRequireSignature;
+    public function getProofRequireSignature() {
+        return $this->proofRequireSignature;
     }
 
     /**
      * @param boolean $proofRequireSignature
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofRequireSignature($proofRequireSignature)
-    {
-      $this->proofRequireSignature = $proofRequireSignature;
-      return $this;
+    public function setProofRequireSignature($proofRequireSignature) {
+        $this->proofRequireSignature = $proofRequireSignature;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProofRequireSignatureAdult()
-    {
-      return $this->proofRequireSignatureAdult;
+    public function getProofRequireSignatureAdult() {
+        return $this->proofRequireSignatureAdult;
     }
 
     /**
      * @param boolean $proofRequireSignatureAdult
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofRequireSignatureAdult($proofRequireSignatureAdult)
-    {
-      $this->proofRequireSignatureAdult = $proofRequireSignatureAdult;
-      return $this;
+    public function setProofRequireSignatureAdult($proofRequireSignatureAdult) {
+        $this->proofRequireSignatureAdult = $proofRequireSignatureAdult;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProofRequireSignatureConsignee()
-    {
-      return $this->proofRequireSignatureConsignee;
+    public function getProofRequireSignatureConsignee() {
+        return $this->proofRequireSignatureConsignee;
     }
 
     /**
      * @param boolean $proofRequireSignatureConsignee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofRequireSignatureConsignee($proofRequireSignatureConsignee)
-    {
-      $this->proofRequireSignatureConsignee = $proofRequireSignatureConsignee;
-      return $this;
+    public function setProofRequireSignatureConsignee($proofRequireSignatureConsignee) {
+        $this->proofRequireSignatureConsignee = $proofRequireSignatureConsignee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getProofRequireSignatureFee()
-    {
-      return $this->proofRequireSignatureFee;
+    public function getProofRequireSignatureFee() {
+        return $this->proofRequireSignatureFee;
     }
 
     /**
      * @param Money $proofRequireSignatureFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofRequireSignatureFee($proofRequireSignatureFee)
-    {
-      $this->proofRequireSignatureFee = $proofRequireSignatureFee;
-      return $this;
+    public function setProofRequireSignatureFee($proofRequireSignatureFee) {
+        $this->proofRequireSignatureFee = $proofRequireSignatureFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProofReturnOfDocuments()
-    {
-      return $this->proofReturnOfDocuments;
+    public function getProofReturnOfDocuments() {
+        return $this->proofReturnOfDocuments;
     }
 
     /**
      * @param boolean $proofReturnOfDocuments
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofReturnOfDocuments($proofReturnOfDocuments)
-    {
-      $this->proofReturnOfDocuments = $proofReturnOfDocuments;
-      return $this;
+    public function setProofReturnOfDocuments($proofReturnOfDocuments) {
+        $this->proofReturnOfDocuments = $proofReturnOfDocuments;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProofSignatureWaiver()
-    {
-      return $this->proofSignatureWaiver;
+    public function getProofSignatureWaiver() {
+        return $this->proofSignatureWaiver;
     }
 
     /**
      * @param boolean $proofSignatureWaiver
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofSignatureWaiver($proofSignatureWaiver)
-    {
-      $this->proofSignatureWaiver = $proofSignatureWaiver;
-      return $this;
+    public function setProofSignatureWaiver($proofSignatureWaiver) {
+        $this->proofSignatureWaiver = $proofSignatureWaiver;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getProofUseAlternateNumber()
-    {
-      return $this->proofUseAlternateNumber;
+    public function getProofUseAlternateNumber() {
+        return $this->proofUseAlternateNumber;
     }
 
     /**
      * @param boolean $proofUseAlternateNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setProofUseAlternateNumber($proofUseAlternateNumber)
-    {
-      $this->proofUseAlternateNumber = $proofUseAlternateNumber;
-      return $this;
+    public function setProofUseAlternateNumber($proofUseAlternateNumber) {
+        $this->proofUseAlternateNumber = $proofUseAlternateNumber;
+        return $this;
     }
 
     /**
      * @return Weight
      */
-    public function getRatedWeight()
-    {
-      return $this->ratedWeight;
+    public function getRatedWeight() {
+        return $this->ratedWeight;
     }
 
     /**
      * @param Weight $ratedWeight
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRatedWeight($ratedWeight)
-    {
-      $this->ratedWeight = $ratedWeight;
-      return $this;
+    public function setRatedWeight($ratedWeight) {
+        $this->ratedWeight = $ratedWeight;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getRateCode()
-    {
-      return $this->rateCode;
+    public function getRateCode() {
+        return $this->rateCode;
     }
 
     /**
      * @param string $rateCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRateCode($rateCode)
-    {
-      $this->rateCode = $rateCode;
-      return $this;
+    public function setRateCode($rateCode) {
+        $this->rateCode = $rateCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getRegisteredMail()
-    {
-      return $this->registeredMail;
+    public function getRegisteredMail() {
+        return $this->registeredMail;
     }
 
     /**
      * @param boolean $registeredMail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRegisteredMail($registeredMail)
-    {
-      $this->registeredMail = $registeredMail;
-      return $this;
+    public function setRegisteredMail($registeredMail) {
+        $this->registeredMail = $registeredMail;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getRegisteredMailFee()
-    {
-      return $this->registeredMailFee;
+    public function getRegisteredMailFee() {
+        return $this->registeredMailFee;
     }
 
     /**
      * @param Money $registeredMailFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRegisteredMailFee($registeredMailFee)
-    {
-      $this->registeredMailFee = $registeredMailFee;
-      return $this;
+    public function setRegisteredMailFee($registeredMailFee) {
+        $this->registeredMailFee = $registeredMailFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getRemoteOriginFee()
-    {
-      return $this->remoteOriginFee;
+    public function getRemoteOriginFee() {
+        return $this->remoteOriginFee;
     }
 
     /**
      * @param Money $remoteOriginFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRemoteOriginFee($remoteOriginFee)
-    {
-      $this->remoteOriginFee = $remoteOriginFee;
-      return $this;
+    public function setRemoteOriginFee($remoteOriginFee) {
+        $this->remoteOriginFee = $remoteOriginFee;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getRemotePassthrough()
-    {
-      return $this->remotePassthrough;
+    public function getRemotePassthrough() {
+        return $this->remotePassthrough;
     }
 
     /**
      * @param anyType $remotePassthrough
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRemotePassthrough($remotePassthrough)
-    {
-      $this->remotePassthrough = $remotePassthrough;
-      return $this;
+    public function setRemotePassthrough($remotePassthrough) {
+        $this->remotePassthrough = $remotePassthrough;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getResidentialDeliveryFee()
-    {
-      return $this->residentialDeliveryFee;
+    public function getResidentialDeliveryFee() {
+        return $this->residentialDeliveryFee;
     }
 
     /**
      * @param Money $residentialDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setResidentialDeliveryFee($residentialDeliveryFee)
-    {
-      $this->residentialDeliveryFee = $residentialDeliveryFee;
-      return $this;
+    public function setResidentialDeliveryFee($residentialDeliveryFee) {
+        $this->residentialDeliveryFee = $residentialDeliveryFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReturnAccount()
-    {
-      return $this->returnAccount;
+    public function getReturnAccount() {
+        return $this->returnAccount;
     }
 
     /**
      * @param string $returnAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnAccount($returnAccount)
-    {
-      $this->returnAccount = $returnAccount;
-      return $this;
+    public function setReturnAccount($returnAccount) {
+        $this->returnAccount = $returnAccount;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getReturnAddress()
-    {
-      return $this->returnAddress;
+    public function getReturnAddress() {
+        return $this->returnAddress;
     }
 
     /**
      * @param NameAddress $returnAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnAddress($returnAddress)
-    {
-      $this->returnAddress = $returnAddress;
-      return $this;
+    public function setReturnAddress($returnAddress) {
+        $this->returnAddress = $returnAddress;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getReturnAddressMethod()
-    {
-      return $this->returnAddressMethod;
+    public function getReturnAddressMethod() {
+        return $this->returnAddressMethod;
     }
 
     /**
      * @param enumItem $returnAddressMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnAddressMethod($returnAddressMethod)
-    {
-      $this->returnAddressMethod = $returnAddressMethod;
-      return $this;
+    public function setReturnAddressMethod($returnAddressMethod) {
+        $this->returnAddressMethod = $returnAddressMethod;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getReturnDelivery()
-    {
-      return $this->returnDelivery;
+    public function getReturnDelivery() {
+        return $this->returnDelivery;
     }
 
     /**
      * @param boolean $returnDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDelivery($returnDelivery)
-    {
-      $this->returnDelivery = $returnDelivery;
-      return $this;
+    public function setReturnDelivery($returnDelivery) {
+        $this->returnDelivery = $returnDelivery;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReturnDeliveryAddressEmail()
-    {
-      return $this->returnDeliveryAddressEmail;
+    public function getReturnDeliveryAddressEmail() {
+        return $this->returnDeliveryAddressEmail;
     }
 
     /**
      * @param string $returnDeliveryAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryAddressEmail($returnDeliveryAddressEmail)
-    {
-      $this->returnDeliveryAddressEmail = $returnDeliveryAddressEmail;
-      return $this;
+    public function setReturnDeliveryAddressEmail($returnDeliveryAddressEmail) {
+        $this->returnDeliveryAddressEmail = $returnDeliveryAddressEmail;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getReturnDeliveryAddressEmailLocale()
-    {
-      return $this->returnDeliveryAddressEmailLocale;
+    public function getReturnDeliveryAddressEmailLocale() {
+        return $this->returnDeliveryAddressEmailLocale;
     }
 
     /**
      * @param language $returnDeliveryAddressEmailLocale
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryAddressEmailLocale($returnDeliveryAddressEmailLocale)
-    {
-      $this->returnDeliveryAddressEmailLocale = $returnDeliveryAddressEmailLocale;
-      return $this;
+    public function setReturnDeliveryAddressEmailLocale($returnDeliveryAddressEmailLocale) {
+        $this->returnDeliveryAddressEmailLocale = $returnDeliveryAddressEmailLocale;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getReturnDeliveryFee()
-    {
-      return $this->returnDeliveryFee;
+    public function getReturnDeliveryFee() {
+        return $this->returnDeliveryFee;
     }
 
     /**
      * @param Money $returnDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryFee($returnDeliveryFee)
-    {
-      $this->returnDeliveryFee = $returnDeliveryFee;
-      return $this;
+    public function setReturnDeliveryFee($returnDeliveryFee) {
+        $this->returnDeliveryFee = $returnDeliveryFee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getReturnDeliveryMethod()
-    {
-      return $this->returnDeliveryMethod;
+    public function getReturnDeliveryMethod() {
+        return $this->returnDeliveryMethod;
     }
 
     /**
      * @param enumItem $returnDeliveryMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryMethod($returnDeliveryMethod)
-    {
-      $this->returnDeliveryMethod = $returnDeliveryMethod;
-      return $this;
+    public function setReturnDeliveryMethod($returnDeliveryMethod) {
+        $this->returnDeliveryMethod = $returnDeliveryMethod;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getReturnDeliveryNotificationAddress()
-    {
-      return $this->returnDeliveryNotificationAddress;
+    public function getReturnDeliveryNotificationAddress() {
+        return $this->returnDeliveryNotificationAddress;
     }
 
     /**
      * @param NameAddress $returnDeliveryNotificationAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationAddress($returnDeliveryNotificationAddress)
-    {
-      $this->returnDeliveryNotificationAddress = $returnDeliveryNotificationAddress;
-      return $this;
+    public function setReturnDeliveryNotificationAddress($returnDeliveryNotificationAddress) {
+        $this->returnDeliveryNotificationAddress = $returnDeliveryNotificationAddress;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getReturnDeliveryNotificationAddress2()
-    {
-      return $this->returnDeliveryNotificationAddress2;
+    public function getReturnDeliveryNotificationAddress2() {
+        return $this->returnDeliveryNotificationAddress2;
     }
 
     /**
      * @param NameAddress $returnDeliveryNotificationAddress2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationAddress2($returnDeliveryNotificationAddress2)
-    {
-      $this->returnDeliveryNotificationAddress2 = $returnDeliveryNotificationAddress2;
-      return $this;
+    public function setReturnDeliveryNotificationAddress2($returnDeliveryNotificationAddress2) {
+        $this->returnDeliveryNotificationAddress2 = $returnDeliveryNotificationAddress2;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReturnDeliveryNotificationAddressEmail()
-    {
-      return $this->returnDeliveryNotificationAddressEmail;
+    public function getReturnDeliveryNotificationAddressEmail() {
+        return $this->returnDeliveryNotificationAddressEmail;
     }
 
     /**
      * @param string $returnDeliveryNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationAddressEmail($returnDeliveryNotificationAddressEmail)
-    {
-      $this->returnDeliveryNotificationAddressEmail = $returnDeliveryNotificationAddressEmail;
-      return $this;
+    public function setReturnDeliveryNotificationAddressEmail($returnDeliveryNotificationAddressEmail) {
+        $this->returnDeliveryNotificationAddressEmail = $returnDeliveryNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReturnDeliveryNotificationDescription()
-    {
-      return $this->returnDeliveryNotificationDescription;
+    public function getReturnDeliveryNotificationDescription() {
+        return $this->returnDeliveryNotificationDescription;
     }
 
     /**
      * @param string $returnDeliveryNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationDescription($returnDeliveryNotificationDescription)
-    {
-      $this->returnDeliveryNotificationDescription = $returnDeliveryNotificationDescription;
-      return $this;
+    public function setReturnDeliveryNotificationDescription($returnDeliveryNotificationDescription) {
+        $this->returnDeliveryNotificationDescription = $returnDeliveryNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getReturnDeliveryNotificationEmail()
-    {
-      return $this->returnDeliveryNotificationEmail;
+    public function getReturnDeliveryNotificationEmail() {
+        return $this->returnDeliveryNotificationEmail;
     }
 
     /**
      * @param boolean $returnDeliveryNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationEmail($returnDeliveryNotificationEmail)
-    {
-      $this->returnDeliveryNotificationEmail = $returnDeliveryNotificationEmail;
-      return $this;
+    public function setReturnDeliveryNotificationEmail($returnDeliveryNotificationEmail) {
+        $this->returnDeliveryNotificationEmail = $returnDeliveryNotificationEmail;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getReturnDeliveryNotificationFax()
-    {
-      return $this->returnDeliveryNotificationFax;
+    public function getReturnDeliveryNotificationFax() {
+        return $this->returnDeliveryNotificationFax;
     }
 
     /**
      * @param boolean $returnDeliveryNotificationFax
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationFax($returnDeliveryNotificationFax)
-    {
-      $this->returnDeliveryNotificationFax = $returnDeliveryNotificationFax;
-      return $this;
+    public function setReturnDeliveryNotificationFax($returnDeliveryNotificationFax) {
+        $this->returnDeliveryNotificationFax = $returnDeliveryNotificationFax;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getReturnDeliveryNotificationFee()
-    {
-      return $this->returnDeliveryNotificationFee;
+    public function getReturnDeliveryNotificationFee() {
+        return $this->returnDeliveryNotificationFee;
     }
 
     /**
      * @param Money $returnDeliveryNotificationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationFee($returnDeliveryNotificationFee)
-    {
-      $this->returnDeliveryNotificationFee = $returnDeliveryNotificationFee;
-      return $this;
+    public function setReturnDeliveryNotificationFee($returnDeliveryNotificationFee) {
+        $this->returnDeliveryNotificationFee = $returnDeliveryNotificationFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReturnDeliveryNotificationSenderName()
-    {
-      return $this->returnDeliveryNotificationSenderName;
+    public function getReturnDeliveryNotificationSenderName() {
+        return $this->returnDeliveryNotificationSenderName;
     }
 
     /**
      * @param string $returnDeliveryNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationSenderName($returnDeliveryNotificationSenderName)
-    {
-      $this->returnDeliveryNotificationSenderName = $returnDeliveryNotificationSenderName;
-      return $this;
+    public function setReturnDeliveryNotificationSenderName($returnDeliveryNotificationSenderName) {
+        $this->returnDeliveryNotificationSenderName = $returnDeliveryNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getReturnDeliveryNotificationSubjectText()
-    {
-      return $this->returnDeliveryNotificationSubjectText;
+    public function getReturnDeliveryNotificationSubjectText() {
+        return $this->returnDeliveryNotificationSubjectText;
     }
 
     /**
      * @param string $returnDeliveryNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnDeliveryNotificationSubjectText($returnDeliveryNotificationSubjectText)
-    {
-      $this->returnDeliveryNotificationSubjectText = $returnDeliveryNotificationSubjectText;
-      return $this;
+    public function setReturnDeliveryNotificationSubjectText($returnDeliveryNotificationSubjectText) {
+        $this->returnDeliveryNotificationSubjectText = $returnDeliveryNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getReturnTrackingRetentionDays()
-    {
-      return $this->returnTrackingRetentionDays;
+    public function getReturnTrackingRetentionDays() {
+        return $this->returnTrackingRetentionDays;
     }
 
     /**
      * @param int $returnTrackingRetentionDays
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setReturnTrackingRetentionDays($returnTrackingRetentionDays)
-    {
-      $this->returnTrackingRetentionDays = $returnTrackingRetentionDays;
-      return $this;
+    public function setReturnTrackingRetentionDays($returnTrackingRetentionDays) {
+        $this->returnTrackingRetentionDays = $returnTrackingRetentionDays;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getRoutedExportTransaction()
-    {
-      return $this->routedExportTransaction;
+    public function getRoutedExportTransaction() {
+        return $this->routedExportTransaction;
     }
 
     /**
      * @param boolean $routedExportTransaction
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRoutedExportTransaction($routedExportTransaction)
-    {
-      $this->routedExportTransaction = $routedExportTransaction;
-      return $this;
+    public function setRoutedExportTransaction($routedExportTransaction) {
+        $this->routedExportTransaction = $routedExportTransaction;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getRoutingCode()
-    {
-      return $this->routingCode;
+    public function getRoutingCode() {
+        return $this->routingCode;
     }
 
     /**
      * @param string $routingCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRoutingCode($routingCode)
-    {
-      $this->routingCode = $routingCode;
-      return $this;
+    public function setRoutingCode($routingCode) {
+        $this->routingCode = $routingCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getRoutingCode2()
-    {
-      return $this->routingCode2;
+    public function getRoutingCode2() {
+        return $this->routingCode2;
     }
 
     /**
      * @param string $routingCode2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRoutingCode2($routingCode2)
-    {
-      $this->routingCode2 = $routingCode2;
-      return $this;
+    public function setRoutingCode2($routingCode2) {
+        $this->routingCode2 = $routingCode2;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getRoutingCode3()
-    {
-      return $this->routingCode3;
+    public function getRoutingCode3() {
+        return $this->routingCode3;
     }
 
     /**
      * @param string $routingCode3
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRoutingCode3($routingCode3)
-    {
-      $this->routingCode3 = $routingCode3;
-      return $this;
+    public function setRoutingCode3($routingCode3) {
+        $this->routingCode3 = $routingCode3;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getRoutingCode4()
-    {
-      return $this->routingCode4;
+    public function getRoutingCode4() {
+        return $this->routingCode4;
     }
 
     /**
      * @param string $routingCode4
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRoutingCode4($routingCode4)
-    {
-      $this->routingCode4 = $routingCode4;
-      return $this;
+    public function setRoutingCode4($routingCode4) {
+        $this->routingCode4 = $routingCode4;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getRoutingCode5()
-    {
-      return $this->routingCode5;
+    public function getRoutingCode5() {
+        return $this->routingCode5;
     }
 
     /**
      * @param string $routingCode5
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setRoutingCode5($routingCode5)
-    {
-      $this->routingCode5 = $routingCode5;
-      return $this;
+    public function setRoutingCode5($routingCode5) {
+        $this->routingCode5 = $routingCode5;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSackLevel()
-    {
-      return $this->sackLevel;
+    public function getSackLevel() {
+        return $this->sackLevel;
     }
 
     /**
      * @param string $sackLevel
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSackLevel($sackLevel)
-    {
-      $this->sackLevel = $sackLevel;
-      return $this;
+    public function setSackLevel($sackLevel) {
+        $this->sackLevel = $sackLevel;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSackZip()
-    {
-      return $this->sackZip;
+    public function getSackZip() {
+        return $this->sackZip;
     }
 
     /**
      * @param string $sackZip
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSackZip($sackZip)
-    {
-      $this->sackZip = $sackZip;
-      return $this;
+    public function setSackZip($sackZip) {
+        $this->sackZip = $sackZip;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSaturdayDelivery()
-    {
-      return $this->saturdayDelivery;
+    public function getSaturdayDelivery() {
+        return $this->saturdayDelivery;
     }
 
     /**
      * @param boolean $saturdayDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSaturdayDelivery($saturdayDelivery)
-    {
-      $this->saturdayDelivery = $saturdayDelivery;
-      return $this;
+    public function setSaturdayDelivery($saturdayDelivery) {
+        $this->saturdayDelivery = $saturdayDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSaturdayDeliveryFee()
-    {
-      return $this->saturdayDeliveryFee;
+    public function getSaturdayDeliveryFee() {
+        return $this->saturdayDeliveryFee;
     }
 
     /**
      * @param Money $saturdayDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSaturdayDeliveryFee($saturdayDeliveryFee)
-    {
-      $this->saturdayDeliveryFee = $saturdayDeliveryFee;
-      return $this;
+    public function setSaturdayDeliveryFee($saturdayDeliveryFee) {
+        $this->saturdayDeliveryFee = $saturdayDeliveryFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSaturdayPickupFee()
-    {
-      return $this->saturdayPickupFee;
+    public function getSaturdayPickupFee() {
+        return $this->saturdayPickupFee;
     }
 
     /**
      * @param Money $saturdayPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSaturdayPickupFee($saturdayPickupFee)
-    {
-      $this->saturdayPickupFee = $saturdayPickupFee;
-      return $this;
+    public function setSaturdayPickupFee($saturdayPickupFee) {
+        $this->saturdayPickupFee = $saturdayPickupFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSecurity()
-    {
-      return $this->security;
+    public function getSecurity() {
+        return $this->security;
     }
 
     /**
      * @param boolean $security
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSecurity($security)
-    {
-      $this->security = $security;
-      return $this;
+    public function setSecurity($security) {
+        $this->security = $security;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSecurityFee()
-    {
-      return $this->securityFee;
+    public function getSecurityFee() {
+        return $this->securityFee;
     }
 
     /**
      * @param Money $securityFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSecurityFee($securityFee)
-    {
-      $this->securityFee = $securityFee;
-      return $this;
+    public function setSecurityFee($securityFee) {
+        $this->securityFee = $securityFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSedExemptionNumber()
-    {
-      return $this->sedExemptionNumber;
+    public function getSedExemptionNumber() {
+        return $this->sedExemptionNumber;
     }
 
     /**
      * @param string $sedExemptionNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSedExemptionNumber($sedExemptionNumber)
-    {
-      $this->sedExemptionNumber = $sedExemptionNumber;
-      return $this;
+    public function setSedExemptionNumber($sedExemptionNumber) {
+        $this->sedExemptionNumber = $sedExemptionNumber;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getSedMethod()
-    {
-      return $this->sedMethod;
+    public function getSedMethod() {
+        return $this->sedMethod;
     }
 
     /**
      * @param enumItem $sedMethod
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSedMethod($sedMethod)
-    {
-      $this->sedMethod = $sedMethod;
-      return $this;
+    public function setSedMethod($sedMethod) {
+        $this->sedMethod = $sedMethod;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSerialNumber()
-    {
-      return $this->serialNumber;
+    public function getSerialNumber() {
+        return $this->serialNumber;
     }
 
     /**
      * @param string $serialNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSerialNumber($serialNumber)
-    {
-      $this->serialNumber = $serialNumber;
-      return $this;
+    public function setSerialNumber($serialNumber) {
+        $this->serialNumber = $serialNumber;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getService()
-    {
-      return $this->service;
+    public function getService() {
+        return $this->service;
     }
 
     /**
      * @param string $service
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setService($service)
-    {
-      $this->service = $service;
-      return $this;
+    public function setService($service) {
+        $this->service = $service;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getShipdate()
-    {
-      return $this->shipdate;
+    public function getShipdate() {
+        return $this->shipdate;
     }
 
     /**
      * @param date $shipdate
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipdate($shipdate)
-    {
-      $this->shipdate = $shipdate;
-      return $this;
+    public function setShipdate($shipdate) {
+        $this->shipdate = $shipdate;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipper()
-    {
-      return $this->shipper;
+    public function getShipper() {
+        return $this->shipper;
     }
 
     /**
      * @param string $shipper
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipper($shipper)
-    {
-      $this->shipper = $shipper;
-      return $this;
+    public function setShipper($shipper) {
+        $this->shipper = $shipper;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipperReference()
-    {
-      return $this->shipperReference;
+    public function getShipperReference() {
+        return $this->shipperReference;
     }
 
     /**
      * @param string $shipperReference
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipperReference($shipperReference)
-    {
-      $this->shipperReference = $shipperReference;
-      return $this;
+    public function setShipperReference($shipperReference) {
+        $this->shipperReference = $shipperReference;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getShipNotificationAddress()
-    {
-      return $this->shipNotificationAddress;
+    public function getShipNotificationAddress() {
+        return $this->shipNotificationAddress;
     }
 
     /**
      * @param NameAddress $shipNotificationAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationAddress($shipNotificationAddress)
-    {
-      $this->shipNotificationAddress = $shipNotificationAddress;
-      return $this;
+    public function setShipNotificationAddress($shipNotificationAddress) {
+        $this->shipNotificationAddress = $shipNotificationAddress;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getShipNotificationAddress2()
-    {
-      return $this->shipNotificationAddress2;
+    public function getShipNotificationAddress2() {
+        return $this->shipNotificationAddress2;
     }
 
     /**
      * @param NameAddress $shipNotificationAddress2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationAddress2($shipNotificationAddress2)
-    {
-      $this->shipNotificationAddress2 = $shipNotificationAddress2;
-      return $this;
+    public function setShipNotificationAddress2($shipNotificationAddress2) {
+        $this->shipNotificationAddress2 = $shipNotificationAddress2;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipNotificationAddressEmail()
-    {
-      return $this->shipNotificationAddressEmail;
+    public function getShipNotificationAddressEmail() {
+        return $this->shipNotificationAddressEmail;
     }
 
     /**
      * @param string $shipNotificationAddressEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationAddressEmail($shipNotificationAddressEmail)
-    {
-      $this->shipNotificationAddressEmail = $shipNotificationAddressEmail;
-      return $this;
+    public function setShipNotificationAddressEmail($shipNotificationAddressEmail) {
+        $this->shipNotificationAddressEmail = $shipNotificationAddressEmail;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipNotificationAddressFax()
-    {
-      return $this->shipNotificationAddressFax;
+    public function getShipNotificationAddressFax() {
+        return $this->shipNotificationAddressFax;
     }
 
     /**
      * @param string $shipNotificationAddressFax
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationAddressFax($shipNotificationAddressFax)
-    {
-      $this->shipNotificationAddressFax = $shipNotificationAddressFax;
-      return $this;
+    public function setShipNotificationAddressFax($shipNotificationAddressFax) {
+        $this->shipNotificationAddressFax = $shipNotificationAddressFax;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipNotificationDescription()
-    {
-      return $this->shipNotificationDescription;
+    public function getShipNotificationDescription() {
+        return $this->shipNotificationDescription;
     }
 
     /**
      * @param string $shipNotificationDescription
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationDescription($shipNotificationDescription)
-    {
-      $this->shipNotificationDescription = $shipNotificationDescription;
-      return $this;
+    public function setShipNotificationDescription($shipNotificationDescription) {
+        $this->shipNotificationDescription = $shipNotificationDescription;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getShipNotificationEmail()
-    {
-      return $this->shipNotificationEmail;
+    public function getShipNotificationEmail() {
+        return $this->shipNotificationEmail;
     }
 
     /**
      * @param boolean $shipNotificationEmail
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationEmail($shipNotificationEmail)
-    {
-      $this->shipNotificationEmail = $shipNotificationEmail;
-      return $this;
+    public function setShipNotificationEmail($shipNotificationEmail) {
+        $this->shipNotificationEmail = $shipNotificationEmail;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getShipNotificationFax()
-    {
-      return $this->shipNotificationFax;
+    public function getShipNotificationFax() {
+        return $this->shipNotificationFax;
     }
 
     /**
      * @param boolean $shipNotificationFax
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationFax($shipNotificationFax)
-    {
-      $this->shipNotificationFax = $shipNotificationFax;
-      return $this;
+    public function setShipNotificationFax($shipNotificationFax) {
+        $this->shipNotificationFax = $shipNotificationFax;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getShipNotificationFee()
-    {
-      return $this->shipNotificationFee;
+    public function getShipNotificationFee() {
+        return $this->shipNotificationFee;
     }
 
     /**
      * @param Money $shipNotificationFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationFee($shipNotificationFee)
-    {
-      $this->shipNotificationFee = $shipNotificationFee;
-      return $this;
+    public function setShipNotificationFee($shipNotificationFee) {
+        $this->shipNotificationFee = $shipNotificationFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipNotificationSenderName()
-    {
-      return $this->shipNotificationSenderName;
+    public function getShipNotificationSenderName() {
+        return $this->shipNotificationSenderName;
     }
 
     /**
      * @param string $shipNotificationSenderName
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationSenderName($shipNotificationSenderName)
-    {
-      $this->shipNotificationSenderName = $shipNotificationSenderName;
-      return $this;
+    public function setShipNotificationSenderName($shipNotificationSenderName) {
+        $this->shipNotificationSenderName = $shipNotificationSenderName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipNotificationSubjectText()
-    {
-      return $this->shipNotificationSubjectText;
+    public function getShipNotificationSubjectText() {
+        return $this->shipNotificationSubjectText;
     }
 
     /**
      * @param string $shipNotificationSubjectText
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationSubjectText($shipNotificationSubjectText)
-    {
-      $this->shipNotificationSubjectText = $shipNotificationSubjectText;
-      return $this;
+    public function setShipNotificationSubjectText($shipNotificationSubjectText) {
+        $this->shipNotificationSubjectText = $shipNotificationSubjectText;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getShipNotificationVerbal()
-    {
-      return $this->shipNotificationVerbal;
+    public function getShipNotificationVerbal() {
+        return $this->shipNotificationVerbal;
     }
 
     /**
      * @param boolean $shipNotificationVerbal
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setShipNotificationVerbal($shipNotificationVerbal)
-    {
-      $this->shipNotificationVerbal = $shipNotificationVerbal;
-      return $this;
+    public function setShipNotificationVerbal($shipNotificationVerbal) {
+        $this->shipNotificationVerbal = $shipNotificationVerbal;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSignatureRelease()
-    {
-      return $this->signatureRelease;
+    public function getSignatureRelease() {
+        return $this->signatureRelease;
     }
 
     /**
      * @param boolean $signatureRelease
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSignatureRelease($signatureRelease)
-    {
-      $this->signatureRelease = $signatureRelease;
-      return $this;
+    public function setSignatureRelease($signatureRelease) {
+        $this->signatureRelease = $signatureRelease;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSpecial()
-    {
-      return $this->special;
+    public function getSpecial() {
+        return $this->special;
     }
 
     /**
      * @param Money $special
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSpecial($special)
-    {
-      $this->special = $special;
-      return $this;
+    public function setSpecial($special) {
+        $this->special = $special;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSpecialDelivery()
-    {
-      return $this->specialDelivery;
+    public function getSpecialDelivery() {
+        return $this->specialDelivery;
     }
 
     /**
      * @param boolean $specialDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSpecialDelivery($specialDelivery)
-    {
-      $this->specialDelivery = $specialDelivery;
-      return $this;
+    public function setSpecialDelivery($specialDelivery) {
+        $this->specialDelivery = $specialDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSpecialDeliveryFee()
-    {
-      return $this->specialDeliveryFee;
+    public function getSpecialDeliveryFee() {
+        return $this->specialDeliveryFee;
     }
 
     /**
      * @param Money $specialDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSpecialDeliveryFee($specialDeliveryFee)
-    {
-      $this->specialDeliveryFee = $specialDeliveryFee;
-      return $this;
+    public function setSpecialDeliveryFee($specialDeliveryFee) {
+        $this->specialDeliveryFee = $specialDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getStairDelivery()
-    {
-      return $this->stairDelivery;
+    public function getStairDelivery() {
+        return $this->stairDelivery;
     }
 
     /**
      * @param boolean $stairDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setStairDelivery($stairDelivery)
-    {
-      $this->stairDelivery = $stairDelivery;
-      return $this;
+    public function setStairDelivery($stairDelivery) {
+        $this->stairDelivery = $stairDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getStairDeliveryFee()
-    {
-      return $this->stairDeliveryFee;
+    public function getStairDeliveryFee() {
+        return $this->stairDeliveryFee;
     }
 
     /**
      * @param Money $stairDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setStairDeliveryFee($stairDeliveryFee)
-    {
-      $this->stairDeliveryFee = $stairDeliveryFee;
-      return $this;
+    public function setStairDeliveryFee($stairDeliveryFee) {
+        $this->stairDeliveryFee = $stairDeliveryFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getStairPickup()
-    {
-      return $this->stairPickup;
+    public function getStairPickup() {
+        return $this->stairPickup;
     }
 
     /**
      * @param boolean $stairPickup
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setStairPickup($stairPickup)
-    {
-      $this->stairPickup = $stairPickup;
-      return $this;
+    public function setStairPickup($stairPickup) {
+        $this->stairPickup = $stairPickup;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getStairPickupFee()
-    {
-      return $this->stairPickupFee;
+    public function getStairPickupFee() {
+        return $this->stairPickupFee;
     }
 
     /**
      * @param Money $stairPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setStairPickupFee($stairPickupFee)
-    {
-      $this->stairPickupFee = $stairPickupFee;
-      return $this;
+    public function setStairPickupFee($stairPickupFee) {
+        $this->stairPickupFee = $stairPickupFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSubcategory()
-    {
-      return $this->subcategory;
+    public function getSubcategory() {
+        return $this->subcategory;
     }
 
     /**
      * @param string $subcategory
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSubcategory($subcategory)
-    {
-      $this->subcategory = $subcategory;
-      return $this;
+    public function setSubcategory($subcategory) {
+        $this->subcategory = $subcategory;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getSubNumber()
-    {
-      return $this->subNumber;
+    public function getSubNumber() {
+        return $this->subNumber;
     }
 
     /**
      * @param string $subNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSubNumber($subNumber)
-    {
-      $this->subNumber = $subNumber;
-      return $this;
+    public function setSubNumber($subNumber) {
+        $this->subNumber = $subNumber;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSundayDelivery()
-    {
-      return $this->sundayDelivery;
+    public function getSundayDelivery() {
+        return $this->sundayDelivery;
     }
 
     /**
      * @param boolean $sundayDelivery
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSundayDelivery($sundayDelivery)
-    {
-      $this->sundayDelivery = $sundayDelivery;
-      return $this;
+    public function setSundayDelivery($sundayDelivery) {
+        $this->sundayDelivery = $sundayDelivery;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSundayDeliveryFee()
-    {
-      return $this->sundayDeliveryFee;
+    public function getSundayDeliveryFee() {
+        return $this->sundayDeliveryFee;
     }
 
     /**
      * @param Money $sundayDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSundayDeliveryFee($sundayDeliveryFee)
-    {
-      $this->sundayDeliveryFee = $sundayDeliveryFee;
-      return $this;
+    public function setSundayDeliveryFee($sundayDeliveryFee) {
+        $this->sundayDeliveryFee = $sundayDeliveryFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getSundayPickupFee()
-    {
-      return $this->sundayPickupFee;
+    public function getSundayPickupFee() {
+        return $this->sundayPickupFee;
     }
 
     /**
      * @param Money $sundayPickupFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSundayPickupFee($sundayPickupFee)
-    {
-      $this->sundayPickupFee = $sundayPickupFee;
-      return $this;
+    public function setSundayPickupFee($sundayPickupFee) {
+        $this->sundayPickupFee = $sundayPickupFee;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSuppressDc()
-    {
-      return $this->suppressDc;
+    public function getSuppressDc() {
+        return $this->suppressDc;
     }
 
     /**
      * @param boolean $suppressDc
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSuppressDc($suppressDc)
-    {
-      $this->suppressDc = $suppressDc;
-      return $this;
+    public function setSuppressDc($suppressDc) {
+        $this->suppressDc = $suppressDc;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSuppressMms()
-    {
-      return $this->suppressMms;
+    public function getSuppressMms() {
+        return $this->suppressMms;
     }
 
     /**
      * @param boolean $suppressMms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setSuppressMms($suppressMms)
-    {
-      $this->suppressMms = $suppressMms;
-      return $this;
+    public function setSuppressMms($suppressMms) {
+        $this->suppressMms = $suppressMms;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getTax()
-    {
-      return $this->tax;
+    public function getTax() {
+        return $this->tax;
     }
 
     /**
      * @param Money $tax
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTax($tax)
-    {
-      $this->tax = $tax;
-      return $this;
+    public function setTax($tax) {
+        $this->tax = $tax;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getTemperatureControl()
-    {
-      return $this->temperatureControl;
+    public function getTemperatureControl() {
+        return $this->temperatureControl;
     }
 
     /**
      * @param enumItem $temperatureControl
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTemperatureControl($temperatureControl)
-    {
-      $this->temperatureControl = $temperatureControl;
-      return $this;
+    public function setTemperatureControl($temperatureControl) {
+        $this->temperatureControl = $temperatureControl;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getTemperatureControlFee()
-    {
-      return $this->temperatureControlFee;
+    public function getTemperatureControlFee() {
+        return $this->temperatureControlFee;
     }
 
     /**
      * @param Money $temperatureControlFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTemperatureControlFee($temperatureControlFee)
-    {
-      $this->temperatureControlFee = $temperatureControlFee;
-      return $this;
+    public function setTemperatureControlFee($temperatureControlFee) {
+        $this->temperatureControlFee = $temperatureControlFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getTerminalHandlingFee()
-    {
-      return $this->terminalHandlingFee;
+    public function getTerminalHandlingFee() {
+        return $this->terminalHandlingFee;
     }
 
     /**
      * @param Money $terminalHandlingFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTerminalHandlingFee($terminalHandlingFee)
-    {
-      $this->terminalHandlingFee = $terminalHandlingFee;
-      return $this;
+    public function setTerminalHandlingFee($terminalHandlingFee) {
+        $this->terminalHandlingFee = $terminalHandlingFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getTerms()
-    {
-      return $this->terms;
+    public function getTerms() {
+        return $this->terms;
     }
 
     /**
      * @param string $terms
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTerms($terms)
-    {
-      $this->terms = $terms;
-      return $this;
+    public function setTerms($terms) {
+        $this->terms = $terms;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getTermsOfSale()
-    {
-      return $this->termsOfSale;
+    public function getTermsOfSale() {
+        return $this->termsOfSale;
     }
 
     /**
      * @param string $termsOfSale
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTermsOfSale($termsOfSale)
-    {
-      $this->termsOfSale = $termsOfSale;
-      return $this;
+    public function setTermsOfSale($termsOfSale) {
+        $this->termsOfSale = $termsOfSale;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getThirdPartyBilling()
-    {
-      return $this->thirdPartyBilling;
+    public function getThirdPartyBilling() {
+        return $this->thirdPartyBilling;
     }
 
     /**
      * @param boolean $thirdPartyBilling
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setThirdPartyBilling($thirdPartyBilling)
-    {
-      $this->thirdPartyBilling = $thirdPartyBilling;
-      return $this;
+    public function setThirdPartyBilling($thirdPartyBilling) {
+        $this->thirdPartyBilling = $thirdPartyBilling;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getThirdPartyBillingAccount()
-    {
-      return $this->thirdPartyBillingAccount;
+    public function getThirdPartyBillingAccount() {
+        return $this->thirdPartyBillingAccount;
     }
 
     /**
      * @param string $thirdPartyBillingAccount
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setThirdPartyBillingAccount($thirdPartyBillingAccount)
-    {
-      $this->thirdPartyBillingAccount = $thirdPartyBillingAccount;
-      return $this;
+    public function setThirdPartyBillingAccount($thirdPartyBillingAccount) {
+        $this->thirdPartyBillingAccount = $thirdPartyBillingAccount;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getThirdPartyBillingAddress()
-    {
-      return $this->thirdPartyBillingAddress;
+    public function getThirdPartyBillingAddress() {
+        return $this->thirdPartyBillingAddress;
     }
 
     /**
      * @param NameAddress $thirdPartyBillingAddress
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setThirdPartyBillingAddress($thirdPartyBillingAddress)
-    {
-      $this->thirdPartyBillingAddress = $thirdPartyBillingAddress;
-      return $this;
+    public function setThirdPartyBillingAddress($thirdPartyBillingAddress) {
+        $this->thirdPartyBillingAddress = $thirdPartyBillingAddress;
+        return $this;
     }
 
     /**
      * @return Commitment
      */
-    public function getTimeInTransit()
-    {
-      return $this->timeInTransit;
+    public function getTimeInTransit() {
+        return $this->timeInTransit;
     }
 
     /**
      * @param Commitment $timeInTransit
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTimeInTransit($timeInTransit)
-    {
-      $this->timeInTransit = $timeInTransit;
-      return $this;
+    public function setTimeInTransit($timeInTransit) {
+        $this->timeInTransit = $timeInTransit;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getTotal()
-    {
-      return $this->total;
+    public function getTotal() {
+        return $this->total;
     }
 
     /**
      * @param Money $total
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTotal($total)
-    {
-      $this->total = $total;
-      return $this;
+    public function setTotal($total) {
+        $this->total = $total;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getTrackingNumber()
-    {
-      return $this->trackingNumber;
+    public function getTrackingNumber() {
+        return $this->trackingNumber;
     }
 
     /**
      * @param string $trackingNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTrackingNumber($trackingNumber)
-    {
-      $this->trackingNumber = $trackingNumber;
-      return $this;
+    public function setTrackingNumber($trackingNumber) {
+        $this->trackingNumber = $trackingNumber;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getTrackingNumber2()
-    {
-      return $this->trackingNumber2;
+    public function getTrackingNumber2() {
+        return $this->trackingNumber2;
     }
 
     /**
      * @param string $trackingNumber2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTrackingNumber2($trackingNumber2)
-    {
-      $this->trackingNumber2 = $trackingNumber2;
-      return $this;
+    public function setTrackingNumber2($trackingNumber2) {
+        $this->trackingNumber2 = $trackingNumber2;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getTransportMode()
-    {
-      return $this->transportMode;
+    public function getTransportMode() {
+        return $this->transportMode;
     }
 
     /**
      * @param enumItem $transportMode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setTransportMode($transportMode)
-    {
-      $this->transportMode = $transportMode;
-      return $this;
+    public function setTransportMode($transportMode) {
+        $this->transportMode = $transportMode;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getUltimateConsignee()
-    {
-      return $this->ultimateConsignee;
+    public function getUltimateConsignee() {
+        return $this->ultimateConsignee;
     }
 
     /**
      * @param NameAddress $ultimateConsignee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUltimateConsignee($ultimateConsignee)
-    {
-      $this->ultimateConsignee = $ultimateConsignee;
-      return $this;
+    public function setUltimateConsignee($ultimateConsignee) {
+        $this->ultimateConsignee = $ultimateConsignee;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getUltimateConsigneeType()
-    {
-      return $this->ultimateConsigneeType;
+    public function getUltimateConsigneeType() {
+        return $this->ultimateConsigneeType;
     }
 
     /**
      * @param enumItem $ultimateConsigneeType
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUltimateConsigneeType($ultimateConsigneeType)
-    {
-      $this->ultimateConsigneeType = $ultimateConsigneeType;
-      return $this;
+    public function setUltimateConsigneeType($ultimateConsigneeType) {
+        $this->ultimateConsigneeType = $ultimateConsigneeType;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getUltimateDestinationCountry()
-    {
-      return $this->ultimateDestinationCountry;
+    public function getUltimateDestinationCountry() {
+        return $this->ultimateDestinationCountry;
     }
 
     /**
      * @param string $ultimateDestinationCountry
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUltimateDestinationCountry($ultimateDestinationCountry)
-    {
-      $this->ultimateDestinationCountry = $ultimateDestinationCountry;
-      return $this;
+    public function setUltimateDestinationCountry($ultimateDestinationCountry) {
+        $this->ultimateDestinationCountry = $ultimateDestinationCountry;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getUnpack()
-    {
-      return $this->unpack;
+    public function getUnpack() {
+        return $this->unpack;
     }
 
     /**
      * @param boolean $unpack
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUnpack($unpack)
-    {
-      $this->unpack = $unpack;
-      return $this;
+    public function setUnpack($unpack) {
+        $this->unpack = $unpack;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getUnpackFee()
-    {
-      return $this->unpackFee;
+    public function getUnpackFee() {
+        return $this->unpackFee;
     }
 
     /**
      * @param Money $unpackFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUnpackFee($unpackFee)
-    {
-      $this->unpackFee = $unpackFee;
-      return $this;
+    public function setUnpackFee($unpackFee) {
+        $this->unpackFee = $unpackFee;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getUrbanDeliveryFee()
-    {
-      return $this->urbanDeliveryFee;
+    public function getUrbanDeliveryFee() {
+        return $this->urbanDeliveryFee;
     }
 
     /**
      * @param Money $urbanDeliveryFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUrbanDeliveryFee($urbanDeliveryFee)
-    {
-      $this->urbanDeliveryFee = $urbanDeliveryFee;
-      return $this;
+    public function setUrbanDeliveryFee($urbanDeliveryFee) {
+        $this->urbanDeliveryFee = $urbanDeliveryFee;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData1()
-    {
-      return $this->userData1;
+    public function getUserData1() {
+        return $this->userData1;
     }
 
     /**
      * @param anyType $userData1
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUserData1($userData1)
-    {
-      $this->userData1 = $userData1;
-      return $this;
+    public function setUserData1($userData1) {
+        $this->userData1 = $userData1;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData2()
-    {
-      return $this->userData2;
+    public function getUserData2() {
+        return $this->userData2;
     }
 
     /**
      * @param anyType $userData2
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUserData2($userData2)
-    {
-      $this->userData2 = $userData2;
-      return $this;
+    public function setUserData2($userData2) {
+        $this->userData2 = $userData2;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData3()
-    {
-      return $this->userData3;
+    public function getUserData3() {
+        return $this->userData3;
     }
 
     /**
      * @param anyType $userData3
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUserData3($userData3)
-    {
-      $this->userData3 = $userData3;
-      return $this;
+    public function setUserData3($userData3) {
+        $this->userData3 = $userData3;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData4()
-    {
-      return $this->userData4;
+    public function getUserData4() {
+        return $this->userData4;
     }
 
     /**
      * @param anyType $userData4
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUserData4($userData4)
-    {
-      $this->userData4 = $userData4;
-      return $this;
+    public function setUserData4($userData4) {
+        $this->userData4 = $userData4;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData5()
-    {
-      return $this->userData5;
+    public function getUserData5() {
+        return $this->userData5;
     }
 
     /**
      * @param anyType $userData5
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setUserData5($userData5)
-    {
-      $this->userData5 = $userData5;
-      return $this;
+    public function setUserData5($userData5) {
+        $this->userData5 = $userData5;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getWaybillBolNumber()
-    {
-      return $this->waybillBolNumber;
+    public function getWaybillBolNumber() {
+        return $this->waybillBolNumber;
     }
 
     /**
      * @param string $waybillBolNumber
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWaybillBolNumber($waybillBolNumber)
-    {
-      $this->waybillBolNumber = $waybillBolNumber;
-      return $this;
+    public function setWaybillBolNumber($waybillBolNumber) {
+        $this->waybillBolNumber = $waybillBolNumber;
+        return $this;
     }
 
     /**
      * @return Weight
      */
-    public function getWeight()
-    {
-      return $this->weight;
+    public function getWeight() {
+        return $this->weight;
     }
 
     /**
      * @param Weight $weight
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWeight($weight)
-    {
-      $this->weight = $weight;
-      return $this;
+    public function setWeight($weight) {
+        $this->weight = $weight;
+        return $this;
     }
 
     /**
      * @return Money
      */
-    public function getWharfageFee()
-    {
-      return $this->wharfageFee;
+    public function getWharfageFee() {
+        return $this->wharfageFee;
     }
 
     /**
      * @param Money $wharfageFee
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWharfageFee($wharfageFee)
-    {
-      $this->wharfageFee = $wharfageFee;
-      return $this;
+    public function setWharfageFee($wharfageFee) {
+        $this->wharfageFee = $wharfageFee;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getWorldEaseCode()
-    {
-      return $this->worldEaseCode;
+    public function getWorldEaseCode() {
+        return $this->worldEaseCode;
     }
 
     /**
      * @param string $worldEaseCode
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWorldEaseCode($worldEaseCode)
-    {
-      $this->worldEaseCode = $worldEaseCode;
-      return $this;
+    public function setWorldEaseCode($worldEaseCode) {
+        $this->worldEaseCode = $worldEaseCode;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getWorldEaseFlag()
-    {
-      return $this->worldEaseFlag;
+    public function getWorldEaseFlag() {
+        return $this->worldEaseFlag;
     }
 
     /**
      * @param boolean $worldEaseFlag
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWorldEaseFlag($worldEaseFlag)
-    {
-      $this->worldEaseFlag = $worldEaseFlag;
-      return $this;
+    public function setWorldEaseFlag($worldEaseFlag) {
+        $this->worldEaseFlag = $worldEaseFlag;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getWorldEaseId()
-    {
-      return $this->worldEaseId;
+    public function getWorldEaseId() {
+        return $this->worldEaseId;
     }
 
     /**
      * @param int $worldEaseId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWorldEaseId($worldEaseId)
-    {
-      $this->worldEaseId = $worldEaseId;
-      return $this;
+    public function setWorldEaseId($worldEaseId) {
+        $this->worldEaseId = $worldEaseId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getWorldEaseMasterShipmentId()
-    {
-      return $this->worldEaseMasterShipmentId;
+    public function getWorldEaseMasterShipmentId() {
+        return $this->worldEaseMasterShipmentId;
     }
 
     /**
      * @param string $worldEaseMasterShipmentId
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWorldEaseMasterShipmentId($worldEaseMasterShipmentId)
-    {
-      $this->worldEaseMasterShipmentId = $worldEaseMasterShipmentId;
-      return $this;
+    public function setWorldEaseMasterShipmentId($worldEaseMasterShipmentId) {
+        $this->worldEaseMasterShipmentId = $worldEaseMasterShipmentId;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getWorldEaseSingleEuCountry()
-    {
-      return $this->worldEaseSingleEuCountry;
+    public function getWorldEaseSingleEuCountry() {
+        return $this->worldEaseSingleEuCountry;
     }
 
     /**
      * @param boolean $worldEaseSingleEuCountry
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setWorldEaseSingleEuCountry($worldEaseSingleEuCountry)
-    {
-      $this->worldEaseSingleEuCountry = $worldEaseSingleEuCountry;
-      return $this;
+    public function setWorldEaseSingleEuCountry($worldEaseSingleEuCountry) {
+        $this->worldEaseSingleEuCountry = $worldEaseSingleEuCountry;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getZone()
-    {
-      return $this->zone;
+    public function getZone() {
+        return $this->zone;
     }
 
     /**
      * @param string $zone
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setZone($zone)
-    {
-      $this->zone = $zone;
-      return $this;
+    public function setZone($zone) {
+        $this->zone = $zone;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getExternalKey()
-    {
-      return $this->externalKey;
+    public function getExternalKey() {
+        return $this->externalKey;
     }
 
     /**
      * @param string $externalKey
      * @return \ConnectshipBundle\AMP\DataDictionary
      */
-    public function setExternalKey($externalKey)
-    {
-      $this->externalKey = $externalKey;
-      return $this;
+    public function setExternalKey($externalKey) {
+        $this->externalKey = $externalKey;
+        return $this;
     }
 
 }

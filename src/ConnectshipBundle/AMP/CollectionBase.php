@@ -2,13 +2,10 @@
 
 namespace ConnectshipBundle\AMP;
 
-class CollectionBase
-{
+class CollectionBase {
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
 }

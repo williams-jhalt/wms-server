@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ShipperInformation
-{
+class ShipperInformation {
 
     /**
      * @var int $id
@@ -25,65 +24,58 @@ class ShipperInformation
      * @param string $abbreviation
      * @param NameAddress $address
      */
-    public function __construct($id, $abbreviation, $address)
-    {
-      $this->id = $id;
-      $this->abbreviation = $abbreviation;
-      $this->address = $address;
+    public function __construct($id, $abbreviation, $address) {
+        $this->id = $id;
+        $this->abbreviation = $abbreviation;
+        $this->address = $address;
     }
 
     /**
      * @return int
      */
-    public function getId()
-    {
-      return $this->id;
+    public function getId() {
+        return $this->id;
     }
 
     /**
      * @param int $id
      * @return \ConnectshipBundle\AMP\ShipperInformation
      */
-    public function setId($id)
-    {
-      $this->id = $id;
-      return $this;
+    public function setId($id) {
+        $this->id = $id;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAbbreviation()
-    {
-      return $this->abbreviation;
+    public function getAbbreviation() {
+        return $this->abbreviation;
     }
 
     /**
      * @param string $abbreviation
      * @return \ConnectshipBundle\AMP\ShipperInformation
      */
-    public function setAbbreviation($abbreviation)
-    {
-      $this->abbreviation = $abbreviation;
-      return $this;
+    public function setAbbreviation($abbreviation) {
+        $this->abbreviation = $abbreviation;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getAddress()
-    {
-      return $this->address;
+    public function getAddress() {
+        return $this->address;
     }
 
     /**
      * @param NameAddress $address
      * @return \ConnectshipBundle\AMP\ShipperInformation
      */
-    public function setAddress($address)
-    {
-      $this->address = $address;
-      return $this;
+    public function setAddress($address) {
+        $this->address = $address;
+        return $this;
     }
 
 }

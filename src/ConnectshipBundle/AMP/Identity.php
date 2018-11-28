@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class Identity
-{
+class Identity {
 
     /**
      * @var string $symbol
@@ -18,45 +17,40 @@ class Identity
     /**
      * @param string $symbol
      */
-    public function __construct($symbol)
-    {
-      $this->symbol = $symbol;
+    public function __construct($symbol) {
+        $this->symbol = $symbol;
     }
 
     /**
      * @return string
      */
-    public function getSymbol()
-    {
-      return $this->symbol;
+    public function getSymbol() {
+        return $this->symbol;
     }
 
     /**
      * @param string $symbol
      * @return \ConnectshipBundle\AMP\Identity
      */
-    public function setSymbol($symbol)
-    {
-      $this->symbol = $symbol;
-      return $this;
+    public function setSymbol($symbol) {
+        $this->symbol = $symbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
-      return $this->name;
+    public function getName() {
+        return $this->name;
     }
 
     /**
      * @param string $name
      * @return \ConnectshipBundle\AMP\Identity
      */
-    public function setName($name)
-    {
-      $this->name = $name;
-      return $this;
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
     }
 
 }

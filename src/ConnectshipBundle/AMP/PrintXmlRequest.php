@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class PrintXmlRequest
-{
+class PrintXmlRequest {
 
     /**
      * @var anyType $document
@@ -65,196 +64,175 @@ class PrintXmlRequest
      * @param boolean $splitMultipage
      * @param string $asyncCorrelationData
      */
-    public function __construct($document, $output, $stock, $preProcess, $postProcess, $locale, $splitMultipage, $asyncCorrelationData)
-    {
-      $this->document = $document;
-      $this->output = $output;
-      $this->stock = $stock;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->splitMultipage = $splitMultipage;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($document, $output, $stock, $preProcess, $postProcess, $locale, $splitMultipage, $asyncCorrelationData) {
+        $this->document = $document;
+        $this->output = $output;
+        $this->stock = $stock;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->splitMultipage = $splitMultipage;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return anyType
      */
-    public function getDocument()
-    {
-      return $this->document;
+    public function getDocument() {
+        return $this->document;
     }
 
     /**
      * @param anyType $document
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setDocument($document)
-    {
-      $this->document = $document;
-      return $this;
+    public function setDocument($document) {
+        $this->document = $document;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getOutput()
-    {
-      return $this->output;
+    public function getOutput() {
+        return $this->output;
     }
 
     /**
      * @param string $output
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setOutput($output)
-    {
-      $this->output = $output;
-      return $this;
+    public function setOutput($output) {
+        $this->output = $output;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getDestination()
-    {
-      return $this->destination;
+    public function getDestination() {
+        return $this->destination;
     }
 
     /**
      * @param string $destination
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setDestination($destination)
-    {
-      $this->destination = $destination;
-      return $this;
+    public function setDestination($destination) {
+        $this->destination = $destination;
+        return $this;
     }
 
     /**
      * @return StockDescriptor
      */
-    public function getStock()
-    {
-      return $this->stock;
+    public function getStock() {
+        return $this->stock;
     }
 
     /**
      * @param StockDescriptor $stock
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setStock($stock)
-    {
-      $this->stock = $stock;
-      return $this;
+    public function setStock($stock) {
+        $this->stock = $stock;
+        return $this;
     }
 
     /**
      * @return Dictionary
      */
-    public function getOutputOptions()
-    {
-      return $this->outputOptions;
+    public function getOutputOptions() {
+        return $this->outputOptions;
     }
 
     /**
      * @param Dictionary $outputOptions
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setOutputOptions($outputOptions)
-    {
-      $this->outputOptions = $outputOptions;
-      return $this;
+    public function setOutputOptions($outputOptions) {
+        $this->outputOptions = $outputOptions;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getSplitMultipage()
-    {
-      return $this->splitMultipage;
+    public function getSplitMultipage() {
+        return $this->splitMultipage;
     }
 
     /**
      * @param boolean $splitMultipage
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setSplitMultipage($splitMultipage)
-    {
-      $this->splitMultipage = $splitMultipage;
-      return $this;
+    public function setSplitMultipage($splitMultipage) {
+        $this->splitMultipage = $splitMultipage;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\PrintXmlRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

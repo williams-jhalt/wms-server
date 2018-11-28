@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class StringListResult
-{
+class StringListResult {
 
     /**
      * @var int $code
@@ -25,65 +24,58 @@ class StringListResult
      * @param string $message
      * @param StringList $resultData
      */
-    public function __construct($code, $message, $resultData)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->resultData = $resultData;
+    public function __construct($code, $message, $resultData) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->resultData = $resultData;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\StringListResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\StringListResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return StringList
      */
-    public function getResultData()
-    {
-      return $this->resultData;
+    public function getResultData() {
+        return $this->resultData;
     }
 
     /**
      * @param StringList $resultData
      * @return \ConnectshipBundle\AMP\StringListResult
      */
-    public function setResultData($resultData)
-    {
-      $this->resultData = $resultData;
-      return $this;
+    public function setResultData($resultData) {
+        $this->resultData = $resultData;
+        return $this;
     }
 
 }

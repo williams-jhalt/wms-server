@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class Volume
-{
+class Volume {
 
     /**
      * @var float $amount
@@ -20,64 +19,56 @@ class Volume
      */
     protected $value = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return float
      */
-    public function getAmount()
-    {
-      return $this->amount;
+    public function getAmount() {
+        return $this->amount;
     }
 
     /**
      * @param float $amount
      * @return \ConnectshipBundle\AMP\Volume
      */
-    public function setAmount($amount)
-    {
-      $this->amount = $amount;
-      return $this;
+    public function setAmount($amount) {
+        $this->amount = $amount;
+        return $this;
     }
 
     /**
      * @return unit
      */
-    public function getUnit()
-    {
-      return $this->unit;
+    public function getUnit() {
+        return $this->unit;
     }
 
     /**
      * @param unit $unit
      * @return \ConnectshipBundle\AMP\Volume
      */
-    public function setUnit($unit)
-    {
-      $this->unit = $unit;
-      return $this;
+    public function setUnit($unit) {
+        $this->unit = $unit;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getValue()
-    {
-      return $this->value;
+    public function getValue() {
+        return $this->value;
     }
 
     /**
      * @param string $value
      * @return \ConnectshipBundle\AMP\Volume
      */
-    public function setValue($value)
-    {
-      $this->value = $value;
-      return $this;
+    public function setValue($value) {
+        $this->value = $value;
+        return $this;
     }
 
 }

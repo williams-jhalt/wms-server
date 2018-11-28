@@ -2,36 +2,31 @@
 
 namespace ConnectshipBundle\AMP;
 
-class Dictionary extends CollectionBase
-{
+class Dictionary extends CollectionBase {
 
     /**
      * @var DictionaryItem[] $item
      */
     protected $item = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return DictionaryItem[]
      */
-    public function getItem()
-    {
-      return $this->item;
+    public function getItem() {
+        return $this->item;
     }
 
     /**
      * @param DictionaryItem[] $item
      * @return \ConnectshipBundle\AMP\Dictionary
      */
-    public function setItem(array $item = null)
-    {
-      $this->item = $item;
-      return $this;
+    public function setItem(array $item = null) {
+        $this->item = $item;
+        return $this;
     }
 
 }

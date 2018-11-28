@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class Group
-{
+class Group {
 
     /**
      * @var string $symbol
@@ -35,118 +34,104 @@ class Group
      */
     protected $data = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return string
      */
-    public function getSymbol()
-    {
-      return $this->symbol;
+    public function getSymbol() {
+        return $this->symbol;
     }
 
     /**
      * @param string $symbol
      * @return \ConnectshipBundle\AMP\Group
      */
-    public function setSymbol($symbol)
-    {
-      $this->symbol = $symbol;
-      return $this;
+    public function setSymbol($symbol) {
+        $this->symbol = $symbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
-      return $this->name;
+    public function getName() {
+        return $this->name;
     }
 
     /**
      * @param string $name
      * @return \ConnectshipBundle\AMP\Group
      */
-    public function setName($name)
-    {
-      $this->name = $name;
-      return $this;
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getId()
-    {
-      return $this->id;
+    public function getId() {
+        return $this->id;
     }
 
     /**
      * @param int $id
      * @return \ConnectshipBundle\AMP\Group
      */
-    public function setId($id)
-    {
-      $this->id = $id;
-      return $this;
+    public function setId($id) {
+        $this->id = $id;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getStatus()
-    {
-      return $this->status;
+    public function getStatus() {
+        return $this->status;
     }
 
     /**
      * @param int $status
      * @return \ConnectshipBundle\AMP\Group
      */
-    public function setStatus($status)
-    {
-      $this->status = $status;
-      return $this;
+    public function setStatus($status) {
+        $this->status = $status;
+        return $this;
     }
 
     /**
      * @return date
      */
-    public function getDateOpened()
-    {
-      return $this->dateOpened;
+    public function getDateOpened() {
+        return $this->dateOpened;
     }
 
     /**
      * @param date $dateOpened
      * @return \ConnectshipBundle\AMP\Group
      */
-    public function setDateOpened($dateOpened)
-    {
-      $this->dateOpened = $dateOpened;
-      return $this;
+    public function setDateOpened($dateOpened) {
+        $this->dateOpened = $dateOpened;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getData()
-    {
-      return $this->data;
+    public function getData() {
+        return $this->data;
     }
 
     /**
      * @param DataDictionary $data
      * @return \ConnectshipBundle\AMP\Group
      */
-    public function setData($data)
-    {
-      $this->data = $data;
-      return $this;
+    public function setData($data) {
+        $this->data = $data;
+        return $this;
     }
 
 }

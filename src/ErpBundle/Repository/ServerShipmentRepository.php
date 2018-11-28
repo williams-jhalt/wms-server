@@ -12,7 +12,7 @@ use ErpBundle\Model\ShipmentPackageCollection;
 use ErpBundle\Model\ShipmentPackageItem;
 
 class ServerShipmentRepository extends AbstractServerRepository implements ShipmentRepositoryInterface {
-    
+
     /**
      * 
      * @param integer $limit
@@ -51,7 +51,8 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
                 . "country_code,"
                 . "postal_code,"
                 . "Manifest_id,"
-                . "num_pages";
+                . "num_pages,"
+                . "ship_date";
 
         $response = $this->erp->read($query, $fields, $limit, $offset);
 
@@ -63,7 +64,7 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
 
         return new ShipmentCollection($result);
     }
-    
+
     /**
      * 
      * @param integer $limit
@@ -103,7 +104,8 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
                 . "country_code,"
                 . "postal_code,"
                 . "Manifest_id,"
-                . "num_pages";
+                . "num_pages,"
+                . "ship_date";
 
         $response = $this->erp->read($query, $fields, $limit, $offset);
 
@@ -154,7 +156,8 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
                 . "country_code,"
                 . "postal_code,"
                 . "Manifest_id,"
-                . "num_pages";
+                . "num_pages,"
+                . "ship_date";
 
         $response = $this->erp->read($query, $fields);
 
@@ -206,7 +209,8 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
                 . "country_code,"
                 . "postal_code,"
                 . "Manifest_id,"
-                . "num_pages";
+                . "num_pages,"
+                . "ship_date";
 
         $response = $this->erp->read($query, $fields, 1);
 
@@ -363,8 +367,95 @@ class ServerShipmentRepository extends AbstractServerRepository implements Shipm
         $shipment->setShipToZip($erpShipment->postal_code);
         $shipment->setManifestId($erpShipment->Manifest_id);
         $shipment->setNumberOfPages($erpShipment->num_pages);
+        $shipment->setShipDate($erpShipment->ship_date);
 
         return $shipment;
+    }
+
+    /**
+     * 
+     * @param DateTime $startDate
+     * @param DateTime $endDate
+     * @param int $limit
+     * @param int $offset
+     */
+    public function findByShippingDate(DateTime $startDate, DateTime $endDate, $limit = 1000, $offset = 0) {
+
+        $query = "FOR EACH oe_head NO-LOCK "
+                . "WHERE oe_head.company_oe = '" . $this->erp->getCompany() . "' ";
+        
+        if ($startDate !== null) {
+            $startDateStr = $startDate->format("m/d/Y");
+            $query .= " AND oe_head.ship_date >= '{$startDateStr}'";
+        }
+
+        if ($endDate !== null) {
+            $endDateStr = $endDate->format("m/d/Y");
+            $query .= " AND oe_head.ship_date <= '{$endDateStr}'";
+        }
+
+        $fields = "adr,"
+                . "created_date,"
+                . "created_time,"
+                . "customer,"
+                . "cu_po,"
+                . "c_tot_code,"
+                . "c_tot_code_amt,"
+                . "c_tot_gross,"
+                . "c_tot_net_ar,"
+                . "email,"
+                . "invc_date,"
+                . "invc_seq,"
+                . "invoice,"
+                . "opn,"
+                . "order,"
+                . "ord_date,"
+                . "ord_ext,"
+                . "phone,"
+                . "rec_seq,"
+                . "residential,"
+                . "ship_via_code,"
+                . "stat,"
+                . "state,"
+                . "country_code,"
+                . "postal_code,"
+                . "Manifest_id,"
+                . "num_pages,"
+                . "ship_date";
+
+        $response = $this->erp->read($query, $fields, $limit, $offset);
+
+        $result = array();
+
+        foreach ($response as $erpItem) {
+            $result[] = $this->_loadShipmentFromErp($erpItem);
+        }
+
+        return new ShipmentCollection($result);
+    }
+    
+    public function getByUcc($ucc) {
+        
+        $query = "FOR EACH ed_ucc128ln NO-LOCK WHERE "
+                . "ed_ucc128ln.company_oe = '" . $this->erp->getCompany() . "' "
+                . "AND ed_ucc128ln.ucc = '{$ucc}'";
+
+        $fields = "order";
+
+        $response = $this->erp->read($query, $fields);
+        
+        if (sizeof($response) < 0) {
+            throw Exception("Package not found");
+        }
+        
+        $orderNumber = $response[0]->order;
+        
+        return $this->get($orderNumber);
+        
+    }
+    
+    public function submitShipmentPackage($shipmentPackage) {
+        ;
     }
 
 }

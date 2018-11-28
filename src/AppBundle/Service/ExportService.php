@@ -62,36 +62,36 @@ class ExportService {
 
         $repo = $this->erp->getInvoiceRepository();
         $shipmentRepo = $this->erp->getShipmentRepository();
-        
+
         $headerFh = $headerFile->openFile("wb");
         $detailFh = $detailFile->openFile("wb");
-        
+
         $headerFh->fputcsv(['orderNumber', 'recordSequence', 'webReferenceNumber', 'customerReferenceNumber', 'invoiceDate', 'customerNumber', 'grossInvoiceAmount', 'shippingAndHandling', 'freightCharge', 'netInvoiceAmount', 'trackingNumber', 'shippingMethod']);
         $detailFh->fputcsv(['orderNumber', 'recordSequence', 'itemNumber', 'qtyOrdered', 'qtyBilled', 'unitOfMeasure', 'price']);
-        
+
         $offset = 0;
         $limit = 1000;
-        
+
         do {
             $invoices = $repo->findByCustomerAndDate($customerNumber, $startDate, $endDate, $consolidated, $limit, $offset)->getInvoices();
             foreach ($invoices as $invoice) {
-                
+
                 if ($invoice->getOpen()) {
                     continue;
                 }
-                
+
                 $packages = $shipmentRepo->getPackages($invoice->getOrderNumber())->getShipmentPackages();
                 $shipment = $shipmentRepo->get($invoice->getOrderNumber(), $invoice->getRecordSequence());
-                
+
                 $trackingNumber = "";
-                
+
                 for ($i = 0; $i < count($packages); $i++) {
                     if ($i > 0) {
                         $trackingNumber .= ",";
                     }
                     $trackingNumber .= $packages[$i]->getTrackingNumber();
                 }
-                
+
                 $headerFh->fputcsv([
                     $invoice->getOrderNumber(),
                     $invoice->getRecordSequence(),
@@ -106,9 +106,9 @@ class ExportService {
                     $trackingNumber,
                     $shipment->getShipViaCode()
                 ]);
-                
+
                 $items = $repo->getItems($invoice->getOrderNumber(), $invoice->getRecordSequence())->getItems();
-                
+
                 foreach ($items as $item) {
                     $detailFh->fputcsv([
                         $invoice->getOrderNumber(),
@@ -120,14 +120,55 @@ class ExportService {
                         $item->getPrice()
                     ]);
                 }
-                
             }
             $offset += $limit;
         } while (count($invoices) > 0);
-        
+
         $headerFh = null;
         $detailFh = null;
-                
+    }
+
+    /**
+     * 
+     * @param DateTime $startDate
+     * @param DateTime $endDate
+     * @param SplFileInfo $outputFile
+     */
+    public function exportShippingData(DateTime $startDate, DateTime $endDate, SplFileInfo $outputFile) {
+
+        $packages = $this->connectship->getShippingDataByDate($startDate, $endDate);
+
+        $outputFh = $outputFile->openFile("wb");
+
+        $outputFh->fputcsv([
+            'shippingMethod',
+            'height',
+            'length',
+            'width',
+            'weight',
+            'total',
+            'zip',
+            'state',
+            'country',
+            'shipDate'
+        ]);
+        
+        foreach ($packages as $package) {
+            $outputFh->fputcsv([
+                $package->getShippingMethod(),
+                $package->getHeight(),
+                $package->getLength(),
+                $package->getWidth(),
+                $package->getWeight(),
+                $package->getFreightCharge(),
+                $package->getConsigneePostalCode(),
+                $package->getConsigneeState(),
+                $package->getConsigneeCountry(),
+                $package->getShipDate()
+            ]);
+        }
+
+        $outputFh = null;
     }
 
     /**
@@ -159,10 +200,9 @@ class ExportService {
         ftp_put($ftp, $headerFileName, $headerFile->getPathname(), FTP_ASCII);
         ftp_put($ftp, $detailFileName, $detailFile->getPathname(), FTP_ASCII);
         ftp_close($ftp);
-        
+
         unlink($headerFile->getPathname());
         unlink($detailFile->getPathname());
-        
     }
 
 }

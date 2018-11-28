@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class Commitment
-{
+class Commitment {
 
     /**
      * @var string $symbol
@@ -30,100 +29,88 @@ class Commitment
      */
     protected $comparisonValue = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return string
      */
-    public function getSymbol()
-    {
-      return $this->symbol;
+    public function getSymbol() {
+        return $this->symbol;
     }
 
     /**
      * @param string $symbol
      * @return \ConnectshipBundle\AMP\Commitment
      */
-    public function setSymbol($symbol)
-    {
-      $this->symbol = $symbol;
-      return $this;
+    public function setSymbol($symbol) {
+        $this->symbol = $symbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getName()
-    {
-      return $this->name;
+    public function getName() {
+        return $this->name;
     }
 
     /**
      * @param string $name
      * @return \ConnectshipBundle\AMP\Commitment
      */
-    public function setName($name)
-    {
-      $this->name = $name;
-      return $this;
+    public function setName($name) {
+        $this->name = $name;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getDays()
-    {
-      return $this->days;
+    public function getDays() {
+        return $this->days;
     }
 
     /**
      * @param int $days
      * @return \ConnectshipBundle\AMP\Commitment
      */
-    public function setDays($days)
-    {
-      $this->days = $days;
-      return $this;
+    public function setDays($days) {
+        $this->days = $days;
+        return $this;
     }
 
     /**
      * @return time
      */
-    public function getTime()
-    {
-      return $this->time;
+    public function getTime() {
+        return $this->time;
     }
 
     /**
      * @param time $time
      * @return \ConnectshipBundle\AMP\Commitment
      */
-    public function setTime($time)
-    {
-      $this->time = $time;
-      return $this;
+    public function setTime($time) {
+        $this->time = $time;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getComparisonValue()
-    {
-      return $this->comparisonValue;
+    public function getComparisonValue() {
+        return $this->comparisonValue;
     }
 
     /**
      * @param int $comparisonValue
      * @return \ConnectshipBundle\AMP\Commitment
      */
-    public function setComparisonValue($comparisonValue)
-    {
-      $this->comparisonValue = $comparisonValue;
-      return $this;
+    public function setComparisonValue($comparisonValue) {
+        $this->comparisonValue = $comparisonValue;
+        return $this;
     }
 
 }

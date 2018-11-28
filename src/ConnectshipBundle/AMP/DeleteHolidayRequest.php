@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class DeleteHolidayRequest
-{
+class DeleteHolidayRequest {
 
     /**
      * @var string $carrier
@@ -49,141 +48,126 @@ class DeleteHolidayRequest
      * @param language $locale
      * @param string $asyncCorrelationData
      */
-    public function __construct($carrier, $countrySymbol, $holidaySymbol, $preProcess, $postProcess, $locale, $asyncCorrelationData)
-    {
-      $this->carrier = $carrier;
-      $this->countrySymbol = $countrySymbol;
-      $this->holidaySymbol = $holidaySymbol;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($carrier, $countrySymbol, $holidaySymbol, $preProcess, $postProcess, $locale, $asyncCorrelationData) {
+        $this->carrier = $carrier;
+        $this->countrySymbol = $countrySymbol;
+        $this->holidaySymbol = $holidaySymbol;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return string
      */
-    public function getCarrier()
-    {
-      return $this->carrier;
+    public function getCarrier() {
+        return $this->carrier;
     }
 
     /**
      * @param string $carrier
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setCarrier($carrier)
-    {
-      $this->carrier = $carrier;
-      return $this;
+    public function setCarrier($carrier) {
+        $this->carrier = $carrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getCountrySymbol()
-    {
-      return $this->countrySymbol;
+    public function getCountrySymbol() {
+        return $this->countrySymbol;
     }
 
     /**
      * @param string $countrySymbol
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setCountrySymbol($countrySymbol)
-    {
-      $this->countrySymbol = $countrySymbol;
-      return $this;
+    public function setCountrySymbol($countrySymbol) {
+        $this->countrySymbol = $countrySymbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHolidaySymbol()
-    {
-      return $this->holidaySymbol;
+    public function getHolidaySymbol() {
+        return $this->holidaySymbol;
     }
 
     /**
      * @param string $holidaySymbol
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setHolidaySymbol($holidaySymbol)
-    {
-      $this->holidaySymbol = $holidaySymbol;
-      return $this;
+    public function setHolidaySymbol($holidaySymbol) {
+        $this->holidaySymbol = $holidaySymbol;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\DeleteHolidayRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

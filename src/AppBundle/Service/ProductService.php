@@ -41,7 +41,10 @@ class ProductService {
         $result = array();
 
         foreach ($products as $product) {
-            $result[] = $this->buildProductFromErp($product);
+            $t = $this->buildProductFromErp($product);
+            if ($t !== null) {
+                $result[] = $t;
+            }
         }
 
         return $result;
@@ -159,6 +162,8 @@ class ProductService {
         $wholesaleProduct = $this->wholesale->getProductRepository()->find($product->getItemNumber()); // look for item on Wholesale
         if ($wholesaleProduct !== null) {
             $this->loadProductFromWholesale($product, $wholesaleProduct); // if it exists add the data to the model
+        } else {
+            return null;
         }
 
         $dimensions = $this->em->getRepository(\AppBundle\Entity\ProductDimension::class)->findOneByBarcode($product->getBarcode()); // look for item in local cubiscan db

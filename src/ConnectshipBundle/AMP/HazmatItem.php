@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class HazmatItem
-{
+class HazmatItem {
 
     /**
      * @var boolean $hazmat500kgExemption
@@ -205,730 +204,648 @@ class HazmatItem
      */
     protected $userData5 = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return boolean
      */
-    public function getHazmat500kgExemption()
-    {
-      return $this->hazmat500kgExemption;
+    public function getHazmat500kgExemption() {
+        return $this->hazmat500kgExemption;
     }
 
     /**
      * @param boolean $hazmat500kgExemption
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmat500kgExemption($hazmat500kgExemption)
-    {
-      $this->hazmat500kgExemption = $hazmat500kgExemption;
-      return $this;
+    public function setHazmat500kgExemption($hazmat500kgExemption) {
+        $this->hazmat500kgExemption = $hazmat500kgExemption;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatAccessible()
-    {
-      return $this->hazmatAccessible;
+    public function getHazmatAccessible() {
+        return $this->hazmatAccessible;
     }
 
     /**
      * @param boolean $hazmatAccessible
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatAccessible($hazmatAccessible)
-    {
-      $this->hazmatAccessible = $hazmatAccessible;
-      return $this;
+    public function setHazmatAccessible($hazmatAccessible) {
+        $this->hazmatAccessible = $hazmatAccessible;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatCargo()
-    {
-      return $this->hazmatCargo;
+    public function getHazmatCargo() {
+        return $this->hazmatCargo;
     }
 
     /**
      * @param boolean $hazmatCargo
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatCargo($hazmatCargo)
-    {
-      $this->hazmatCargo = $hazmatCargo;
-      return $this;
+    public function setHazmatCargo($hazmatCargo) {
+        $this->hazmatCargo = $hazmatCargo;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHazmatCaCategory()
-    {
-      return $this->hazmatCaCategory;
+    public function getHazmatCaCategory() {
+        return $this->hazmatCaCategory;
     }
 
     /**
      * @param enumItem $hazmatCaCategory
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatCaCategory($hazmatCaCategory)
-    {
-      $this->hazmatCaCategory = $hazmatCaCategory;
-      return $this;
+    public function setHazmatCaCategory($hazmatCaCategory) {
+        $this->hazmatCaCategory = $hazmatCaCategory;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatClass()
-    {
-      return $this->hazmatClass;
+    public function getHazmatClass() {
+        return $this->hazmatClass;
     }
 
     /**
      * @param string $hazmatClass
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatClass($hazmatClass)
-    {
-      $this->hazmatClass = $hazmatClass;
-      return $this;
+    public function setHazmatClass($hazmatClass) {
+        $this->hazmatClass = $hazmatClass;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatDescription()
-    {
-      return $this->hazmatDescription;
+    public function getHazmatDescription() {
+        return $this->hazmatDescription;
     }
 
     /**
      * @param string $hazmatDescription
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatDescription($hazmatDescription)
-    {
-      $this->hazmatDescription = $hazmatDescription;
-      return $this;
+    public function setHazmatDescription($hazmatDescription) {
+        $this->hazmatDescription = $hazmatDescription;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatEmergencyContact()
-    {
-      return $this->hazmatEmergencyContact;
+    public function getHazmatEmergencyContact() {
+        return $this->hazmatEmergencyContact;
     }
 
     /**
      * @param string $hazmatEmergencyContact
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatEmergencyContact($hazmatEmergencyContact)
-    {
-      $this->hazmatEmergencyContact = $hazmatEmergencyContact;
-      return $this;
+    public function setHazmatEmergencyContact($hazmatEmergencyContact) {
+        $this->hazmatEmergencyContact = $hazmatEmergencyContact;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatEmergencyPhone()
-    {
-      return $this->hazmatEmergencyPhone;
+    public function getHazmatEmergencyPhone() {
+        return $this->hazmatEmergencyPhone;
     }
 
     /**
      * @param string $hazmatEmergencyPhone
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatEmergencyPhone($hazmatEmergencyPhone)
-    {
-      $this->hazmatEmergencyPhone = $hazmatEmergencyPhone;
-      return $this;
+    public function setHazmatEmergencyPhone($hazmatEmergencyPhone) {
+        $this->hazmatEmergencyPhone = $hazmatEmergencyPhone;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatExceptedQuantity()
-    {
-      return $this->hazmatExceptedQuantity;
+    public function getHazmatExceptedQuantity() {
+        return $this->hazmatExceptedQuantity;
     }
 
     /**
      * @param boolean $hazmatExceptedQuantity
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatExceptedQuantity($hazmatExceptedQuantity)
-    {
-      $this->hazmatExceptedQuantity = $hazmatExceptedQuantity;
-      return $this;
+    public function setHazmatExceptedQuantity($hazmatExceptedQuantity) {
+        $this->hazmatExceptedQuantity = $hazmatExceptedQuantity;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatExNumber()
-    {
-      return $this->hazmatExNumber;
+    public function getHazmatExNumber() {
+        return $this->hazmatExNumber;
     }
 
     /**
      * @param string $hazmatExNumber
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatExNumber($hazmatExNumber)
-    {
-      $this->hazmatExNumber = $hazmatExNumber;
-      return $this;
+    public function setHazmatExNumber($hazmatExNumber) {
+        $this->hazmatExNumber = $hazmatExNumber;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatId()
-    {
-      return $this->hazmatId;
+    public function getHazmatId() {
+        return $this->hazmatId;
     }
 
     /**
      * @param string $hazmatId
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatId($hazmatId)
-    {
-      $this->hazmatId = $hazmatId;
-      return $this;
+    public function setHazmatId($hazmatId) {
+        $this->hazmatId = $hazmatId;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getHazmatInfectiousResponsibleParty()
-    {
-      return $this->hazmatInfectiousResponsibleParty;
+    public function getHazmatInfectiousResponsibleParty() {
+        return $this->hazmatInfectiousResponsibleParty;
     }
 
     /**
      * @param NameAddress $hazmatInfectiousResponsibleParty
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatInfectiousResponsibleParty($hazmatInfectiousResponsibleParty)
-    {
-      $this->hazmatInfectiousResponsibleParty = $hazmatInfectiousResponsibleParty;
-      return $this;
+    public function setHazmatInfectiousResponsibleParty($hazmatInfectiousResponsibleParty) {
+        $this->hazmatInfectiousResponsibleParty = $hazmatInfectiousResponsibleParty;
+        return $this;
     }
 
     /**
      * @return enumList
      */
-    public function getHazmatLabel()
-    {
-      return $this->hazmatLabel;
+    public function getHazmatLabel() {
+        return $this->hazmatLabel;
     }
 
     /**
      * @param enumList $hazmatLabel
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatLabel($hazmatLabel)
-    {
-      $this->hazmatLabel = $hazmatLabel;
-      return $this;
+    public function setHazmatLabel($hazmatLabel) {
+        $this->hazmatLabel = $hazmatLabel;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatLimitedQuantity()
-    {
-      return $this->hazmatLimitedQuantity;
+    public function getHazmatLimitedQuantity() {
+        return $this->hazmatLimitedQuantity;
     }
 
     /**
      * @param boolean $hazmatLimitedQuantity
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatLimitedQuantity($hazmatLimitedQuantity)
-    {
-      $this->hazmatLimitedQuantity = $hazmatLimitedQuantity;
-      return $this;
+    public function setHazmatLimitedQuantity($hazmatLimitedQuantity) {
+        $this->hazmatLimitedQuantity = $hazmatLimitedQuantity;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatPacking()
-    {
-      return $this->hazmatPacking;
+    public function getHazmatPacking() {
+        return $this->hazmatPacking;
     }
 
     /**
      * @param string $hazmatPacking
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatPacking($hazmatPacking)
-    {
-      $this->hazmatPacking = $hazmatPacking;
-      return $this;
+    public function setHazmatPacking($hazmatPacking) {
+        $this->hazmatPacking = $hazmatPacking;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHazmatPackingGroup()
-    {
-      return $this->hazmatPackingGroup;
+    public function getHazmatPackingGroup() {
+        return $this->hazmatPackingGroup;
     }
 
     /**
      * @param enumItem $hazmatPackingGroup
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatPackingGroup($hazmatPackingGroup)
-    {
-      $this->hazmatPackingGroup = $hazmatPackingGroup;
-      return $this;
+    public function setHazmatPackingGroup($hazmatPackingGroup) {
+        $this->hazmatPackingGroup = $hazmatPackingGroup;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatPackingInstruction()
-    {
-      return $this->hazmatPackingInstruction;
+    public function getHazmatPackingInstruction() {
+        return $this->hazmatPackingInstruction;
     }
 
     /**
      * @param string $hazmatPackingInstruction
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatPackingInstruction($hazmatPackingInstruction)
-    {
-      $this->hazmatPackingInstruction = $hazmatPackingInstruction;
-      return $this;
+    public function setHazmatPackingInstruction($hazmatPackingInstruction) {
+        $this->hazmatPackingInstruction = $hazmatPackingInstruction;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatPercentage()
-    {
-      return $this->hazmatPercentage;
+    public function getHazmatPercentage() {
+        return $this->hazmatPercentage;
     }
 
     /**
      * @param string $hazmatPercentage
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatPercentage($hazmatPercentage)
-    {
-      $this->hazmatPercentage = $hazmatPercentage;
-      return $this;
+    public function setHazmatPercentage($hazmatPercentage) {
+        $this->hazmatPercentage = $hazmatPercentage;
+        return $this;
     }
 
     /**
      * @return HazmatQuantity
      */
-    public function getHazmatQuantity()
-    {
-      return $this->hazmatQuantity;
+    public function getHazmatQuantity() {
+        return $this->hazmatQuantity;
     }
 
     /**
      * @param HazmatQuantity $hazmatQuantity
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatQuantity($hazmatQuantity)
-    {
-      $this->hazmatQuantity = $hazmatQuantity;
-      return $this;
+    public function setHazmatQuantity($hazmatQuantity) {
+        $this->hazmatQuantity = $hazmatQuantity;
+        return $this;
     }
 
     /**
      * @return HazmatQuantity
      */
-    public function getHazmatRadioactiveActivity()
-    {
-      return $this->hazmatRadioactiveActivity;
+    public function getHazmatRadioactiveActivity() {
+        return $this->hazmatRadioactiveActivity;
     }
 
     /**
      * @param HazmatQuantity $hazmatRadioactiveActivity
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveActivity($hazmatRadioactiveActivity)
-    {
-      $this->hazmatRadioactiveActivity = $hazmatRadioactiveActivity;
-      return $this;
+    public function setHazmatRadioactiveActivity($hazmatRadioactiveActivity) {
+        $this->hazmatRadioactiveActivity = $hazmatRadioactiveActivity;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatRadioactiveChemicalForm()
-    {
-      return $this->hazmatRadioactiveChemicalForm;
+    public function getHazmatRadioactiveChemicalForm() {
+        return $this->hazmatRadioactiveChemicalForm;
     }
 
     /**
      * @param string $hazmatRadioactiveChemicalForm
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveChemicalForm($hazmatRadioactiveChemicalForm)
-    {
-      $this->hazmatRadioactiveChemicalForm = $hazmatRadioactiveChemicalForm;
-      return $this;
+    public function setHazmatRadioactiveChemicalForm($hazmatRadioactiveChemicalForm) {
+        $this->hazmatRadioactiveChemicalForm = $hazmatRadioactiveChemicalForm;
+        return $this;
     }
 
     /**
      * @return float
      */
-    public function getHazmatRadioactiveCsi()
-    {
-      return $this->hazmatRadioactiveCsi;
+    public function getHazmatRadioactiveCsi() {
+        return $this->hazmatRadioactiveCsi;
     }
 
     /**
      * @param float $hazmatRadioactiveCsi
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveCsi($hazmatRadioactiveCsi)
-    {
-      $this->hazmatRadioactiveCsi = $hazmatRadioactiveCsi;
-      return $this;
+    public function setHazmatRadioactiveCsi($hazmatRadioactiveCsi) {
+        $this->hazmatRadioactiveCsi = $hazmatRadioactiveCsi;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHazmatRadioactiveException()
-    {
-      return $this->hazmatRadioactiveException;
+    public function getHazmatRadioactiveException() {
+        return $this->hazmatRadioactiveException;
     }
 
     /**
      * @param enumItem $hazmatRadioactiveException
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveException($hazmatRadioactiveException)
-    {
-      $this->hazmatRadioactiveException = $hazmatRadioactiveException;
-      return $this;
+    public function setHazmatRadioactiveException($hazmatRadioactiveException) {
+        $this->hazmatRadioactiveException = $hazmatRadioactiveException;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatRadioactiveName()
-    {
-      return $this->hazmatRadioactiveName;
+    public function getHazmatRadioactiveName() {
+        return $this->hazmatRadioactiveName;
     }
 
     /**
      * @param string $hazmatRadioactiveName
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveName($hazmatRadioactiveName)
-    {
-      $this->hazmatRadioactiveName = $hazmatRadioactiveName;
-      return $this;
+    public function setHazmatRadioactiveName($hazmatRadioactiveName) {
+        $this->hazmatRadioactiveName = $hazmatRadioactiveName;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatRadioactivePackaging()
-    {
-      return $this->hazmatRadioactivePackaging;
+    public function getHazmatRadioactivePackaging() {
+        return $this->hazmatRadioactivePackaging;
     }
 
     /**
      * @param string $hazmatRadioactivePackaging
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactivePackaging($hazmatRadioactivePackaging)
-    {
-      $this->hazmatRadioactivePackaging = $hazmatRadioactivePackaging;
-      return $this;
+    public function setHazmatRadioactivePackaging($hazmatRadioactivePackaging) {
+        $this->hazmatRadioactivePackaging = $hazmatRadioactivePackaging;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHazmatRadioactivePhysicalForm()
-    {
-      return $this->hazmatRadioactivePhysicalForm;
+    public function getHazmatRadioactivePhysicalForm() {
+        return $this->hazmatRadioactivePhysicalForm;
     }
 
     /**
      * @param enumItem $hazmatRadioactivePhysicalForm
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactivePhysicalForm($hazmatRadioactivePhysicalForm)
-    {
-      $this->hazmatRadioactivePhysicalForm = $hazmatRadioactivePhysicalForm;
-      return $this;
+    public function setHazmatRadioactivePhysicalForm($hazmatRadioactivePhysicalForm) {
+        $this->hazmatRadioactivePhysicalForm = $hazmatRadioactivePhysicalForm;
+        return $this;
     }
 
     /**
      * @return HazmatQuantity
      */
-    public function getHazmatRadioactiveSurfaceReading()
-    {
-      return $this->hazmatRadioactiveSurfaceReading;
+    public function getHazmatRadioactiveSurfaceReading() {
+        return $this->hazmatRadioactiveSurfaceReading;
     }
 
     /**
      * @param HazmatQuantity $hazmatRadioactiveSurfaceReading
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveSurfaceReading($hazmatRadioactiveSurfaceReading)
-    {
-      $this->hazmatRadioactiveSurfaceReading = $hazmatRadioactiveSurfaceReading;
-      return $this;
+    public function setHazmatRadioactiveSurfaceReading($hazmatRadioactiveSurfaceReading) {
+        $this->hazmatRadioactiveSurfaceReading = $hazmatRadioactiveSurfaceReading;
+        return $this;
     }
 
     /**
      * @return float
      */
-    public function getHazmatRadioactiveTransportIndex()
-    {
-      return $this->hazmatRadioactiveTransportIndex;
+    public function getHazmatRadioactiveTransportIndex() {
+        return $this->hazmatRadioactiveTransportIndex;
     }
 
     /**
      * @param float $hazmatRadioactiveTransportIndex
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRadioactiveTransportIndex($hazmatRadioactiveTransportIndex)
-    {
-      $this->hazmatRadioactiveTransportIndex = $hazmatRadioactiveTransportIndex;
-      return $this;
+    public function setHazmatRadioactiveTransportIndex($hazmatRadioactiveTransportIndex) {
+        $this->hazmatRadioactiveTransportIndex = $hazmatRadioactiveTransportIndex;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatReference()
-    {
-      return $this->hazmatReference;
+    public function getHazmatReference() {
+        return $this->hazmatReference;
     }
 
     /**
      * @param string $hazmatReference
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatReference($hazmatReference)
-    {
-      $this->hazmatReference = $hazmatReference;
-      return $this;
+    public function setHazmatReference($hazmatReference) {
+        $this->hazmatReference = $hazmatReference;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHazmatRegulation()
-    {
-      return $this->hazmatRegulation;
+    public function getHazmatRegulation() {
+        return $this->hazmatRegulation;
     }
 
     /**
      * @param enumItem $hazmatRegulation
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRegulation($hazmatRegulation)
-    {
-      $this->hazmatRegulation = $hazmatRegulation;
-      return $this;
+    public function setHazmatRegulation($hazmatRegulation) {
+        $this->hazmatRegulation = $hazmatRegulation;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getHazmatRegulationSet()
-    {
-      return $this->hazmatRegulationSet;
+    public function getHazmatRegulationSet() {
+        return $this->hazmatRegulationSet;
     }
 
     /**
      * @param enumItem $hazmatRegulationSet
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatRegulationSet($hazmatRegulationSet)
-    {
-      $this->hazmatRegulationSet = $hazmatRegulationSet;
-      return $this;
+    public function setHazmatRegulationSet($hazmatRegulationSet) {
+        $this->hazmatRegulationSet = $hazmatRegulationSet;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getHazmatReportableQuantity()
-    {
-      return $this->hazmatReportableQuantity;
+    public function getHazmatReportableQuantity() {
+        return $this->hazmatReportableQuantity;
     }
 
     /**
      * @param boolean $hazmatReportableQuantity
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatReportableQuantity($hazmatReportableQuantity)
-    {
-      $this->hazmatReportableQuantity = $hazmatReportableQuantity;
-      return $this;
+    public function setHazmatReportableQuantity($hazmatReportableQuantity) {
+        $this->hazmatReportableQuantity = $hazmatReportableQuantity;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatSpecialProvisions()
-    {
-      return $this->hazmatSpecialProvisions;
+    public function getHazmatSpecialProvisions() {
+        return $this->hazmatSpecialProvisions;
     }
 
     /**
      * @param string $hazmatSpecialProvisions
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatSpecialProvisions($hazmatSpecialProvisions)
-    {
-      $this->hazmatSpecialProvisions = $hazmatSpecialProvisions;
-      return $this;
+    public function setHazmatSpecialProvisions($hazmatSpecialProvisions) {
+        $this->hazmatSpecialProvisions = $hazmatSpecialProvisions;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatSubsidiaryRiskClass()
-    {
-      return $this->hazmatSubsidiaryRiskClass;
+    public function getHazmatSubsidiaryRiskClass() {
+        return $this->hazmatSubsidiaryRiskClass;
     }
 
     /**
      * @param string $hazmatSubsidiaryRiskClass
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatSubsidiaryRiskClass($hazmatSubsidiaryRiskClass)
-    {
-      $this->hazmatSubsidiaryRiskClass = $hazmatSubsidiaryRiskClass;
-      return $this;
+    public function setHazmatSubsidiaryRiskClass($hazmatSubsidiaryRiskClass) {
+        $this->hazmatSubsidiaryRiskClass = $hazmatSubsidiaryRiskClass;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHazmatTechnicalName()
-    {
-      return $this->hazmatTechnicalName;
+    public function getHazmatTechnicalName() {
+        return $this->hazmatTechnicalName;
     }
 
     /**
      * @param string $hazmatTechnicalName
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setHazmatTechnicalName($hazmatTechnicalName)
-    {
-      $this->hazmatTechnicalName = $hazmatTechnicalName;
-      return $this;
+    public function setHazmatTechnicalName($hazmatTechnicalName) {
+        $this->hazmatTechnicalName = $hazmatTechnicalName;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData1()
-    {
-      return $this->userData1;
+    public function getUserData1() {
+        return $this->userData1;
     }
 
     /**
      * @param anyType $userData1
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setUserData1($userData1)
-    {
-      $this->userData1 = $userData1;
-      return $this;
+    public function setUserData1($userData1) {
+        $this->userData1 = $userData1;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData2()
-    {
-      return $this->userData2;
+    public function getUserData2() {
+        return $this->userData2;
     }
 
     /**
      * @param anyType $userData2
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setUserData2($userData2)
-    {
-      $this->userData2 = $userData2;
-      return $this;
+    public function setUserData2($userData2) {
+        $this->userData2 = $userData2;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData3()
-    {
-      return $this->userData3;
+    public function getUserData3() {
+        return $this->userData3;
     }
 
     /**
      * @param anyType $userData3
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setUserData3($userData3)
-    {
-      $this->userData3 = $userData3;
-      return $this;
+    public function setUserData3($userData3) {
+        $this->userData3 = $userData3;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData4()
-    {
-      return $this->userData4;
+    public function getUserData4() {
+        return $this->userData4;
     }
 
     /**
      * @param anyType $userData4
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setUserData4($userData4)
-    {
-      $this->userData4 = $userData4;
-      return $this;
+    public function setUserData4($userData4) {
+        $this->userData4 = $userData4;
+        return $this;
     }
 
     /**
      * @return anyType
      */
-    public function getUserData5()
-    {
-      return $this->userData5;
+    public function getUserData5() {
+        return $this->userData5;
     }
 
     /**
      * @param anyType $userData5
      * @return \ConnectshipBundle\AMP\HazmatItem
      */
-    public function setUserData5($userData5)
-    {
-      $this->userData5 = $userData5;
-      return $this;
+    public function setUserData5($userData5) {
+        $this->userData5 = $userData5;
+        return $this;
     }
 
 }

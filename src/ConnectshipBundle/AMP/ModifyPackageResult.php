@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ModifyPackageResult
-{
+class ModifyPackageResult {
 
     /**
      * @var int $code
@@ -25,65 +24,58 @@ class ModifyPackageResult
      * @param string $message
      * @param int $package
      */
-    public function __construct($code, $message, $package)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->package = $package;
+    public function __construct($code, $message, $package) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->package = $package;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\ModifyPackageResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\ModifyPackageResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getPackage()
-    {
-      return $this->package;
+    public function getPackage() {
+        return $this->package;
     }
 
     /**
      * @param int $package
      * @return \ConnectshipBundle\AMP\ModifyPackageResult
      */
-    public function setPackage($package)
-    {
-      $this->package = $package;
-      return $this;
+    public function setPackage($package) {
+        $this->package = $package;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class PrintItem
-{
+class PrintItem {
 
     /**
      * @var int $msn
@@ -37,103 +36,92 @@ class PrintItem
      * @param string $containerCode
      * @param string $shipFileSymbol
      */
-    public function __construct($msn, $bundleId, $groupId, $containerCode, $shipFileSymbol)
-    {
-      $this->msn = $msn;
-      $this->bundleId = $bundleId;
-      $this->groupId = $groupId;
-      $this->containerCode = $containerCode;
-      $this->shipFileSymbol = $shipFileSymbol;
+    public function __construct($msn, $bundleId, $groupId, $containerCode, $shipFileSymbol) {
+        $this->msn = $msn;
+        $this->bundleId = $bundleId;
+        $this->groupId = $groupId;
+        $this->containerCode = $containerCode;
+        $this->shipFileSymbol = $shipFileSymbol;
     }
 
     /**
      * @return int
      */
-    public function getMsn()
-    {
-      return $this->msn;
+    public function getMsn() {
+        return $this->msn;
     }
 
     /**
      * @param int $msn
      * @return \ConnectshipBundle\AMP\PrintItem
      */
-    public function setMsn($msn)
-    {
-      $this->msn = $msn;
-      return $this;
+    public function setMsn($msn) {
+        $this->msn = $msn;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getBundleId()
-    {
-      return $this->bundleId;
+    public function getBundleId() {
+        return $this->bundleId;
     }
 
     /**
      * @param int $bundleId
      * @return \ConnectshipBundle\AMP\PrintItem
      */
-    public function setBundleId($bundleId)
-    {
-      $this->bundleId = $bundleId;
-      return $this;
+    public function setBundleId($bundleId) {
+        $this->bundleId = $bundleId;
+        return $this;
     }
 
     /**
      * @return int
      */
-    public function getGroupId()
-    {
-      return $this->groupId;
+    public function getGroupId() {
+        return $this->groupId;
     }
 
     /**
      * @param int $groupId
      * @return \ConnectshipBundle\AMP\PrintItem
      */
-    public function setGroupId($groupId)
-    {
-      $this->groupId = $groupId;
-      return $this;
+    public function setGroupId($groupId) {
+        $this->groupId = $groupId;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getContainerCode()
-    {
-      return $this->containerCode;
+    public function getContainerCode() {
+        return $this->containerCode;
     }
 
     /**
      * @param string $containerCode
      * @return \ConnectshipBundle\AMP\PrintItem
      */
-    public function setContainerCode($containerCode)
-    {
-      $this->containerCode = $containerCode;
-      return $this;
+    public function setContainerCode($containerCode) {
+        $this->containerCode = $containerCode;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipFileSymbol()
-    {
-      return $this->shipFileSymbol;
+    public function getShipFileSymbol() {
+        return $this->shipFileSymbol;
     }
 
     /**
      * @param string $shipFileSymbol
      * @return \ConnectshipBundle\AMP\PrintItem
      */
-    public function setShipFileSymbol($shipFileSymbol)
-    {
-      $this->shipFileSymbol = $shipFileSymbol;
-      return $this;
+    public function setShipFileSymbol($shipFileSymbol) {
+        $this->shipFileSymbol = $shipFileSymbol;
+        return $this;
     }
 
 }

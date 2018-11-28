@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ServiceList
-{
+class ServiceList {
 
     /**
      * @var string[] $service
@@ -13,27 +12,24 @@ class ServiceList
     /**
      * @param string[] $service
      */
-    public function __construct(array $service)
-    {
-      $this->service = $service;
+    public function __construct(array $service) {
+        $this->service = $service;
     }
 
     /**
      * @return string[]
      */
-    public function getService()
-    {
-      return $this->service;
+    public function getService() {
+        return $this->service;
     }
 
     /**
      * @param string[] $service
      * @return \ConnectshipBundle\AMP\ServiceList
      */
-    public function setService(array $service)
-    {
-      $this->service = $service;
-      return $this;
+    public function setService(array $service) {
+        $this->service = $service;
+        return $this;
     }
 
 }

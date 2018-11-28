@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ShipResponse
-{
+class ShipResponse {
 
     /**
      * @var ProcessResult $result
@@ -19,46 +18,41 @@ class ShipResponse
      * @param ProcessResult $result
      * @param string $asyncCorrelationData
      */
-    public function __construct($result, $asyncCorrelationData)
-    {
-      $this->result = $result;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($result, $asyncCorrelationData) {
+        $this->result = $result;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return ProcessResult
      */
-    public function getResult()
-    {
-      return $this->result;
+    public function getResult() {
+        return $this->result;
     }
 
     /**
      * @param ProcessResult $result
      * @return \ConnectshipBundle\AMP\ShipResponse
      */
-    public function setResult($result)
-    {
-      $this->result = $result;
-      return $this;
+    public function setResult($result) {
+        $this->result = $result;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\ShipResponse
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

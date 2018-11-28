@@ -2,36 +2,31 @@
 
 namespace ConnectshipBundle\AMP;
 
-class HazmatItemList
-{
+class HazmatItemList {
 
     /**
      * @var HazmatItem[] $item
      */
     protected $item = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return HazmatItem[]
      */
-    public function getItem()
-    {
-      return $this->item;
+    public function getItem() {
+        return $this->item;
     }
 
     /**
      * @param HazmatItem[] $item
      * @return \ConnectshipBundle\AMP\HazmatItemList
      */
-    public function setItem(array $item = null)
-    {
-      $this->item = $item;
-      return $this;
+    public function setItem(array $item = null) {
+        $this->item = $item;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class Dimensions
-{
+class Dimensions {
 
     /**
      * @var float $length
@@ -30,100 +29,88 @@ class Dimensions
      */
     protected $value = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return float
      */
-    public function getLength()
-    {
-      return $this->length;
+    public function getLength() {
+        return $this->length;
     }
 
     /**
      * @param float $length
      * @return \ConnectshipBundle\AMP\Dimensions
      */
-    public function setLength($length)
-    {
-      $this->length = $length;
-      return $this;
+    public function setLength($length) {
+        $this->length = $length;
+        return $this;
     }
 
     /**
      * @return float
      */
-    public function getWidth()
-    {
-      return $this->width;
+    public function getWidth() {
+        return $this->width;
     }
 
     /**
      * @param float $width
      * @return \ConnectshipBundle\AMP\Dimensions
      */
-    public function setWidth($width)
-    {
-      $this->width = $width;
-      return $this;
+    public function setWidth($width) {
+        $this->width = $width;
+        return $this;
     }
 
     /**
      * @return float
      */
-    public function getHeight()
-    {
-      return $this->height;
+    public function getHeight() {
+        return $this->height;
     }
 
     /**
      * @param float $height
      * @return \ConnectshipBundle\AMP\Dimensions
      */
-    public function setHeight($height)
-    {
-      $this->height = $height;
-      return $this;
+    public function setHeight($height) {
+        $this->height = $height;
+        return $this;
     }
 
     /**
      * @return unit
      */
-    public function getUnit()
-    {
-      return $this->unit;
+    public function getUnit() {
+        return $this->unit;
     }
 
     /**
      * @param unit $unit
      * @return \ConnectshipBundle\AMP\Dimensions
      */
-    public function setUnit($unit)
-    {
-      $this->unit = $unit;
-      return $this;
+    public function setUnit($unit) {
+        $this->unit = $unit;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getValue()
-    {
-      return $this->value;
+    public function getValue() {
+        return $this->value;
     }
 
     /**
      * @param string $value
      * @return \ConnectshipBundle\AMP\Dimensions
      */
-    public function setValue($value)
-    {
-      $this->value = $value;
-      return $this;
+    public function setValue($value) {
+        $this->value = $value;
+        return $this;
     }
 
 }

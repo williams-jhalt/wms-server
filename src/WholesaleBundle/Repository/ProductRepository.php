@@ -79,6 +79,11 @@ class ProductRepository {
     }
 
     private function loadProduct($data) {
+        
+        if ($data == null) {
+            return null;
+        }
+        
         $t = new Product();
         $t->setId($data->id)
                 ->setActive($data->active)

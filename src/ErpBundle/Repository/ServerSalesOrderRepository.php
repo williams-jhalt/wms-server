@@ -375,7 +375,7 @@ class ServerSalesOrderRepository extends AbstractServerRepository implements Sal
                 . "AND oe_head.rec_type = 'O' "
                 . "AND oe_head.ord_date >= $startDateString "
                 . "AND oe_head.ord_date <= $endDateString";
-
+        
         return $this->_find($query, $limit, $offset);
     }
 

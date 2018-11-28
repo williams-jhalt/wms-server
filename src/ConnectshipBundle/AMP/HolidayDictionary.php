@@ -2,36 +2,31 @@
 
 namespace ConnectshipBundle\AMP;
 
-class HolidayDictionary
-{
+class HolidayDictionary {
 
     /**
      * @var HolidayItem[] $item
      */
     protected $item = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return HolidayItem[]
      */
-    public function getItem()
-    {
-      return $this->item;
+    public function getItem() {
+        return $this->item;
     }
 
     /**
      * @param HolidayItem[] $item
      * @return \ConnectshipBundle\AMP\HolidayDictionary
      */
-    public function setItem(array $item = null)
-    {
-      $this->item = $item;
-      return $this;
+    public function setItem(array $item = null) {
+        $this->item = $item;
+        return $this;
     }
 
 }

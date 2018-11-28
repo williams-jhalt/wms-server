@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ProcessResult
-{
+class ProcessResult {
 
     /**
      * @var int $code
@@ -35,101 +34,90 @@ class ProcessResult
      * @param string $message
      * @param DataDictionary $resultData
      */
-    public function __construct($code, $message, $resultData)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->resultData = $resultData;
+    public function __construct($code, $message, $resultData) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->resultData = $resultData;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\ProcessResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\ProcessResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getResultData()
-    {
-      return $this->resultData;
+    public function getResultData() {
+        return $this->resultData;
     }
 
     /**
      * @param DataDictionary $resultData
      * @return \ConnectshipBundle\AMP\ProcessResult
      */
-    public function setResultData($resultData)
-    {
-      $this->resultData = $resultData;
-      return $this;
+    public function setResultData($resultData) {
+        $this->resultData = $resultData;
+        return $this;
     }
 
     /**
      * @return PackageResultList
      */
-    public function getPackageResults()
-    {
-      return $this->packageResults;
+    public function getPackageResults() {
+        return $this->packageResults;
     }
 
     /**
      * @param PackageResultList $packageResults
      * @return \ConnectshipBundle\AMP\ProcessResult
      */
-    public function setPackageResults($packageResults)
-    {
-      $this->packageResults = $packageResults;
-      return $this;
+    public function setPackageResults($packageResults) {
+        $this->packageResults = $packageResults;
+        return $this;
     }
 
     /**
      * @return Identity
      */
-    public function getService()
-    {
-      return $this->service;
+    public function getService() {
+        return $this->service;
     }
 
     /**
      * @param Identity $service
      * @return \ConnectshipBundle\AMP\ProcessResult
      */
-    public function setService($service)
-    {
-      $this->service = $service;
-      return $this;
+    public function setService($service) {
+        $this->service = $service;
+        return $this;
     }
 
 }

@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ListShipFilesResult
-{
+class ListShipFilesResult {
 
     /**
      * @var int $code
@@ -25,65 +24,58 @@ class ListShipFilesResult
      * @param string $message
      * @param ShipFileList $resultData
      */
-    public function __construct($code, $message, $resultData)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->resultData = $resultData;
+    public function __construct($code, $message, $resultData) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->resultData = $resultData;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\ListShipFilesResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\ListShipFilesResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return ShipFileList
      */
-    public function getResultData()
-    {
-      return $this->resultData;
+    public function getResultData() {
+        return $this->resultData;
     }
 
     /**
      * @param ShipFileList $resultData
      * @return \ConnectshipBundle\AMP\ListShipFilesResult
      */
-    public function setResultData($resultData)
-    {
-      $this->resultData = $resultData;
-      return $this;
+    public function setResultData($resultData) {
+        $this->resultData = $resultData;
+        return $this;
     }
 
 }

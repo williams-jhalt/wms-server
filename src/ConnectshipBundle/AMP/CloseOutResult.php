@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class CloseOutResult
-{
+class CloseOutResult {
 
     /**
      * @var int $code
@@ -35,101 +34,90 @@ class CloseOutResult
      * @param string $message
      * @param DataDictionary $resultData
      */
-    public function __construct($code, $message, $resultData)
-    {
-      $this->code = $code;
-      $this->message = $message;
-      $this->resultData = $resultData;
+    public function __construct($code, $message, $resultData) {
+        $this->code = $code;
+        $this->message = $message;
+        $this->resultData = $resultData;
     }
 
     /**
      * @return int
      */
-    public function getCode()
-    {
-      return $this->code;
+    public function getCode() {
+        return $this->code;
     }
 
     /**
      * @param int $code
      * @return \ConnectshipBundle\AMP\CloseOutResult
      */
-    public function setCode($code)
-    {
-      $this->code = $code;
-      return $this;
+    public function setCode($code) {
+        $this->code = $code;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getMessage()
-    {
-      return $this->message;
+    public function getMessage() {
+        return $this->message;
     }
 
     /**
      * @param string $message
      * @return \ConnectshipBundle\AMP\CloseOutResult
      */
-    public function setMessage($message)
-    {
-      $this->message = $message;
-      return $this;
+    public function setMessage($message) {
+        $this->message = $message;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getResultData()
-    {
-      return $this->resultData;
+    public function getResultData() {
+        return $this->resultData;
     }
 
     /**
      * @param DataDictionary $resultData
      * @return \ConnectshipBundle\AMP\CloseOutResult
      */
-    public function setResultData($resultData)
-    {
-      $this->resultData = $resultData;
-      return $this;
+    public function setResultData($resultData) {
+        $this->resultData = $resultData;
+        return $this;
     }
 
     /**
      * @return ShipFile
      */
-    public function getShipFile()
-    {
-      return $this->shipFile;
+    public function getShipFile() {
+        return $this->shipFile;
     }
 
     /**
      * @param ShipFile $shipFile
      * @return \ConnectshipBundle\AMP\CloseOutResult
      */
-    public function setShipFile($shipFile)
-    {
-      $this->shipFile = $shipFile;
-      return $this;
+    public function setShipFile($shipFile) {
+        $this->shipFile = $shipFile;
+        return $this;
     }
 
     /**
      * @return TransmitItemList
      */
-    public function getTransmitItemList()
-    {
-      return $this->transmitItemList;
+    public function getTransmitItemList() {
+        return $this->transmitItemList;
     }
 
     /**
      * @param TransmitItemList $transmitItemList
      * @return \ConnectshipBundle\AMP\CloseOutResult
      */
-    public function setTransmitItemList($transmitItemList)
-    {
-      $this->transmitItemList = $transmitItemList;
-      return $this;
+    public function setTransmitItemList($transmitItemList) {
+        $this->transmitItemList = $transmitItemList;
+        return $this;
     }
 
 }

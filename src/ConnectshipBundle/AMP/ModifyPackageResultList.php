@@ -2,36 +2,31 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ModifyPackageResultList
-{
+class ModifyPackageResultList {
 
     /**
      * @var ModifyPackageResult[] $item
      */
     protected $item = null;
 
-    
-    public function __construct()
-    {
-    
+    public function __construct() {
+        
     }
 
     /**
      * @return ModifyPackageResult[]
      */
-    public function getItem()
-    {
-      return $this->item;
+    public function getItem() {
+        return $this->item;
     }
 
     /**
      * @param ModifyPackageResult[] $item
      * @return \ConnectshipBundle\AMP\ModifyPackageResultList
      */
-    public function setItem(array $item = null)
-    {
-      $this->item = $item;
-      return $this;
+    public function setItem(array $item = null) {
+        $this->item = $item;
+        return $this;
     }
 
 }

@@ -20,7 +20,7 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $format = 'json';
 
         $response = $this->client->get("shipments.{$format}", ['query' => ['limit' => $limit, 'offset' => $offset]]);
-        
+
         $data = $response->getBody();
 
         $serializer = $this->erp->getSerializer();
@@ -53,15 +53,14 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $serializer = $this->erp->getSerializer();
 
         $salesOrders = $serializer->deserialize($salesOrderData, 'ErpBundle\Model\SalesOrderCollection', $format);
-        
-        $result = new ShipmentCollection();        
+
+        $result = new ShipmentCollection();
 
         foreach ($salesOrders->getSalesOrders() as $salesOrder) {
 
             $shipments = $this->findByOrderNumber($salesOrder->getOrderNumber());
-            
+
             $result->setShipments(array_merge($result->getShipments(), $shipments->getShipments()));
-            
         }
 
         return $result;
@@ -77,7 +76,7 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $format = 'json';
 
         $response = $this->client->get("shipments/{$orderNumber}.{$format}");
-        
+
         $data = $response->getBody();
 
         $serializer = $this->erp->getSerializer();
@@ -98,7 +97,7 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $format = 'json';
 
         $response = $this->client->get("shipments/{$orderNumber}/{$recordSequence}.{$format}");
-        
+
         $data = $response->getBody();
 
         $serializer = $this->erp->getSerializer();
@@ -106,7 +105,6 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $result = $serializer->deserialize($data, 'ErpBundle\Model\Shipment', $format);
 
         return $result;
-        
     }
 
     /**
@@ -120,7 +118,7 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $format = 'json';
 
         $response = $this->client->get("shipments/{$orderNumber}/{$recordSequence}/items.{$format}");
-        
+
         $data = $response->getBody();
 
         $serializer = $this->erp->getSerializer();
@@ -140,7 +138,7 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $format = 'json';
 
         $response = $this->client->get("shipments/{$orderNumber}/packages.{$format}");
-        
+
         $data = $response->getBody();
 
         $serializer = $this->erp->getSerializer();
@@ -148,7 +146,43 @@ class ClientShipmentRepository extends AbstractClientRepository implements Shipm
         $result = $serializer->deserialize($data, 'ErpBundle\Model\ShipmentPackageCollection', $format);
 
         return $result;
-        
+    }
+
+    public function findByShippingDate(\DateTime $startDate, \DateTime $endDate, $limit = 1000, $offset = 0) {
+
+        $format = 'json';
+
+        $query = [
+            'limit' => $limit,
+            'offset' => $offset
+        ];
+
+        if ($startDate !== null) {
+            $query['startDate'] = $startDate->format('c');
+        }
+
+        if ($endDate !== null) {
+            $query['endDate'] = $endDate->format('c');
+        }
+
+        $salesOrderResponse = $this->client->get("orders.{$format}", ['query' => $query]);
+
+        $salesOrderData = $salesOrderResponse->getBody();
+
+        $serializer = $this->erp->getSerializer();
+
+        $salesOrders = $serializer->deserialize($salesOrderData, 'ErpBundle\Model\SalesOrderCollection', $format);
+
+        $result = new ShipmentCollection();
+
+        foreach ($salesOrders->getSalesOrders() as $salesOrder) {
+
+            $shipments = $this->findByOrderNumber($salesOrder->getOrderNumber());
+
+            $result->setShipments(array_merge($result->getShipments(), $shipments->getShipments()));
+        }
+
+        return $result;
     }
 
 }

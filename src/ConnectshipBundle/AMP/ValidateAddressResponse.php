@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ValidateAddressResponse
-{
+class ValidateAddressResponse {
 
     /**
      * @var ValidateResult $result
@@ -19,46 +18,41 @@ class ValidateAddressResponse
      * @param ValidateResult $result
      * @param string $asyncCorrelationData
      */
-    public function __construct($result, $asyncCorrelationData)
-    {
-      $this->result = $result;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($result, $asyncCorrelationData) {
+        $this->result = $result;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return ValidateResult
      */
-    public function getResult()
-    {
-      return $this->result;
+    public function getResult() {
+        return $this->result;
     }
 
     /**
      * @param ValidateResult $result
      * @return \ConnectshipBundle\AMP\ValidateAddressResponse
      */
-    public function setResult($result)
-    {
-      $this->result = $result;
-      return $this;
+    public function setResult($result) {
+        $this->result = $result;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\ValidateAddressResponse
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

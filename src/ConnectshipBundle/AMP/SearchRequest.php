@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class SearchRequest
-{
+class SearchRequest {
 
     /**
      * @var string $carrier
@@ -79,249 +78,222 @@ class SearchRequest
      * @param contextControlSetting $contextControl
      * @param string $asyncCorrelationData
      */
-    public function __construct($carrier, $filters, $preProcess, $postProcess, $locale, $contextControl, $asyncCorrelationData)
-    {
-      $this->carrier = $carrier;
-      $this->filters = $filters;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->contextControl = $contextControl;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($carrier, $filters, $preProcess, $postProcess, $locale, $contextControl, $asyncCorrelationData) {
+        $this->carrier = $carrier;
+        $this->filters = $filters;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->contextControl = $contextControl;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return string
      */
-    public function getCarrier()
-    {
-      return $this->carrier;
+    public function getCarrier() {
+        return $this->carrier;
     }
 
     /**
      * @param string $carrier
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setCarrier($carrier)
-    {
-      $this->carrier = $carrier;
-      return $this;
+    public function setCarrier($carrier) {
+        $this->carrier = $carrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipper()
-    {
-      return $this->shipper;
+    public function getShipper() {
+        return $this->shipper;
     }
 
     /**
      * @param string $shipper
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setShipper($shipper)
-    {
-      $this->shipper = $shipper;
-      return $this;
+    public function setShipper($shipper) {
+        $this->shipper = $shipper;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getShipFile()
-    {
-      return $this->shipFile;
+    public function getShipFile() {
+        return $this->shipFile;
     }
 
     /**
      * @param string $shipFile
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setShipFile($shipFile)
-    {
-      $this->shipFile = $shipFile;
-      return $this;
+    public function setShipFile($shipFile) {
+        $this->shipFile = $shipFile;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getFilters()
-    {
-      return $this->filters;
+    public function getFilters() {
+        return $this->filters;
     }
 
     /**
      * @param DataDictionary $filters
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setFilters($filters)
-    {
-      $this->filters = $filters;
-      return $this;
+    public function setFilters($filters) {
+        $this->filters = $filters;
+        return $this;
     }
 
     /**
      * @return DataDictionary
      */
-    public function getReturnFields()
-    {
-      return $this->returnFields;
+    public function getReturnFields() {
+        return $this->returnFields;
     }
 
     /**
      * @param DataDictionary $returnFields
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setReturnFields($returnFields)
-    {
-      $this->returnFields = $returnFields;
-      return $this;
+    public function setReturnFields($returnFields) {
+        $this->returnFields = $returnFields;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getSearchCloseOutMode()
-    {
-      return $this->searchCloseOutMode;
+    public function getSearchCloseOutMode() {
+        return $this->searchCloseOutMode;
     }
 
     /**
      * @param enumItem $searchCloseOutMode
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setSearchCloseOutMode($searchCloseOutMode)
-    {
-      $this->searchCloseOutMode = $searchCloseOutMode;
-      return $this;
+    public function setSearchCloseOutMode($searchCloseOutMode) {
+        $this->searchCloseOutMode = $searchCloseOutMode;
+        return $this;
     }
 
     /**
      * @return enumItem
      */
-    public function getSearchVoided()
-    {
-      return $this->searchVoided;
+    public function getSearchVoided() {
+        return $this->searchVoided;
     }
 
     /**
      * @param enumItem $searchVoided
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setSearchVoided($searchVoided)
-    {
-      $this->searchVoided = $searchVoided;
-      return $this;
+    public function setSearchVoided($searchVoided) {
+        $this->searchVoided = $searchVoided;
+        return $this;
     }
 
     /**
      * @return boolean
      */
-    public function getGlobalSearch()
-    {
-      return $this->globalSearch;
+    public function getGlobalSearch() {
+        return $this->globalSearch;
     }
 
     /**
      * @param boolean $globalSearch
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setGlobalSearch($globalSearch)
-    {
-      $this->globalSearch = $globalSearch;
-      return $this;
+    public function setGlobalSearch($globalSearch) {
+        $this->globalSearch = $globalSearch;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return contextControlSetting
      */
-    public function getContextControl()
-    {
-      return $this->contextControl;
+    public function getContextControl() {
+        return $this->contextControl;
     }
 
     /**
      * @param contextControlSetting $contextControl
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setContextControl($contextControl)
-    {
-      $this->contextControl = $contextControl;
-      return $this;
+    public function setContextControl($contextControl) {
+        $this->contextControl = $contextControl;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\SearchRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

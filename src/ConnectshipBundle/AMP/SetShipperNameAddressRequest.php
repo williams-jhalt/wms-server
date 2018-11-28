@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class SetShipperNameAddressRequest
-{
+class SetShipperNameAddressRequest {
 
     /**
      * @var string $shipper
@@ -43,122 +42,109 @@ class SetShipperNameAddressRequest
      * @param language $locale
      * @param string $asyncCorrelationData
      */
-    public function __construct($shipper, $address, $preProcess, $postProcess, $locale, $asyncCorrelationData)
-    {
-      $this->shipper = $shipper;
-      $this->address = $address;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($shipper, $address, $preProcess, $postProcess, $locale, $asyncCorrelationData) {
+        $this->shipper = $shipper;
+        $this->address = $address;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return string
      */
-    public function getShipper()
-    {
-      return $this->shipper;
+    public function getShipper() {
+        return $this->shipper;
     }
 
     /**
      * @param string $shipper
      * @return \ConnectshipBundle\AMP\SetShipperNameAddressRequest
      */
-    public function setShipper($shipper)
-    {
-      $this->shipper = $shipper;
-      return $this;
+    public function setShipper($shipper) {
+        $this->shipper = $shipper;
+        return $this;
     }
 
     /**
      * @return NameAddress
      */
-    public function getAddress()
-    {
-      return $this->address;
+    public function getAddress() {
+        return $this->address;
     }
 
     /**
      * @param NameAddress $address
      * @return \ConnectshipBundle\AMP\SetShipperNameAddressRequest
      */
-    public function setAddress($address)
-    {
-      $this->address = $address;
-      return $this;
+    public function setAddress($address) {
+        $this->address = $address;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\SetShipperNameAddressRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\SetShipperNameAddressRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\SetShipperNameAddressRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\SetShipperNameAddressRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

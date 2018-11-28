@@ -2,8 +2,7 @@
 
 namespace ConnectshipBundle\AMP;
 
-class ExecuteHookRequest
-{
+class ExecuteHookRequest {
 
     /**
      * @var string $carrier
@@ -48,140 +47,125 @@ class ExecuteHookRequest
      * @param language $locale
      * @param string $asyncCorrelationData
      */
-    public function __construct($carrier, $hook, $preProcess, $postProcess, $locale, $asyncCorrelationData)
-    {
-      $this->carrier = $carrier;
-      $this->hook = $hook;
-      $this->preProcess = $preProcess;
-      $this->postProcess = $postProcess;
-      $this->locale = $locale;
-      $this->asyncCorrelationData = $asyncCorrelationData;
+    public function __construct($carrier, $hook, $preProcess, $postProcess, $locale, $asyncCorrelationData) {
+        $this->carrier = $carrier;
+        $this->hook = $hook;
+        $this->preProcess = $preProcess;
+        $this->postProcess = $postProcess;
+        $this->locale = $locale;
+        $this->asyncCorrelationData = $asyncCorrelationData;
     }
 
     /**
      * @return string
      */
-    public function getCarrier()
-    {
-      return $this->carrier;
+    public function getCarrier() {
+        return $this->carrier;
     }
 
     /**
      * @param string $carrier
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setCarrier($carrier)
-    {
-      $this->carrier = $carrier;
-      return $this;
+    public function setCarrier($carrier) {
+        $this->carrier = $carrier;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getHook()
-    {
-      return $this->hook;
+    public function getHook() {
+        return $this->hook;
     }
 
     /**
      * @param string $hook
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setHook($hook)
-    {
-      $this->hook = $hook;
-      return $this;
+    public function setHook($hook) {
+        $this->hook = $hook;
+        return $this;
     }
 
     /**
      * @return Dictionary
      */
-    public function getHookInfo()
-    {
-      return $this->hookInfo;
+    public function getHookInfo() {
+        return $this->hookInfo;
     }
 
     /**
      * @param Dictionary $hookInfo
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setHookInfo($hookInfo)
-    {
-      $this->hookInfo = $hookInfo;
-      return $this;
+    public function setHookInfo($hookInfo) {
+        $this->hookInfo = $hookInfo;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPreProcess()
-    {
-      return $this->preProcess;
+    public function getPreProcess() {
+        return $this->preProcess;
     }
 
     /**
      * @param string $preProcess
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setPreProcess($preProcess)
-    {
-      $this->preProcess = $preProcess;
-      return $this;
+    public function setPreProcess($preProcess) {
+        $this->preProcess = $preProcess;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getPostProcess()
-    {
-      return $this->postProcess;
+    public function getPostProcess() {
+        return $this->postProcess;
     }
 
     /**
      * @param string $postProcess
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setPostProcess($postProcess)
-    {
-      $this->postProcess = $postProcess;
-      return $this;
+    public function setPostProcess($postProcess) {
+        $this->postProcess = $postProcess;
+        return $this;
     }
 
     /**
      * @return language
      */
-    public function getLocale()
-    {
-      return $this->locale;
+    public function getLocale() {
+        return $this->locale;
     }
 
     /**
      * @param language $locale
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setLocale($locale)
-    {
-      $this->locale = $locale;
-      return $this;
+    public function setLocale($locale) {
+        $this->locale = $locale;
+        return $this;
     }
 
     /**
      * @return string
      */
-    public function getAsyncCorrelationData()
-    {
-      return $this->asyncCorrelationData;
+    public function getAsyncCorrelationData() {
+        return $this->asyncCorrelationData;
     }
 
     /**
      * @param string $asyncCorrelationData
      * @return \ConnectshipBundle\AMP\ExecuteHookRequest
      */
-    public function setAsyncCorrelationData($asyncCorrelationData)
-    {
-      $this->asyncCorrelationData = $asyncCorrelationData;
-      return $this;
+    public function setAsyncCorrelationData($asyncCorrelationData) {
+        $this->asyncCorrelationData = $asyncCorrelationData;
+        return $this;
     }
 
 }

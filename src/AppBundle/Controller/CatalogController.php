@@ -5,17 +5,20 @@ namespace AppBundle\Controller;
 use AppBundle\Entity\Product;
 use AppBundle\Entity\ProductDetail;
 use AppBundle\Form\ProductDetailType;
-use AppBundle\Form\ProductType;
+use AppBundle\Service\ProductService;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\HttpFoundation\Request;
 
 /**
  * @Route("/catalog")
  */
 class CatalogController extends Controller {
+    
+    /**
+     * @var ProductService
+     */
+    private $productService;
 
     /**
      * @Route("/", name="catalog_homepage")
@@ -28,17 +31,21 @@ class CatalogController extends Controller {
      * @Route("/search", name="catalog_search")
      */
     public function searchAction(Request $request) {
+        
+        $productService = $this->get('app.product_service');
 
         $searchTerms = $request->get('searchTerms');
+        
+        $products = $productService->findBySearchTerms($searchTerms);
 
-        $em = $this->getDoctrine()->getManager();
-        $dql = "SELECT p FROM AppBundle:Product p WHERE p.itemNumber = :searchTerms OR p.name LIKE :searchTermsLike OR p.barcode = :searchTerms";
-        $query = $em->createQuery($dql)
-                ->setParameter('searchTerms', $searchTerms)
-                ->setParameter('searchTermsLike', "%" . $searchTerms . "%")
-                ->setMaxResults(10);
-
-        $products = $query->getResult();
+//        $em = $this->getDoctrine()->getManager();
+//        $dql = "SELECT p FROM AppBundle:Product p WHERE p.itemNumber = :searchTerms OR p.name LIKE :searchTermsLike OR p.barcode = :searchTerms";
+//        $query = $em->createQuery($dql)
+//                ->setParameter('searchTerms', $searchTerms)
+//                ->setParameter('searchTermsLike', "%" . $searchTerms . "%")
+//                ->setMaxResults(10);
+//
+//        $products = $query->getResult();
 
         return $this->render('catalog/search.html.twig', [
                     'searchTerms' => $searchTerms,

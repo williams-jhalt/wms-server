@@ -56,12 +56,12 @@ class SalesListController extends Controller {
         
         $productService = $this->get('app.product_service');
         
-        $input = split("\w", $request->get('import'));
+        $input = preg_split("/[\s,]+/", $request->get('import'));
         $list = $session->get('sales-list', []);
         
         foreach ($input as $key) {
             
-            $result = $productService->findBySearchTerms($key);
+            $result = $productService->findBySearchTerms(trim($key));
             
             if (sizeof($result) == 1) {
                 $list[] = $result[0]->getItemNumber();

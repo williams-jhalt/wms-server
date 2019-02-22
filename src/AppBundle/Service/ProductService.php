@@ -41,13 +41,9 @@ class ProductService {
         $result = array();
 
         foreach ($products as $product) {
-            try {
-                $t = $this->buildProductFromErp($product);
-                if ($t !== null) {
-                    $result[] = $t;
-                }
-            } catch (GuzzleHttp\Exception\ServerException $e) {
-                
+            $t = $this->buildProductFromErp($product);
+            if ($t !== null) {
+                $result[] = $t;
             }
         }
 

@@ -20,12 +20,7 @@ class SalesListController extends Controller {
 
         $productService = $this->get('app.product_service');
 
-        $list = $session->get("sales-list", []);
-        $products = [];
-
-        foreach ($list as $itemNumber) {
-            $products[] = $productService->getByItemNumber($itemNumber);
-        }
+        $products = $session->get("sales-list", []);
 
         return $this->render('sales-list/index.html.twig', [
                     'products' => $products
@@ -40,9 +35,7 @@ class SalesListController extends Controller {
         $item = $request->get('itemNumber');
         $list = $session->get("sales-list", []);
 
-        $index = array_search($item, $list);
-
-        unset($list[$index]);
+        unset($list[$item]);
 
         $session->set('sales-list', $list);
 
@@ -67,7 +60,7 @@ class SalesListController extends Controller {
                 $result = $productService->findBySearchTerms($itemNumber);
 
                 if (sizeof($result) == 1) {
-                    $list[] = $result[0]->getItemNumber();
+                    $list[$result[0]->getItemNumber()] = $result[0];
                 }
             }
         }
@@ -97,7 +90,7 @@ class SalesListController extends Controller {
 
         $list = $session->get("sales-list", []);
 
-        $list[] = $results[0]->getItemNumber();
+        $list[$results[0]->getItemNumber()] = $results[0];
 
         $session->set("sales-list", $list);
 
@@ -122,9 +115,7 @@ class SalesListController extends Controller {
 
             $productService = $this->get('app.product_service');
 
-            foreach ($items as $itemNumber) {
-
-                $product = $productService->getByItemNumber($itemNumber);
+            foreach ($items as $product) {
 
                 $row = [
                     $product->getItemNumber(),

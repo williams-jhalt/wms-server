@@ -69,6 +69,8 @@ class SalesListController extends Controller {
             
         }
 
+        $session->set('sales-list', $list);
+
         return $this->redirectToRoute("sales_list_index");
         
     }

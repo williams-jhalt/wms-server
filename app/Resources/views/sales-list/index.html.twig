@@ -17,12 +17,30 @@
 
     <br>
 
-    <form class="form-inline" id="inputForm" action="{{ path('sales_list_add') }}" method="post">
-        <div class="form-group">
-            <input class="form-control" type="text" name="search" placeholder="Search Terms" required>
+    <div class="row">
+        <div class="col-sm-6">
+
+            <form class="form-inline" id="inputForm" action="{{ path('sales_list_add') }}" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="search" placeholder="Search Terms" required>
+                </div>
+                <button class="btn btn-default" type="submit">Submit</button>
+            </form>
+
         </div>
-        <button class="btn btn-default" type="submit">Submit</button>
-    </form>
+
+        <div class="col-sm-6">
+
+            <form class="form-inline" id="inputForm" action="{{ path('sales_list_import') }}" method="post">
+                <div class="form-group">
+                    <textarea class="form-control" name="import" required></textarea>
+                </div>
+                <button class="btn btn-default" type="submit">Import</button>
+            </form>
+
+        </div>
+
+    </div>
 
     <br>
 

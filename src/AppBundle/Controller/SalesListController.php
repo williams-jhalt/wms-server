@@ -47,6 +47,30 @@ class SalesListController extends Controller {
         $session->set('sales-list', $list);
 
         return $this->redirectToRoute('sales_list_index');
+    }    
+
+    /**
+     * @Route("/import-products", name="sales_list_import")
+     */
+    public function importListAction(Request $request, Session $session) {
+        
+        $productService = $this->get('app.product_service');
+        
+        $input = split("\w", $request->get('import'));
+        $list = $session->get('sales-list', []);
+        
+        foreach ($input as $key) {
+            
+            $result = $productService->findBySearchTerms($key);
+            
+            if (sizeof($result) == 1) {
+                $list[] = $result[0]->getItemNumber();
+            }
+            
+        }
+
+        return $this->redirectToRoute("sales_list_index");
+        
     }
 
     /**

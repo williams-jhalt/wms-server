@@ -98,5 +98,10 @@ class ErpClientService implements ErpService {
     public function getSerializer() {
         return $this->serializer;
     }
+    
+    public function getPackerLogEntryRepository(): \ErpBundle\Repository\PackerLogEntryRepositoryInterface {
+        throw new Exception("Not Yet Implemented");
+    }
+
 
 }

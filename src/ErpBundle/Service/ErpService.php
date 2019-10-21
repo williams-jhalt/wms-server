@@ -4,6 +4,7 @@ namespace ErpBundle\Service;
 
 use ErpBundle\Repository\CustomerRepositoryInterface;
 use ErpBundle\Repository\InvoiceRepositoryInterface;
+use ErpBundle\Repository\PackerLogEntryRepositoryInterface;
 use ErpBundle\Repository\ProductRepositoryInterface;
 use ErpBundle\Repository\SalesOrderRepositoryInterface;
 use ErpBundle\Repository\ShipmentRepositoryInterface;
@@ -34,5 +35,10 @@ interface ErpService {
      * @return CustomerRepositoryInterface
      */
     public function getCustomerRepository();
+
+    /**
+     * @return PackerLogEntryRepositoryInterface
+     */
+    public function getPackerLogEntryRepository();
     
 }

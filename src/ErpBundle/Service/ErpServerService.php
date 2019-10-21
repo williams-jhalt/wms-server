@@ -3,12 +3,13 @@
 namespace ErpBundle\Service;
 
 use Doctrine\Common\Cache\FilesystemCache;
-use Exception;
 use ErpBundle\Repository\ServerCustomerRepository;
 use ErpBundle\Repository\ServerInvoiceRepository;
+use ErpBundle\Repository\ServerPackerLogEntryRepository;
 use ErpBundle\Repository\ServerProductRepository;
 use ErpBundle\Repository\ServerSalesOrderRepository;
 use ErpBundle\Repository\ServerShipmentRepository;
+use Exception;
 use function GuzzleHttp\json_decode;
 use function GuzzleHttp\json_encode;
 
@@ -161,7 +162,6 @@ class ErpServerService implements ErpService {
         if ($closeCurlWhenFinished) {
             curl_close($ch);
         }
-        
     }
 
     /**
@@ -430,12 +430,19 @@ class ErpServerService implements ErpService {
     public function getInvoiceRepository() {
         return new ServerInvoiceRepository($this);
     }
-    
+
     /**
      * @return ServerCustomerRepository
      */
     public function getCustomerRepository() {
         return new ServerCustomerRepository($this);
+    }
+
+    /**
+     * @return ServerPackerLogEntryRepository
+     */
+    public function getPackerLogEntryRepository() {
+        return new ServerPackerLogEntryRepository($this);
     }
 
 }

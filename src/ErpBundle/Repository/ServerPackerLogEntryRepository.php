@@ -12,7 +12,7 @@ class ServerPackerLogEntryRepository extends AbstractServerRepository implements
 
         $query = "FOR EACH ed_ucc128pk NO-LOCK "
                 . "WHERE ed_ucc128pk.company_oe = '" . $this->erp->getCompany() . "' "
-                . "AND ed_ucc128pk.build_date >= '" . $startDate->format('MM/dd/yyyy') . "' AND ed_ucc128pk.build_date <= '" . $endDate->format('MM/dd/yyyy') . "'";
+                . "AND ed_ucc128pk.build_date >= '" . $startDate->format('m/d/Y') . "' AND ed_ucc128pk.build_date <= '" . $endDate->format('m/d/Y') . "'";
 
         $fields = "user_id,"
                 . "ucc,"

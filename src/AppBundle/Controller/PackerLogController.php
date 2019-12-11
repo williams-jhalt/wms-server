@@ -21,7 +21,7 @@ class PackerLogController extends Controller {
     public function indexAction(Request $request) {
 
         $defaultEndDate = new DateTimeImmutable();
-        $defaultStartDate = $defaultEndDate->sub(new DateInterval("P1D"));
+        $defaultStartDate = $defaultEndDate->sub(new DateInterval("P1W"));
 
         $startDate = $request->get('startDate', $defaultStartDate->format('m/d/Y'));
         $endDate = $request->get('endDate', $defaultEndDate->format('m/d/Y'));
@@ -36,11 +36,10 @@ class PackerLogController extends Controller {
 
         foreach ($entries->getPackerLogEntries() as $entry) {
             $userId = strtoupper($entry->getUserId());
-            if (isset($data[$userId])) {
-                $data[$userId][$entry->getUcc()] = $entry->getQtyShipped();
-            } else {
-                $data[$userId] = [$entry->getUcc() => $entry->getQtyShipped()];
+            if (!isset($data[$userId])) {
+                $data[$userId] = [];
             }
+            $data[$userId][$entry->getUcc()] = $entry->getQtyShipped();
         }
 
         $result = [];

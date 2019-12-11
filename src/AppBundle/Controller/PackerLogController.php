@@ -20,8 +20,8 @@ class PackerLogController extends Controller {
      */
     public function indexAction(Request $request) {
 
-        $defaultEndDate = new DateTimeImmutable();
-        $defaultStartDate = $defaultEndDate->sub(new DateInterval("P1W"));
+        $defaultEndDate = new DateTimeImmutable("yesterday");
+        $defaultStartDate = $defaultEndDate->sub(new DateInterval("P1D"));
 
         $startDate = $request->get('startDate', $defaultStartDate->format('m/d/Y'));
         $endDate = $request->get('endDate', $defaultEndDate->format('m/d/Y'));
@@ -30,17 +30,29 @@ class PackerLogController extends Controller {
 
         $repo = $erpService->getPackerLogEntryRepository();
 
-        $entries = $repo->findByStartDateAndEndDate(new DateTime($startDate), new DateTime($endDate));
+        $limit = 5000;
+        $offset = 0;
 
         $data = [];
 
-        foreach ($entries->getPackerLogEntries() as $entry) {
-            $userId = strtoupper($entry->getUserId());
-            if (!isset($data[$userId])) {
-                $data[$userId] = [];
+        do {
+
+            $entries = $repo->findByStartDateAndEndDate(new DateTime($startDate), new DateTime($endDate), $limit, $offset);
+
+            foreach ($entries->getPackerLogEntries() as $entry) {
+                $userId = strtoupper($entry->getUserId());
+                if (!isset($data[$userId])) {
+                    $data[$userId] = [];
+                }
+                if (isset($data[$userId][$entry->getUcc()])) {
+                    $data[$userId][(string) $entry->getUcc()] += $entry->getQtyShipped();
+                } else {
+                    $data[$userId][(string) $entry->getUcc()] = $entry->getQtyShipped();
+                }
             }
-            $data[$userId][$entry->getUcc()] = $entry->getQtyShipped();
-        }
+
+            $offset = $offset + $limit;
+        } while (sizeof($entries->getPackerLogEntries()) > 0);
 
         $result = [];
 
@@ -82,7 +94,7 @@ class PackerLogController extends Controller {
 
             $response = $repo->findByStartDateAndEndDate($startDate, $endDate, $limit, $offset);
             $entries = $response->getPackerLogEntries();
-            
+
             foreach ($entries as $entry) {
                 if ($entry->getUserId() == $id) {
                     $data['totalShipments'] ++;
@@ -91,7 +103,6 @@ class PackerLogController extends Controller {
             }
 
             $offset = $offset + $limit;
-            
         } while (sizeof($entries) > 0);
 
         return $this->render('packer-log/index.html.twig', [

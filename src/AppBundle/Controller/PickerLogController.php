@@ -95,9 +95,9 @@ class PickerLogController extends Controller {
                 ->setParameter('orderNumber', $manifestId)
                 ->setMaxResults(1);
 
-        if ($query->getOneOrNullResult() !== null) {
-            $messages[] = "Order has already been scanned";
-        }
+#        if ($query->getOneOrNullResult() !== null) {
+#            $messages[] = "Order has already been scanned";
+#        }
 
         if (sizeof($messages) == 0) {
             $scan = new PickerLog();

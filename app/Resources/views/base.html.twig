@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}WMS{% endblock %}</title>
             <!-- Bootstrap Core CSS -->
             <link href="{{ asset('web_assets/startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
 
@@ -50,7 +50,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ path('homepage') }}">Warehouse Manager</a>
+                    <a class="navbar-brand" href="{{ path('homepage') }}">Warehouse Management System</a>
                 </div>
 
                 <div class="navbar-default sidebar" role="navigation">
@@ -71,6 +71,7 @@
                             <li><a href="{{ path('catalog_homepage') }}">Catalog</a></li>
                             <li><a href="{{ path('credits_index') }}">Credit Builder</a></li>
                             <li><a href="{{ path('shipping_index') }}">Shipping</a></li>
+                            <li><a href="{{ path('dimwatcher_index') }}">Dim Watcher</a></li>
                             <li><a href="{{ path('sales_list_index') }}">Sales List</a></li>
                         </ul>
                     </div>
